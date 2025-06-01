@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | BizGrants Consulting</title>
-  <meta name="description" content="Contact BizGrants Consulting for expert CCP grant application support." />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -14,49 +13,37 @@
       <div class="logo">BizGrants Consulting</div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html" class="">Home</a></li>
+          <li><a href="services.html" class="">Services</a></li>
+          <li><a href="blog.html" class="">Blog</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
-  <section class="hero contact-hero">
+  <section class="hero">
     <div class="container">
       <h1>Let’s Talk Grants</h1>
-      <p>Get in touch to discuss how we can support your CCP applications or guide your workforce transformation.</p>
+      <p>Reach out to discuss your CCP application or transformation goals.</p>
     </div>
   </section>
+  
+<section class="container grid">
+  <div>
+    <h2>Contact Us</h2>
+    <ul>
+      <li><strong>Email:</strong> hello@bizgrants.consulting</li>
+      <li><strong>WhatsApp:</strong> +65 9123 4567</li>
+    </ul>
+  </div>
+  <form class="contact-form">
+    <label>Name</label><input type="text" required>
+    <label>Email</label><input type="email" required>
+    <label>Message</label><textarea rows="5"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
 
-  <section class="contact-section">
-    <div class="container contact-grid">
-      <div>
-        <h2>Get in Touch</h2>
-        <p>Drop us a line to explore how we can help.</p>
-        <ul class="contact-details">
-          <li><strong>Email:</strong> hello@bizgrants.consulting</li>
-          <li><strong>WhatsApp:</strong> +65 9123 4567</li>
-          <li><strong>Hours:</strong> Mon–Fri, 9am to 6pm</li>
-        </ul>
-      </div>
-      <form class="contact-form">
-        <label>Name</label>
-        <input type="text" placeholder="Your full name" required />
-        <label>Email</label>
-        <input type="email" placeholder="Your email address" required />
-        <label>Message</label>
-        <textarea placeholder="How can we help?" rows="5" required></textarea>
-        <button type="submit">Send Enquiry</button>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
-    </div>
-  </footer>
+  <footer><div class="container"><p>&copy; 2025 BizGrants Consulting. All rights reserved.</p></div></footer>
 </body>
 </html>

@@ -24,22 +24,34 @@ footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; 
   align-items: center;
   padding: 1em 0;
 }
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
   }
 
   nav ul {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-left: 0;
+    width: 100%;
   }
 
-  nav ul li {
-    margin: 0;
+  nav ul.show {
+    display: flex;
   }
 
-
+  .hamburger {
+    display: block;
+    margin-top: 1rem;
+  }
+}

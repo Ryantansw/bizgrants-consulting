@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – BizGrants Consulting</title>
-    <meta name="description" content="Get in touch with BizGrants Consulting for career conversion programme application services.">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | BizGrants Consulting</title>
+  <meta name="description" content="Contact BizGrants Consulting for expert CCP grant application support." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <img src="images/logo.png" alt="BizGrants Consulting logo" class="logo">
-    <nav>
+  <header>
+    <div class="container nav-container">
+      <div class="logo">BizGrants Consulting</div>
+      <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
-    </nav>
-</header>
-<main>
-    <h1>Contact Us</h1>
-    <p>For inquiries about our Career Conversion Programme consulting services, please reach out to us using the form below or via our contact details.</p>
-    <ul>
-        <li><strong>Email:</strong> <a href="mailto:info@bizgrants.consulting">info@bizgrants.consulting</a></li>
-        <li><strong>Phone:</strong> +65 1234 5678</li>
-        <li><strong>Address:</strong> Singapore</li>
-    </ul>
-    <form action="#" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="company">Company (optional):</label><br>
-        <input type="text" id="company" name="company"><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
-        <button type="submit">Send Message</button>
-    </form>
-</main>
-<footer>
-    <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
-</footer>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero contact-hero">
+    <div class="container">
+      <h1>Let’s Talk Grants</h1>
+      <p>Get in touch to discuss how we can support your CCP applications or guide your workforce transformation.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Get in Touch</h2>
+        <p>Drop us a line to explore how we can help.</p>
+        <ul class="contact-details">
+          <li><strong>Email:</strong> hello@bizgrants.consulting</li>
+          <li><strong>WhatsApp:</strong> +65 9123 4567</li>
+          <li><strong>Hours:</strong> Mon–Fri, 9am to 6pm</li>
+        </ul>
+      </div>
+      <form class="contact-form">
+        <label>Name</label>
+        <input type="text" placeholder="Your full name" required />
+        <label>Email</label>
+        <input type="email" placeholder="Your email address" required />
+        <label>Message</label>
+        <textarea placeholder="How can we help?" rows="5" required></textarea>
+        <button type="submit">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

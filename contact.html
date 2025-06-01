@@ -9,20 +9,21 @@
 </head>
 <body>
   <header>
-    <div class="container nav-container">
-      <div class="logo">
-  <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
-</div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="services.html" class="">Services</a></li>
-          <li><a href="blog.html" class="">Blog</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-      </nav>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
     </div>
-  </header>
+    <nav>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <section class="hero">
     <div class="container">
       <h1>Let’s Talk Grants</h1>

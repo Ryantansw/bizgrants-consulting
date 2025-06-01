@@ -43,6 +43,7 @@ footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; 
   }
 
   .logo img.logo-img {
-    height: 60px; /* slightly smaller for mobile */
+    height: 80px; /* slightly larger logo for mobile */
   }
 }
+

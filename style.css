@@ -42,8 +42,4 @@ footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; 
     margin: 0;
   }
 
-  .logo img.logo-img {
-    height: 80px; /* slightly larger logo for mobile */
-  }
-}
 

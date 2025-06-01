@@ -24,3 +24,25 @@ footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; 
   align-items: center;
   padding: 1em 0;
 }
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-left: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .logo img.logo-img {
+    height: 60px; /* slightly smaller for mobile */
+  }
+}

@@ -4,57 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | BizGrants Consulting</title>
+  <meta name="description" content="BizGrants Consulting offers Career Conversion Programme (CCP) consulting services to help Singapore companies access salary support and reskill employees effectively." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-  <div class="container nav-container">
-    <div class="logo">
-      <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+      </div>
+      <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <ul id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
+
   <section class="hero">
     <div class="container">
       <h1>Our CCP Consulting Services</h1>
-      <p>Explore how BizGrants can support your team with Workforce Singapore's Career Conversion Programmes.</p>
+      <p>Explore how BizGrants supports your team in securing Workforce Singapore (WSG)'s Career Conversion Programme (CCP) funding – from job redesign to full documentation.</p>
     </div>
   </section>
-  
-<section>
-  <div class="container grid">
-    <div class="card">
-      <h3>ESG & Sustainability Roles</h3>
-      <p>Reskill internal staff to support green transformation agendas.</p>
-    </div>
-    <div class="card">
-      <h3>Digital Marketing & HR</h3>
-      <p>Redesign roles and develop on-the-job plans that align with SkillsFuture frameworks.</p>
-    </div>
-    <div class="card">
-      <h3>Full Application Support</h3>
-      <p>We write the job descriptions, OJT plans, and handle all submission paperwork.</p>
-    </div>
-  </div>
-</section>
 
-  <footer><div class="container"><p>&copy; 2025 BizGrants Consulting. All rights reserved.</p></div></footer>
+  <section class="container">
+    <h2>Career Reskilling Solutions for Companies</h2>
+    <p>We assist employers in reskilling employees through structured CCP pathways aligned to WSG’s priorities. You get access to up to 90% salary support – we handle the entire submission process on your behalf.</p>
+
+    <ul>
+      <li><strong>✔ Roles in Sustainability, Green Transformation, and ESG:</strong> For businesses seeking to build internal capabilities in sustainability, including environmental reporting, sustainable procurement, and green operations.</li>
+
+      <li><strong>✔ Roles in Strategic HR and Human Capital Transformation:</strong> For HR teams taking on workforce planning, talent development, or digitalisation of HR practices aligned with business strategy.</li>
+
+      <li><strong>✔ Roles in Digital Advertising, Branding, and Performance Marketing:</strong> For companies aiming to build or strengthen their digital presence through social media, SEO/SEM, or online advertising capabilities.</li>
+
+      <li><strong>✔ Overseas Deployment for Market Expansion and Business Development:</strong> For Singapore-based employees taking on responsibilities in new international markets through on-the-ground deployment or remote market activation.</li>
+
+      <li><strong>✔ Roles Driving Operational Efficiency and Process Transformation:</strong> For companies focused on automation, cost reduction, digital tools adoption, or lean workflow improvement.</li>
+
+      <li><strong>✔ Cross-functional Roles in SMEs:</strong> Designed for SME teams building multifunctional capabilities such as finance, admin, ops, marketing, or account management within the same headcount.</li>
+
+      <li><strong>✔ Roles for Mid-Career Hires Switching into New Functions:</strong> Supports companies onboarding professionals with adjacent but non-identical backgrounds, enabling them to pivot into your industry or function through structured OJT.</li>
+
+      <li><strong>✔ Roles in UI/UX, Creative Content, and Brand Identity:</strong> For firms ramping up design innovation — whether in digital interfaces, visual branding, marketing creatives, or product packaging.</li>
+
+      <li><strong>✔ Roles in Experience Design and Service Recovery (Tourism/Hospitality):</strong> Especially relevant for businesses redesigning their customer journey, digital offerings, or guest touchpoints in a post-pandemic environment.</li>
+
+      <li><strong>✔ Regional Sales, Distribution and Export Trade Roles:</strong> Supports capabilities in managing overseas distributors, regional clients, trade documentation, or cross-border supply chain operations.</li>
+    </ul>
+
+    <p><strong>Note:</strong> Depending on your business goals and industry, additional CCP pathways may be relevant. Engage us for a consultation and we’ll assess your eligibility and recommend the right approach.</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-  }
-</script>
-
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>

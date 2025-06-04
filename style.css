@@ -1,21 +1,23 @@
+/* Base Styles */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
 
-body { font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
-.container { width: 90%; max-width: 1200px; margin: auto; }
-header { background: #fff; padding: 1em 0; border-bottom: 1px solid #eee; }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: bold; font-size: 1.5em; color: #0F52BA; }
-nav ul { list-style: none; display: flex; gap: 2em; margin: 0; padding: 0; }
-nav a { text-decoration: none; color: #333; font-weight: 500; }
-nav a.active, nav a:hover { color: #0F52BA; }
-.hero { background: linear-gradient(135deg, #0F52BA, #89CFF0); color: white; text-align: center; padding: 5em 1em; }
-.hero h1 { font-size: 2.5em; }
-section { padding: 4em 0; }
-.grid { display: grid; gap: 2em; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.card { background: #fff; padding: 2em; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-radius: 8px; }
-footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; margin-top: 4em; }
-.logo img.logo-img {
-  height: 100px;
-  display: block;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header & Navigation */
+header {
+  background: #fff;
+  padding: 1em 0;
+  border-bottom: 1px solid #eee;
 }
 
 .nav-container {
@@ -24,6 +26,37 @@ footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; 
   align-items: center;
   padding: 1em 0;
 }
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #0F52BA;
+}
+
+.logo img.logo-img {
+  height: 100px;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  color: #0F52BA;
+}
+
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -32,6 +65,63 @@ footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; 
   cursor: pointer;
 }
 
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0F52BA, #89CFF0);
+  color: white;
+  text-align: center;
+  padding: 5em 1em;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+/* General Section Styling */
+section {
+  padding: 4em 0;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 2em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+/* CCP List Section */
+.ccp-list h3 {
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #0F52BA;
+}
+
+.ccp-list p {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Footer */
+footer {
+  background: #0F52BA;
+  color: white;
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 4em;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -54,17 +144,8 @@ footer { background: #0F52BA; color: white; text-align: center; padding: 2em 0; 
     display: block;
     margin-top: 1rem;
   }
-}
 
-.ccp-list p {
-  margin-bottom: 1.5em;
-  line-height: 1.6;
+  .ccp-list h3 {
+    font-size: 1.1em;
+  }
 }
-
-.ccp-list h3 {
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  font-size: 1.25em;
-  color: #0F52BA;
-}
-

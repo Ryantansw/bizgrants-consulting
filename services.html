@@ -1,15 +1,41 @@
-<section class="container">
-  <h2>What Are Career Conversion Programmes (CCPs)?</h2>
-  <p>Career Conversion Programmes (CCPs) are Workforce Singapore (WSG) initiatives designed to help employers reskill or redeploy mid-career individuals into new or redesigned job roles. Whether you're hiring new staff or transforming internal roles to meet evolving business needs, CCPs offer a practical and cost-effective workforce strategy.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | BizGrants Consulting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+      </div>
+      <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <p>Companies receive up to <strong>70% to 90% salary support</strong> over 3 to 12 months, depending on the programme pathway and employee eligibility. CCPs are suitable for roles in sustainability, digital marketing, HR, international business development, and more. BizGrants Consulting helps ensure your roles are structured to meet funding criteria and manages the full application process.</p>
+  <section class="container ccp-list">
+    <h2>What Are Career Conversion Programmes (CCPs)?</h2>
+    <p>Career Conversion Programmes (CCPs) are Workforce Singapore (WSG) initiatives designed to help employers reskill or redeploy mid-career individuals into new or redesigned job roles. Whether you're hiring new staff or transforming internal roles to meet evolving business needs, CCPs offer a practical and cost-effective workforce strategy.</p>
 
-  <p>Each CCP includes job redesign, on-the-job training plans, and alignment to national skills frameworks. Our service includes advisory on eligibility, crafting eligible job scopes, developing SkillsFuture-compliant OJT, and submission handling — end to end.</p>
+    <p>Companies receive up to <strong>70% to 90% salary support</strong> over 3 to 12 months, depending on the programme pathway and employee eligibility. CCPs are suitable for roles in sustainability, digital marketing, HR, international business development, and more. BizGrants Consulting helps ensure your roles are structured to meet funding criteria and manages the full application process.</p>
 
-  <h2>Career Reskilling Solutions for Companies</h2>
-  <p>We assist employers in reskilling employees through structured CCP pathways aligned to WSG’s priorities. You get access to up to 90% salary support – we handle the entire submission process on your behalf.</p>
+    <p>Each CCP includes job redesign, on-the-job training plans, and alignment to national skills frameworks. Our service includes advisory on eligibility, crafting eligible job scopes, developing SkillsFuture-compliant OJT, and submission handling — end to end.</p>
 
-  <div class="ccp-list">
+    <h2>Career Reskilling Solutions for Companies</h2>
+    <p>We assist employers in reskilling employees through structured CCP pathways aligned to WSG’s priorities. You get access to up to 90% salary support – we handle the entire submission process on your behalf.</p>
+
     <h3>Sustainability and ESG Roles</h3>
     <p>✔ <strong>We support your job redesign or new hire of sustainability professionals:</strong> From ESG reporting and carbon tracking to green procurement and operations — we help structure these roles for CCP funding.</p>
 
@@ -39,7 +65,21 @@
 
     <h3>Trade, Export and Regional Sales Roles</h3>
     <p>✔ <strong>We guide trade and sales teams into expanded regional roles:</strong> If your company deals with overseas clients, distributors or supply chain ops, we help restructure roles for CCP claims.</p>
-  </div>
 
-  <p><strong>Note:</strong> Depending on your business goals and industry, additional CCP pathways may be relevant. Engage us for a consultation and we’ll assess your eligibility and recommend the right approach.</p>
-</section>
+    <p><strong>Note:</strong> Depending on your business goals and industry, additional CCP pathways may be relevant. Engage us for a consultation and we’ll assess your eligibility and recommend the right approach.</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

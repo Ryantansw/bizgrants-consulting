@@ -13,24 +13,25 @@
     navLinks.classList.toggle('show');
   }
 
-  // Auto-Slider Logic
-  let slider = document.querySelector(".slider");
+  const slider = document.getElementById('slider');
   let scrollAmount = 0;
+  const scrollStep = 1;
 
-  function autoScrollSlider() {
+  function autoScroll() {
     if (!slider) return;
-    scrollAmount += 1;
+    scrollAmount += scrollStep;
     if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
       scrollAmount = 0;
     }
     slider.scrollTo({
       left: scrollAmount,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
   }
 
-  let autoScroll = setInterval(autoScrollSlider, 25);
+  let sliderInterval = setInterval(autoScroll, 25); // scrolls every 25ms
 </script>
+
 
 <body>
   <header>

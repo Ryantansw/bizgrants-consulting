@@ -7,32 +7,6 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
-  <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-  }
-
-  const slider = document.getElementById('slider');
-  let scrollAmount = 0;
-  const scrollStep = 1;
-
-  function autoScroll() {
-    if (!slider) return;
-    scrollAmount += scrollStep;
-    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
-      scrollAmount = 0;
-    }
-    slider.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-
-  let sliderInterval = setInterval(autoScroll, 25); // scrolls every 25ms
-</script>
-
-
 <body>
   <header>
     <div class="container nav-container">
@@ -65,21 +39,21 @@
   </section>
 
   <section class="slider-section">
-  <div class="container">
-    <h2>Recent Approved Projects</h2>
-    <div class="slider" id="slider">
-      <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
-      <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
-      <div class="slide">✅ International Market Expansion Manager – Approved under OMIP</div>
-      <div class="slide">✅ HR People & Culture Manager – Job redesign approved for an SME client</div>
-      <div class="slide">✅ Sustainability Director – Approved for a hotel chain</div>
-      <div class="slide">✅ Service Sales Engineer – Approved for HVAC sector client</div>
-      <div class="slide">✅ Digital Marketing Manager – Approved for events company</div>
-      <div class="slide">✅ UX and Web Designer – Approved for tech solutions firm</div>
-      <div class="slide">✅ Business Development Executive – Approved for travel sector SME</div>
+    <div class="container">
+      <h2>Recent Approved Projects</h2>
+      <div class="slider">
+        <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
+        <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
+        <div class="slide">✅ International Market Expansion Manager – Approved under OMIP</div>
+        <div class="slide">✅ HR People & Culture Manager – Existing staff job redesign approved for an SME Client</div>
+        <div class="slide">✅ Sustainability Director – Approved for a hotel chain</div>
+        <div class="slide">✅ Service Sales Engineer – Approved for a client in the HVAC sector</div>
+        <div class="slide">✅ Digital Marketing Manager – Approved for an events company</div>
+        <div class="slide">✅ UX and Web Designer – Approved for a tech solutions company</div>
+        <div class="slide">✅ Business Development Executive – Approved for a client in the travel sector</div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="container grid">
     <div class="card">
@@ -108,21 +82,23 @@
       navLinks.classList.toggle('show');
     }
 
-    // Faster auto-slider (no pause on hover)
-    const slider = document.getElementById('slider');
-    let scrollInterval;
+    // Auto-slide logic for slider
+    const slider = document.querySelector('.slider');
+    let scrollAmount = 0;
+    let scrollStep = 1;
 
-    function startSlider() {
-      scrollInterval = setInterval(() => {
-        slider.scrollLeft += 1.5;
-        if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-          slider.scrollLeft = 0;
-        }
-      }, 16); // ~60fps
-    }
+    setInterval(() => {
+      if (!slider) return;
 
-    // Ensure slider works on mobile too
-    window.addEventListener('load', startSlider);
+      scrollAmount += scrollStep;
+
+      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+        scrollAmount = 0;
+        slider.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
+      }
+    }, 20); // Speed of scroll
   </script>
 </body>
 </html>

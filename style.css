@@ -176,7 +176,6 @@ footer {
   font-weight: bold;
 }
 
-/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -207,7 +206,12 @@ footer {
   .hero p {
     font-size: 1em;
   }
+
+  .slide {
+    min-width: 320px;
+  }
 }
+
 
 .card-grid {
   display: grid;
@@ -247,14 +251,18 @@ footer {
 
 .slide {
   flex: 0 0 auto;
-  min-width: 300px;
+  min-width: 450px; /* wider to fit full message */
   background: #f4f4f4;
   padding: 1.5em;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   font-weight: 500;
   color: #333;
+  white-space: normal;
+  word-break: break-word;
 }
+
+
 
 .slider::-webkit-scrollbar {
   display: none;

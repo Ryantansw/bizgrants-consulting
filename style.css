@@ -105,13 +105,7 @@ footer {
   margin-top: 4em;
 }
 
-/* SLIDER SECTION */
-.slider-section {
-  margin-top: 3em;
-  overflow: hidden;
-}
-
-/* SLIDER CONTAINER */
+/* SLIDER */
 .slider-section {
   margin-top: 4em;
   overflow-x: auto;
@@ -145,6 +139,19 @@ footer {
   display: none;
 }
 
+/* SLIDER CARD VERSION (if reused somewhere else) */
+.slider-card {
+  min-width: 280px;
+  background: #f0f8ff;
+  padding: 1.5em;
+  border-left: 4px solid #0F52BA;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.slider-card:hover {
+  transform: scale(1.02);
+}
 
 /* ACCORDION STYLES */
 .accordion-section h3 {
@@ -187,7 +194,7 @@ footer {
   font-weight: bold;
 }
 
-/* RESPONSIVE NAVIGATION */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -224,7 +231,7 @@ footer {
   }
 }
 
-/* GRID CARDS FOR SERVICES */
+/* CARD GRID SECTION FOR CCP PAGE */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

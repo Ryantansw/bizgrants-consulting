@@ -208,3 +208,24 @@ footer {
     font-size: 1em;
   }
 }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.ccp-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ccp-card h3 {
+  color: #0F52BA;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}

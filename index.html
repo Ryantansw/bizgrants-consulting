@@ -77,39 +77,40 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+  }
 
-    const slider = document.getElementById('slider');
-    let scrollStep = 1;
-    let scrollInterval;
-    let isUserScrolling = false;
+  const slider = document.getElementById('slider');
+  let scrollStep = 0.5; // slower scroll speed
+  let scrollInterval;
+  let isUserScrolling = false;
 
-    function startAutoScroll() {
-      scrollInterval = setInterval(() => {
-        if (!isUserScrolling) {
+  function startAutoScroll() {
+    scrollInterval = setInterval(() => {
+      if (!isUserScrolling) {
+        // If reached end, loop back
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 1) {
+          slider.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
           slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
-          if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-            slider.scrollTo({ left: 0, behavior: 'smooth' });
-          }
         }
-      }, 20); // adjust speed here
-    }
+      }
+    }, 20); // adjust for speed smoothness
+  }
 
-    function stopAutoScroll() {
-      clearInterval(scrollInterval);
-    }
+  function stopAutoScroll() {
+    clearInterval(scrollInterval);
+  }
 
-    // Pause when user interacts
-    slider.addEventListener('mousedown', () => isUserScrolling = true);
-    slider.addEventListener('touchstart', () => isUserScrolling = true);
-    slider.addEventListener('mouseup', () => isUserScrolling = false);
-    slider.addEventListener('touchend', () => isUserScrolling = false);
+  // Pause scroll when user interacts
+  slider.addEventListener('mousedown', () => isUserScrolling = true);
+  slider.addEventListener('touchstart', () => isUserScrolling = true);
+  slider.addEventListener('mouseup', () => isUserScrolling = false);
+  slider.addEventListener('touchend', () => isUserScrolling = false);
 
-    // Start on load
-    startAutoScroll();
-  </script>
+  startAutoScroll();
+</script>
 </body>
 </html>

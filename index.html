@@ -7,6 +7,31 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
+  <script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+  }
+
+  // Auto-Slider Logic
+  let slider = document.querySelector(".slider");
+  let scrollAmount = 0;
+
+  function autoScrollSlider() {
+    if (!slider) return;
+    scrollAmount += 1;
+    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+      scrollAmount = 0;
+    }
+    slider.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth"
+    });
+  }
+
+  let autoScroll = setInterval(autoScrollSlider, 25);
+</script>
+
 <body>
   <header>
     <div class="container nav-container">

@@ -27,30 +27,30 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Funding. Simplified.</h1>
-      <p>We help Singapore companies unlock Workforce Singapore (WSG) funding through Career Conversion Programmes (CCPs) – without the headache.</p>
+      <h1>Singapore's Trusted CCP Application Partner</h1>
+      <p>We help businesses secure salary support through Career Conversion Programmes — from new hires, existing staff job redesign to full submission management.</p>
     </div>
   </section>
 
   <section class="container">
     <h2>Why Companies Choose BizGrants Consulting</h2>
-    <p>We specialise in helping employers access Workforce Singapore’s Career Conversion Programmes (CCPs) for up to 90% salary support. From job redesign to application submission, we handle everything — so you can focus on operations, not paperwork.</p>
-    <p>Backed by a success-only model, we only get paid when your application is approved.</p>
+    <p>We are a consulting firm that specialises in helping employers in Singapore tap into Workforce Singapore’s Career Conversion Programmes (CCPs) to receive up to 90% salary support. Whether you're transforming roles or hiring new staff, we make your CCP journey seamless — with our end-to-end application management service.</p> 
+    <p>With our success-only model, you only pay when funding is approved — ensuring your investment is protected and results-driven.</p>
   </section>
 
   <section class="slider-section">
     <div class="container">
       <h2>Recent Approved Projects</h2>
       <div class="slider" id="slider">
-        <div class="slider-card">✅ Regional Marketing Manager – Bio-tech SME</div>
-        <div class="slider-card">✅ FnB Sustainability Manager – Restaurant Chain</div>
-        <div class="slider-card">✅ OMIP Expansion Manager – Japan Market</div>
-        <div class="slider-card">✅ HR & Culture Lead – Local SME</div>
-        <div class="slider-card">✅ Sustainability Director – Hotel Group</div>
-        <div class="slider-card">✅ Service Sales Engineer – HVAC Sector</div>
-        <div class="slider-card">✅ Digital Marketing Manager – Events Company</div>
-        <div class="slider-card">✅ UX & Web Designer – Tech Startup</div>
-        <div class="slider-card">✅ BD Executive – Tourism Industry</div>
+        <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
+        <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
+        <div class="slide">✅ International Market Expansion Manager – Approved under OMIP</div>
+        <div class="slide">✅ HR People & Culture Manager – Existing staff job redesign approved for an SME Client</div>
+        <div class="slide">✅ Sustainability Director – Approved for a hotel chain</div>
+        <div class="slide">✅ Service Sales Engineer – Approved for a client in the HVAC sector</div>
+        <div class="slide">✅ Digital Marketing Manager – Approved for an events company</div>
+        <div class="slide">✅ UX and Web Designer – Approved for a tech solutions company</div>
+        <div class="slide">✅ Business Development Executive – Approved for a client in the travel sector</div>
       </div>
     </div>
   </section>
@@ -82,28 +82,20 @@
       navLinks.classList.toggle('show');
     }
 
-    // Slider auto-scroll with pause on hover
+    // Faster auto-slider (no pause on hover)
     const slider = document.getElementById('slider');
-    let scrollSpeed = 1;
     let scrollInterval;
 
     function startSlider() {
       scrollInterval = setInterval(() => {
-        slider.scrollLeft += scrollSpeed;
+        slider.scrollLeft += 1.5;
         if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
           slider.scrollLeft = 0;
         }
-      }, 20); // speed of scroll (lower = faster)
+      }, 16); // ~60fps
     }
 
-    function stopSlider() {
-      clearInterval(scrollInterval);
-    }
-
-    slider.addEventListener('mouseover', stopSlider);
-    slider.addEventListener('mouseout', startSlider);
-
-    // Start slider when page loads
+    // Ensure slider works on mobile too
     window.addEventListener('load', startSlider);
   </script>
 </body>

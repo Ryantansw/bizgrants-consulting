@@ -83,35 +83,30 @@
     navLinks.classList.toggle('show');
   }
 
-  const slider = document.getElementById('slider');
-  let scrollStep = 0.5; // slower scroll speed
-  let scrollInterval;
+  // Auto-scroll slider with smooth behaviour
+  const slider = document.querySelector('.slider');
   let isUserScrolling = false;
 
-  function startAutoScroll() {
-    scrollInterval = setInterval(() => {
-      if (!isUserScrolling) {
-        // If reached end, loop back
-        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 1) {
-          slider.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
-        }
+  let autoScroll = () => {
+    if (!isUserScrolling && slider) {
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        slider.scrollBy({ left: 1, behavior: 'smooth' });
       }
-    }, 20); // adjust for speed smoothness
-  }
+    }
+  };
 
-  function stopAutoScroll() {
-    clearInterval(scrollInterval);
-  }
+  let scrollInterval = setInterval(autoScroll, 30);
 
-  // Pause scroll when user interacts
-  slider.addEventListener('mousedown', () => isUserScrolling = true);
-  slider.addEventListener('touchstart', () => isUserScrolling = true);
-  slider.addEventListener('mouseup', () => isUserScrolling = false);
-  slider.addEventListener('touchend', () => isUserScrolling = false);
-
-  startAutoScroll();
+  // Pause auto-scroll while user is interacting
+  slider.addEventListener('pointerdown', () => { isUserScrolling = true; });
+  slider.addEventListener('pointerup', () => { isUserScrolling = false; });
+  slider.addEventListener('touchstart', () => { isUserScrolling = true; });
+  slider.addEventListener('touchend', () => { isUserScrolling = false; });
+  slider.addEventListener('mouseenter', () => { isUserScrolling = true; });
+  slider.addEventListener('mouseleave', () => { isUserScrolling = false; });
 </script>
+
 </body>
 </html>

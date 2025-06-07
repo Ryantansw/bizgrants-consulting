@@ -229,3 +229,33 @@ footer {
   margin-bottom: 1em;
   font-size: 1.2em;
 }
+
+
+.slider-section {
+  margin-top: 3em;
+  overflow-x: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 1.5em;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1em 0;
+  white-space: nowrap;
+}
+
+.slide {
+  flex: 0 0 auto;
+  min-width: 300px;
+  background: #f4f4f4;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  color: #333;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}

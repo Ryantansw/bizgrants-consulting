@@ -131,6 +131,10 @@ footer {
   white-space: nowrap;
 }
 
+.slider:hover {
+  animation-play-state: paused;
+}
+
 .slide {
   min-width: 300px;
   background: #0F52BA;
@@ -145,3 +149,4 @@ footer {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+

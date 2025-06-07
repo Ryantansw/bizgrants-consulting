@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BizGrants Consulting | Career Conversion & Workforce Solutions</title>
+  <title>BizGrants Consulting | Career Conversion Programmes Advisory</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
@@ -41,7 +41,7 @@
   <section class="slider-section">
     <div class="container">
       <h2>Recent Approved Projects</h2>
-      <div class="slider">
+      <div class="slider" id="slider">
         <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
         <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
         <div class="slide">✅ International Market Expansion Manager – Approved under OMIP</div>
@@ -82,23 +82,34 @@
       navLinks.classList.toggle('show');
     }
 
-    // Auto-slide logic for slider
-    const slider = document.querySelector('.slider');
-    let scrollAmount = 0;
+    const slider = document.getElementById('slider');
     let scrollStep = 1;
+    let scrollInterval;
+    let isUserScrolling = false;
 
-    setInterval(() => {
-      if (!slider) return;
+    function startAutoScroll() {
+      scrollInterval = setInterval(() => {
+        if (!isUserScrolling) {
+          slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
+          if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+            slider.scrollTo({ left: 0, behavior: 'smooth' });
+          }
+        }
+      }, 20); // adjust speed here
+    }
 
-      scrollAmount += scrollStep;
+    function stopAutoScroll() {
+      clearInterval(scrollInterval);
+    }
 
-      if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
-        scrollAmount = 0;
-        slider.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
-      }
-    }, 20); // Speed of scroll
+    // Pause when user interacts
+    slider.addEventListener('mousedown', () => isUserScrolling = true);
+    slider.addEventListener('touchstart', () => isUserScrolling = true);
+    slider.addEventListener('mouseup', () => isUserScrolling = false);
+    slider.addEventListener('touchend', () => isUserScrolling = false);
+
+    // Start on load
+    startAutoScroll();
   </script>
 </body>
 </html>

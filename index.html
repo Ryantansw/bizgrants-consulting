@@ -40,11 +40,7 @@
 
   <section class="slider-section">
     <div class="container">
-      <h2 style="color: #000;">Recent Approved Projects</h2>
-      <div class="slider-controls">
-        <button onclick="scrollSlider('left')">←</button>
-        <button onclick="scrollSlider('right')">→</button>
-      </div>
+      <h2 class="slider-heading">Recent Approved Projects</h2>
       <div class="slider" id="slider">
         <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
         <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
@@ -86,11 +82,11 @@
       navLinks.classList.toggle('show');
     }
 
-    // Auto-scroll logic
+    // Auto-scroll slider
     const slider = document.getElementById('slider');
     let isUserScrolling = false;
 
-    let autoScroll = () => {
+    function autoScroll() {
       if (!isUserScrolling && slider) {
         if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
           slider.scrollTo({ left: 0, behavior: 'smooth' });
@@ -98,27 +94,16 @@
           slider.scrollBy({ left: 1, behavior: 'smooth' });
         }
       }
-    };
+    }
 
     let scrollInterval = setInterval(autoScroll, 30);
 
-    // Pause auto-scroll while user interacts
     slider.addEventListener('pointerdown', () => { isUserScrolling = true; });
     slider.addEventListener('pointerup', () => { isUserScrolling = false; });
     slider.addEventListener('touchstart', () => { isUserScrolling = true; });
     slider.addEventListener('touchend', () => { isUserScrolling = false; });
     slider.addEventListener('mouseenter', () => { isUserScrolling = true; });
     slider.addEventListener('mouseleave', () => { isUserScrolling = false; });
-
-    // Manual scroll buttons
-    function scrollSlider(direction) {
-      const scrollAmount = 300;
-      if (direction === 'left') {
-        slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-      } else if (direction === 'right') {
-        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
-    }
   </script>
 </body>
 </html>

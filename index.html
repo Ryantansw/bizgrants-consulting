@@ -38,9 +38,13 @@
     <p>With our success-only model, you only pay when funding is approved — ensuring your investment is protected and results-driven.</p>
   </section>
 
-  <section class="slider-section" style="background-color: #0F52BA; color: white;">
+  <section class="slider-section">
     <div class="container">
-      <h2>Recent Approved Projects</h2>
+      <h2 style="color: #000;">Recent Approved Projects</h2>
+      <div class="slider-controls">
+        <button onclick="scrollSlider('left')">←</button>
+        <button onclick="scrollSlider('right')">→</button>
+      </div>
       <div class="slider" id="slider">
         <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
         <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
@@ -82,11 +86,11 @@
       navLinks.classList.toggle('show');
     }
 
-    // Auto-scroll slider with smooth behaviour
-    const slider = document.querySelector('.slider');
+    // Auto-scroll logic
+    const slider = document.getElementById('slider');
     let isUserScrolling = false;
 
-    const autoScroll = () => {
+    let autoScroll = () => {
       if (!isUserScrolling && slider) {
         if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
           slider.scrollTo({ left: 0, behavior: 'smooth' });
@@ -98,12 +102,23 @@
 
     let scrollInterval = setInterval(autoScroll, 30);
 
+    // Pause auto-scroll while user interacts
     slider.addEventListener('pointerdown', () => { isUserScrolling = true; });
     slider.addEventListener('pointerup', () => { isUserScrolling = false; });
     slider.addEventListener('touchstart', () => { isUserScrolling = true; });
     slider.addEventListener('touchend', () => { isUserScrolling = false; });
     slider.addEventListener('mouseenter', () => { isUserScrolling = true; });
     slider.addEventListener('mouseleave', () => { isUserScrolling = false; });
+
+    // Manual scroll buttons
+    function scrollSlider(direction) {
+      const scrollAmount = 300;
+      if (direction === 'left') {
+        slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else if (direction === 'right') {
+        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
   </script>
 </body>
 </html>

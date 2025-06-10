@@ -5,14 +5,12 @@ body {
   padding: 0;
   background: #fff;
   color: #333;
-  line-height: 1.6;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 2em 0;
 }
 
 /* HEADER */
@@ -26,6 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1em 0;
 }
 
 .logo img.logo-img {
@@ -66,7 +65,7 @@ nav a:hover {
   background: linear-gradient(135deg, #0F52BA, #89CFF0);
   color: white;
   text-align: center;
-  padding: 6em 1em;
+  padding: 5em 1em;
 }
 
 .hero h1 {
@@ -76,8 +75,6 @@ nav a:hover {
 
 .hero p {
   font-size: 1.2em;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 /* SECTION */
@@ -94,80 +91,9 @@ section {
 
 .card {
   background: #fff;
-  padding: 2.5em;
+  padding: 2em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-}
-
-/* SLIDER SECTION */
-.slider-section {
-  margin-top: 4em;
-  background-color: #0F52BA;
-  color: white;
-  padding: 3em 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.slider-section h2 {
-  margin-bottom: 1em;
-}
-
-.slider {
-  display: flex;
-  gap: 1.5em;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  white-space: nowrap;
-  padding: 1em 0;
-}
-
-.slide {
-  flex: 0 0 auto;
-  min-width: 450px;
-  background: white;
-  color: #0F52BA;
-  padding: 2em;
-  border-radius: 8px;
-  font-weight: 500;
-  white-space: normal;
-  word-break: break-word;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Scroll buttons */
-.slider-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  padding: 0 1em;
-  pointer-events: none;
-}
-
-.slider-button {
-  background: rgba(255, 255, 255, 0.8);
-  border: none;
-  font-size: 1.5em;
-  color: #0F52BA;
-  cursor: pointer;
-  border-radius: 50%;
-  pointer-events: auto;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-}
-
-.slider::-webkit-scrollbar {
-  display: none;
 }
 
 /* FOOTER */
@@ -175,11 +101,132 @@ footer {
   background: #0F52BA;
   color: white;
   text-align: center;
-  padding: 2.5em 0;
+  padding: 2em 0;
   margin-top: 4em;
 }
 
-/* MEDIA QUERIES */
+/* SLIDER SECTION */
+.slider-section {
+  margin-top: 4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background: #fff;
+}
+
+/* SLIDER */
+.slider {
+  display: flex;
+  gap: 1.5em;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1em 0;
+  white-space: nowrap;
+}
+
+.slide {
+  flex: 0 0 auto;
+  min-width: 450px;
+  background: #f4f4f4;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  color: #333;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* SLIDER CONTROLS */
+.slider-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.slider-controls button {
+  background: #0F52BA;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.slider-controls button:hover {
+  background: #003e8a;
+}
+
+/* ACCORDION */
+.accordion-section h3 {
+  font-size: 1.2em;
+  color: #0F52BA;
+  cursor: pointer;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.accordion-content {
+  display: none;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  line-height: 1.6;
+  border-left: 2px solid #0F52BA;
+  margin-bottom: 1em;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+/* CCP LIST */
+.ccp-list p {
+  margin-bottom: 1.5em;
+  line-height: 1.6;
+}
+
+.ccp-list h3 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+  color: #0F52BA;
+}
+
+.ccp-list p::before {
+  content: "✔ ";
+  color: #0F52BA;
+  font-weight: bold;
+}
+
+/* CCP CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.ccp-card {
+  background: #ffffff;
+  border: 1px solid #eee;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ccp-card h3 {
+  color: #0F52BA;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;

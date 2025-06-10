@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BizGrants Consulting | Career Conversion Programme Experts</title>
-  <meta name="description" content="BizGrants Consulting helps Singapore companies secure salary support through Career Conversion Programmes (CCPs).">
+  <title>BizGrants Consulting | Career Conversion Programmes Advisory</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
+  <header>
     <div class="container nav-container">
       <div class="logo">
-        <img src="images/logo.png" alt="BizGrants Consulting logo" class="logo-img" />
+        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
       </div>
       <nav>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -28,46 +25,27 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <h1>Singapore's Trusted CCP Application Partner</h1>
-      <p>We help businesses secure salary support through Career Conversion Programmes — from new hires and existing staff job redesign to full submission management.</p>
-      <a href="contact.html" class="btn-primary">Speak to Us</a>
+      <p>We help businesses secure salary support through Career Conversion Programmes — from new hires, existing staff job redesign to full submission management.</p>
     </div>
   </section>
 
-  <!-- TRUST SECTION -->
-  <section class="container section">
-    <div class="text-center">
-      <h2>Why Companies Choose BizGrants Consulting</h2>
-      <p class="subtitle">We specialise in helping Singapore employers tap into Workforce Singapore’s Career Conversion Programmes (CCPs) to receive up to 90% salary support.</p>
-    </div>
-    <div class="card-grid">
-      <div class="card">
-        <h3>End-to-End CCP Consulting</h3>
-        <p>From eligibility checks to full application submission — we manage the entire process for you.</p>
-      </div>
-      <div class="card">
-        <h3>Fast Turnaround Time</h3>
-        <p>We understand your business context quickly and work efficiently to structure and submit your application — helping you achieve the fastest possible approval.</p>
-      </div>
-      <div class="card">
-        <h3>Personalised Advisory</h3>
-        <p>No one-size-fits-all. We diagnose your workforce needs and align them to the most suitable CCP.</p>
-      </div>
-    </div>
+  <section class="container">
+    <h2>Why Companies Choose BizGrants Consulting</h2>
+    <p>We are a consulting firm that specialises in helping employers in Singapore tap into Workforce Singapore’s Career Conversion Programmes (CCPs) to receive up to 90% salary support. Whether you're transforming roles or hiring new staff, we make your CCP journey seamless — with our end-to-end application management service.</p> 
+    <p>With our success-only model, you only pay when funding is approved — ensuring your investment is protected and results-driven.</p>
   </section>
 
-  <!-- SLIDER -->
-  <section class="slider-section">
+  <section class="slider-section" style="background-color: #0F52BA; color: white;">
     <div class="container">
       <h2>Recent Approved Projects</h2>
       <div class="slider" id="slider">
         <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
         <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
         <div class="slide">✅ International Market Expansion Manager – Approved under OMIP</div>
-        <div class="slide">✅ HR People & Culture Manager – Approved for an SME Client</div>
+        <div class="slide">✅ HR People & Culture Manager – Existing staff job redesign approved for an SME Client</div>
         <div class="slide">✅ Sustainability Director – Approved for a hotel chain</div>
         <div class="slide">✅ Service Sales Engineer – Approved for a client in the HVAC sector</div>
         <div class="slide">✅ Digital Marketing Manager – Approved for an events company</div>
@@ -77,26 +55,39 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <section class="container grid">
+    <div class="card">
+      <h3>End-to-End CCP Consulting</h3>
+      <p>From eligibility checks to full application submission — we manage the entire process for you.</p>
+    </div>
+    <div class="card">
+      <h3>Fast Turnaround Time</h3>
+      <p>We understand your business context quickly and work efficiently to structure and submit your application — helping you achieve the fastest possible approval.</p>
+    </div>
+    <div class="card">
+      <h3>Personalised Advisory for Each Client</h3>
+      <p>No one-size-fits-all. We diagnose your workforce needs and align them to the most suitable CCP.</p>
+    </div>
+  </section>
+
   <footer>
     <div class="container">
       <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- JS -->
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('show');
     }
 
-    // Slider logic
-    const slider = document.getElementById('slider');
+    // Auto-scroll slider with smooth behaviour
+    const slider = document.querySelector('.slider');
     let isUserScrolling = false;
 
-    const scrollSlider = () => {
-      if (!isUserScrolling) {
+    const autoScroll = () => {
+      if (!isUserScrolling && slider) {
         if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
           slider.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
@@ -105,15 +96,14 @@
       }
     };
 
-    let interval = setInterval(scrollSlider, 30);
+    let scrollInterval = setInterval(autoScroll, 30);
 
-    slider.addEventListener('pointerdown', () => isUserScrolling = true);
-    slider.addEventListener('pointerup', () => isUserScrolling = false);
-    slider.addEventListener('touchstart', () => isUserScrolling = true);
-    slider.addEventListener('touchend', () => isUserScrolling = false);
-    slider.addEventListener('mouseenter', () => isUserScrolling = true);
-    slider.addEventListener('mouseleave', () => isUserScrolling = false);
+    slider.addEventListener('pointerdown', () => { isUserScrolling = true; });
+    slider.addEventListener('pointerup', () => { isUserScrolling = false; });
+    slider.addEventListener('touchstart', () => { isUserScrolling = true; });
+    slider.addEventListener('touchend', () => { isUserScrolling = false; });
+    slider.addEventListener('mouseenter', () => { isUserScrolling = true; });
+    slider.addEventListener('mouseleave', () => { isUserScrolling = false; });
   </script>
-
 </body>
 </html>

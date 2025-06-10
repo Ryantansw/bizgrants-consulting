@@ -4,37 +4,37 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background: #fff;
-  color: #333;
+  background: #ffffff;
+  color: #222;
   line-height: 1.6;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+h1, h2, h3 {
+  color: #0F52BA;
+  margin-top: 0;
 }
 
-h1, h2, h3, h4 {
-  margin: 0 0 0.5em;
+p {
+  margin-bottom: 1em;
 }
 
-/* NAVIGATION */
-header {
-  background: #fff;
+/* HEADER */
+.main-header {
+  background: #ffffff;
   border-bottom: 1px solid #eee;
-  padding: 1em 0;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1em 0;
 }
 
 .logo-img {
@@ -44,14 +44,15 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5em;
+  gap: 2em;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  font-weight: 600;
+  text-decoration: none;
   color: #333;
+  font-weight: 500;
 }
 
 nav a.active,
@@ -67,96 +68,64 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* HERO SECTION */
-.hero {
+/* HERO */
+.hero.new-hero {
   background: linear-gradient(135deg, #0F52BA, #89CFF0);
-  color: white;
+  color: #fff;
+  padding: 4em 1em;
   text-align: center;
-  padding: 5em 1em;
 }
 
-.hero h1 {
-  font-size: 2.8em;
-  margin-bottom: 0.3em;
+.hero-content h1 {
+  font-size: 2.5rem;
 }
 
-.hero p {
-  font-size: 1.2em;
+.hero-content p {
+  font-size: 1.2rem;
   max-width: 700px;
-  margin: 0 auto 1.5em;
+  margin: 1em auto;
 }
 
 .cta-button {
-  background-color: white;
-  color: #0F52BA;
-  padding: 0.8em 1.5em;
-  font-weight: bold;
-  border-radius: 30px;
   display: inline-block;
-  transition: background 0.3s;
+  padding: 0.8em 1.5em;
+  background: #ffffff;
+  color: #0F52BA;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1em;
 }
 
-.cta-button:hover {
-  background-color: #e6f0ff;
-}
-
-/* FEATURE HIGHLIGHTS */
-.highlights {
-  display: flex;
-  gap: 2em;
-  flex-wrap: wrap;
-  margin-top: 3em;
-}
-
-.highlights .card {
-  flex: 1 1 30%;
+/* SECTION STYLES */
+.section-light {
+  padding: 4em 1em;
   background: #f9f9f9;
+}
+
+.section-cards {
+  padding: 4em 1em;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #eee;
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* CCP GRID */
-.ccp-grid {
-  display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 2em;
-}
-
-.ccp-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 1.5em;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.ccp-card h4 {
-  margin-bottom: 0.5em;
-  color: #0F52BA;
-}
-
-.cta-button-secondary {
-  display: inline-block;
-  margin-top: 2em;
-  padding: 0.7em 1.5em;
-  border: 2px solid #0F52BA;
-  color: #0F52BA;
-  border-radius: 25px;
-  font-weight: 600;
-}
-
-.cta-button-secondary:hover {
-  background-color: #f0f8ff;
-}
-
-/* SLIDER SECTION */
+/* SLIDER */
 .slider-section {
-  margin-top: 4em;
-  overflow: hidden;
-  background: #f0f8ff;
-  padding: 3em 0;
+  background: #0F52BA;
+  color: white;
+  padding: 4em 1em;
 }
 
 .slider {
@@ -168,35 +137,19 @@ nav a:hover {
 }
 
 .slide {
-  min-width: 280px;
-  background: #fff;
-  padding: 1.2em;
-  border-left: 4px solid #0F52BA;
+  flex: 0 0 auto;
+  min-width: 320px;
+  background: #ffffff;
+  color: #0F52BA;
+  padding: 1.5em;
   border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  word-break: break-word;
 }
 
 .slider::-webkit-scrollbar {
   display: none;
-}
-
-/* CTA STRIP */
-.cta-strip {
-  background: #0F52BA;
-  color: white;
-  text-align: center;
-  padding: 3em 1em;
-}
-
-.cta-strip h2 {
-  margin-bottom: 1em;
-}
-
-.cta-strip .cta-button {
-  background-color: white;
-  color: #0F52BA;
-  border-radius: 25px;
-  font-weight: bold;
 }
 
 /* FOOTER */
@@ -205,7 +158,7 @@ footer {
   color: white;
   text-align: center;
   padding: 2em 0;
-  margin-top: 3em;
+  margin-top: 4em;
 }
 
 /* RESPONSIVE */
@@ -218,6 +171,8 @@ footer {
   nav ul {
     display: none;
     flex-direction: column;
+    gap: 1em;
+    padding-left: 0;
     width: 100%;
   }
 
@@ -230,7 +185,15 @@ footer {
     margin-top: 1rem;
   }
 
-  .highlights {
-    flex-direction: column;
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .slide {
+    min-width: 260px;
   }
 }

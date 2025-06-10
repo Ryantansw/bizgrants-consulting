@@ -5,12 +5,14 @@ body {
   padding: 0;
   background: #fff;
   color: #333;
+  line-height: 1.6;
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  padding: 2em 0;
 }
 
 /* HEADER */
@@ -24,7 +26,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
 }
 
 .logo img.logo-img {
@@ -65,7 +66,7 @@ nav a:hover {
   background: linear-gradient(135deg, #0F52BA, #89CFF0);
   color: white;
   text-align: center;
-  padding: 5em 1em;
+  padding: 6em 1em;
 }
 
 .hero h1 {
@@ -75,9 +76,11 @@ nav a:hover {
 
 .hero p {
   font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-/* SECTION LAYOUT */
+/* SECTION */
 section {
   padding: 4em 0;
 }
@@ -91,16 +94,28 @@ section {
 
 .card {
   background: #fff;
-  padding: 2em;
+  padding: 2.5em;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
-/* SLIDER */
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* SLIDER SECTION */
 .slider-section {
   margin-top: 4em;
   background-color: #0F52BA;
   color: white;
+  padding: 3em 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-section h2 {
+  margin-bottom: 1em;
 }
 
 .slider {
@@ -108,8 +123,8 @@ section {
   gap: 1.5em;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 1.5em 0;
   white-space: nowrap;
+  padding: 1em 0;
 }
 
 .slide {
@@ -117,12 +132,38 @@ section {
   min-width: 450px;
   background: white;
   color: #0F52BA;
-  padding: 1.5em;
+  padding: 2em;
   border-radius: 8px;
   font-weight: 500;
   white-space: normal;
   word-break: break-word;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll buttons */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1em;
+  pointer-events: none;
+}
+
+.slider-button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 1.5em;
+  color: #0F52BA;
+  cursor: pointer;
+  border-radius: 50%;
+  pointer-events: auto;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
 }
 
 .slider::-webkit-scrollbar {
@@ -134,7 +175,7 @@ footer {
   background: #0F52BA;
   color: white;
   text-align: center;
-  padding: 2em 0;
+  padding: 2.5em 0;
   margin-top: 4em;
 }
 

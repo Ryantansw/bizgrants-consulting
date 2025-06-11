@@ -75,11 +75,19 @@ nav a:hover {
 
 .hero p {
   font-size: 1.2em;
+  max-width: 700px;
+  margin: auto;
 }
 
-/* SECTION */
+/* SECTION LAYOUT */
 section {
   padding: 4em 0;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 1em;
 }
 
 /* GRID CARDS */
@@ -96,31 +104,26 @@ section {
   border-radius: 8px;
 }
 
-/* FOOTER */
-footer {
-  background: #0F52BA;
-  color: white;
-  text-align: center;
-  padding: 2em 0;
-  margin-top: 4em;
-}
-
-/* SLIDER SECTION */
-.slider-section {
-  margin-top: 4em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background: #fff;
-}
-
 /* SLIDER */
+.slider-section {
+  margin-top: 3em;
+  background: white; /* ✅ Revert blue */
+  padding: 3em 0;
+}
+
+.slider-heading {
+  color: #111;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
 .slider {
   display: flex;
-  gap: 1.5em;
+  gap: 1em;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 1em 0;
-  white-space: nowrap;
+  padding-bottom: 1em;
 }
 
 .slide {
@@ -140,93 +143,16 @@ footer {
   display: none;
 }
 
-/* SLIDER CONTROLS */
-.slider-controls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5em;
-  margin-bottom: 1em;
-}
-
-.slider-controls button {
+/* FOOTER */
+footer {
   background: #0F52BA;
   color: white;
-  border: none;
-  padding: 0.5em 1em;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.2s ease;
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 4em;
 }
 
-.slider-controls button:hover {
-  background: #003e8a;
-}
-
-/* ACCORDION */
-.accordion-section h3 {
-  font-size: 1.2em;
-  color: #0F52BA;
-  cursor: pointer;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-}
-
-.accordion-content {
-  display: none;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  line-height: 1.6;
-  border-left: 2px solid #0F52BA;
-  margin-bottom: 1em;
-}
-
-.accordion-content.active {
-  display: block;
-}
-
-/* CCP LIST */
-.ccp-list p {
-  margin-bottom: 1.5em;
-  line-height: 1.6;
-}
-
-.ccp-list h3 {
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  font-size: 1.25em;
-  color: #0F52BA;
-}
-
-.ccp-list p::before {
-  content: "✔ ";
-  color: #0F52BA;
-  font-weight: bold;
-}
-
-/* CCP CARDS */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2em;
-  margin-top: 2em;
-}
-
-.ccp-card {
-  background: #ffffff;
-  border: 1px solid #eee;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-.ccp-card h3 {
-  color: #0F52BA;
-  margin-bottom: 1em;
-  font-size: 1.2em;
-}
-
-/* RESPONSIVE */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;

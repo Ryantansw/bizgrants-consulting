@@ -24,15 +24,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
 }
 
 .logo img.logo-img {
-  height: 100px;
+  height: 80px;
   display: block;
 }
 
-/* NAVIGATION */
 nav ul {
   list-style: none;
   display: flex;
@@ -75,22 +73,66 @@ nav a:hover {
 
 .hero p {
   font-size: 1.2em;
-  max-width: 700px;
-  margin: auto;
+  margin-bottom: 1.5em;
 }
 
-/* SECTION LAYOUT */
+.cta-button {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #0F52BA;
+  padding: 0.75em 1.5em;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0F52BA;
+  color: white;
+}
+
+/* SECTION GENERAL */
 section {
   padding: 4em 0;
 }
 
-h2 {
-  font-size: 1.8em;
-  font-weight: 700;
+/* SLIDER SECTION */
+.slider-section {
+  background-color: #fff;
+  padding: 4em 0;
+}
+
+.slider-section h2 {
+  font-size: 1.75em;
   margin-bottom: 1em;
 }
 
-/* GRID CARDS */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5em;
+  padding: 1em 0;
+}
+
+.slide {
+  flex: 0 0 auto;
+  min-width: 400px;
+  background: #f9f9f9;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD SECTION */
 .grid {
   display: grid;
   gap: 2em;
@@ -100,47 +142,8 @@ h2 {
 .card {
   background: #fff;
   padding: 2em;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-}
-
-/* SLIDER */
-.slider-section {
-  margin-top: 3em;
-  background: white; /* ✅ Revert blue */
-  padding: 3em 0;
-}
-
-.slider-heading {
-  color: #111;
-  text-align: left;
-  font-weight: 700;
-  margin-bottom: 1em;
-}
-
-.slider {
-  display: flex;
-  gap: 1em;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding-bottom: 1em;
-}
-
-.slide {
-  flex: 0 0 auto;
-  min-width: 450px;
-  background: #f4f4f4;
-  padding: 1.5em;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  font-weight: 500;
-  color: #333;
-  white-space: normal;
-  word-break: break-word;
-}
-
-.slider::-webkit-scrollbar {
-  display: none;
 }
 
 /* FOOTER */
@@ -163,7 +166,6 @@ footer {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    padding-left: 0;
     width: 100%;
   }
 

@@ -3,9 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BizGrants Consulting | Career Conversion Programmes Advisory</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>BizGrants Consulting | Career Conversion Programme Experts</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="BizGrants Consulting helps Singapore companies tap into up to 90% salary support through Workforce Singapore’s Career Conversion Programmes (CCPs). We manage the entire application process end-to-end.">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="BizGrants Consulting | Career Conversion Experts" />
+  <meta property="og:description" content="Singapore’s trusted partner for Career Conversion Programme advisory. Get up to 90% salary support with full application support." />
+  <meta property="og:image" content="https://yourdomain.com/images/logo.png" /> <!-- replace with actual image URL -->
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Calendly Badge Widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/enquiries-bizgrants/30min',
+        text: 'Book a Call',
+        color: '#0069ff',
+        textColor: '#ffffff',
+        branding: true
+      });
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -29,21 +61,19 @@
     <div class="container">
       <h1>Singapore's Trusted CCP Application Partner</h1>
       <p>We help businesses secure salary support through Career Conversion Programmes — from new hires, existing staff job redesign to full submission management.</p>
-      <a href="https://calendly.com/enquiries-bizgrants/30min" class="cta-button">Book a Call</a>
     </div>
   </section>
 
-  <section class="container">
+  <section class="container why-us">
     <h2>Why Companies Choose BizGrants Consulting</h2>
-    <p>We are a consulting firm that specialises in helping employers in Singapore tap into Workforce Singapore’s Career Conversion Programmes (CCPs) to receive up to 90% salary support. Whether you're transforming roles or hiring new staff, we make your CCP journey seamless — with our end-to-end application management service.</p> 
-    <p>Our success-only fee structure ensures you get either an approval or a full refund.</p>
-    <a href="https://calendly.com/enquiries-bizgrants/30min" class="cta-button">Book a Call</a>
+    <p>We are a consulting firm that specialises in helping employers in Singapore tap into Workforce Singapore’s Career Conversion Programmes (CCPs) to receive up to 90% salary support. Whether you're transforming roles or hiring new staff, we make your CCP journey seamless — with our end-to-end application management service.</p>
+    <p>With our success-only model, you only pay when funding is approved — ensuring your investment is protected and results-driven.</p>
   </section>
 
   <section class="slider-section">
     <div class="container">
       <h2 style="color: #000;">Recent Approved Projects</h2>
-      <div class="slider">
+      <div class="slider" id="slider">
         <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
         <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
         <div class="slide">✅ International Market Expansion Manager – Approved under OMIP</div>
@@ -84,44 +114,27 @@
       navLinks.classList.toggle('show');
     }
 
-    const slider = document.querySelector('.slider');
+    // Auto scroll logic (smooth, not too fast)
+    const slider = document.getElementById("slider");
     let isUserScrolling = false;
+    let scrollSpeed = 0.6; // Adjust speed as needed
 
-    let autoScroll = () => {
-      if (!isUserScrolling && slider) {
-        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-          slider.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          slider.scrollBy({ left: 1, behavior: 'smooth' });
-        }
+    function autoScroll() {
+      if (!slider || isUserScrolling) return;
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        slider.scrollBy({ left: scrollSpeed, behavior: 'smooth' });
       }
-    };
+    }
 
-    let scrollInterval = setInterval(autoScroll, 30);
+    let scrollInterval = setInterval(autoScroll, 20);
 
-    slider.addEventListener('pointerdown', () => { isUserScrolling = true; });
-    slider.addEventListener('pointerup', () => { isUserScrolling = false; });
-    slider.addEventListener('touchstart', () => { isUserScrolling = true; });
-    slider.addEventListener('touchend', () => { isUserScrolling = false; });
-    slider.addEventListener('mouseenter', () => { isUserScrolling = true; });
-    slider.addEventListener('mouseleave', () => { isUserScrolling = false; });
+    // Detect user interaction
+    slider.addEventListener('pointerdown', () => isUserScrolling = true);
+    slider.addEventListener('pointerup', () => isUserScrolling = false);
+    slider.addEventListener('mouseenter', () => isUserScrolling = true);
+    slider.addEventListener('mouseleave', () => isUserScrolling = false);
   </script>
-
-  <!-- Calendly badge widget begin -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    window.onload = function () {
-      Calendly.initBadgeWidget({
-        url: 'https://calendly.com/enquiries-bizgrants/30min',
-        text: 'Book a Call',
-        color: '#0069ff',
-        textColor: '#ffffff',
-        branding: true
-      });
-    };
-  </script>
-  <!-- Calendly badge widget end -->
-
 </body>
 </html>

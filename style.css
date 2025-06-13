@@ -13,24 +13,28 @@ body {
   margin: auto;
 }
 
+a {
+  color: #0F52BA;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
 /* HEADER */
 header {
   background: #fff;
   padding: 1em 0;
   border-bottom: 1px solid #eee;
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1em 0;
 }
-
 .logo img.logo-img {
-  height: 80px;
+  height: 100px;
   display: block;
 }
-
 nav ul {
   list-style: none;
   display: flex;
@@ -38,18 +42,15 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
 nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
 }
-
 nav a.active,
 nav a:hover {
   color: #0F52BA;
 }
-
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -58,92 +59,158 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* HERO BANNER */
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #0F52BA, #89CFF0);
   color: white;
   text-align: center;
-  padding: 5em 1em;
+  padding: 5em 1em 4em 1em;
 }
-
 .hero h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
+  font-weight: 700;
   margin-bottom: 0.5em;
+  letter-spacing: -0.02em;
 }
-
 .hero p {
-  font-size: 1.2em;
-  margin-bottom: 1.5em;
+  font-size: 1.17em;
+  margin-bottom: 0;
 }
 
-.cta-button {
-  display: inline-block;
-  background-color: #ffffff;
-  color: #0F52BA;
-  padding: 0.75em 1.5em;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* WHY-US SECTION */
+.why-us {
+  padding-top: 4em;
+  padding-bottom: 2.5em;
 }
-
-.cta-button:hover {
-  background-color: #0F52BA;
-  color: white;
+.why-us h2 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 1.2em;
 }
-
-/* SECTION GENERAL */
-section {
-  padding: 4em 0;
+.why-us p {
+  line-height: 1.7;
+  margin-bottom: 1.1em;
+  font-size: 1.05em;
 }
 
 /* SLIDER SECTION */
 .slider-section {
-  background-color: #fff;
-  padding: 4em 0;
+  margin-top: 0;
+  padding: 4em 0 4em 0;
+  background: #fff;
 }
-
 .slider-section h2 {
-  font-size: 1.75em;
-  margin-bottom: 1em;
+  font-size: 1.18em;
+  font-weight: 700;
+  margin-bottom: 1.7em;
+  color: #111;
 }
-
 .slider {
   display: flex;
+  gap: 2em;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 1.5em;
-  padding: 1em 0;
+  padding: 0.5em 0;
+  white-space: nowrap;
 }
-
 .slide {
   flex: 0 0 auto;
   min-width: 400px;
-  background: #f9f9f9;
-  padding: 1.5em;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  max-width: 480px;
+  background: #f4f4f4;
+  padding: 1.3em 1.2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.06);
   font-weight: 500;
+  font-size: 1.06em;
   color: #333;
-  word-wrap: break-word;
+  white-space: normal;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+.slider::-webkit-scrollbar { display: none; }
+
+/* CTA BUTTON */
+.cta-btn {
+  display: inline-block;
+  background: #0F52BA;
+  color: #fff !important;
+  padding: 0.85em 2.2em;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 1.05em;
+  margin: 1.3em auto 0 auto;
+  box-shadow: 0 1px 8px rgba(15,82,186,0.07);
+  transition: background 0.2s, box-shadow 0.2s;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background: #1549A7;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 3px 14px rgba(15,82,186,0.13);
 }
 
-.slider::-webkit-scrollbar {
-  display: none;
+/* CCP CARDS GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+.ccp-card {
+  background: #fff;
+  border: 1px solid #e3eaf6;
+  padding: 2.1em 2em;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(15,82,186,0.04);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.ccp-card h3 {
+  color: #0F52BA;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.ccp-card p {
+  font-size: 1.03em;
+  margin-bottom: 0;
+  line-height: 1.65;
+  color: #444;
 }
 
-/* CARD SECTION */
+/* GRID CARD SECTION (homepage) */
 .grid {
   display: grid;
-  gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.2em;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
-
 .card {
   background: #fff;
-  padding: 2em;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2.1em 2em;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border-radius: 9px;
+  border: 1px solid #f2f2f2;
+}
+.card h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #0F52BA;
+  margin-bottom: 1em;
+}
+.card p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #444;
 }
 
 /* FOOTER */
@@ -153,40 +220,66 @@ footer {
   text-align: center;
   padding: 2em 0;
   margin-top: 4em;
+  font-size: 1em;
+  letter-spacing: 0.01em;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES: Responsive Design */
+@media (max-width: 900px) {
+  .slider {
+    gap: 1em;
+  }
+  .slide {
+    min-width: 320px;
+    max-width: 99vw;
+    font-size: 1em;
+    padding: 1em 0.8em;
+  }
+  .card-grid, .grid {
+    gap: 1.2em;
+    margin-bottom: 2.5em;
+  }
+  .card, .ccp-card {
+    padding: 1.2em 1em;
+  }
+  .logo img.logo-img {
+    height: 64px;
+  }
+}
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
     align-items: flex-start;
   }
-
   nav ul {
     display: none;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.1rem;
+    padding-left: 0;
     width: 100%;
+    margin-top: 1.2em;
+    background: #fff;
   }
-
   nav ul.show {
     display: flex;
   }
-
   .hamburger {
     display: block;
     margin-top: 1rem;
   }
+  .hero h1 { font-size: 1.22em; }
+  .hero p { font-size: 1em; }
+  .container { width: 97%; }
+}
 
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
+/* Misc Spacing Adjustments */
+@media (max-width: 500px) {
   .slide {
-    min-width: 320px;
+    min-width: 240px;
+    font-size: 0.99em;
+    padding: 0.7em 0.6em;
   }
+  .hero { padding: 2.4em 0.7em 2em 0.7em; }
+  .slider-section { padding: 2.2em 0; }
+  .card-grid, .grid { margin-bottom: 1em; }
 }

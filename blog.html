@@ -3,27 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Blog | BizGrants Consulting</title>
-  <meta name="description" content="Read the latest CCP and grant funding updates from BizGrants Consulting. Stay ahead with news, case studies and SME transformation tips." />
-  <link rel="canonical" href="https://bizgrants.consulting/blog.html" />
-
-  <meta property="og:title" content="Blog & Insights | BizGrants Consulting" />
-  <meta property="og:description" content="Updates on WSG funding, Career Conversion Programmes and best practices for Singapore companies." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://bizgrants.consulting/blog.html" />
-  <meta property="og:image" content="https://bizgrants.consulting/images/logo.png" />
-  <meta property="og:site_name" content="BizGrants Consulting" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog & Insights | BizGrants Consulting" />
-  <meta name="twitter:description" content="Updates on WSG funding, Career Conversion Programmes and best practices for Singapore companies." />
-  <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
-  <meta name="twitter:site" content="@bizgrantsconsulting" />
-
-  <link rel="icon" type="image/x-icon" href="https://bizgrants.consulting/favicon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Stay up to date with BizGrants Consulting’s insights on Singapore government grants, Workforce Singapore’s Career Conversion Programmes, and practical strategies for business transformation." />
+  <meta property="og:title" content="Blog | BizGrants Consulting" />
+  <meta property="og:description" content="Latest news, funding updates, and guides to Workforce Singapore Career Conversion Programmes for Singapore businesses." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://bizgrants.consulting/blog.html" />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!-- Sticky footer fix for blog only -->
+  <style>
+    html, body { height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content {
+      flex: 1 0 auto;
+    }
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -42,24 +46,26 @@
       </nav>
     </div>
   </header>
-  <section class="hero">
-    <div class="container">
-      <h1>Insights & Updates</h1>
-      <p>Stay informed with the latest news on Workforce Singapore funding schemes and career conversion opportunities.</p>
-    </div>
-  </section>
-  <section class="container grid">
-    <div class="card">
-      <h3>What is the Career Conversion Programme (CCP)?</h3>
-      <p>Learn how CCPs help Singapore companies reskill mid-career hires effectively.</p>
-      <a href="#">Read More →</a>
-    </div>
-    <div class="card">
-      <h3>Flat-Fee CCP Consulting: How It Works</h3>
-      <p>Discover how our success-based pricing gives companies peace of mind.</p>
-      <a href="#">Read More →</a>
-    </div>
-  </section>
+  <div class="main-content">
+    <section class="hero">
+      <div class="container">
+        <h1>Insights & Updates</h1>
+        <p>Stay informed with the latest news on Workforce Singapore funding schemes and career conversion opportunities.</p>
+      </div>
+    </section>
+    <section class="container grid">
+      <div class="card">
+        <h3>What is the Career Conversion Programme (CCP)?</h3>
+        <p>Learn how CCPs help Singapore companies reskill mid-career hires effectively.</p>
+        <a href="#">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Flat-Fee CCP Consulting: How It Works</h3>
+        <p>Discover how our success-based pricing gives companies peace of mind.</p>
+        <a href="#">Read More →</a>
+      </div>
+    </section>
+  </div>
   <footer>
     <div class="container">
       <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>

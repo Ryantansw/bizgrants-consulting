@@ -4,56 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | BizGrants Consulting</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Get in touch with BizGrants Consulting for CCP advisory or partnership enquiries. Reach out for a consultation today." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-  <div class="container nav-container">
-    <div class="logo">
-      <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+      </div>
+      <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <ul id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
   <section class="hero">
     <div class="container">
       <h1>Let’s Talk Grants</h1>
       <p>Reach out to discuss your CCP application or transformation goals.</p>
     </div>
   </section>
-  
-<section class="container grid">
-  <div>
-    <h2>Contact Us</h2>
-    <ul>
-      <li><strong>Email:</strong> hello@bizgrants.consulting</li>
-      <li><strong>WhatsApp:</strong> +65 9123 4567</li>
-    </ul>
-  </div>
-  <form class="contact-form">
-    <label>Name</label><input type="text" required>
-    <label>Email</label><input type="email" required>
-    <label>Message</label><textarea rows="5"></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-  <footer><div class="container"><p>&copy; 2025 BizGrants Consulting. All rights reserved.</p></div></footer>
-  <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-  }
-</script>
-
-</body>
-</html>
+  <section class="container grid">
+    <div>
+      <h2>Contact Us</h2>
+      <ul>
+        <li><strong>Email:</

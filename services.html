@@ -93,22 +93,32 @@
       navLinks.classList.toggle('show');
     }
   </script>
-<!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">
-  window.onload = function () {
-    if (!window.calendlyBadgeInitialized) {
-      window.calendlyBadgeInitialized = true;
-      Calendly.initBadgeWidget({
-        url: 'https://calendly.com/enquiries-bizgrants/30min',
-        text: 'Book a Call',
-        color: '#0069ff',
-        textColor: '#ffffff',
-        branding: true
-      });
+<!-- Calendly badge widget (safe, global, single-init) -->
+<script>
+  (function () {
+    if (!window.__calendlyBadgeInitialized) {
+      window.__calendlyBadgeInitialized = true;
+
+      var link = document.createElement("link");
+      link.href = "https://assets.calendly.com/assets/external/widget.css";
+      link.rel = "stylesheet";
+      document.head.appendChild(link);
+
+      var script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      script.onload = function () {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/enquiries-bizgrants/30min',
+          text: 'Book a Call',
+          color: '#0069ff',
+          textColor: '#ffffff',
+          branding: true
+        });
+      };
+      document.body.appendChild(script);
     }
-  };
+  })();
 </script>
 <!-- Calendly badge widget end -->
 </body>

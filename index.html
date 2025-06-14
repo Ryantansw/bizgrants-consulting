@@ -24,11 +24,13 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Calendly Badge Widget -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    window.onload = function() {
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">
+  window.onload = function () {
+    if (!window.calendlyBadgeInitialized) {
+      window.calendlyBadgeInitialized = true;
       Calendly.initBadgeWidget({
         url: 'https://calendly.com/enquiries-bizgrants/30min',
         text: 'Book a Call',
@@ -37,7 +39,9 @@
         branding: true
       });
     }
-  </script>
+  };
+</script>
+<!-- Calendly badge widget end -->
 </head>
 <body>
   <header>

@@ -12,7 +12,7 @@ html {
 
 /* GLOBAL */
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #fff;
@@ -53,6 +53,7 @@ header {
   height: 100px;
   display: block;
 }
+/* NAVIGATION JUMP FIX */
 nav ul {
   list-style: none;
   display: flex;
@@ -60,21 +61,22 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
-/* --- NAV LINK FONT FIX FOR NO JUMP --- */
-nav a,
-nav a.active,
-nav a:hover {
+nav a {
+  font-weight: 600;
   text-decoration: none;
   color: #333;
-  font-weight: 500;
   transition: color 0.2s;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  letter-spacing: 0.01em;
+  font-variation-settings: "wght" 600;
 }
 nav a.active,
 nav a:hover {
   color: #0F52BA;
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
 }
 .hamburger {
   display: none;
@@ -295,7 +297,7 @@ section h2, .why-us h2, .slider-section h2 {
   border: 1px solid #e3eaf6;
   border-radius: 6px;
   font-size: 1em;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
   margin-bottom: 1em;
   box-sizing: border-box;
   resize: vertical;

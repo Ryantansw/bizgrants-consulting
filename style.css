@@ -6,20 +6,22 @@ body {
   background: #fff;
   color: #333;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
-
 a {
   color: #0F52BA;
   text-decoration: none;
 }
-a:hover { text-decoration: underline; }
+a:hover {
+  text-decoration: underline;
+}
 
-/* HEADER */
+/* HEADER & NAV */
 header {
   background: #fff;
   padding: 1em 0;
@@ -46,6 +48,7 @@ nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.2s;
 }
 nav a.active,
 nav a:hover {
@@ -59,31 +62,63 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
   background: linear-gradient(135deg, #0F52BA, #89CFF0);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 5em 1em 4em 1em;
+  margin-bottom: 0;
+}
+.hero .container {
+  padding: 0;
 }
 .hero h1 {
   font-size: 2.2em;
   font-weight: 700;
   margin-bottom: 0.5em;
+  margin-top: 0;
   letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 .hero p {
   font-size: 1.17em;
   margin-bottom: 0;
+  margin-top: 0;
+}
+.cta-btn {
+  display: inline-block;
+  background: #0F52BA;
+  color: #fff !important;
+  padding: 0.85em 2.2em;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 1.05em;
+  margin: 1.3em auto 0 auto;
+  box-shadow: 0 1px 8px rgba(15,82,186,0.07);
+  transition: background 0.2s, box-shadow 0.2s;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background: #1549A7;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 3px 14px rgba(15,82,186,0.13);
 }
 
-/* Make all section h2 headings consistent */
+/* SECTION HEADINGS */
 section h2, .why-us h2, .slider-section h2 {
   font-size: 1.4em;
   font-weight: 700;
   text-align: left;
   margin-top: 1.5em;
   margin-bottom: 1.2em;
+  padding: 0;
+  color: #222;
+  line-height: 1.1;
 }
 
 /* WHY-US SECTION */
@@ -128,33 +163,11 @@ section h2, .why-us h2, .slider-section h2 {
   align-items: center;
   line-height: 1.5;
 }
-.slider::-webkit-scrollbar { display: none; }
-
-/* CTA BUTTON */
-.cta-btn {
-  display: inline-block;
-  background: #0F52BA;
-  color: #fff !important;
-  padding: 0.85em 2.2em;
-  border-radius: 30px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  font-size: 1.05em;
-  margin: 1.3em auto 0 auto;
-  box-shadow: 0 1px 8px rgba(15,82,186,0.07);
-  transition: background 0.2s, box-shadow 0.2s;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-}
-.cta-btn:hover {
-  background: #1549A7;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 3px 14px rgba(15,82,186,0.13);
+.slider::-webkit-scrollbar {
+  display: none;
 }
 
-/* CCP CARDS GRID */
+/* CARD GRID (Services & Blog) */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -182,7 +195,7 @@ section h2, .why-us h2, .slider-section h2 {
   color: #444;
 }
 
-/* GRID CARD SECTION (homepage) */
+/* GRID (Blog, Contact, Home Cards) */
 .grid {
   display: grid;
   gap: 2.2em;
@@ -211,6 +224,45 @@ section h2, .why-us h2, .slider-section h2 {
   color: #444;
 }
 
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 400px;
+  margin-top: 0.5em;
+}
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9em 1em;
+  border: 1px solid #e3eaf6;
+  border-radius: 6px;
+  font-size: 1em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-bottom: 1em;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.contact-form button[type="submit"] {
+  background: #0F52BA;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9em 2em;
+  font-size: 1.08em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button[type="submit"]:hover {
+  background: #1549A7;
+}
+
 /* FOOTER */
 footer {
   background: #0F52BA;
@@ -222,7 +274,7 @@ footer {
   letter-spacing: 0.01em;
 }
 
-/* MEDIA QUERIES: Responsive Design */
+/* RESPONSIVE DESIGN */
 @media (max-width: 900px) {
   .slider {
     gap: 1em;
@@ -269,8 +321,6 @@ footer {
   .hero p { font-size: 1em; }
   .container { width: 97%; }
 }
-
-/* Misc Spacing Adjustments */
 @media (max-width: 500px) {
   .slide {
     min-width: 240px;

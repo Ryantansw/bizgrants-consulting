@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <meta name="description" content="Explore BizGrants' Career Conversion Programme (CCP) advisory services for Singapore businesses. Salary support, job redesign, digital transformation and more." />
+  <!-- Calendly widget script for popup CTA -->
+  <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 </head>
 <body>
   <header>
@@ -30,11 +32,11 @@
     <div class="container">
       <h1>Career Conversion Programme (CCP) Consulting Services</h1>
       <p>Helping Singapore employers secure up to 90% salary support through Workforce Singapore's CCP pathways—job redesign, structured OJT, digital transformation, and green skills. End-to-end advisory, zero headache.</p>
-      <a href="#" 
-   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false;" 
-   class="cta-button">
-   Book a Call
-</a>
+      <a href="#"
+         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false;"
+         class="cta-btn">
+        Book a Call
+      </a>
     </div>
   </section>
 
@@ -63,7 +65,7 @@
       </div>
       <div class="ccp-card">
         <h3>SME Generalist Upskilling</h3>
-        <p>Adapt to New roles in SMEs (e.g. sales/admin, ops/marketing hybrids) and secure funding through CCP for SME new hires.</p>
+        <p>Adapt to new roles in SMEs (e.g. sales/admin, ops/marketing hybrids) and secure funding through CCP for SME new hires.</p>
       </div>
       <div class="ccp-card">
         <h3>Digital Professionals</h3>
@@ -82,7 +84,11 @@
       <strong>Note:</strong> Many more CCPs are available (ICT, F&B, Biomedical, etc). We match the most relevant programme to your business for maximum funding and best results.
     </p>
     <div style="text-align:center; margin-top:2em;">
-      <a href="https://calendly.com/enquiries-bizgrants/30min" class="cta-btn">Book a Call</a>
+      <a href="#"
+         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false;"
+         class="cta-btn">
+        Book a Call
+      </a>
     </div>
   </section>
 
@@ -97,33 +103,5 @@
       navLinks.classList.toggle('show');
     }
   </script>
-<!-- Calendly badge widget (safe, global, single-init) -->
-<script>
-  (function () {
-    if (!window.__calendlyBadgeInitialized) {
-      window.__calendlyBadgeInitialized = true;
-
-      var link = document.createElement("link");
-      link.href = "https://assets.calendly.com/assets/external/widget.css";
-      link.rel = "stylesheet";
-      document.head.appendChild(link);
-
-      var script = document.createElement("script");
-      script.src = "https://assets.calendly.com/assets/external/widget.js";
-      script.async = true;
-      script.onload = function () {
-        Calendly.initBadgeWidget({
-          url: 'https://calendly.com/enquiries-bizgrants/30min',
-          text: 'Book a Call',
-          color: '#0069ff',
-          textColor: '#ffffff',
-          branding: true
-        });
-      };
-      document.body.appendChild(script);
-    }
-  })();
-</script>
-<!-- Calendly badge widget end -->
 </body>
 </html>

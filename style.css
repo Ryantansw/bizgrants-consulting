@@ -392,3 +392,18 @@ main.main-content {
   .slider-section { padding: 2.2em 0; }
   .card-grid, .grid { margin-bottom: 1em; }
 }
+
+.salary-support-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.7em auto;
+  padding: 0.7em 0 0.2em 0;
+  border-bottom: 4px solid #D32F2F;
+  font-size: 1.18em;
+  font-weight: 600;
+  color: #0F52BA;
+  background: #fff;
+  letter-spacing: 0.01em;
+}

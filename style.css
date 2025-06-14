@@ -283,3 +283,8 @@ footer {
   .slider-section { padding: 2.2em 0; }
   .card-grid, .grid { margin-bottom: 1em; }
 }
+
+section h2 {
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
+}

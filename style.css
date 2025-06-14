@@ -60,11 +60,17 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-nav a {
+
+/* --- NAV LINK FONT FIX FOR NO JUMP --- */
+nav a,
+nav a.active,
+nav a:hover {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   transition: color 0.2s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 nav a.active,
 nav a:hover {

@@ -28,3 +28,48 @@
 <body>
   <header>
     <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+      </div>
+      <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <h1>Insights & Updates</h1>
+      <p>Stay informed with the latest news on Workforce Singapore funding schemes and career conversion opportunities.</p>
+    </div>
+  </section>
+  <section class="container grid">
+    <div class="card">
+      <h3>What is the Career Conversion Programme (CCP)?</h3>
+      <p>Learn how CCPs help Singapore companies reskill mid-career hires effectively.</p>
+      <a href="#">Read More →</a>
+    </div>
+    <div class="card">
+      <h3>Flat-Fee CCP Consulting: How It Works</h3>
+      <p>Discover how our success-based pricing gives companies peace of mind.</p>
+      <a href="#">Read More →</a>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

@@ -77,15 +77,19 @@ nav a:hover {
   margin-bottom: 0;
 }
 
+/* Make all section h2 headings consistent */
+section h2, .why-us h2, .slider-section h2 {
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 1.5em;
+  margin-bottom: 1.2em;
+}
+
 /* WHY-US SECTION */
 .why-us {
   padding-top: 4em;
   padding-bottom: 2.5em;
-}
-.why-us h2 {
-  font-size: 1.4em;
-  font-weight: 700;
-  margin-bottom: 1.2em;
 }
 .why-us p {
   line-height: 1.7;
@@ -98,12 +102,6 @@ nav a:hover {
   margin-top: 0;
   padding: 4em 0 4em 0;
   background: #fff;
-}
-.slider-section h2 {
-  font-size: 1.18em;
-  font-weight: 700;
-  margin-bottom: 1.7em;
-  color: #111;
 }
 .slider {
   display: flex;
@@ -283,14 +281,3 @@ footer {
   .slider-section { padding: 2.2em 0; }
   .card-grid, .grid { margin-bottom: 1em; }
 }
-
-section h2 {
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: left;
-  font-size: 2em;
-}
-
-

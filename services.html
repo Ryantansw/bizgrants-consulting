@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | BizGrants Consulting</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <meta name="description" content="Explore BizGrants' Career Conversion Programme (CCP) advisory services for Singapore businesses. Salary support, job redesign, digital transformation and more." />
-  <!-- Calendly widget script for popup CTA -->
-  <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+  <!-- Calendly Badge Widget - SAFE VERSION -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      if (!window.__calendlyBadgeWidgetLoaded) {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/enquiries-bizgrants/30min',
+          text: 'Book a Call',
+          color: '#0069ff',
+          textColor: '#ffffff',
+          branding: true
+        });
+        window.__calendlyBadgeWidgetLoaded = true;
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -41,7 +57,7 @@
     </div>
   </section>
 
-  <section class="container">
+  <section class="container" style="padding-bottom:2em;">
     <h2 style="font-size:1.4em; font-weight:700; margin-top:1.5em; margin-bottom:1.2em; text-align:left;">
       Our Key CCP Pathways
     </h2>

@@ -10,49 +10,15 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="BizGrants Consulting | Career Conversion Experts" />
-  <meta property="og:description" content="Singapore’s trusted partner for Career Conversion Programme advisory. Get up to 90% salary support with full application support." />
-  <meta property="og:image" content="https://bizgrants.consulting/images/logo.png" /> <!-- replace with actual image URL -->
-  <meta property="og:url" content="https://bizgrants.consulting/" />
+  <meta property="og:description" content="BizGrants Consulting helps Singapore companies tap into up to 90% salary support through Workforce Singapore’s Career Conversion Programmes (CCPs). We manage the entire application process end-to-end." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bizgrants.sg/" />
+  <meta property="og:image" content="images/og-image.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-
-<!-- Calendly badge widget (safe, global, single-init) -->
-<script>
-  (function () {
-    if (!window.__calendlyBadgeInitialized) {
-      window.__calendlyBadgeInitialized = true;
-
-      var link = document.createElement("link");
-      link.href = "https://assets.calendly.com/assets/external/widget.css";
-      link.rel = "stylesheet";
-      document.head.appendChild(link);
-
-      var script = document.createElement("script");
-      script.src = "https://assets.calendly.com/assets/external/widget.js";
-      script.async = true;
-      script.onload = function () {
-        Calendly.initBadgeWidget({
-          url: 'https://calendly.com/enquiries-bizgrants/30min',
-          text: 'Book a Call',
-          color: '#0069ff',
-          textColor: '#ffffff',
-          branding: true
-        });
-      };
-      document.body.appendChild(script);
-    }
-  })();
-</script>
-
-<!-- Calendly badge widget end -->
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <!-- Calendly widget script for popup CTA -->
+  <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 </head>
 <body>
   <header>
@@ -74,46 +40,68 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Singapore's Trusted CCP Application Partner</h1>
-      <p>We help businesses secure salary support through Career Conversion Programmes — from new hires, existing staff job redesign to full submission management.</p>
+      <h1>Workforce Singapore Career Conversion Programme (CCP) Advisory</h1>
+      <p>Maximise government funding for workforce transformation. Secure up to 90% salary support for hiring, job redesign, digital and green skills. End-to-end consulting, zero headache for your HR and management team.</p>
+      <a href="https://calendly.com/enquiries-bizgrants/30min"
+         onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
+         target="_blank"
+         class="cta-btn">
+        Book a Call
+      </a>
     </div>
   </section>
 
-  <section class="container why-us">
-    <h2>Why Companies Choose BizGrants Consulting</h2>
-    <p>We are a consulting firm that specialises in helping employers in Singapore tap into Workforce Singapore’s Career Conversion Programmes (CCPs) to receive up to 90% salary support. Whether you're transforming roles or hiring new staff, we make your CCP journey seamless — with our end-to-end application management service.</p>
-    <p>With our success-only fee arrangement, you'll either walk away with an approval - or your money back. It's our way of sharing the risk and showing full confidence in our process.</p>
+  <section class="why-us">
+    <div class="container">
+      <h2>Why Choose BizGrants Consulting?</h2>
+      <p>We combine deep policy expertise with practical business acumen to help Singapore companies unlock the full value of government grants. Our consulting is outcomes-driven, confidential, and focused on real business transformation — not just compliance paperwork.</p>
+      <p>From job redesign to training and onboarding, we support you at every step, ensuring your grant applications are successful and your team is future-ready.</p>
+    </div>
   </section>
 
   <section class="slider-section">
     <div class="container">
-      <h2 style="color: #000;">Recent Approved Projects</h2>
-      <div class="slider" id="slider">
-        <div class="slide">✅ Regional Marketing Manager – Approved for SME client in the bio-tech sector</div>
-        <div class="slide">✅ FnB Sustainability Manager – Approved for a restaurant chain</div>
-        <div class="slide">✅ International Market Expansion Manager – Approved under OMIP</div>
-        <div class="slide">✅ HR People & Culture Manager – Existing staff job redesign approved for an SME Client</div>
-        <div class="slide">✅ Sustainability Director – Approved for a hotel chain</div>
-        <div class="slide">✅ Service Sales Engineer – Approved for a client in the HVAC sector</div>
-        <div class="slide">✅ Digital Marketing Manager – Approved for an events company</div>
-        <div class="slide">✅ UX and Web Designer – Approved for a tech solutions company</div>
-        <div class="slide">✅ Business Development Executive – Approved for a client in the travel sector</div>
+      <h2>Recent Client Successes</h2>
+      <div class="slider">
+        <div class="slide">
+          <strong>SME F&B Group</strong><br>
+          Reskilled service & operations staff to take on digital ordering and delivery, with 90% salary support secured.
+        </div>
+        <div class="slide">
+          <strong>Mid-Sized Manufacturer</strong><br>
+          Transformed production and sales roles for green operations and ESG reporting. Up to $30,000 in salary support per head.
+        </div>
+        <div class="slide">
+          <strong>Regional Tech Company</strong><br>
+          Supported new business development hires and digital marketing team conversion. All funding approved in 2 months.
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="container grid">
-    <div class="card">
-      <h3>End-to-End CCP Consulting</h3>
-      <p>From eligibility checks to full application submission — we manage the entire process for you.</p>
+  <section class="container">
+    <h2 style="margin-bottom:2em;">Our Core Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Grant Opportunity Mapping</h3>
+        <p>We assess your workforce and recommend the most relevant government grants, with a focus on CCPs, SFEC, and industry transformation funding.</p>
+      </div>
+      <div class="card">
+        <h3>End-to-End Application</h3>
+        <p>We manage documentation, job redesign, OJT plans, and reporting. You focus on your business, we handle the grant process.</p>
+      </div>
+      <div class="card">
+        <h3>Job Redesign & Workforce Planning</h3>
+        <p>Expert advice to future-proof your team for digital, green, and overseas roles — aligned to government policy and SkillsFuture frameworks.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Fast Turnaround Time</h3>
-      <p>We understand your business context quickly and work efficiently to structure and submit your application — helping you achieve the fastest possible approval.</p>
-    </div>
-    <div class="card">
-      <h3>Personalised Advisory for Each Client</h3>
-      <p>No one-size-fits-all. We diagnose your workforce needs and align them to the most suitable CCP.</p>
+    <div style="text-align:center; margin-top:2.5em;">
+      <a href="https://calendly.com/enquiries-bizgrants/30min"
+         onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
+         target="_blank"
+         class="cta-btn">
+        Book a Call
+      </a>
     </div>
   </section>
 
@@ -122,34 +110,11 @@
       <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
     </div>
   </footer>
-
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('show');
     }
-
-    // Auto scroll logic (smooth, not too fast)
-    const slider = document.getElementById("slider");
-    let isUserScrolling = false;
-    let scrollSpeed = 0.6; // Adjust speed as needed
-
-    function autoScroll() {
-      if (!slider || isUserScrolling) return;
-      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
-        slider.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        slider.scrollBy({ left: scrollSpeed, behavior: 'smooth' });
-      }
-    }
-
-    let scrollInterval = setInterval(autoScroll, 20);
-
-    // Detect user interaction
-    slider.addEventListener('pointerdown', () => isUserScrolling = true);
-    slider.addEventListener('pointerup', () => isUserScrolling = false);
-    slider.addEventListener('mouseenter', () => isUserScrolling = true);
-    slider.addEventListener('mouseleave', () => isUserScrolling = false);
   </script>
 </body>
 </html>

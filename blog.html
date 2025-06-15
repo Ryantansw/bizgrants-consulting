@@ -13,65 +13,123 @@
   <meta property="og:url" content="https://bizgrants.consulting/blog.html" />
   <meta property="og:type" content="article" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
-  <!-- (Optional) FAQPage Schema if you add FAQ below -->
-  <!--
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the Career Conversion Programme (CCP)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The CCP is a Workforce Singapore grant that supports employers to hire and reskill mid-career talent or redesign roles, with up to 90% salary support."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who is eligible for CCP in Singapore?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Singapore-registered employers hiring Singaporeans/PRs into new or redesigned roles are generally eligible for CCP funding. See our Services page for more details."
-        }
-      }
-    ]
-  }
-  </script>
-  -->
-
   <style>
-    /* Your previous inline styles remain */
-    /* Add extra bottom margin before footer if needed */
-    .blog-faq-section { margin-top:3rem; margin-bottom:3.5rem; }
+    html, body { height: 100%; }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    .main-content { flex: 1 0 auto; }
+    footer { flex-shrink: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 2rem; }
+    .card { background: #fff; border-radius: 18px; box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05); padding: 2rem; transition: box-shadow .2s; }
+    .card:hover { box-shadow: 0 8px 24px rgba(49, 90, 172, 0.13); }
+    .card h3 { margin-top: 0; }
+    .card a { color: #0F52BA; text-decoration: none; font-weight: 500; }
+    .card a:hover { text-decoration: underline; }
+    .container { width: 95%; max-width: 1200px; margin: 0 auto; }
+    .hero-gradient {
+      background: linear-gradient(90deg, #0F52BA 0%, #89CFF0 100%);
+      text-align: center;
+      padding: 4.5rem 0 4.5rem 0;
+      display: block;
+    }
+    .hero-content {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-gradient h1,
+    .hero-gradient p {
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .hero-gradient h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      padding-bottom: 1rem;
+    }
+    .hero-gradient p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      padding-bottom: 0;
+    }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .card { padding: 1.25rem; }
+      .hero-gradient {
+        padding: 2.5rem 0 2.5rem 0;
+      }
+      .hero-gradient h1 {
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+      }
+      .hero-gradient p {
+        font-size: 1rem;
+      }
+    }
+    /* Extra spacing above footer */
+    .blog-faq-section, .popular-topics-section { margin-bottom: 3.5rem; }
   </style>
 </head>
 <body>
   <header>
-    <!-- ... unchanged ... -->
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+      </div>
+      <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <div class="main-content">
     <section class="hero-gradient">
       <div class="hero-content">
-        <h1>Singapore’s #1 Blog for Career Conversion, Job Redesign & Salary Support Grants</h1>
+        <h1>Singapore CCP & Job Redesign Grant Blog — Insights from BizGrants Consulting Advisory</h1>
         <p>
-          The latest news, CCP case studies, and actionable guides on Workforce Singapore funding, SkillsFuture, and government support for hiring and upskilling locals.
+          Your hub for Workforce Singapore grant news, CCP case studies, SkillsFuture tips, and practical advisory for employers and HR managers.
         </p>
       </div>
     </section>
     <section class="container grid" style="margin-top: 3rem; margin-bottom: 4.5rem;">
-      <!-- Your blog cards remain; update h3 for SEO -->
       <div class="card">
         <h3>What is the Career Conversion Programme (CCP) and Who is Eligible in Singapore?</h3>
         <p>Confused about CCPs? This article explains Workforce Singapore’s Career Conversion Programmes, eligibility criteria, and why more companies are tapping on CCP funding in 2025.</p>
         <a href="blog/ccp-eligibility.html">Read More &rarr;</a>
       </div>
-      <!-- ...repeat for all six articles, using more explicit "Singapore", "Job Redesign", "SkillsFuture" keywords in titles/descriptions... -->
+      <div class="card">
+        <h3>Step-by-Step Guide: How to Apply for a CCP in Singapore (2025 Edition)</h3>
+        <p>A practical walkthrough for HR managers and business owners—from identifying the right CCP pathway to submitting a compliant, fundable application.</p>
+        <a href="blog/ccp-application-guide.html">Read More &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Maximising Workforce Singapore Funding: CCP vs Other Salary Support Schemes</h3>
+        <p>We break down CCP, JGI, SFEC, and other support schemes, so you can make informed decisions on which to prioritise for your hiring and reskilling plans.</p>
+        <a href="blog/ccp-vs-jgi-sfec.html">Read More &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>What Counts as “Reskilling” Under CCP? (Singapore Examples & Success Stories)</h3>
+        <p>Get clarity on what “reskilling” means in practice, with real case studies from Singapore companies who successfully converted staff into new roles using CCP funding.</p>
+        <a href="blog/ccp-reskilling-examples.html">Read More &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>The True Cost of CCP: Flat-Fee, Success-Based vs. Traditional Consulting Models</h3>
+        <p>Worried about consulting fees? We unpack how BizGrants’ flat fee, success-only model—with a full refund if your CCP application isn’t successful—reduces risk for Singapore SMEs.</p>
+        <a href="blog/ccp-flatfee-consulting.html">Read More &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Common Pitfalls in CCP Applications—and How to Avoid Rejection</h3>
+        <p>From missing documents to vague job descriptions, we share hard-won lessons on the most common reasons for failed CCP applications—and how to get it right the first time.</p>
+        <a href="blog/ccp-application-pitfalls.html">Read More &rarr;</a>
+      </div>
     </section>
 
-    <!-- Optional: FAQ for extra SEO coverage -->
+    <!-- FAQ Section for extra SEO -->
     <section class="container blog-faq-section">
       <h2>Frequently Asked Questions about CCP, Job Redesign & Government Grants</h2>
       <div>
@@ -86,8 +144,8 @@
       </div>
     </section>
 
-    <!-- Optional: Related Articles for stickiness -->
-    <section class="container" style="margin-bottom:4rem;">
+    <!-- Popular Topics / Internal Linking -->
+    <section class="container popular-topics-section">
       <h2>Popular Topics</h2>
       <ul>
         <li><a href="blog/ccp-vs-jgi-sfec.html">CCP vs JGI vs SFEC: What’s Best for Your Hiring Plans?</a></li>
@@ -98,7 +156,9 @@
     </section>
   </div>
   <footer>
-    <!-- ... unchanged ... -->
+    <div class="container">
+      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    </div>
   </footer>
   <script>
     function toggleMenu() {

@@ -27,8 +27,17 @@
     .container { width: 95%; max-width: 1200px; margin: 0 auto; }
     .hero-gradient {
       background: linear-gradient(90deg, #0F52BA 0%, #89CFF0 100%);
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 4rem 0 3rem 0;
+      padding: 0;
+    }
+    .hero-content {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .hero-gradient h1,
     .hero-gradient p {
@@ -43,15 +52,12 @@
       font-size: 1.25rem;
       font-weight: 400;
       margin-bottom: 0;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
     }
     @media (max-width: 700px) {
       .grid { grid-template-columns: 1fr; }
       .card { padding: 1.25rem; }
       .hero-gradient {
-        padding: 2.5rem 0 2rem 0;
+        min-height: 200px;
       }
       .hero-gradient h1 {
         font-size: 2rem;
@@ -81,7 +87,7 @@
   </header>
   <div class="main-content">
     <section class="hero-gradient">
-      <div class="container">
+      <div class="hero-content">
         <h1>Insights & Updates</h1>
         <p>
           Stay informed with the latest news on Workforce Singapore funding schemes and career conversion opportunities.

@@ -21,27 +21,9 @@
   <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta name="twitter:site" content="@bizgrantsconsulting" />
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="https://bizgrants.consulting/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Calendly Badge Widget - fully synchronised with other tabs -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    window.addEventListener("load", function () {
-      if (!window.__calendlyBadgeWidgetLoaded) {
-        Calendly.initBadgeWidget({
-          url: 'https://calendly.com/enquiries-bizgrants/30min',
-          text: 'Book a Call',
-          color: '#0069ff',
-          textColor: '#ffffff',
-          branding: true
-        });
-        window.__calendlyBadgeWidgetLoaded = true;
-      }
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -57,3 +39,41 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <h1>Let’s Talk Grants</h1>
+      <p>Reach out to discuss your CCP application or transformation goals.</p>
+    </div>
+  </section>
+  <section class="container grid">
+    <div>
+      <h2>Contact Us</h2>
+      <ul>
+        <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
+      </ul>
+    </div>
+    <form class="contact-form">
+      <label>Name</label><input type="text" required>
+      <label>Email</label><input type="email" required>
+      <label>Message</label><textarea rows="5"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
+
+

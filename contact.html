@@ -25,8 +25,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Calendly Pop-Up Widget Script -->
+  <!-- Calendly Badge Widget - fully synchronised with other tabs -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      if (!window.__calendlyBadgeWidgetLoaded) {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/enquiries-bizgrants/30min',
+          text: 'Book a Call',
+          color: '#0069ff',
+          textColor: '#ffffff',
+          branding: true
+        });
+        window.__calendlyBadgeWidgetLoaded = true;
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -42,31 +57,3 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
-      </nav>
-    </div>
-  </header>
-  <section class="hero">
-    <div class="container">
-      <h1>Let’s Talk Grants</h1>
-      <p>Reach out to discuss your CCP application or transformation goals.</p>
-      <!-- CTA: Opens Calendly popup widget (same as other pages) -->
-      <a href="#"
-         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false;"
-         class="cta-btn">
-        Book a Free Consultation
-      </a>
-    </div>
-  </section>
-  <section class="container grid">
-    <div>
-      <h2>Contact Us</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:enquiries@bizgrants.consulting">enquiries@bizgrants.consulting</a></li>
-      </ul>
-      <p style="margin-top:1em;font-size:1.04em;color:#444;">
-        Prefer not to fill a form? Just drop us an email or book a call above.
-      </p>
-    </div>
-    <div>
-      <!-- Google Form embedded here -->
-     

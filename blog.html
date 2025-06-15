@@ -24,27 +24,41 @@
     .card h3 { margin-top: 0; }
     .card a { color: #0F52BA; text-decoration: none; font-weight: 500; }
     .card a:hover { text-decoration: underline; }
-    .hero {
-      padding: 2.5rem 0 2rem 0;
-      background: #f8fbff;
-      text-align: left;
+    .container { width: 95%; max-width: 1200px; margin: 0 auto; }
+    .hero-gradient {
+      background: linear-gradient(90deg, #0F52BA 0%, #89CFF0 100%);
+      text-align: center;
+      padding: 4rem 0 3rem 0;
     }
-    .hero h1 {
-      color: #0F52BA;
-      font-size: 2.5rem;
+    .hero-gradient h1,
+    .hero-gradient p {
+      color: #fff;
+    }
+    .hero-gradient h1 {
+      font-size: 2.7rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
-    .hero p {
-      color: #333;
-      font-size: 1.2rem;
+    .hero-gradient p {
+      font-size: 1.25rem;
       font-weight: 400;
       margin-bottom: 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .container { width: 95%; max-width: 1200px; margin: 0 auto; }
     @media (max-width: 700px) {
       .grid { grid-template-columns: 1fr; }
       .card { padding: 1.25rem; }
+      .hero-gradient {
+        padding: 2.5rem 0 2rem 0;
+      }
+      .hero-gradient h1 {
+        font-size: 2rem;
+      }
+      .hero-gradient p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -66,10 +80,12 @@
     </div>
   </header>
   <div class="main-content">
-    <section class="hero">
+    <section class="hero-gradient">
       <div class="container">
         <h1>Insights & Updates</h1>
-        <p>Stay informed with the latest news on Workforce Singapore funding schemes and career conversion opportunities.</p>
+        <p>
+          Stay informed with the latest news on Workforce Singapore funding schemes and career conversion opportunities.
+        </p>
       </div>
     </section>
     <section class="container grid">

@@ -78,12 +78,23 @@
         <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
       </ul>
     </div>
-    <form class="contact-form">
-      <label>Name</label><input type="text" required>
-      <label>Email</label><input type="email" required>
-      <label>Message</label><textarea rows="5"></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <form action="https://formspree.io/f/xblyyoel" method="POST" class="contact-form" id="contact-form">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+  <button type="submit">Send</button>
+</form>
+<div id="form-success-message" style="display:none; margin-top:1.5em; background:#e8f8ef; border-radius:8px; padding:1em; text-align:center;">
+  <strong>
+    We have received your submission and will be in touch within 1 business day.<br>
+    Alternatively, you can also <a href="https://calendly.com/enquiries-bizgrants/30min" target="_blank" style="color:#0F52BA; font-weight:600;">book a call</a>.<br>
+    Thank you!
+  </strong>
+</div>
+
   </section>
   <footer>
     <div class="container">
@@ -96,6 +107,36 @@
       navLinks.classList.toggle('show');
     }
   </script>
+
+  <script>
+  // Handles Formspree AJAX submit, shows success message, no React/Widget triggers
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success-message');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+          } else {
+            alert('There was an error submitting the form. Please try again.');
+          }
+        }).catch(() => {
+          alert('There was an error submitting the form. Please try again.');
+        });
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
 

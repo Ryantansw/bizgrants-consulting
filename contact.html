@@ -24,6 +24,23 @@
   <link rel="icon" type="image/x-icon" href="https://bizgrants.consulting/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+    <!-- Calendly Badge Widget - SAFE VERSION -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script type="text/javascript">
+    window.addEventListener("load", function () {
+      if (!window.__calendlyBadgeWidgetLoaded) {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/enquiries-bizgrants/30min',
+          text: 'Book a Call',
+          color: '#0069ff',
+          textColor: '#ffffff',
+          branding: true
+        });
+        window.__calendlyBadgeWidgetLoaded = true;
+      }
+    });
+  </script>
 </head>
 <body>
   <header>

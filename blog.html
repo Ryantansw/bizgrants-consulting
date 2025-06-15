@@ -18,7 +18,7 @@
     body { min-height: 100vh; display: flex; flex-direction: column; }
     .main-content { flex: 1 0 auto; }
     footer { flex-shrink: 0; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 2rem; margin-top: 2rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 2rem; }
     .card { background: #fff; border-radius: 18px; box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05); padding: 2rem; transition: box-shadow .2s; }
     .card:hover { box-shadow: 0 8px 24px rgba(49, 90, 172, 0.13); }
     .card h3 { margin-top: 0; }
@@ -94,10 +94,8 @@
         </p>
       </div>
     </section>
-    <section class="container grid" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
-  <!-- cards... -->
-</section>
-
+    <!-- Note: Added margin-top and margin-bottom inline below -->
+    <section class="container grid" style="margin-top: 3rem; margin-bottom: 3rem;">
       <div class="card">
         <h3>What is the Career Conversion Programme (CCP) and Who is Eligible?</h3>
         <p>Confused about CCPs? This article explains Workforce Singapore’s Career Conversion Programmes, eligibility criteria, and why more companies are tapping on CCP funding in 2025.</p>

@@ -237,8 +237,23 @@
       navLinks.classList.toggle('show');
     }
   </script>
+    <script>
+  // Track clicks to Calendly links site-wide
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
+      gtag('event', 'cta_click', {
+        event_category: 'Calendly',
+        event_label: link.href,
+        link_text: (link.textContent || '').trim(),
+        page_location: window.location.href
+      });
+    }
+  }, { capture: true });
+</script>
 </body>
 </html>
+
 
 
 

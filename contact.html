@@ -275,11 +275,27 @@
           headers: { 'Accept': 'application/json' }
         }).then(response => {
           if (response.ok) {
-            form.reset();
-            successMsg.style.display = 'block';
-          } else {
-            alert('There was an error submitting the form. Please try again.');
-          }
+  // Prevent double submissions
+  const submitBtn = form.querySelector('button[type="submit"]');
+  if (submitBtn) submitBtn.disabled = true;
+
+  // 1) Fire GA4 conversion event
+  gtag('event', 'form_submit', {
+    form_id: 'contact-form',
+    page_location: window.location.href,
+    page_title: document.title
+  });
+
+  // Optional: also send an event for Google Ads audience building later
+  // gtag('event', 'generate_lead', { value: 1 });
+
+  // 2) UI
+  form.reset();
+  successMsg.style.display = 'block';
+} else {
+  alert('There was an error submitting the form. Please try again.');
+}
+
         }).catch(() => {
           alert('There was an error submitting the form. Please try again.');
         });
@@ -287,6 +303,23 @@
     }
   });
   </script>
+
+  <script>
+  // Track clicks to Calendly links site-wide
+  document.addEventListener('click', function (e) {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
+      gtag('event', 'cta_click', {
+        event_category: 'Calendly',
+        event_label: link.href,
+        link_text: (link.textContent || '').trim(),
+        page_location: window.location.href
+      });
+    }
+  }, { capture: true });
+</script>
+  
 </body>
 </html>
+
 

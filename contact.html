@@ -259,67 +259,87 @@
       navLinks.classList.toggle('show');
     }
   </script>
-  <script>
+ <script>
   // Handles Formspree AJAX submit, shows success message
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     const successMsg = document.getElementById('form-success-message');
+    let leadSent = false; // prevent double firing
 
     if (form) {
       form.addEventListener('submit', function (e) {
         e.preventDefault();
+
         const formData = new FormData(form);
+
         fetch(form.action, {
-          method: "POST",
+          method: 'POST',
           body: formData,
           headers: { 'Accept': 'application/json' }
-        }).then(response => {
-          if (response.ok) {
-  // Prevent double submissions
-  const submitBtn = form.querySelector('button[type="submit"]');
-  if (submitBtn) submitBtn.disabled = true;
+        })
+        .then(response => {
+          if (!response.ok) throw new Error('Form submit failed');
 
-  // 1) Fire GA4 conversion event
-  gtag('event', 'form_submit', {
-    form_id: 'contact-form',
-    page_location: window.location.href,
-    page_title: document.title
-  });
+          // Prevent double submissions (UI + tracking)
+          const submitBtn = form.querySelector('button[type="submit"]');
+          if (submitBtn) submitBtn.disabled = true;
 
-  // Optional: also send an event for Google Ads audience building later
-  // gtag('event', 'generate_lead', { value: 1 });
+          // --- GA4 EVENTS ---
+          if (!leadSent && typeof window.gtag === 'function') {
+            // (A) Recommended event for Ads import
+            gtag('event', 'generate_lead', {
+              value: 1,
+              currency: 'SGD',
+              method: 'formspree',
+              form_id: 'contact-form',
+              page_location: window.location.href,
+              page_title: document.title,
+              // debug_mode: true, // uncomment while testing
+            });
 
-  // 2) UI
-  form.reset();
-  successMsg.style.display = 'block';
-} else {
-  alert('There was an error submitting the form. Please try again.');
-}
+            // (B) Optional: keep your custom event for GA4 analysis
+            gtag('event', 'form_submit', {
+              form_id: 'contact-form',
+              page_location: window.location.href,
+              page_title: document.title
+            });
 
-        }).catch(() => {
+            leadSent = true;
+          }
+
+          // UI success state
+          form.reset();
+          if (successMsg) successMsg.style.display = 'block';
+        })
+        .catch(() => {
           alert('There was an error submitting the form. Please try again.');
         });
       });
     }
   });
-  </script>
+</script>
 
-  <script>
+<script>
   // Track clicks to Calendly links site-wide
   document.addEventListener('click', function (e) {
     const link = e.target.closest('a');
     if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
-      gtag('event', 'cta_click', {
-        event_category: 'Calendly',
-        event_label: link.href,
-        link_text: (link.textContent || '').trim(),
-        page_location: window.location.href
-      });
+      if (typeof window.gtag === 'function') {
+        gtag('event', 'cta_click', {
+          event_category: 'Calendly',
+          event_label: link.href,
+          link_text: (link.textContent || '').trim(),
+          page_location: window.location.href,
+          // debug_mode: true, // uncomment while testing
+        });
+      }
     }
   }, { capture: true });
 </script>
+
   
 </body>
 </html>
+
 
 

@@ -21,13 +21,16 @@
   <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta name="twitter:site" content="@bizgrantsconsulting" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- GA4 with debug + test ping -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-CWBH1DYTQB');
+    gtag('config', 'G-CWBH1DYTQB', { debug_mode: true });
+    window.addEventListener('load', function(){
+      gtag('event','site_debug_ping', { page_location: location.href });
+    });
   </script>
 
   <!-- Fonts & CSS -->
@@ -53,6 +56,7 @@
   </script>
 
   <style>
+    /* CCP block light styles to work with your existing CSS */
     #ccp { scroll-margin-top: 80px; background:#F8FAFC; border:1px solid #E5E7EB; border-radius:16px; padding:20px; margin:32px auto; }
     #ccp .row { display:grid; grid-template-columns: 1fr; gap:16px; }
     #ccp .actions { display:flex; gap:12px; flex-wrap:wrap; }
@@ -205,6 +209,7 @@
   <script>
     function toggleMenu(){document.getElementById('nav-links').classList.toggle('show');}
 
+    // CCP estimator
     const MONTHS = {
       'Different Job Scope': { new: 3, existing: 3 },
       'ESG / Sustainability': { new: 6, existing: 3 },
@@ -218,22 +223,26 @@
       'Infocomm Sales & Marketing Professionals': { new: 6, existing: 3 }
     };
 
-    const estBtn=document.getElementById('ccpEstimate');
-    const result=document.getElementById('ccpResult');
-    estBtn?.addEventListener('click',()=>{
-      const p=document.getElementById('ccpPathway').value;
-      const t=document.getElementById('ccpHireType').value;
-      const s=parseFloat(document.getElementById('ccpSalary').value||'0');
-      if(!p||!t||!s){alert('Select pathway, employment type and enter salary.');return;}
-      const months=(MONTHS[p]||{})[t]||3;
-      const std=Math.min(0.70*s,5000);
-      const enh=Math.min(0.90*s,7500);
-      const min=Math.round(std*months);
-      const max=Math.round(enh*months);
-      result.style.display='block';
-      result.innerHTML=`<strong>Indicative duration:</strong> ${months} month(s)<br>
-                        <strong>Estimated support:</strong> S$${min.toLocaleString()} to S$${max.toLocaleString()}`;
-      gtag('event','calculator_submit',{section:'ccp_services',pathway:p,type:t});
+    const estBtn = document.getElementById('ccpEstimate');
+    const result = document.getElementById('ccpResult');
+
+    estBtn?.addEventListener('click', ()=>{
+      const p = document.getElementById('ccpPathway').value;
+      const t = document.getElementById('ccpHireType').value;
+      const s = parseFloat(document.getElementById('ccpSalary').value || '0');
+      if(!p || !t || !s){ alert('Select pathway, employment type and enter salary.'); return; }
+
+      const months = (MONTHS[p] || {})[t] || 3;
+      const std = Math.min(0.70 * s, 5000);
+      const enh = Math.min(0.90 * s, 7500);
+      const min = Math.round(std * months);
+      const max = Math.round(enh * months);
+
+      result.style.display = 'block';
+      result.innerHTML = `<strong>Indicative duration:</strong> ${months} month(s)<br>
+                          <strong>Estimated support:</strong> S$${min.toLocaleString()} to S$${max.toLocaleString()}`;
+
+      gtag('event','calculator_submit',{ section:'ccp_services', pathway:p, type:t });
     });
   </script>
 </body>

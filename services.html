@@ -244,6 +244,20 @@
 
       gtag('event','calculator_submit',{ section:'ccp_services', pathway:p, type:t });
     });
+
+    // Track clicks to Calendly links site-wide (cta_click)
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
+        gtag('event', 'cta_click', {
+          event_category: 'Calendly',
+          event_label: link.href,
+          link_text: (link.textContent || '').trim(),
+          page_location: window.location.href
+        });
+        // console.log('cta_click event fired');
+      }
+    }, { capture: true });
   </script>
 </body>
 </html>

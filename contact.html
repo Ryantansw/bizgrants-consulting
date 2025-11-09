@@ -21,15 +21,17 @@
   <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta name="twitter:site" content="@bizgrantsconsulting" />
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CWBH1DYTQB');
-</script>
+  <!-- GA4 with debug + visible ping -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CWBH1DYTQB', { debug_mode: true });
+    window.addEventListener('load', function(){
+      gtag('event','site_debug_ping', { page_location: location.href, page_title: document.title });
+    });
+  </script>
 
   <!-- Local Business Schema for SEO -->
   <script type="application/ld+json">
@@ -53,10 +55,11 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
   <!-- Calendly Badge Widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
+  <script>
     window.addEventListener("load", function () {
       if (!window.__calendlyBadgeWidgetLoaded) {
         Calendly.initBadgeWidget({
@@ -70,6 +73,7 @@
       }
     });
   </script>
+
   <style>
     .contact-main-grid {
       display: grid;
@@ -79,94 +83,39 @@
       margin-top: 2.5rem;
       margin-bottom: 2.5rem;
     }
-    .contact-left {
-      display: flex;
-      flex-direction: column;
-      gap: 2.2rem;
-    }
-    .contact-info-block {
-      margin-bottom: 0.7em;
-    }
+    .contact-left { display: flex; flex-direction: column; gap: 2.2rem; }
+    .contact-info-block { margin-bottom: 0.7em; }
     .why-us-block {
-      background: #f6faff;
-      border-radius: 12px;
-      padding: 1.5em 1.5em 1.3em 1.5em;
-      margin-top: 0.3em;
-      box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05);
+      background: #f6faff; border-radius: 12px; padding: 1.5em 1.5em 1.3em 1.5em;
+      margin-top: 0.3em; box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05);
     }
-    .why-us-block ul {
-      margin-top: 0.7em;
-      margin-bottom: 0;
-      padding-left: 1.3em;
-    }
+    .why-us-block ul { margin-top: 0.7em; margin-bottom: 0; padding-left: 1.3em; }
     .contact-form {
-      background: #fff;
-      border-radius: 12px;
-      padding: 2em 2em 1.5em 2em;
+      background: #fff; border-radius: 12px; padding: 2em 2em 1.5em 2em;
       box-shadow: 0 2px 8px rgba(49, 90, 172, 0.06);
-      display: flex;
-      flex-direction: column;
-      gap: 1.1em;
-      font-size: 1.08em;
+      display: flex; flex-direction: column; gap: 1.1em; font-size: 1.08em;
     }
-    .contact-form label {
-      font-weight: 500;
-      margin-bottom: 0.2em;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.7em 0.8em;
-      border: 1px solid #c3dafc;
-      border-radius: 6px;
-      font-size: 1em;
+    .contact-form label { font-weight: 500; margin-bottom: 0.2em; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 0.7em 0.8em; border: 1px solid #c3dafc; border-radius: 6px; font-size: 1em;
     }
     .contact-form button[type="submit"] {
-      margin-top: 1.1em;
-      background: #0F52BA;
-      color: #fff;
-      font-weight: 700;
-      border: none;
-      border-radius: 8px;
-      padding: 0.9em 0;
-      font-size: 1.12em;
-      cursor: pointer;
-      transition: background 0.16s;
+      margin-top: 1.1em; background: #0F52BA; color: #fff; font-weight: 700; border: none;
+      border-radius: 8px; padding: 0.9em 0; font-size: 1.12em; cursor: pointer; transition: background 0.16s;
     }
-    .contact-form button[type="submit"]:hover {
-      background: #1168c4;
-    }
+    .contact-form button[type="submit"]:hover { background: #1168c4; }
     #form-success-message {
-      display: none;
-      margin-top: 1.5em;
-      background: #E6F2FB;
-      border-radius: 8px;
-      padding: 1em;
-      text-align: center;
-      font-size: 1.08em;
+      display: none; margin-top: 1.5em; background: #E6F2FB; border-radius: 8px; padding: 1em;
+      text-align: center; font-size: 1.08em;
     }
     @media (max-width: 900px) {
-      .contact-main-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-      .contact-left {
-        gap: 1.6rem;
-      }
+      .contact-main-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-left { gap: 1.6rem; }
     }
     @media (max-width: 600px) {
-      .contact-main-grid {
-        margin-top: 1.5rem;
-        margin-bottom: 1.2rem;
-      }
-      .contact-form {
-        padding: 1em;
-        font-size: 1em;
-      }
-      .why-us-block {
-        padding: 1em;
-        font-size: 1em;
-      }
+      .contact-main-grid { margin-top: 1.5rem; margin-bottom: 1.2rem; }
+      .contact-form { padding: 1em; font-size: 1em; }
+      .why-us-block { padding: 1em; font-size: 1em; }
     }
   </style>
 </head>
@@ -188,26 +137,25 @@
     </div>
   </header>
 
-    <section class="hero">
+  <section class="hero">
     <div class="container">
       <h1>Let’s Talk Grants</h1>
       <p>Reach out for a confidential, obligation-free consultation on CCP and job redesign grants. Whether you need eligibility advice or full application support, we’re here to help you unlock funding for your next hire or workforce transformation.</p>
       <a href="https://calendly.com/enquiries-bizgrants/30min"
          onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
-         target="_blank"
-         class="cta-btn">
+         target="_blank" class="cta-btn">
         Book a Free Consultation
       </a>
     </div>
   </section>
-  
+
   <section class="container">
     <div class="contact-main-grid">
       <!-- LEFT: Contact Info + Why Us -->
       <div class="contact-left">
         <div class="contact-info-block">
           <h2 style="margin-bottom:0.2em;">Contact Us – Grant Advisory Specialists</h2>
-          <p><strong>Experts in CCP &amp; Job Redesign Grants</strong> for SMEs and corporates in Singapore.<br>
+          <p><strong>Experts in CCP and Job Redesign Grants</strong> for SMEs and corporates in Singapore.<br>
             <a href="blog.html">See our latest CCP guides</a> or <a href="services.html">explore eligible roles</a>.
           </p>
           <ul>
@@ -217,27 +165,29 @@
           </ul>
           <p>
             Find out about <a href="services.html">grant-eligible roles</a>
-            or how <a href="blog/ccp-vs-jgi-sfec.html">CCP &amp; Job Redesign funding works</a> before you reach out.
+            or how <a href="blog/ccp-vs-jgi-sfec.html">CCP and Job Redesign funding works</a> before you reach out.
           </p>
         </div>
+
         <div class="why-us-block">
           <h2 style="margin-bottom:0.3em;">Why Work with a Success-Fee Advisory?</h2>
           <ul>
-            <li>100% risk-free: only pay if your CCP or job redesign grant is approved</li>
-            <li>End-to-end support: eligibility check, documentation, OJT plans, submission and follow up</li>
+            <li>100 percent risk-free, pay only if your CCP or job redesign grant is approved</li>
+            <li>End-to-end support, eligibility check, documentation, OJT plans, submission and follow up</li>
             <li>Proven track record for Singapore SMEs and corporates</li>
             <li>Fast, confidential, and practical grant advice</li>
           </ul>
         </div>
       </div>
+
       <!-- RIGHT: Contact Form -->
       <form action="https://formspree.io/f/xblyyoel" method="POST" class="contact-form" id="contact-form">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
-        <label for="Contact Number">Contact Number</label>
-        <input type="Contact Number" id="Contact Number" name="Contact Number" required>
+        <label for="contact-number">Contact Number</label>
+        <input type="text" id="contact-number" name="contact_number" required>
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
         <button type="submit">Send</button>
@@ -251,101 +201,93 @@
       </form>
     </div>
   </section>
+
   <footer>
     <div class="container">
       <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
     </div>
   </footer>
+
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('show');
     }
   </script>
- <script>
-  // Handles Formspree AJAX submit, shows success message
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
-    const successMsg = document.getElementById('form-success-message');
-    let leadSent = false; // prevent double firing
 
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
+  <script>
+    // AJAX submit to Formspree + GA4 events (generate_lead and form_submit)
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const successMsg = document.getElementById('form-success-message');
+      let leadSent = false;
 
-        const formData = new FormData(form);
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
 
-        fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        })
-        .then(response => {
-          if (!response.ok) throw new Error('Form submit failed');
+          const formData = new FormData(form);
 
-          // Prevent double submissions (UI + tracking)
-          const submitBtn = form.querySelector('button[type="submit"]');
-          if (submitBtn) submitBtn.disabled = true;
+          fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(response => {
+            if (!response.ok) throw new Error('Form submit failed');
 
-          // --- GA4 EVENTS ---
-          if (!leadSent && typeof window.gtag === 'function') {
-            // (A) Recommended event for Ads import
-            gtag('event', 'generate_lead', {
-              value: 1,
-              currency: 'SGD',
-              method: 'formspree',
-              form_id: 'contact-form',
-              page_location: window.location.href,
-              page_title: document.title,
-              // debug_mode: true, // uncomment while testing
-            });
+            // Disable to avoid repeat firing
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) submitBtn.disabled = true;
 
-            // (B) Optional: keep your custom event for GA4 analysis
-            gtag('event', 'form_submit', {
-              form_id: 'contact-form',
-              page_location: window.location.href,
-              page_title: document.title
-            });
+            // GA4 events
+            if (!leadSent && typeof window.gtag === 'function') {
+              gtag('event', 'generate_lead', {
+                value: 1,
+                currency: 'SGD',
+                method: 'formspree',
+                form_id: 'contact-form',
+                page_location: window.location.href,
+                page_title: document.title
+              });
 
-            leadSent = true;
-          }
+              gtag('event', 'form_submit', {
+                form_id: 'contact-form',
+                page_location: window.location.href,
+                page_title: document.title
+              });
 
-          // UI success state
-          form.reset();
-          if (successMsg) successMsg.style.display = 'block';
-        })
-        .catch(() => {
-          alert('There was an error submitting the form. Please try again.');
-        });
-      });
-    }
-  });
-</script>
+              leadSent = true;
+            }
 
-<script>
-  // Track clicks to Calendly links site-wide
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a');
-    if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
-      if (typeof window.gtag === 'function') {
-        gtag('event', 'cta_click', {
-          event_category: 'Calendly',
-          event_label: link.href,
-          link_text: (link.textContent || '').trim(),
-          page_location: window.location.href,
-          // debug_mode: true, // uncomment while testing
+            // UI success state
+            form.reset();
+            if (successMsg) successMsg.style.display = 'block';
+          })
+          .catch(() => {
+            alert('There was an error submitting the form. Please try again.');
+          });
         });
       }
-    }
-  }, { capture: true });
-</script>
+    });
+  </script>
 
-  
+  <script>
+    // Track clicks to Calendly links site-wide (cta_click)
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
+        if (typeof window.gtag === 'function') {
+          gtag('event', 'cta_click', {
+            event_category: 'Calendly',
+            event_label: link.href,
+            link_text: (link.textContent || '').trim(),
+            page_location: window.location.href
+          });
+        }
+      }
+    }, { capture: true });
+  </script>
+
 </body>
 </html>
-
-
-
-
-
-

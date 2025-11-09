@@ -245,19 +245,81 @@
       gtag('event','calculator_submit',{ section:'ccp_services', pathway:p, type:t });
     });
 
-    // Track clicks to Calendly links site-wide (cta_click)
+    // Track clicks to Calendly hyperlinks (cta_click). Also guard to avoid double fire from special button handler
     document.addEventListener('click', function (e) {
       const link = e.target.closest('a');
-      if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
+      if (!link) return;
+      if (link.getAttribute('data-cta-fired') === '1') return;
+      if (link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
         gtag('event', 'cta_click', {
           event_category: 'Calendly',
           event_label: link.href,
           link_text: (link.textContent || '').trim(),
           page_location: window.location.href
         });
-        // console.log('cta_click event fired');
       }
     }, { capture: true });
+
+    // Fire cta_click specifically on the "Book a 15-minute consult" button and avoid double count
+    (function trackCcpBook(){
+      const btn = document.getElementById('ccpBook');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        this.setAttribute('data-cta-fired','1');
+        gtag('event','cta_click',{
+          event_category:'Calendly',
+          event_label: this.href || 'ccpBook',
+          link_text: (this.textContent || '').trim(),
+          page_location: window.location.href
+        });
+        setTimeout(()=>this.removeAttribute('data-cta-fired'), 600);
+      }, { capture: true });
+    })();
+
+    // Track Calendly badge / popup / inline widget interactions, and scheduled bookings
+    (function trackCalendlyWidget(){
+      function sendCTA(label){
+        if (typeof window.gtag === 'function') {
+          gtag('event','cta_click',{
+            event_category:'Calendly',
+            event_label: label,
+            page_location: window.location.href
+          });
+        }
+      }
+      // Observe and wire the injected badge button
+      const obs = new MutationObserver(function(){
+        const badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content');
+        if (badge && !badge.__bgTracked) {
+          badge.__bgTracked = true;
+          badge.addEventListener('click', function(){ sendCTA('badge_widget'); }, { capture: true });
+        }
+      });
+      obs.observe(document.documentElement, { childList: true, subtree: true });
+
+      // Listen for Calendly postMessage events
+      window.addEventListener('message', function(ev){
+        try{
+          const originHost = new URL(ev.origin).hostname || '';
+          if (!/calendly\.com$/i.test(originHost)) return;
+          const data = typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
+          if (!data) return;
+
+          if (data.event &&
+              (data.event.indexOf('calendly.profile_page_viewed') === 0 ||
+               data.event.indexOf('calendly.event_type_viewed') === 0 ||
+               data.event.indexOf('calendly.date_and_time_selected') === 0)) {
+            sendCTA(data.event);
+          }
+
+          if (data.event === 'calendly.event_scheduled') {
+            if (typeof window.gtag === 'function') {
+              gtag('event','calendly_scheduled',{ event_category:'Calendly', page_location: window.location.href });
+            }
+          }
+        }catch(_){}
+      });
+    })();
   </script>
 </body>
 </html>

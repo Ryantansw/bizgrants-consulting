@@ -245,7 +245,7 @@
       gtag('event','calculator_submit',{ section:'ccp_services', pathway:p, type:t });
     });
 
-    // Track clicks to Calendly links site-wide (cta_click)
+    // Track clicks to Calendly hyperlinks (cta_click)
     document.addEventListener('click', function (e) {
       const link = e.target.closest('a');
       if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
@@ -255,9 +255,57 @@
           link_text: (link.textContent || '').trim(),
           page_location: window.location.href
         });
-        // console.log('cta_click event fired');
       }
     }, { capture: true });
+
+    // Track Calendly badge / popup / inline widget interactions as cta_click too
+    (function trackCalendlyWidget(){
+      function sendCTA(label){
+        if (typeof window.gtag === 'function') {
+          gtag('event','cta_click',{
+            event_category:'Calendly',
+            event_label: label,
+            page_location: window.location.href
+          });
+        }
+      }
+
+      // 1) Capture clicks on the injected badge button
+      const obs = new MutationObserver(function(){
+        const badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content');
+        if (badge && !badge.__bgTracked) {
+          badge.__bgTracked = true;
+          badge.addEventListener('click', function(){ sendCTA('badge_widget'); }, { capture: true });
+        }
+      });
+      obs.observe(document.documentElement, { childList: true, subtree: true });
+
+      // 2) Listen for Calendly postMessage events (popup and inline widget)
+      window.addEventListener('message', function(ev){
+        try{
+          const originHost = new URL(ev.origin).hostname || '';
+          if (!/calendly\.com$/i.test(originHost)) return;
+
+          const data = typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
+          if (!data) return;
+
+          // Treat viewing the profile or event type, or selecting date/time, as a CTA
+          if (data.event &&
+              (data.event.indexOf('calendly.profile_page_viewed') === 0 ||
+               data.event.indexOf('calendly.event_type_viewed') === 0 ||
+               data.event.indexOf('calendly.date_and_time_selected') === 0)) {
+            sendCTA(data.event);
+          }
+
+          // Optional: track successful bookings separately
+          if (data.event === 'calendly.event_scheduled') {
+            if (typeof window.gtag === 'function') {
+              gtag('event','calendly_scheduled',{ event_category:'Calendly', page_location: window.location.href });
+            }
+          }
+        }catch(_){}
+      });
+    })();
   </script>
 </body>
 </html>

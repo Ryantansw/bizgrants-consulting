@@ -140,7 +140,7 @@
   <section class="hero">
     <div class="container">
       <h1>Let’s Talk Grants</h1>
-      <p>Reach out for a confidential, obligation-free consultation on CCP and job redesign grants. Whether you need eligibility advice or full application support, we’re here to help you unlock funding for your next hire or workforce transformation.</p>
+      <p>Reach out for a confidential, obligation-free consultation on CCP and job redesign grants. Whether you need eligibility advice or full application support, we are here to help you unlock funding for your next hire or workforce transformation.</p>
       <a href="https://calendly.com/enquiries-bizgrants/30min"
          onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
          target="_blank" class="cta-btn">
@@ -273,7 +273,7 @@
   </script>
 
   <script>
-    // Track clicks to Calendly links site-wide (cta_click)
+    // Track clicks to Calendly hyperlinks (cta_click)
     document.addEventListener('click', function (e) {
       const link = e.target.closest('a');
       if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
@@ -287,6 +287,51 @@
         }
       }
     }, { capture: true });
+
+    // Track Calendly badge / popup / inline widget interactions, and scheduled bookings
+    (function trackCalendlyWidget(){
+      function sendCTA(label){
+        if (typeof window.gtag === 'function') {
+          gtag('event','cta_click',{
+            event_category:'Calendly',
+            event_label: label,
+            page_location: window.location.href
+          });
+        }
+      }
+      // Observe and wire the injected badge button
+      const obs = new MutationObserver(function(){
+        const badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content');
+        if (badge && !badge.__bgTracked) {
+          badge.__bgTracked = true;
+          badge.addEventListener('click', function(){ sendCTA('badge_widget'); }, { capture: true });
+        }
+      });
+      obs.observe(document.documentElement, { childList: true, subtree: true });
+
+      // Listen for Calendly postMessage events
+      window.addEventListener('message', function(ev){
+        try{
+          const originHost = new URL(ev.origin).hostname || '';
+          if (!/calendly\.com$/i.test(originHost)) return;
+          const data = typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
+          if (!data) return;
+
+          if (data.event &&
+              (data.event.indexOf('calendly.profile_page_viewed') === 0 ||
+               data.event.indexOf('calendly.event_type_viewed') === 0 ||
+               data.event.indexOf('calendly.date_and_time_selected') === 0)) {
+            sendCTA(data.event);
+          }
+
+          if (data.event === 'calendly.event_scheduled') {
+            if (typeof window.gtag === 'function') {
+              gtag('event','calendly_scheduled',{ event_category:'Calendly', page_location: window.location.href });
+            }
+          }
+        }catch(_){}
+      });
+    })();
   </script>
 
 </body>

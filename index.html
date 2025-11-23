@@ -39,7 +39,7 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Who is eligible for the Career Conversion Programme (CCP)?",
+        "name": 'Who is eligible for the Career Conversion Programme (CCP)?',
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Most Singapore-registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles are eligible for CCP funding. Eligibility may also extend to job redesign and upskilling initiatives. Book a free eligibility check with us."
@@ -66,7 +66,7 @@
         "name": "Is there a success fee model?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. With BizGrants Consulting, you only pay on approval—risk-free for SMEs and corporates. We specialise in success-fee grant consulting."
+          "text": "Yes. With BizGrants Consulting, you only pay when a grant is approved, which keeps it risk free for SMEs and corporates. We specialise in success-fee grant consulting."
         }
       }
     ]
@@ -90,6 +90,69 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Intro video section styles -->
+  <style>
+    .intro-video-section {
+      padding: 60px 0;
+      background: #f5f7fb;
+    }
+    .intro-video-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .intro-video-text {
+      flex: 1 1 320px;
+      min-width: 280px;
+    }
+    .intro-video-text h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .intro-video-text p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    .intro-video-wrapper {
+      flex: 1 1 320px;
+      min-width: 280px;
+    }
+    .intro-video {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid rgba(15, 40, 90, 0.08);
+      box-shadow: 0 18px 45px rgba(15, 40, 90, 0.18);
+      outline: none;
+    }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeInUp 0.9s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 768px) {
+      .intro-video-section {
+        padding: 40px 0;
+      }
+      .intro-video-text h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 
   <!-- Calendly Badge Widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
@@ -126,6 +189,7 @@
       </nav>
     </div>
   </header>
+
   <section class="hero">
     <div class="container">
       <h1>Career Conversion Programme (CCP) & Job Redesign Grant Advisory for Singapore Employers</h1>
@@ -136,6 +200,24 @@
          class="cta-btn">
         Book a Call
       </a>
+    </div>
+  </section>
+
+  <!-- New intro video section -->
+  <section class="intro-video-section">
+    <div class="container intro-video-layout fade-in-up">
+      <div class="intro-video-text">
+        <h2>How BizGrants Consulting Works With Employers</h2>
+        <p>
+          In this short explainer, Ryan walks through how CCPs and job redesign grants work in Singapore, from checking eligibility and redesigning job scopes to drafting OJT plans and managing submissions and claims for your company.
+        </p>
+      </div>
+      <div class="intro-video-wrapper">
+        <video class="intro-video" controls preload="metadata">
+          <source src="CCP Explainer.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </section>
 

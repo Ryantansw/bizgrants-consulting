@@ -10,9 +10,14 @@ html {
   box-sizing: inherit;
 }
 
+/* UNIVERSAL FONT OVERRIDE */
+body, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif !important;
+  letter-spacing: -0.01em;
+}
+
 /* GLOBAL */
 body {
-  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #fff;
@@ -70,13 +75,11 @@ nav a {
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
   letter-spacing: 0.01em;
-  font-variation-settings: "wght" 600;
 }
 nav a.active,
 nav a:hover {
   color: #0F52BA;
   font-weight: 600;
-  font-variation-settings: "wght" 600;
 }
 .hamburger {
   display: none;
@@ -232,22 +235,6 @@ section h2, .why-us h2, .slider-section h2 {
   color: #0F52BA;
   margin-bottom: 0.5em;
 }
-.ccp-jobchips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6em;
-  margin-top: 1em;
-}
-.ccp-jobchip {
-  background: #e8f0fa;
-  color: #0F52BA;
-  font-weight: 500;
-  font-size: 0.98em;
-  border-radius: 2em;
-  padding: 0.38em 1.15em;
-  margin-bottom: 0.3em;
-  display: inline-block;
-}
 
 /* GRID (Blog, Contact, Home Cards) */
 .grid {
@@ -297,8 +284,6 @@ section h2, .why-us h2, .slider-section h2 {
   border: 1px solid #e3eaf6;
   border-radius: 6px;
   font-size: 1em;
-  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
-  margin-bottom: 1em;
   box-sizing: border-box;
   resize: vertical;
 }

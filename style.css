@@ -26,11 +26,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-size: 16px;
+  font-size: 16px;          /* base body text desktop */
   line-height: 1.6;
 }
 
-/* Headings scale */
+/* Headings scale (desktop) */
 h1 {
   font-size: 2rem;          /* 32px */
   font-weight: 700;
@@ -96,7 +96,7 @@ nav a {
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
   letter-spacing: 0.01em;
-  font-size: 0.95rem;
+  font-size: 0.95rem;       /* ~15px */
 }
 nav a.active,
 nav a:hover {
@@ -343,7 +343,7 @@ main.main-content {
   flex-direction: column;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE DESIGN - DESKTOP DOWN TO TABLET */
 @media (max-width: 900px) {
   .slider {
     gap: 1em;
@@ -366,71 +366,73 @@ main.main-content {
   }
 }
 
-/* MOBILE NAV + TYPOGRAPHY */
+/* RESPONSIVE DESIGN - TABLET / MOBILE NAV */
 @media (max-width: 768px) {
-  /* Keep header in a single row: logo left, hamburger right */
   .nav-container {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
-
-  nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
   nav ul {
     display: none;
     flex-direction: column;
     gap: 1.1rem;
     padding-left: 0;
-    width: 190px;
-    margin-top: 0.6em;
+    width: 100%;
+    margin-top: 1.2em;
     background: #fff;
-    position: absolute;
-    right: 1rem;
-    top: 100%;
-    border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 10px 24px rgba(15, 40, 90, 0.15);
   }
-
   nav ul.show {
     display: flex;
   }
-
   .hamburger {
     display: block;
-    margin-left: 1rem;
+    margin-top: 1rem;
   }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-  .hero p {
-    font-size: 0.95rem;
-  }
-  .container {
-    width: 97%;
-  }
+  .hero h1 { font-size: 1.5rem; }
+  .hero p { font-size: 0.95rem; }
+  .container { width: 97%; }
 }
 
+/* RESPONSIVE DESIGN - SMALL MOBILE */
 @media (max-width: 500px) {
   .slide {
     min-width: 240px;
     font-size: 0.93rem;
     padding: 0.7em 0.6em;
   }
-  .hero {
-    padding: 2.4em 0.7em 2em 0.7em;
+  .hero { padding: 2.4em 0.7em 2em 0.7em; }
+  .slider-section { padding: 2.2em 0; }
+  .card-grid, .grid { margin-bottom: 1em; }
+}
+
+/* MOBILE FONT SCALE - APPLIES SITE WIDE */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
   }
-  .slider-section {
-    padding: 2.2em 0;
+  h1 {
+    font-size: 1.7rem;
   }
-  .card-grid, .grid {
-    margin-bottom: 1em;
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1.05rem;
   }
 }
 

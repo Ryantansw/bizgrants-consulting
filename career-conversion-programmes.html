@@ -5,28 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Career Conversion Programmes in Singapore | Employer Overview</title>
-  <meta name="description" content="A simple overview of Career Conversion Programmes in Singapore for employers. Compare pathways, understand eligibility, and see how BizGrants manages the end-to-end process." />
+  <meta name="description" content="A simple overview of Career Conversion Programmes in Singapore for employers. Compare pathways, understand eligibility, and see how BizGrants manages the end to end process." />
   <link rel="canonical" href="https://bizgrants.consulting/career-conversion-programmes.html" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://bizgrants.consulting/"},
-    {"@type":"ListItem","position":2,"name":"Career Conversion Programmes","item":"https://bizgrants.consulting/career-conversion-programmes.html"}
-  ]
-}
-</script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://bizgrants.consulting/"},
+      {"@type":"ListItem","position":2,"name":"Career Conversion Programmes","item":"https://bizgrants.consulting/career-conversion-programmes.html"}
+    ]
+  }
+  </script>
+
   <meta property="og:title" content="Career Conversion Programmes in Singapore | Employer Overview" />
-  <meta property="og:description" content="Compare CCP pathways, eligibility and steps. Singapore-specific guidance for HR and business owners." />
+  <meta property="og:description" content="Compare CCP pathways, eligibility and steps. Singapore specific guidance for HR and business owners." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/career-conversion-programmes.html" />
   <meta property="og:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Career Conversion Programmes in Singapore | Employer Overview" />
-  <meta name="twitter:description" content="Compare CCP pathways, eligibility and steps. Singapore-specific guidance for HR and business owners." />
+  <meta name="twitter:description" content="Compare CCP pathways, eligibility and steps. Singapore specific guidance for HR and business owners." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta name="twitter:site" content="@bizgrantsconsulting" />
 
@@ -38,9 +40,9 @@
     gtag('config', 'G-CWBH1DYTQB');
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Calendly Badge Widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   <script>
@@ -63,12 +65,195 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"What are Career Conversion Programmes?","acceptedAnswer":{"@type":"Answer","text":"CCPs help employers to hire or reskill mid-career workers into redesigned roles, supported by structured OJT and approved training."}},
+      {"@type":"Question","name":"What are Career Conversion Programmes?","acceptedAnswer":{"@type":"Answer","text":"CCPs help employers to hire or reskill mid career workers into redesigned roles, supported by structured OJT and approved training."}},
       {"@type":"Question","name":"Which CCP should I choose?","acceptedAnswer":{"@type":"Answer","text":"It depends on the role, whether it is a new hire or existing staff, and the extent of scope change. We assess fit and recommend the right pathway."}},
-      {"@type":"Question","name":"Do I need a new job description?","acceptedAnswer":{"@type":"Answer","text":"Yes, the redesigned role and OJT should reflect the future scope and skills. We provide assessor-ready examples and templates."}}
+      {"@type":"Question","name":"Do I need a new job description?","acceptedAnswer":{"@type":"Answer","text":"Yes, the redesigned role and OJT should reflect the future scope and skills. We provide assessor ready examples and templates."}}
     ]
   }
   </script>
+
+  <style>
+    body {
+      background: #f5f7fb;
+      color: #0f285a;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(15, 40, 90, 0.06);
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+    .logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #0f285a;
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: #0f52ba;
+      transition: width 0.2s ease;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: #ffffff;
+      color: #0f285a;
+      text-align: left;
+      padding: 3.5rem 0 3rem;
+    }
+    .hero .container {
+      max-width: 1120px;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin: 0 0 0.8rem 0;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: #6b7280;
+      margin: 0 0 1.2rem 0;
+      max-width: 42rem;
+    }
+    .guide-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.6rem;
+      border-radius: 14px;
+      background: #0F52BA;
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      box-shadow: none;
+      transition: background 0.18s ease;
+      white-space: nowrap;
+    }
+    .guide-hero-cta:hover {
+      background: #1549A7;
+      text-decoration: none;
+    }
+
+    .guide-section {
+      padding: 2.8rem 0 0;
+    }
+
+    footer {
+      background: #0b1a3a;
+      color: rgba(255, 255, 255, 0.86);
+      padding: 2.8rem 0 2rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+    .footer-layout {
+      display: grid;
+      grid-template-columns: 2fr 1.4fr 1.4fr;
+      gap: 2.2rem;
+      font-size: 0.9rem;
+    }
+    .footer-heading {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .footer-links li + li {
+      margin-top: 0.35rem;
+    }
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding-top: 1.1rem;
+      font-size: 0.78rem;
+      color: rgba(226, 232, 240, 0.85);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 960px) {
+      nav ul {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid rgba(15, 40, 90, 0.1);
+        box-shadow: 0 18px 40px rgba(15, 40, 90, 0.14);
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 170px;
+        display: none;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    @media (max-width: 600px) {
+      .footer-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -90,19 +275,19 @@
 
   <section class="hero">
     <div class="container">
-      <h1>Career Conversion Programmes, A Simple Employer Guide</h1>
+      <h1>Career Conversion Programmes, a simple employer guide</h1>
       <p>Understand options, decide the right pathway, and plan the documentation. We help you navigate grant complexities and uncertainties.</p>
       <a href="https://calendly.com/enquiries-bizgrants/30min"
          onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
          target="_blank"
-         class="cta-btn">
+         class="guide-hero-cta">
         Free eligibility check
       </a>
     </div>
   </section>
 
-  <section class="container">
-    <h2>Common Employer Scenarios</h2>
+  <section class="container guide-section">
+    <h2>Common employer scenarios</h2>
     <div class="card-grid">
       <div class="ccp-card">
         <h3>New hire into a redesigned role</h3>
@@ -119,23 +304,23 @@
     </div>
   </section>
 
-  <section class="container" style="padding-top:2em;">
-    <h2>How We Structure Your CCP</h2>
+  <section class="container guide-section">
+    <h2>How we structure your CCP</h2>
     <ol>
       <li>Eligibility review and pathway selection</li>
       <li>Role redesign and job description drafting</li>
       <li>OJT plan with measurable activities and KPIs</li>
       <li>Document pack preparation and submission</li>
-      <li>Clarifications, approval, and claims support</li>
+      <li>Clarifications, approval and claims support</li>
     </ol>
   </section>
 
-  <section class="container" style="padding-top:2em;">
-    <h2>Explore the Guides</h2>
+  <section class="container guide-section">
+    <h2>Explore the guides</h2>
     <ul>
       <li><a href="wsg-career-conversion-programme.html">WSG Career Conversion Programme</a></li>
       <li><a href="ccp-grant-singapore.html">CCP Grant in Singapore</a></li>
-      <li><a href="ccp-for-employers.html">CCP for Employers</a></li>
+      <li><a href="ccp-for-employers.html">CCP for employers</a></li>
       <li><a href="ccp-digital-marketing.html">CCP Digital Marketing</a></li>
       <li><a href="ccp-sustainability.html">CCP Sustainability Professionals</a></li>
     </ul>
@@ -143,7 +328,7 @@
       <a href="https://calendly.com/enquiries-bizgrants/30min"
          onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
          target="_blank"
-         class="cta-btn">
+         class="guide-hero-cta">
         Speak to an advisor
       </a>
     </div>
@@ -151,9 +336,38 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+      <div class="footer-layout">
+        <div>
+          <div class="footer-heading">BizGrants Consulting</div>
+          <p>
+            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture supported
+            workforce transformation in Singapore.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">CCP advisory and role scoping</a></li>
+            <li><a href="services.html">Job redesign and OJT planning</a></li>
+            <li><a href="blog.html">Grant insights and guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><strong>Contact Number:</strong> 8887 5297</li>
+            <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
+            <li><strong>Address:</strong> 60 Paya Lebar Road, #07-54, Paya Lebar Square, Singapore 409051</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 BizGrants Consulting. All rights reserved.</span>
+        <span>For Singapore registered employers hiring or reskilling Singapore Citizens and PRs.</span>
+      </div>
     </div>
   </footer>
+
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
@@ -161,20 +375,19 @@
     }
   </script>
 
-    <script>
-  // Track clicks to Calendly links site-wide
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a');
-    if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
-      gtag('event', 'cta_click', {
-        event_category: 'Calendly',
-        event_label: link.href,
-        link_text: (link.textContent || '').trim(),
-        page_location: window.location.href
-      });
-    }
-  }, { capture: true });
-</script>
-  
+  <script>
+    // Track clicks to Calendly links site wide
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a');
+      if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
+        gtag('event', 'cta_click', {
+          event_category: 'Calendly',
+          event_label: link.href,
+          link_text: (link.textContent || '').trim(),
+          page_location: window.location.href
+        });
+      }
+    }, { capture: true });
+  </script>
 </body>
 </html>

@@ -75,47 +75,415 @@
   </script>
 
   <style>
+    body {
+      font-family: 'Plus Jakarta Sans', "Segoe UI", Arial, sans-serif;
+      background: #f5f7fb;
+      color: #0f285a;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #0f52ba;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Header aligned to new system */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(15, 40, 90, 0.06);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #0f285a;
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: #0f52ba;
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Hero - all white, clean */
+    .hero {
+      background: #ffffff;
+      padding: 4rem 0 3.2rem;
+      color: #0f285a;
+      text-align: left;
+    }
+
+    .hero .container {
+      max-width: 1120px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.22rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(15, 82, 186, 0.06);
+      color: #0b3f8a;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      line-height: 1.2;
+      margin: 0 0 0.8rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.02rem;
+      max-width: 42rem;
+      color: #6b7280;
+      margin: 0 0 0.7rem 0;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin: 0;
+      max-width: 42rem;
+    }
+
+    .contact-hero-cta-row {
+      margin-top: 1.2rem;
+    }
+
+    .contact-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.6rem;
+      border-radius: 14px;
+      background: #0F52BA;
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      box-shadow: none;
+      transition: background 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .contact-hero-cta:hover {
+      background: #1549A7;
+      text-decoration: none;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Contact content grid */
+    .contact-section {
+      padding: 3.2rem 0 3.2rem;
+    }
+
     .contact-main-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 1fr;
       gap: 3.5rem;
-      align-items: start;
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
+      align-items: flex-start;
+      margin-top: 1.5rem;
     }
-    .contact-left { display: flex; flex-direction: column; gap: 2.2rem; }
-    .contact-info-block { margin-bottom: 0.7em; }
+
+    .contact-left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.9rem;
+    }
+
+    .contact-info-block h2 {
+      margin-bottom: 0.3em;
+      font-size: 1.5rem;
+    }
+
+    .contact-info-block p {
+      margin: 0 0 0.8rem 0;
+      color: #444;
+      font-size: 0.97rem;
+    }
+
+    .contact-info-block ul {
+      padding-left: 1.1rem;
+      margin: 0 0 0.7rem 0;
+      font-size: 0.96rem;
+      color: #333;
+    }
+
+    .contact-info-block li + li {
+      margin-top: 0.25rem;
+    }
+
     .why-us-block {
-      background: #f6faff; border-radius: 12px; padding: 1.5em 1.5em 1.3em 1.5em;
-      margin-top: 0.3em; box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05);
+      background: #f6faff;
+      border-radius: 12px;
+      padding: 1.4em 1.4em 1.2em 1.4em;
+      margin-top: 0.2em;
+      box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05);
+      font-size: 0.96rem;
+      color: #333;
     }
-    .why-us-block ul { margin-top: 0.7em; margin-bottom: 0; padding-left: 1.3em; }
+
+    .why-us-block h2 {
+      margin-top: 0;
+      margin-bottom: 0.4em;
+      font-size: 1.25rem;
+    }
+
+    .why-us-block ul {
+      margin-top: 0.4em;
+      margin-bottom: 0;
+      padding-left: 1.1em;
+    }
+
+    .why-us-block li + li {
+      margin-top: 0.3em;
+    }
+
+    /* Contact form */
     .contact-form {
-      background: #fff; border-radius: 12px; padding: 2em 2em 1.5em 2em;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2em 2em 1.5em 2em;
       box-shadow: 0 2px 8px rgba(49, 90, 172, 0.06);
-      display: flex; flex-direction: column; gap: 1.1em; font-size: 1.08em;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1em;
+      font-size: 1.02em;
     }
-    .contact-form label { font-weight: 500; margin-bottom: 0.2em; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: 0.7em 0.8em; border: 1px solid #c3dafc; border-radius: 6px; font-size: 1em;
+
+    .contact-form label {
+      font-weight: 500;
+      margin-bottom: 0.2em;
     }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7em 0.8em;
+      border: 1px solid #c3dafc;
+      border-radius: 6px;
+      font-size: 1em;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
     .contact-form button[type="submit"] {
-      margin-top: 1.1em; background: #0F52BA; color: #fff; font-weight: 700; border: none;
-      border-radius: 8px; padding: 0.9em 0; font-size: 1.12em; cursor: pointer; transition: background 0.16s;
+      margin-top: 1.1em;
+      background: #0F52BA;
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      padding: 0.9em 0;
+      font-size: 1.05em;
+      cursor: pointer;
+      transition: background 0.16s;
     }
-    .contact-form button[type="submit"]:hover { background: #1168c4; }
+
+    .contact-form button[type="submit"]:hover {
+      background: #1168c4;
+    }
+
     #form-success-message {
-      display: none; margin-top: 1.5em; background: #E6F2FB; border-radius: 8px; padding: 1em;
-      text-align: center; font-size: 1.08em;
+      display: none;
+      margin-top: 1.3em;
+      background: #E6F2FB;
+      border-radius: 8px;
+      padding: 1em;
+      text-align: centre;
+      font-size: 1.02em;
     }
-    @media (max-width: 900px) {
-      .contact-main-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .contact-left { gap: 1.6rem; }
+
+    #form-success-message a {
+      color: #0F52BA;
+      font-weight: 600;
     }
+
+    /* Footer (standard layout) */
+    footer {
+      background: #0b1a3a;
+      color: rgba(255, 255, 255, 0.86);
+      padding: 2.8rem 0 2rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .footer-layout {
+      display: grid;
+      grid-template-columns: 2fr 1.4fr 1.4fr;
+      gap: 2.2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-heading {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .footer-links li + li {
+      margin-top: 0.35rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding-top: 1.1rem;
+      font-size: 0.78rem;
+      color: rgba(226, 232, 240, 0.85);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 960px) {
+      .hero {
+        padding: 3.2rem 0 2.4rem;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid rgba(15, 40, 90, 0.1);
+        box-shadow: 0 18px 40px rgba(15, 40, 90, 0.14);
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 170px;
+        display: none;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .contact-main-grid {
+        grid-template-columns: 1fr;
+        gap: 2.4rem;
+      }
+    }
+
     @media (max-width: 600px) {
-      .contact-main-grid { margin-top: 1.5rem; margin-bottom: 1.2rem; }
-      .contact-form { padding: 1em; font-size: 1em; }
-      .why-us-block { padding: 1em; font-size: 1em; }
+      .contact-section {
+        padding: 2.4rem 0 2.4rem;
+      }
+      .contact-form {
+        padding: 1.3em 1.2em 1.1em 1.2em;
+        font-size: 1em;
+      }
+      .why-us-block {
+        padding: 1.1em;
+        font-size: 0.96em;
+      }
+      .footer-layout {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -137,74 +505,122 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Let’s Talk Grants</h1>
-      <p>Reach out for a confidential, obligation-free consultation on CCP and job redesign grants. Whether you need eligibility advice or full application support, we are here to help you unlock funding for your next hire or workforce transformation.</p>
-      <a href="https://calendly.com/enquiries-bizgrants/30min"
-         onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
-         target="_blank" class="cta-btn">
-        Book a Free Consultation
-      </a>
-    </div>
-  </section>
-
-  <section class="container">
-    <div class="contact-main-grid">
-      <!-- LEFT: Contact Info + Why Us -->
-      <div class="contact-left">
-        <div class="contact-info-block">
-          <h2 style="margin-bottom:0.2em;">Contact Us – Grant Advisory Specialists</h2>
-          <p><strong>Experts in CCP and Job Redesign Grants</strong> for SMEs and corporates in Singapore.<br>
-            <a href="blog.html">See our latest CCP guides</a> or <a href="services.html">explore eligible roles</a>.
-          </p>
-          <ul>
-            <li><strong>Contact Number:</strong> <a href="https://wa.me/6588875297">8887 5297</a> (WhatsApp only)</li>
-            <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
-            <li><strong>Address:</strong> 60 Paya Lebar Road, #07-54, Paya Lebar Square, Singapore 409051</li>
-          </ul>
-          <p>
-            Find out about <a href="services.html">grant-eligible roles</a>
-            or how <a href="blog/ccp-vs-jgi-sfec.html">CCP and Job Redesign funding works</a> before you reach out.
-          </p>
-        </div>
-
-        <div class="why-us-block">
-          <h2 style="margin-bottom:0.3em;">Why Work with a Success-Fee Advisory?</h2>
-          <ul>
-            <li>100 percent risk-free, pay only if your CCP or job redesign grant is approved</li>
-            <li>End-to-end support, eligibility check, documentation, OJT plans, submission and follow up</li>
-            <li>Proven track record for Singapore SMEs and corporates</li>
-            <li>Fast, confidential, and practical grant advice</li>
-          </ul>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-eyebrow">Contact · CCP and grant advisory</div>
+        <h1>Talk to us about CCP and job redesign grants</h1>
+        <p class="hero-subtitle">
+          Reach out for a confidential, obligation free consultation on how CCP and related Workforce Singapore grants can support your next hire or workforce transformation.
+        </p>
+        <p class="hero-note">
+          Suitable for HR teams, founders and business leaders who are planning to hire or redesign roles in the next 3 to 6 months.
+        </p>
+        <div class="contact-hero-cta-row">
+          <a
+            href="https://calendly.com/enquiries-bizgrants/30min"
+            onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
+            target="_blank"
+            class="contact-hero-cta"
+          >
+            Book a free consultation
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- RIGHT: Contact Form -->
-      <form action="https://formspree.io/f/xblyyoel" method="POST" class="contact-form" id="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-        <label for="contact-number">Contact Number</label>
-        <input type="text" id="contact-number" name="contact_number" required>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">Send</button>
-        <div id="form-success-message">
-          <strong>
-            We have received your submission and will be in touch within 1 business day.<br>
-            Alternatively, you can also <a href="https://calendly.com/enquiries-bizgrants/30min" target="_blank" style="color:#0F52BA; font-weight:600;">book a call</a>.<br>
-            Thank you!
-          </strong>
+    <section class="container contact-section">
+      <div class="contact-main-grid">
+        <!-- LEFT: Contact Info + Why Us -->
+        <div class="contact-left">
+          <div class="contact-info-block">
+            <h2>Contact us – grant advisory specialists</h2>
+            <p>
+              We focus on CCP and job redesign grants for SMEs and corporates in Singapore.
+              You can reach us via WhatsApp, email or the contact form on this page.
+            </p>
+            <ul>
+              <li><strong>Contact Number:</strong> <a href="https://wa.me/6588875297">8887 5297</a> (WhatsApp only)</li>
+              <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
+              <li><strong>Address:</strong> 60 Paya Lebar Road, #07-54, Paya Lebar Square, Singapore 409051</li>
+            </ul>
+            <p>
+              You can also review <a href="services.html">grant eligible roles and pathways</a>
+              or read our <a href="blog.html">CCP and grant guides</a> before you reach out.
+            </p>
+          </div>
+
+          <div class="why-us-block">
+            <h2>Why work with a success fee advisory</h2>
+            <ul>
+              <li>Risk free for employers, you pay only if your CCP or job redesign grant is approved</li>
+              <li>End to end support, from eligibility check and pathway mapping to documentation, OJT plans and submission</li>
+              <li>Practical guidance tailored to your sector, team size and hiring plans</li>
+              <li>Fast, confidential and straightforward conversations with decision makers and HR teams</li>
+            </ul>
+          </div>
         </div>
-      </form>
-    </div>
-  </section>
+
+        <!-- RIGHT: Contact Form -->
+        <form action="https://formspree.io/f/xblyyoel" method="POST" class="contact-form" id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="contact-number">Contact Number</label>
+          <input type="text" id="contact-number" name="contact_number" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send</button>
+
+          <div id="form-success-message">
+            <strong>
+              We have received your submission and will be in touch within 1 business day.<br>
+              Alternatively, you can also
+              <a href="https://calendly.com/enquiries-bizgrants/30min" target="_blank">book a call</a>.<br>
+              Thank you.
+            </strong>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+      <div class="footer-layout">
+        <div>
+          <div class="footer-heading">BizGrants Consulting</div>
+          <p>
+            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture supported
+            workforce transformation in Singapore.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">CCP advisory and role scoping</a></li>
+            <li><a href="services.html">Job redesign and OJT planning</a></li>
+            <li><a href="blog.html">Grant insights and guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><strong>Contact Number:</strong> 8887 5297</li>
+            <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
+            <li><strong>Address:</strong> 60 Paya Lebar Road, #07-54, Paya Lebar Square, Singapore 409051</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 BizGrants Consulting. All rights reserved.</span>
+        <span>For Singapore registered employers hiring or reskilling Singapore Citizens and PRs.</span>
+      </div>
     </div>
   </footer>
 

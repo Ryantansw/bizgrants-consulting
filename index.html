@@ -88,68 +88,664 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Intro video section styles -->
+  <!-- Page-specific layout styles for professional homepage -->
   <style>
-    .intro-video-section {
-      padding: 60px 0;
-      background: #f5f7fb;
+    :root {
+      --bg-page: #f5f7fb;
+      --bg-hero: #ffffff;
+      --bg-section-alt: #f1f4fa;
+      --bg-card: #ffffff;
+      --border-subtle: rgba(15, 40, 90, 0.08);
+      --brand-main: #0f52ba;
+      --brand-main-soft: #2f6fd2;
+      --brand-accent: #0b3f8a;
+      --text-main: #0f285a;
+      --text-muted: #6b7280;
+      --text-on-brand: #ffffff;
+      --shadow-soft: 0 18px 40px rgba(15, 40, 90, 0.08);
+      --radius-card: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 0.2s ease;
     }
-    .intro-video-layout {
+
+    body {
+      font-family: 'Plus Jakarta Sans', "Segoe UI", Arial, sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--brand-main);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(15, 40, 90, 0.06);
+    }
+
+    .nav-container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
       align-items: center;
       justify-content: space-between;
+      padding: 0.85rem 0;
     }
-    .intro-video-text {
-      flex: 1 1 320px;
-      min-width: 280px;
-    }
-    .intro-video-text h2 {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    .intro-video-text p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-    .intro-video-wrapper {
-      flex: 1 1 320px;
-      min-width: 280px;
-    }
-    .intro-video {
-      width: 100%;
+
+    .logo-img {
+      height: 40px;
+      width: auto;
       display: block;
-      border-radius: 16px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-main);
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand-main);
+      transition: width var(--transition-fast);
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      background: radial-gradient(circle at top left, #e4edff 0, #ffffff 45%, #f5f7fb 100%);
+      padding: 4.5rem 0 4rem;
+      text-align: left;
+      color: var(--text-main);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.9rem;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 82, 186, 0.06);
+      color: var(--brand-accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p.hero-subtitle {
+      font-size: 1.03rem;
+      color: var(--text-muted);
+      max-width: 36rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-badge {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: #ffffff;
       border: 1px solid rgba(15, 40, 90, 0.08);
-      box-shadow: 0 18px 45px rgba(15, 40, 90, 0.18);
-      outline: none;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
-    .fade-in-up {
-      opacity: 0;
-      transform: translateY(24px);
-      animation: fadeInUp 0.9s ease-out forwards;
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
     }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
+
+    .cta-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: centre;
+      padding: 0.85rem 1.6rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      background: linear-gradient(135deg, var(--brand-main), var(--brand-main-soft));
+      color: var(--text-on-brand) !important;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(15, 82, 186, 0.4);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .cta-btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 50px rgba(15, 82, 186, 0.45);
+      background: linear-gradient(135deg, var(--brand-main-soft), var(--brand-accent));
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      border-radius: var(--radius-pill);
+      padding: 0.75rem 1.3rem;
+      border: 1px solid rgba(15, 40, 90, 0.18);
+      background: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+      color: var(--text-main);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-ghost:hover {
+      background: #ffffff;
+      border-color: rgba(15, 40, 90, 0.28);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-right {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.75rem 1.75rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .funding-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(15, 82, 186, 0.06);
+      color: var(--brand-accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .funding-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .funding-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin: 0.85rem 0 1.2rem;
+    }
+
+    .funding-pill {
+      padding: 0.7rem 0.9rem;
+      border-radius: 12px;
+      background: #f5f7fb;
+      font-size: 0.8rem;
+    }
+
+    .funding-pill strong {
+      display: block;
+      font-size: 0.85rem;
+    }
+
+    .funding-footnote {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Generic section spacing */
+    section.section {
+      padding: 4.5rem 0;
+    }
+
+    .section-header {
+      max-width: 42rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-lead {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+    }
+
+    /* Intro video */
+    .intro-video-section {
+      background: var(--bg-section-alt);
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .intro-video-wrapper video {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .intro-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* Why companies choose us */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .stat-chip {
+      min-width: 150px;
+      padding: 0.7rem 0.9rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .stat-chip strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .card-grid-home {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
+    }
+
+    .card-home {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 1.5rem 1.4rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 28px rgba(15, 40, 90, 0.06);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .card-home:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(15, 40, 90, 0.08);
+      border-color: rgba(15, 40, 90, 0.18);
+    }
+
+    .card-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .card-home h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-home p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+
+    /* CCP explainer and eligibility */
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.5rem;
+    }
+
+    .bordered-box {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      padding: 1.4rem 1.5rem;
+      font-size: 0.93rem;
+    }
+
+    .bordered-box h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .bordered-box ul {
+      list-style: disc;
+      padding-left: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    .bordered-box li + li {
+      margin-top: 0.35rem;
+    }
+
+    /* Recent projects */
+    .projects-section {
+      background: #ffffff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      padding: 1.2rem 1.25rem;
+      background: #f9fbff;
+      font-size: 0.9rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-accent);
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    .project-role {
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .project-meta {
+      color: var(--text-muted);
+      font-size: 0.83rem;
+    }
+
+    /* FAQ */
+    .faq-section {
+      background: var(--bg-section-alt);
+    }
+
+    .faq-list {
+      max-width: 44rem;
+    }
+
+    details.faq-item {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      padding: 0.9rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    details.faq-item + details.faq-item {
+      margin-top: 0.7rem;
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-item[open] {
+      border-color: rgba(15, 40, 90, 0.22);
+      box-shadow: 0 12px 32px rgba(15, 40, 90, 0.06);
+    }
+
+    details.faq-item p {
+      margin-top: 0.6rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Related guides */
+    .guides-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .guide-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      padding: 1.1rem 1.2rem;
+      font-size: 0.9rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+      display: block;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(15, 40, 90, 0.08);
+      border-color: rgba(15, 40, 90, 0.2);
+      text-decoration: none;
+    }
+
+    .guide-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+    }
+
+    .guide-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* Footer override for homepage */
+    footer {
+      background: #0b1a3a;
+      color: rgba(255, 255, 255, 0.86);
+      padding: 2.8rem 0 2rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .footer-layout {
+      display: grid;
+      grid-template-columns: 2fr 1.4fr 1.4fr;
+      gap: 2.2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-heading {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .footer-links li + li {
+      margin-top: 0.35rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding-top: 1.1rem;
+      font-size: 0.78rem;
+      color: rgba(226, 232, 240, 0.85);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-layout,
+      .intro-layout,
+      .two-column,
+      .projects-grid,
+      .guides-grid,
+      .card-grid-home,
+      .footer-layout {
+        grid-template-columns: minmax(0, 1fr);
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      .hero {
+        padding: 3.25rem 0 3rem;
+      }
+
+      .hero-layout {
+        gap: 2.5rem;
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      nav ul {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid rgba(15, 40, 90, 0.1);
+        box-shadow: 0 18px 40px rgba(15, 40, 90, 0.14);
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 170px;
+        display: none;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
       }
     }
-    @media (max-width: 768px) {
-      .intro-video-section {
-        padding: 40px 0;
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.9rem;
       }
-      .intro-video-text h2 {
-        font-size: 1.6rem;
+
+      .card-grid-home,
+      .projects-grid,
+      .guides-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      section.section {
+        padding: 3.2rem 0;
       }
     }
   </style>
@@ -190,144 +786,379 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Career Conversion Programme (CCP) & Job Redesign Grant Advisory for Singapore Employers</h1>
-      <p>Specialists in Workforce Singapore’s CCP, Job Redesign Grant, SkillsFuture, and government funding for hiring and upskilling local talent. We help businesses secure salary support through CCPs, job redesign, and upskilling pathways, from new hires to full application management.</p>
-      <a href="https://calendly.com/enquiries-bizgrants/30min"
-         onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
-         target="_blank"
-         class="cta-btn">
-        Book a Call
-      </a>
-    </div>
-  </section>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-layout">
+        <div>
+          <div class="hero-eyebrow">Singapore · Career Conversion & Job Redesign Grants</div>
+          <h1>Secure up to 90% salary support with structured CCP and job redesign advisory</h1>
+          <p class="hero-subtitle">
+            We specialise in Workforce Singapore’s Career Conversion Programmes, Job Redesign Grants and SkillsFuture funding,
+            helping employers in Singapore redesign roles, reskill staff and hire mid-career talent with strong grant support.
+          </p>
 
-  <!-- New intro video section -->
-  <section class="intro-video-section">
-  <div class="container intro-video-layout fade-in-up">
-    <div class="intro-video-text">
-      <h2>How CCP Funding Supports Business Growth</h2>
-      <p>
-        Watch this short explainer to learn how Career Conversion Programmes and job redesign grants can offset payroll costs, support new hires (min. aged 21), and fund structured on-the-job training. See how BizGrants Consulting structures roles, OJT plans, and submissions so your business can unlock available government funding and reinvest the savings into future growth.
-      </p>
-    </div>
-    <div class="intro-video-wrapper">
-      <video class="intro-video" controls preload="metadata">
-        <source src="CCP Explainer.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</section>
+          <div class="hero-badges">
+            <div class="hero-badge"><span>✓</span><span>CCP, Job Redesign, SkillsFuture grants</span></div>
+            <div class="hero-badge"><span>✓</span><span>Success-fee model for employers</span></div>
+            <div class="hero-badge"><span>✓</span><span>New hires and existing staff reskilling</span></div>
+          </div>
 
+          <div class="hero-cta-row">
+            <a
+              href="https://calendly.com/enquiries-bizgrants/30min"
+              onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
+              target="_blank"
+              class="cta-btn-primary"
+            >
+              Book a 30-min CCP consult
+            </a>
+            <a href="#insights" class="btn-ghost">
+              View CCP & grant insights
+            </a>
+          </div>
 
-  <section class="container why-us">
-    <h2>Why Companies Choose BizGrants Consulting</h2>
-    <p>We specialise in Workforce Singapore grants including Career Conversion Programmes, Job Redesign Grants, and SkillsFuture-supported workforce transformation. Whether you are transforming roles, hiring new staff, or upskilling, we make your grant journey simple with end-to-end application management and a success-fee consulting model.</p>
-    <p>With our success-only fee arrangement, you will either walk away with an approval or your money back. It is our way of sharing the risk and showing confidence in our process. <a href="services.html">See which roles are eligible for CCP or job redesign support.</a></p>
-  </section>
+          <p class="hero-note">
+            For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs into new or redesigned roles.
+          </p>
+        </div>
 
-  <section class="container grid">
-    <div class="card">
-      <h3>End-to-End CCP, Job Redesign, and SkillsFuture Consulting</h3>
-      <p>From eligibility checks to full application submission, we manage the entire process, including documentation, job redesign, and grant claims.</p>
-    </div>
-    <div class="card">
-      <h3>Fast Turnaround Time</h3>
-      <p>We understand your business context quickly and work efficiently to structure and submit your application, helping you achieve the fastest possible approval.</p>
-    </div>
-    <div class="card">
-      <h3>Personalised Advisory</h3>
-      <p>No one-size-fits-all. We diagnose your workforce needs and align them to the most suitable pathway.</p>
-    </div>
-  </section>
+        <aside class="hero-right">
+          <div class="funding-tag">Example funding snapshot</div>
+          <div class="funding-title">Sustainability Manager, F&B group</div>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:0.7rem;">
+            Mid-career Singaporean hire on a 6-month CCP with structured on-the-job training.
+          </p>
 
-  <section class="container why-us">
-    <h2>What are Career Conversion Programmes and Job Redesign Grants?</h2>
-    <p>
-      Career Conversion Programmes and Job Redesign Grants are Workforce Singapore and SkillsFuture-funded initiatives designed to help companies reskill or upskill staff, hire mid-career professionals, or redesign existing jobs for digital transformation and business growth.
-    </p>
-    <ul>
-      <li>Receive up to 70% to 90% salary support for eligible staff undergoing structured OJT, reskilling, or job redesign.</li>
-      <li>Reduce hiring and training costs while building a future-ready workforce.</li>
-      <li>Tap into a wide talent pool for new growth, digital, sustainability, and tech roles.</li>
-      <li>Benefit from expert grant advisory and application support, suitable for SMEs and larger companies.</li>
-    </ul>
-    <p><a href="blog.html">Read our blog for eligibility tips, case studies, and CCP success stories.</a></p>
-  </section>
+          <div class="funding-meta">
+            <div class="funding-pill">
+              <strong>Monthly salary</strong>
+              $5,000
+            </div>
+            <div class="funding-pill">
+              <strong>Funding support</strong>
+              Up to 90% for eligible SMEs
+            </div>
+            <div class="funding-pill">
+              <strong>Programme duration</strong>
+              3 to 6 months OJT
+            </div>
+            <div class="funding-pill">
+              <strong>Potential support</strong>
+              Up to $45,000 over programme
+            </div>
+          </div>
 
-  <section class="container" style="padding-top:2em;padding-bottom:2em;">
-    <h2>Who Is Eligible for CCP and Job Redesign Grants?</h2>
-    <ul>
-      <li>Singapore-registered companies hiring or reskilling Singaporeans or PRs into new or redesigned roles</li>
-      <li>Roles must involve at least 50% change in job content for job redesign funding</li>
-      <li>Open to SMEs and larger employers; enhanced funding for SMEs</li>
-      <li>Staff must not be shareholders or family members of directors</li>
-      <li>Book a <a href="contact.html">free eligibility check</a> or see our <a href="services.html">role examples</a></li>
-    </ul>
-  </section>
+          <p class="funding-footnote">
+            Actual funding is subject to Workforce Singapore’s prevailing guidelines and programme partner criteria. We help you
+            structure roles, training and documentation so your application is positioned correctly.
+          </p>
+        </aside>
+      </div>
+    </section>
 
-  <section class="container slider-section">
-    <h2>Recent Approved Projects</h2>
-    <div class="slider" id="slider">
-      <div class="slide">Approved: Regional Marketing Manager for a biotech SME</div>
-      <div class="slide">Approved: Sustainability Manager for an F&B group</div>
-      <div class="slide">Approved: International Markets Manager under OMIP</div>
-      <div class="slide">Approved: People and Culture Manager via job redesign</div>
-      <div class="slide">Approved: Sustainability Director for a hotel chain</div>
-      <div class="slide">Approved: Service Sales Engineer for HVAC</div>
-      <div class="slide">Approved: Digital Marketing Manager for an events company</div>
-      <div class="slide">Approved: UX and Web Designer for a tech firm</div>
-      <div class="slide">Approved: Business Development Executive for travel</div>
-    </div>
-  </section>
+    <!-- Intro video -->
+    <section class="section intro-video-section">
+      <div class="container intro-layout">
+        <div>
+          <div class="section-header">
+            <div class="section-kicker">2-minute overview</div>
+            <h2 class="section-title">How CCP funding supports hiring, reskilling and job redesign</h2>
+            <p class="section-lead">
+              This short explainer walks through how Career Conversion Programmes and job redesign grants offset payroll costs,
+              support mid-career hires and fund structured on-the-job training. See how BizGrants Consulting helps employers
+              translate business plans into CCP-ready roles and documentation.
+            </p>
+          </div>
+        </div>
+        <div class="intro-video-wrapper">
+          <video class="intro-video" controls preload="metadata">
+            <source src="CCP Explainer.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p class="intro-caption">Recorded for Singapore employers exploring CCP and job redesign opportunities.</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="container faq-section" style="margin-bottom: 3.5rem;">
-    <h2>Frequently Asked Questions</h2>
-    <div>
-      <strong>Who is eligible for CCP?</strong>
-      <p>Most Singapore-registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles are eligible for CCP funding. Book a free eligibility check with us.</p>
-      <strong>How much salary support can I get?</strong>
-      <p>Up to 90% salary support for new hires, job redesign, or structured reskilling through CCP, Job Redesign Grant, or SkillsFuture initiatives.</p>
-      <strong>What roles can be supported?</strong>
-      <p>Roles in digital, sustainability, HR, tech, marketing, business operations, and more may qualify. See our <a href="services.html">Services</a> page for examples.</p>
-      <strong>How do I apply?</strong>
-      <p>Contact us for a step-by-step walkthrough. We manage the process end-to-end, with a success fee model for employers.</p>
-    </div>
-  </section>
+    <!-- Why companies choose BizGrants -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Advisory for Singapore employers</div>
+          <h2 class="section-title">Why companies choose BizGrants Consulting as their CCP partner</h2>
+          <p class="section-lead">
+            We work alongside HR, business leaders and founders to diagnose workforce needs, redesign roles and position
+            applications clearly against programme criteria. Our consulting is built around clarity, structure and hands-on
+            documentation support.
+          </p>
+        </div>
 
-  <section class="container" style="padding-top:2em;">
-    <h2>Related Guides</h2>
-    <ul>
-      <li><a href="wsg-career-conversion-programme.html">WSG Career Conversion Programme</a></li>
-      <li><a href="ccp-grant-singapore.html">CCP Grant in Singapore</a></li>
-      <li><a href="ccp-for-employers.html">CCP for Employers</a></li>
-      <li><a href="career-conversion-programmes.html">Career Conversion Programmes overview</a></li>
-      <li><a href="ccp-digital-marketing.html">CCP Digital Marketing</a></li>
-      <li><a href="ccp-sustainability.html">CCP Sustainability Professionals</a></li>
-    </ul>
-  </section>
+        <div class="stats-row">
+          <div class="stat-chip">
+            <strong>End-to-end CCP support</strong>
+            From eligibility check to claims documentation
+          </div>
+          <div class="stat-chip">
+            <strong>New hires and existing staff</strong>
+            Place-and-train and reskilling pathways
+          </div>
+          <div class="stat-chip">
+            <strong>Success-fee model</strong>
+            You invest only when grants are approved
+          </div>
+        </div>
 
+        <div class="card-grid-home">
+          <article class="card-home">
+            <div class="card-label">01</div>
+            <h3>End-to-end CCP, job redesign and SkillsFuture consulting</h3>
+            <p>
+              We help you interpret programme requirements, structure job descriptions, design on-the-job training plans and
+              prepare the full suite of forms, supporting documents and proof of work.
+            </p>
+          </article>
+
+          <article class="card-home">
+            <div class="card-label">02</div>
+            <h3>Fast grasp of your operating context</h3>
+            <p>
+              We work closely with management and HR to understand your business model, current team and hiring plans, then map
+              suitable CCP pathways that can support headcount growth or role redesign.
+            </p>
+          </article>
+
+          <article class="card-home">
+            <div class="card-label">03</div>
+            <h3>Practical, role-based advisory</h3>
+            <p>
+              Instead of generic templates, we translate your actual responsibilities into CCP-ready scope, highlighting
+              conversion, skills gaps and structured OJT that align with SkillsFuture’s frameworks.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- What are CCPs and eligibility -->
+    <section class="section" style="background:var(--bg-section-alt);">
+      <div class="container two-column">
+        <div>
+          <div class="section-header">
+            <div class="section-kicker">Funding overview</div>
+            <h2 class="section-title">What are Career Conversion Programmes and job redesign grants?</h2>
+            <p class="section-lead">
+              Career Conversion Programmes (CCPs) and job redesign grants are Workforce Singapore and SkillsFuture initiatives
+              that help employers reskill or upskill staff, hire mid-career professionals and redesign existing jobs for digital,
+              sustainability and business transformation.
+            </p>
+          </div>
+
+          <div class="bordered-box">
+            <h4>How employers typically benefit</h4>
+            <ul>
+              <li>Receive up to 70% to 90% salary support for eligible staff on structured on-the-job training.</li>
+              <li>Reduce hiring and training costs when building new capabilities in digital, sustainability, tech, HR and more.</li>
+              <li>Tap into a broader mid-career talent pool while maintaining a sustainable payroll.</li>
+              <li>Align job redesign with real business needs instead of purely HR-driven initiatives.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="bordered-box">
+            <h4>Who is typically eligible?</h4>
+            <ul>
+              <li>Singapore-registered companies hiring or reskilling Singapore Citizens or PRs.</li>
+              <li>Roles that are newly created or redesigned with at least 50 percent change in job content.</li>
+              <li>Mid-career individuals aged 21 and above moving into new or significantly expanded roles.</li>
+              <li>Staff who are not shareholders or immediate family members of directors.</li>
+            </ul>
+          </div>
+
+          <div class="bordered-box" style="margin-top:1rem;">
+            <h4>Next step</h4>
+            <p style="font-size:0.9rem; color:var(--text-muted);">
+              If you are hiring or redesigning roles in the next 3 to 6 months, it is often best to review CCP options early.
+              We can run a quick eligibility check across your planned hires and existing staff and highlight viable pathways.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent approved projects -->
+    <section class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Selected case examples</div>
+          <h2 class="section-title">Recent CCP and job redesign projects we have supported</h2>
+          <p class="section-lead">
+            Every project starts from your existing team and business priorities. Below are examples of roles that have gone
+            through structured CCP or job redesign applications with salary support.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-tag">Biotech SME</div>
+            <div class="project-role">Regional Marketing Manager</div>
+            <div class="project-meta">Digital and regional marketing scope under CCP-DAMP for a growing biotech company.</div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">F&B group</div>
+            <div class="project-role">Sustainability Manager</div>
+            <div class="project-meta">Sustainability strategy, reporting and implementation supported under CCP-Sustainability.</div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">International markets</div>
+            <div class="project-role">International Markets Manager</div>
+            <div class="project-meta">Market expansion role supported under overseas market immersion programme (OMIP).</div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">Engineering firm</div>
+            <div class="project-role">People and Culture Manager</div>
+            <div class="project-meta">Job redesign to expand from HR operations into people analytics and workforce planning.</div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">Hospitality</div>
+            <div class="project-role">Sustainability Director</div>
+            <div class="project-meta">Group-level sustainability role, including carbon, certifications and transformation roadmap.</div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-tag">HVAC & industrial</div>
+            <div class="project-role">Service Sales Engineer</div>
+            <div class="project-meta">Field engineering and service sales role with structured technical OJT and customer exposure.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="insights">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Common questions from employers</div>
+          <h2 class="section-title">Frequently asked questions about CCP and job redesign grants</h2>
+          <p class="section-lead">
+            These are typical questions we receive from HR teams, business owners and hiring managers when they first explore
+            CCP and related grants.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Who is eligible for the Career Conversion Programme (CCP)?</summary>
+            <p>
+              Most Singapore-registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles
+              may be eligible for CCP funding. The specifics differ across programme partners and job families, so we usually
+              start with a quick eligibility discussion based on your planned hires and existing staff.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How much salary support can my company receive?</summary>
+            <p>
+              Depending on the CCP and your SME status, employers may receive up to 70 percent to 90 percent salary support for
+              the programme duration. We help you frame the job scope, structured OJT and documentation so the application clearly
+              aligns with programme criteria.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What types of roles are usually supported?</summary>
+            <p>
+              In practice we see a wide range of roles, including digital marketing, sustainability, HR and people roles, sales
+              and business development, operations, tech and product, and specialised engineering roles. The key is that there
+              is a clear conversion in skills, industry or job scope.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do we get started with an application?</summary>
+            <p>
+              Most employers begin with a short call to map their planned hires and internal reskilling needs against the
+              different CCP pathways. From there, we prepare a simple action plan, documentation checklist and timeline for
+              each potential application.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related guides -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Guides for HR and business leaders</div>
+          <h2 class="section-title">CCP and grant resources for Singapore employers</h2>
+        </div>
+
+        <div class="guides-grid">
+          <a href="wsg-career-conversion-programme.html" class="guide-card">
+            <div class="guide-title">WSG Career Conversion Programme explained</div>
+            <div class="guide-desc">Overview of CCP structure, salary support, and how it works for employers and candidates.</div>
+          </a>
+
+          <a href="career-conversion-programmes.html" class="guide-card">
+            <div class="guide-title">Designing roles with substantial job content change</div>
+            <div class="guide-desc">How to approach job redesign in a way that is credible and practical for your team.</div>
+          </a>
+
+          <a href="ccp-digital-marketing.html" class="guide-card">
+            <div class="guide-title">Using CCP for digital, sustainability and people roles</div>
+            <div class="guide-desc">Examples of roles that frequently qualify and how employers structure the conversion.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+      <div class="footer-layout">
+        <div>
+          <div class="footer-heading">BizGrants Consulting</div>
+          <p>
+            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture-supported
+            workforce transformation in Singapore.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="services.html">CCP advisory and role scoping</a></li>
+            <li><a href="services.html">Job redesign and OJT planning</a></li>
+            <li><a href="blog.html">Grant insights and guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><span>Email: enquiries@bizgrants.consulting</span></li>
+            <li><span>Location: Singapore</span></li>
+            <li><a href="https://calendly.com/enquiries-bizgrants/30min" target="_blank" rel="noreferrer">Book a 30-min call</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 BizGrants Consulting. All rights reserved.</span>
+        <span>For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs.</span>
+      </div>
     </div>
   </footer>
+
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('show');
     }
-    const slider = document.getElementById("slider");
-    let scrollPosition = 0;
-    setInterval(() => {
-      scrollPosition += 1;
-      if (scrollPosition >= slider.scrollWidth - slider.clientWidth) {
-        scrollPosition = 0;
-      }
-      slider.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    }, 25);
   </script>
 
   <script>
@@ -391,8 +1222,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-

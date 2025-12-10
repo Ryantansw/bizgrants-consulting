@@ -42,7 +42,7 @@
         "name": "Who is eligible for the Career Conversion Programme (CCP)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most Singapore-registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles are eligible for CCP funding. Eligibility may also extend to job redesign and upskilling initiatives. Book a free eligibility check with us."
+          "text": "Most Singapore registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles are eligible for CCP funding. Eligibility may also extend to job redesign and upskilling initiatives. Book a free eligibility check with us."
         }
       },
       {
@@ -66,7 +66,7 @@
         "name": "Is there a success fee model?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. With BizGrants Consulting, you only pay when a grant is approved, which keeps it risk free for SMEs and corporates. We specialise in success-fee grant consulting."
+          "text": "Yes. With BizGrants Consulting, you only pay when a grant is approved, which keeps it risk free for SMEs and corporates. We specialise in success fee grant consulting."
         }
       }
     ]
@@ -88,10 +88,9 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Page-specific layout styles for professional homepage -->
+  <!-- Page specific layout styles for professional homepage -->
   <style>
     :root {
       --bg-page: #f5f7fb;
@@ -112,10 +111,8 @@
     }
 
     body {
-      font-family: 'Plus Jakarta Sans', "Segoe UI", Arial, sans-serif;
       background: var(--bg-page);
       color: var(--text-main);
-      line-height: 1.6;
     }
 
     a {
@@ -222,14 +219,14 @@
     }
 
     .hero h1 {
-      font-size: 2.4rem;
+      font-size: 2rem;
       line-height: 1.2;
       margin-bottom: 1rem;
       letter-spacing: -0.02em;
     }
 
     .hero p.hero-subtitle {
-      font-size: 1.03rem;
+      font-size: 1rem;
       color: var(--text-muted);
       max-width: 36rem;
       margin-bottom: 1.5rem;
@@ -422,7 +419,7 @@
       margin-top: 0.5rem;
     }
 
-    /* Why companies choose us */
+    /* Why companies choose BizGrants */
     .stats-row {
       display: flex;
       flex-wrap: wrap;
@@ -685,7 +682,7 @@
       gap: 0.75rem;
     }
 
-    /* Responsive */
+    /* Desktop responsive adjustments (already in your design) */
     @media (max-width: 960px) {
       .hero-layout,
       .intro-layout,
@@ -695,18 +692,6 @@
       .card-grid-home,
       .footer-layout {
         grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero {
-        padding: 3.25rem 0 3rem;
-      }
-
-      .hero-layout {
-        gap: 2.5rem;
-      }
-
-      .hero-right {
-        order: -1;
       }
 
       nav ul {
@@ -731,11 +716,23 @@
       .hamburger {
         display: block;
       }
+
+      .hero {
+        padding: 3.25rem 0 3rem;
+      }
+
+      .hero-layout {
+        gap: 2.5rem;
+      }
+
+      .hero-right {
+        order: -1;
+      }
     }
 
     @media (max-width: 640px) {
       .hero h1 {
-        font-size: 1.9rem;
+        font-size: 1.7rem;
       }
 
       .card-grid-home,
@@ -746,6 +743,64 @@
 
       section.section {
         padding: 3.2rem 0;
+      }
+    }
+
+    /* MOBILE UX IMPROVEMENTS (only mobile, desktop unchanged) */
+    @media (max-width: 768px) {
+      header .nav-container {
+        padding: 0.5rem 0;
+      }
+
+      header .logo-img {
+        height: 32px;
+      }
+
+      .hero {
+        padding: 2.4rem 0 2rem;
+      }
+
+      .hero-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.8rem;
+      }
+
+      .hero-right {
+        order: -1;
+        padding: 1.25rem 1.25rem 1.1rem;
+      }
+
+      .funding-meta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.6rem;
+      }
+
+      .funding-pill {
+        font-size: 0.8rem;
+        padding: 0.55rem 0.7rem;
+      }
+
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+
+      .hero p.hero-subtitle {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .funding-meta {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .cta-btn-primary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      body {
+        padding-bottom: 3.5rem;
       }
     }
   </style>
@@ -795,12 +850,12 @@
           <h1>Secure up to 90% salary support with structured CCP and job redesign advisory</h1>
           <p class="hero-subtitle">
             We specialise in Workforce Singapore’s Career Conversion Programmes, Job Redesign Grants and SkillsFuture funding,
-            helping employers in Singapore redesign roles, reskill staff and hire mid-career talent with strong grant support.
+            helping employers in Singapore redesign roles, reskill staff and hire mid career talent with strong grant support.
           </p>
 
           <div class="hero-badges">
             <div class="hero-badge"><span>✓</span><span>CCP, Job Redesign, SkillsFuture grants</span></div>
-            <div class="hero-badge"><span>✓</span><span>Success-fee model for employers</span></div>
+            <div class="hero-badge"><span>✓</span><span>Success fee model for employers</span></div>
             <div class="hero-badge"><span>✓</span><span>New hires and existing staff reskilling</span></div>
           </div>
 
@@ -811,7 +866,7 @@
               target="_blank"
               class="cta-btn-primary"
             >
-              Book a 30-min CCP consult
+              Book a 30 min CCP consult
             </a>
             <a href="#insights" class="btn-ghost">
               View CCP & grant insights
@@ -819,7 +874,7 @@
           </div>
 
           <p class="hero-note">
-            For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs into new or redesigned roles.
+            For Singapore registered employers hiring or reskilling Singapore Citizens and PRs into new or redesigned roles.
           </p>
         </div>
 
@@ -827,7 +882,7 @@
           <div class="funding-tag">Example funding snapshot</div>
           <div class="funding-title">Sustainability Manager, F&B group</div>
           <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:0.7rem;">
-            Mid-career Singaporean hire on a 6-month CCP with structured on-the-job training.
+            Mid career Singaporean hire on a 6 month CCP with structured on the job training.
           </p>
 
           <div class="funding-meta">
@@ -862,12 +917,12 @@
       <div class="container intro-layout">
         <div>
           <div class="section-header">
-            <div class="section-kicker">2-minute overview</div>
+            <div class="section-kicker">2 minute overview</div>
             <h2 class="section-title">How CCP funding supports hiring, reskilling and job redesign</h2>
             <p class="section-lead">
               This short explainer walks through how Career Conversion Programmes and job redesign grants offset payroll costs,
-              support mid-career hires and fund structured on-the-job training. See how BizGrants Consulting helps employers
-              translate business plans into CCP-ready roles and documentation.
+              support mid career hires and fund structured on the job training. See how BizGrants Consulting helps employers
+              translate business plans into CCP ready roles and documentation.
             </p>
           </div>
         </div>
@@ -889,22 +944,22 @@
           <h2 class="section-title">Why companies choose BizGrants Consulting as their CCP partner</h2>
           <p class="section-lead">
             We work alongside HR, business leaders and founders to diagnose workforce needs, redesign roles and position
-            applications clearly against programme criteria. Our consulting is built around clarity, structure and hands-on
+            applications clearly against programme criteria. Our consulting is built around clarity, structure and hands on
             documentation support.
           </p>
         </div>
 
         <div class="stats-row">
           <div class="stat-chip">
-            <strong>End-to-end CCP support</strong>
+            <strong>End to end CCP support</strong>
             From eligibility check to claims documentation
           </div>
           <div class="stat-chip">
             <strong>New hires and existing staff</strong>
-            Place-and-train and reskilling pathways
+            Place and train and reskilling pathways
           </div>
           <div class="stat-chip">
-            <strong>Success-fee model</strong>
+            <strong>Success fee model</strong>
             You invest only when grants are approved
           </div>
         </div>
@@ -912,9 +967,9 @@
         <div class="card-grid-home">
           <article class="card-home">
             <div class="card-label">01</div>
-            <h3>End-to-end CCP, job redesign and SkillsFuture consulting</h3>
+            <h3>End to end CCP, job redesign and SkillsFuture consulting</h3>
             <p>
-              We help you interpret programme requirements, structure job descriptions, design on-the-job training plans and
+              We help you interpret programme requirements, structure job descriptions, design on the job training plans and
               prepare the full suite of forms, supporting documents and proof of work.
             </p>
           </article>
@@ -930,10 +985,10 @@
 
           <article class="card-home">
             <div class="card-label">03</div>
-            <h3>Practical, role-based advisory</h3>
+            <h3>Practical, role based advisory</h3>
             <p>
-              Instead of generic templates, we translate your actual responsibilities into CCP-ready scope, highlighting
-              conversion, skills gaps and structured OJT that align with SkillsFuture’s frameworks.
+              Instead of generic templates, we translate your actual responsibilities into CCP ready scope, highlighting
+              conversion, skills gaps and structured OJT that align with SkillsFuture frameworks.
             </p>
           </article>
         </div>
@@ -949,7 +1004,7 @@
             <h2 class="section-title">What are Career Conversion Programmes and job redesign grants?</h2>
             <p class="section-lead">
               Career Conversion Programmes (CCPs) and job redesign grants are Workforce Singapore and SkillsFuture initiatives
-              that help employers reskill or upskill staff, hire mid-career professionals and redesign existing jobs for digital,
+              that help employers reskill or upskill staff, hire mid career professionals and redesign existing jobs for digital,
               sustainability and business transformation.
             </p>
           </div>
@@ -957,10 +1012,10 @@
           <div class="bordered-box">
             <h4>How employers typically benefit</h4>
             <ul>
-              <li>Receive up to 70% to 90% salary support for eligible staff on structured on-the-job training.</li>
+              <li>Receive up to 70% to 90% salary support for eligible staff on structured on the job training.</li>
               <li>Reduce hiring and training costs when building new capabilities in digital, sustainability, tech, HR and more.</li>
-              <li>Tap into a broader mid-career talent pool while maintaining a sustainable payroll.</li>
-              <li>Align job redesign with real business needs instead of purely HR-driven initiatives.</li>
+              <li>Tap into a broader mid career talent pool while maintaining a sustainable payroll.</li>
+              <li>Align job redesign with real business needs instead of purely HR driven initiatives.</li>
             </ul>
           </div>
         </div>
@@ -969,9 +1024,9 @@
           <div class="bordered-box">
             <h4>Who is typically eligible?</h4>
             <ul>
-              <li>Singapore-registered companies hiring or reskilling Singapore Citizens or PRs.</li>
+              <li>Singapore registered companies hiring or reskilling Singapore Citizens or PRs.</li>
               <li>Roles that are newly created or redesigned with at least 50% change in job content.</li>
-              <li>Mid-career individuals aged 21 and above moving into new or significantly expanded roles.</li>
+              <li>Mid career individuals aged 21 and above moving into new or significantly expanded roles.</li>
               <li>Staff who are not shareholders or immediate family members of directors.</li>
             </ul>
           </div>
@@ -1003,19 +1058,19 @@
           <article class="project-card">
             <div class="project-tag">Biotech SME</div>
             <div class="project-role">Regional Marketing Manager</div>
-            <div class="project-meta">Digital and regional marketing scope under CCP-DAMP for a growing biotech company.</div>
+            <div class="project-meta">Digital and regional marketing scope under CCP DAMP for a growing biotech company.</div>
           </article>
 
           <article class="project-card">
             <div class="project-tag">F&B group</div>
             <div class="project-role">Sustainability Manager</div>
-            <div class="project-meta">Sustainability strategy, reporting and implementation supported under CCP-Sustainability.</div>
+            <div class="project-meta">Sustainability strategy, reporting and implementation supported under CCP Sustainability.</div>
           </article>
 
           <article class="project-card">
             <div class="project-tag">International markets</div>
             <div class="project-role">International Markets Manager</div>
-            <div class="project-meta">Market expansion role supported under overseas market immersion programme (OMIP).</div>
+            <div class="project-meta">Market expansion role supported under overseas market immersion programme.</div>
           </article>
 
           <article class="project-card">
@@ -1027,7 +1082,7 @@
           <article class="project-card">
             <div class="project-tag">Hospitality</div>
             <div class="project-role">Sustainability Director</div>
-            <div class="project-meta">Group-level sustainability role, including carbon, certifications and transformation roadmap.</div>
+            <div class="project-meta">Group level sustainability role, including carbon, certifications and transformation roadmap.</div>
           </article>
 
           <article class="project-card">
@@ -1055,7 +1110,7 @@
           <details class="faq-item" open>
             <summary>Who is eligible for the Career Conversion Programme (CCP)?</summary>
             <p>
-              Most Singapore-registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles
+              Most Singapore registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles
               may be eligible for CCP funding. The specifics differ across programme partners and job families, so we usually
               start with a quick eligibility discussion based on your planned hires and existing staff.
             </p>
@@ -1126,7 +1181,7 @@
         <div>
           <div class="footer-heading">BizGrants Consulting</div>
           <p>
-            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture-supported
+            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture supported
             workforce transformation in Singapore.
           </p>
         </div>
@@ -1149,7 +1204,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2025 BizGrants Consulting. All rights reserved.</span>
-        <span>For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs.</span>
+        <span>For Singapore registered employers hiring or reskilling Singapore Citizens and PRs.</span>
       </div>
     </div>
   </footer>
@@ -1186,7 +1241,6 @@
           });
         }
       }
-      // Observe and wire the injected badge button
       const obs = new MutationObserver(function(){
         const badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content');
         if (badge && !badge.__bgTracked) {
@@ -1196,7 +1250,6 @@
       });
       obs.observe(document.documentElement, { childList: true, subtree: true });
 
-      // Listen for Calendly postMessage events
       window.addEventListener('message', function(ev){
         try{
           const originHost = new URL(ev.origin).hostname || '';

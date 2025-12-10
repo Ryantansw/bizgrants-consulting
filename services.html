@@ -56,7 +56,7 @@
   </script>
 
   <style>
-    /* Make services page follow the new site-wide visual system */
+    /* Page-wide visual system to match homepage */
 
     body {
       font-family: 'Plus Jakarta Sans', "Segoe UI", Arial, sans-serif;
@@ -77,6 +77,13 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* Header aligned to homepage style */
@@ -157,7 +164,7 @@
 
     .hero-eyebrow {
       display: inline-flex;
-      align-items: centre;
+      align-items: center;
       gap: 0.4rem;
       padding: 0.22rem 0.8rem;
       border-radius: 999px;
@@ -181,46 +188,41 @@
       font-size: 1.02rem;
       max-width: 40rem;
       color: #6b7280;
-      margin: 0 0 1.5rem 0;
+      margin: 0;
     }
-
-    .hero-cta-row {
-      margin-top: 1.4rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .cta-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.85rem 1.6rem;
-  border-radius: 999px;
-  border: none;
-  background: linear-gradient(135deg, #0f52ba, #2f6fd2);
-  color: #ffffff !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  box-shadow: 0 16px 40px rgba(15, 82, 186, 0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  text-decoration: none;
-  white-space: nowrap;
-  margin-top: 0.4rem; /* keeps alignment neat */
-}
-
-.cta-btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 20px 50px rgba(15, 82, 186, 0.45);
-  background: linear-gradient(135deg, #2f6fd2, #0b3f8a);
-}
 
     .hero-note {
       font-size: 0.8rem;
       color: #6b7280;
-      margin-top: 0.9rem;
+      margin-top: 0.7rem;
+    }
+
+    /* Flat, clean hero CTA on services page */
+    .services-hero-cta-row {
+      margin-top: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .services-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.6rem;
+      border-radius: 14px;
+      background: #0F52BA;
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      box-shadow: none;
+      transition: background 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .services-hero-cta:hover {
+      background: #1549A7;
+      text-decoration: none;
     }
 
     /* Section spacing */
@@ -300,6 +302,44 @@
     }
     @media (max-width: 900px){
       #ccp .cols-3 { grid-template-columns:1fr; }
+    }
+
+    /* Card grid from existing styles (reused) */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+    .ccp-card {
+      background: #fff;
+      border: 1px solid #e3eaf6;
+      padding: 2.1em 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(15,82,186,0.04);
+      transition: box-shadow 0.2s, border 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 260px;
+      margin-bottom: 0.5em;
+    }
+    .ccp-card h3 {
+      color: #0F52BA;
+      margin-bottom: 1em;
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+    .ccp-card p {
+      font-size: 1.03em;
+      margin-bottom: 0;
+      line-height: 1.65;
+      color: #444;
+    }
+    .ccp-icon {
+      font-size: 2.2em;
+      color: #0F52BA;
+      margin-bottom: 0.5em;
     }
 
     /* Footer aligned with homepage footer */
@@ -395,6 +435,12 @@
       .hero-subtitle {
         font-size: 0.95rem;
       }
+      .card-grid {
+        gap: 1.2em;
+      }
+      .footer-layout {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -427,17 +473,17 @@
           We work with Singapore employers to identify grant-eligible roles and map them to the right Career Conversion Programme,
           Job Redesign Grant or SkillsFuture-supported pathway, across both new hires and existing staff.
         </p>
-        <div class="hero-cta-row">
+        <div class="services-hero-cta-row">
           <a href="https://calendly.com/enquiries-bizgrants/30min"
              onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
              target="_blank"
-             class="cta-btn-primary">
+             class="services-hero-cta">
             Book a free consultation
           </a>
-          <p class="hero-note">
-            Suitable for HR, founders and business leaders planning hiring or role redesign in the next 3 to 6 months.
-          </p>
         </div>
+        <p class="hero-note">
+          Suitable for HR, founders and business leaders planning hiring or role redesign in the next 3 to 6 months.
+        </p>
       </div>
     </section>
 
@@ -579,7 +625,9 @@
   </footer>
 
   <script>
-    function toggleMenu(){document.getElementById('nav-links').classList.toggle('show');}
+    function toggleMenu(){
+      document.getElementById('nav-links').classList.toggle('show');
+    }
 
     // CCP estimator
     const MONTHS = {
@@ -695,5 +743,3 @@
   </script>
 </body>
 </html>
-
-

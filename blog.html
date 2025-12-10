@@ -35,13 +35,46 @@
       text-align: center;
       padding: 4.5rem 0;
     }
-    .hero-gradient h1 { color: #fff; font-size: 2.7rem; font-weight: 700; margin: 0 0 1rem 0; }
-    .hero-gradient p { color: #fff; font-size: 1.25rem; margin: 0; }
+    .hero-gradient h1 {
+      color: #fff;
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+    }
+    .hero-gradient p {
+      color: #fff;
+      font-size: 1.25rem;
+      margin: 0;
+    }
 
-    .email-optin-section { background: #F5F8FF; padding: 3rem 0 4rem; margin-top: 2rem; }
-    .email-optin { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
-    .email-optin-content { max-width: 520px; }
-    .email-optin-content h2 { margin-top: 0; font-size: 1.9rem; margin-bottom: 0.75rem; }
+    .blog-faq-section, .popular-topics-section { margin-bottom: 3.5rem; }
+
+    .email-optin-section {
+      background: #F5F8FF;
+      padding: 3rem 0 4rem;
+      margin-top: 2rem;
+    }
+    .email-optin {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: center; /* vertically centre heading block and form */
+    }
+    .email-optin-content {
+      max-width: 520px;
+    }
+    .email-optin-content h2 {
+      margin-top: 0;
+      font-size: 1.9rem;
+      margin-bottom: 0.75rem;
+    }
+    .email-optin-content p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
 
     .email-optin-form {
       flex: 1;
@@ -51,8 +84,25 @@
       box-shadow: 0 4px 14px rgba(15, 82, 186, 0.08);
       padding: 1.5rem 1.75rem;
     }
-    .email-optin-form label { display: block; margin-bottom: .25rem; font-size: .9rem; font-weight: 500; }
-    .email-optin-form input { width: 100%; padding: .65rem .8rem; margin-bottom: .9rem; border-radius: 8px; border: 1px solid #d0d7ee; }
+    .email-optin-form label {
+      display: block;
+      margin-bottom: .25rem;
+      font-size: .9rem;
+      font-weight: 500;
+    }
+    .email-optin-form input {
+      width: 100%;
+      padding: .65rem .8rem;
+      margin-bottom: .9rem;
+      border-radius: 8px;
+      border: 1px solid #d0d7ee;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+    .email-optin-form input:focus {
+      outline: none;
+      border-color: #0F52BA;
+    }
     .email-optin-form button {
       width: 100%;
       padding: 0.85rem 1rem;
@@ -64,12 +114,26 @@
       background: #0F52BA;
       color: #ffffff;
     }
-    .email-optin-form small { display: block; margin-top: .6rem; font-size: .8rem; color: #666; }
+    .email-optin-form small {
+      display: block;
+      margin-top: .6rem;
+      font-size: .8rem;
+      color: #666;
+    }
 
     @media (max-width: 700px) {
       .grid { grid-template-columns: 1fr; }
-      .email-optin { flex-direction: column; }
-      .email-optin-form { width: 100%; }
+      .hero-gradient { padding: 3rem 1rem; }
+      .hero-gradient h1 { font-size: 2rem; }
+      .hero-gradient p { font-size: 1rem; }
+
+      .email-optin {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .email-optin-form {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -142,7 +206,7 @@
     <p>Yes. CCP pathways exist for digital, marketing, HR, sustainability and more.</p>
 
     <strong>How long does CCP approval take?</strong>
-    <p>Typically 2–6 weeks depending on pathway and documentation completeness.</p>
+    <p>Typically 2 to 6 weeks depending on pathway and documentation completeness.</p>
 
     <strong>Is BizGrants success-fee based?</strong>
     <p>Yes. You only pay if the application gets approved.</p>
@@ -169,13 +233,30 @@
 
       <form id="email-optin-form" class="email-optin-form">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="e.g. John Tan, HR Manager"
+          required
+        />
 
         <label for="company">Company (optional)</label>
-        <input type="text" id="company" name="company" />
+        <input
+          type="text"
+          id="company"
+          name="company"
+          placeholder="e.g. ABC Engineering Pte Ltd"
+        />
 
         <label for="email">Work email</label>
-        <input type="email" id="email" name="email" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@company.com"
+          required
+        />
 
         <input type="hidden" name="source" value="BizGrants Blog Opt in" />
 
@@ -213,30 +294,31 @@
   }
 </script>
 
-<!-- FORCE REDIRECT TO THANK YOU PAGE -->
 <script>
-(function() {
-  var form = document.getElementById('email-optin-form');
-  if (!form) return;
+  (function() {
+    var form = document.getElementById('email-optin-form');
+    if (!form) return;
 
-  var scriptUrl = "https://script.google.com/macros/s/AKfycbzlLI1EENp295PEbZtyaDxN5Dsov7zCMd7G3Qz7yMj6eayxDt28HE9ktX9X4EbSUEBa/exec";
+    var scriptUrl = "https://script.google.com/macros/s/AKfycbzlLI1EENp295PEbZtyaDxN5Dsov7zCMd7G3Qz7yMj6eayxDt28HE9ktX9X4EbSUEBa/exec";
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-    var formData = new FormData(form);
+      var formData = new FormData(form);
 
-    try {
-      fetch(scriptUrl, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-      });
-    } catch (err) {}
+      try {
+        fetch(scriptUrl, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors'
+        });
+      } catch (err) {
+        console.log('Opt in tracking error:', err);
+      }
 
-    window.location.href = "thank-you.html";
-  });
-})();
+      window.location.href = "thank-you.html";
+    });
+  })();
 </script>
 
 </body>

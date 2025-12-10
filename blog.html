@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CCP & Job Redesign Grant Insights | Singapore Grants Blog | BizGrants Consulting Advisory</title>
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
   <meta name="description" content="Learn how Singapore SMEs can maximise Workforce Singapore Career Conversion Programmes (CCP), Job Redesign Grants, SkillsFuture funding, and salary support. In-depth CCP guides, case studies, and success tips for employers." />
   <link rel="canonical" href="https://bizgrants.consulting/blog.html" />
+
   <meta property="og:title" content="CCP & Job Redesign Grant Insights | Singapore Grants Blog | BizGrants Consulting Advisory" />
   <meta property="og:description" content="Guides, FAQs, and real-world advice on CCP, job redesign grant, SkillsFuture, and government funding for Singapore companies. Unlock up to 90% salary support." />
   <meta property="og:image" content="images/logo.png" />
@@ -16,62 +19,276 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+  <!-- Optional: GA4 to align with other pages -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CWBH1DYTQB');
+  </script>
+
   <style>
-    html, body { height: 100%; }
-    body { min-height: 100vh; display: flex; flex-direction: column; }
-    .main-content { flex: 1 0 auto; }
-    footer { flex-shrink: 0; }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 2rem; }
-    .card { background: #fff; border-radius: 18px; box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05); padding: 2rem; transition: box-shadow .2s; }
-    .card:hover { box-shadow: 0 8px 24px rgba(49, 90, 172, 0.13); }
-    .card a { color: #0F52BA; text-decoration: none; font-weight: 500; }
-    .card a:hover { text-decoration: underline; }
-
-    .container { width: 95%; max-width: 1200px; margin: 0 auto; }
-
-    .hero-gradient {
-      background: linear-gradient(90deg, #0F52BA 0%, #89CFF0 100%);
-      text-align: center;
-      padding: 4.5rem 0;
-    }
-    .hero-gradient h1 {
-      color: #fff;
-      font-size: 2.7rem;
-      font-weight: 700;
-      margin: 0 0 1rem 0;
-    }
-    .hero-gradient p {
-      color: #fff;
-      font-size: 1.25rem;
+    body {
+      font-family: 'Plus Jakarta Sans', "Segoe UI", Arial, sans-serif;
+      background: #f5f7fb;
+      color: #0f285a;
       margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
     }
 
-    .blog-faq-section, .popular-topics-section { margin-bottom: 3.5rem; }
+    a {
+      color: #0f52ba;
+      text-decoration: none;
+    }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header aligned to new site style */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(15, 40, 90, 0.06);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #0f285a;
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: #0f52ba;
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Hero (Option A – clean white) */
+    .hero {
+      background: #ffffff;
+      padding: 4rem 0 3rem;
+      text-align: left;
+      color: #0f285a;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: centre;
+      gap: 0.4rem;
+      padding: 0.22rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(15, 82, 186, 0.06);
+      color: #0b3f8a;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 {
+      color: #0f285a;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0 0 0.9rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      color: #6b7280;
+      font-size: 1.02rem;
+      margin: 0 0 1.4rem 0;
+      max-width: 42rem;
+    }
+
+    .hero-note {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-top: 0.4rem;
+    }
+
+    /* Main content layout */
+    .main-content {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .blog-grid-section {
+      padding: 3.5rem 0 4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid rgba(15, 40, 90, 0.08);
+      box-shadow: 0 2px 8px rgba(49, 90, 172, 0.05);
+      padding: 1.8rem 1.7rem;
+      transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 24px rgba(49, 90, 172, 0.13);
+      transform: translateY(-2px);
+      border-color: rgba(15, 40, 90, 0.18);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.7rem;
+      font-size: 1.1rem;
+      color: #0f285a;
+    }
+
+    .card p {
+      margin: 0 0 0.9rem 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .card a {
+      color: #0f52ba;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.92rem;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .blog-section-heading {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .blog-section-lead {
+      font-size: 0.98rem;
+      color: #444;
+      margin-bottom: 1.4rem;
+    }
+
+    .blog-faq-section,
+    .popular-topics-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .blog-faq-section h2,
+    .popular-topics-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-faq-section p {
+      margin: 0 0 0.9rem 0;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .popular-topics-section ul {
+      padding-left: 1.1rem;
+      margin: 0.5rem 0 0;
+    }
+
+    .popular-topics-section li + li {
+      margin-top: 0.3rem;
+    }
+
+    /* EMAIL OPT-IN SECTION */
     .email-optin-section {
       background: #F5F8FF;
       padding: 3rem 0 4rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
+
     .email-optin {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: space-between;
-      align-items: center; /* vertically centre heading block and form */
+      align-items: center;
     }
+
     .email-optin-content {
       max-width: 520px;
     }
+
     .email-optin-content h2 {
       margin-top: 0;
-      font-size: 1.9rem;
+      font-size: 1.8rem;
       margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+      color: #0f285a;
     }
+
     .email-optin-content p {
       margin: 0;
-      font-size: 1rem;
+      font-size: 0.98rem;
       line-height: 1.6;
       color: #333;
     }
@@ -84,25 +301,29 @@
       box-shadow: 0 4px 14px rgba(15, 82, 186, 0.08);
       padding: 1.5rem 1.75rem;
     }
+
     .email-optin-form label {
       display: block;
-      margin-bottom: .25rem;
-      font-size: .9rem;
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
       font-weight: 500;
     }
+
     .email-optin-form input {
       width: 100%;
-      padding: .65rem .8rem;
-      margin-bottom: .9rem;
+      padding: 0.65rem 0.8rem;
+      margin-bottom: 0.9rem;
       border-radius: 8px;
       border: 1px solid #d0d7ee;
       font-size: 0.95rem;
       box-sizing: border-box;
     }
+
     .email-optin-form input:focus {
       outline: none;
       border-color: #0F52BA;
     }
+
     .email-optin-form button {
       width: 100%;
       padding: 0.85rem 1rem;
@@ -114,25 +335,140 @@
       background: #0F52BA;
       color: #ffffff;
     }
+
+    .email-optin-form button:hover {
+      background: #1549A7;
+    }
+
     .email-optin-form small {
       display: block;
-      margin-top: .6rem;
-      font-size: .8rem;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
       color: #666;
     }
 
-    @media (max-width: 700px) {
-      .grid { grid-template-columns: 1fr; }
-      .hero-gradient { padding: 3rem 1rem; }
-      .hero-gradient h1 { font-size: 2rem; }
-      .hero-gradient p { font-size: 1rem; }
+    /* Related guides section */
+    .related-guides-section {
+      padding: 2.5rem 0 3.5rem;
+    }
 
+    .related-guides-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .related-guides-section ul {
+      padding-left: 1.1rem;
+      margin: 0.4rem 0 0;
+    }
+
+    .related-guides-section li + li {
+      margin-top: 0.3rem;
+    }
+
+    /* Footer (aligned to homepage) */
+    footer {
+      background: #0b1a3a;
+      color: rgba(255, 255, 255, 0.86);
+      padding: 2.8rem 0 2rem;
+      margin-top: 3rem;
+      text-align: left;
+      flex-shrink: 0;
+    }
+
+    .footer-layout {
+      display: grid;
+      grid-template-columns: 2fr 1.4fr 1.4fr;
+      gap: 2.2rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-heading {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.7rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .footer-links li + li {
+      margin-top: 0.35rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding-top: 1.1rem;
+      font-size: 0.78rem;
+      color: rgba(226, 232, 240, 0.85);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      nav ul {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid rgba(15, 40, 90, 0.1);
+        box-shadow: 0 18px 40px rgba(15, 40, 90, 0.14);
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 170px;
+        display: none;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 3rem 0 2.3rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .hero p {
+        font-size: 0.98rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
       .email-optin {
         flex-direction: column;
         align-items: flex-start;
       }
       .email-optin-form {
         width: 100%;
+      }
+      .footer-layout {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -159,66 +495,82 @@
 
 <div class="main-content">
 
-  <section class="hero-gradient">
-    <h1>Singapore CCP & Job Redesign Grant Blog - Insights from BizGrants Consulting</h1>
-    <p>Your hub for Workforce Singapore grant news, CCP case studies, SkillsFuture tips, and practical advisory for employers and HR managers.</p>
-  </section>
-
-  <section class="container grid" style="margin-top:3rem;margin-bottom:4.5rem;">
-    <div class="card">
-      <h3>What is the Career Conversion Programme (CCP)?</h3>
-      <p>Understand eligibility, pathways and why more employers are tapping CCP in 2025.</p>
-      <a href="blog/ccp-eligibility.html">Read More →</a>
-    </div>
-    <div class="card">
-      <h3>How to Apply for a CCP in 2025</h3>
-      <p>A step-by-step walkthrough for HR managers and SMEs applying for Workforce Singapore funding.</p>
-      <a href="blog/ccp-application-guide.html">Read More →</a>
-    </div>
-    <div class="card">
-      <h3>CCP vs JGI vs SFEC</h3>
-      <p>A practical comparison to help employers prioritise salary support schemes.</p>
-      <a href="blog/ccp-vs-jgi-sfec.html">Read More →</a>
-    </div>
-    <div class="card">
-      <h3>Reskilling Examples & Case Studies</h3>
-      <p>Real Singapore examples showing how successful CCP conversions are evaluated.</p>
-      <a href="blog/ccp-reskilling-examples.html">Read More →</a>
-    </div>
-    <div class="card">
-      <h3>Consulting Fees: Flat Fee vs Success-Based</h3>
-      <p>Understanding fee structures and how BizGrants minimises employer risk.</p>
-      <a href="blog/ccp-flatfee-consulting.html">Read More →</a>
-    </div>
-    <div class="card">
-      <h3>Common CCP Application Mistakes</h3>
-      <p>Learn the top rejection reasons and how to avoid them.</p>
-      <a href="blog/ccp-application-pitfalls.html">Read More →</a>
+  <!-- New hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">Insights · Singapore employers & grants</div>
+      <h1>CCP & job redesign grant insights for HR and business leaders</h1>
+      <p>Your hub for Workforce Singapore grant news, CCP case studies, SkillsFuture tips, and practical advisory that you can bring to leadership and HR conversations.</p>
+      <p class="hero-note">Focused on Singapore SMEs and corporates using CCP, Job Redesign and SkillsFuture funding for hiring and reskilling.</p>
     </div>
   </section>
 
+  <!-- Blog cards -->
+  <section class="container blog-grid-section">
+    <h2 class="blog-section-heading">Latest CCP & grant articles</h2>
+    <p class="blog-section-lead">
+      These short guides and articles explain how Career Conversion Programmes and related grants work in practice, with examples
+      you can adapt to your own organisation.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>What is the Career Conversion Programme (CCP)?</h3>
+        <p>Understand eligibility, pathways and why more employers are tapping CCP in 2025.</p>
+        <a href="blog/ccp-eligibility.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>How to Apply for a CCP in 2025</h3>
+        <p>A step-by-step walkthrough for HR managers and SMEs applying for Workforce Singapore funding.</p>
+        <a href="blog/ccp-application-guide.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>CCP vs JGI vs SFEC</h3>
+        <p>A practical comparison to help employers prioritise salary support schemes.</p>
+        <a href="blog/ccp-vs-jgi-sfec.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Reskilling Examples & Case Studies</h3>
+        <p>Real Singapore examples showing how successful CCP conversions are evaluated.</p>
+        <a href="blog/ccp-reskilling-examples.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Consulting Fees: Flat Fee vs Success-Based</h3>
+        <p>Understanding fee structures and how BizGrants minimises employer risk.</p>
+        <a href="blog/ccp-flatfee-consulting.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Common CCP Application Mistakes</h3>
+        <p>Learn the top rejection reasons and how to avoid them.</p>
+        <a href="blog/ccp-application-pitfalls.html">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
   <section class="container blog-faq-section">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Frequently asked questions</h2>
     <strong>What is the difference between CCP and Job Redesign Grant?</strong>
-    <p>The CCP focuses on reskilling individuals, while Job Redesign supports changes in job scope and workflow for productivity.</p>
+    <p>The CCP focuses on reskilling individuals into new or substantially changed roles, while Job Redesign supports changes in job scope and workflow for productivity and transformation.</p>
 
     <strong>Can my company apply for CCP?</strong>
-    <p>Yes. CCP pathways exist for digital, marketing, HR, sustainability and more.</p>
+    <p>Yes, there are CCP pathways for digital, marketing, HR, sustainability and more. The key is a clear skills or scope conversion and a structured OJT plan.</p>
 
     <strong>How long does CCP approval take?</strong>
-    <p>Typically 2 to 6 weeks depending on pathway and documentation completeness.</p>
+    <p>Typically 2 to 6 weeks depending on pathway, document readiness and programme partner workload.</p>
 
     <strong>Is BizGrants success-fee based?</strong>
-    <p>Yes. You only pay if the application gets approved.</p>
+    <p>Yes, you only pay if the application gets approved, which keeps it low risk for employers.</p>
   </section>
 
+  <!-- Popular topics -->
   <section class="container popular-topics-section">
-    <h2>Popular Topics</h2>
+    <h2>Popular topics</h2>
     <ul>
       <li><a href="blog/ccp-vs-jgi-sfec.html">CCP vs JGI vs SFEC</a></li>
-      <li><a href="blog/ccp-reskilling-examples.html">CCP Reskilling Examples</a></li>
-      <li><a href="services.html">Eligible CCP Roles</a></li>
-      <li><a href="contact.html">Book a Free Assessment</a></li>
+      <li><a href="blog/ccp-reskilling-examples.html">CCP reskilling examples</a></li>
+      <li><a href="services.html">Eligible CCP roles</a></li>
+      <li><a href="contact.html">Book a free assessment</a></li>
     </ul>
   </section>
 
@@ -267,13 +619,14 @@
     </div>
   </section>
 
-  <section class="container" style="padding-top:2em;">
-    <h2>Related Guides</h2>
+  <!-- Related guides -->
+  <section class="container related-guides-section">
+    <h2>Related guides</h2>
     <ul>
       <li><a href="wsg-career-conversion-programme.html">WSG Career Conversion Programme</a></li>
       <li><a href="ccp-grant-singapore.html">CCP Grant Singapore</a></li>
       <li><a href="ccp-for-employers.html">CCP for Employers</a></li>
-      <li><a href="career-conversion-programmes.html">CCP Overview</a></li>
+      <li><a href="career-conversion-programmes.html">CCP overview</a></li>
       <li><a href="ccp-digital-marketing.html">CCP Digital Marketing</a></li>
       <li><a href="ccp-sustainability.html">CCP Sustainability</a></li>
     </ul>
@@ -283,7 +636,35 @@
 
 <footer>
   <div class="container">
-    <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    <div class="footer-layout">
+      <div>
+        <div class="footer-heading">BizGrants Consulting</div>
+        <p>
+          Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture-supported
+          workforce transformation in Singapore.
+        </p>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="services.html">CCP advisory and role scoping</a></li>
+          <li><a href="services.html">Job redesign and OJT planning</a></li>
+          <li><a href="blog.html">Grant insights and guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><strong>Contact Number:</strong> 8887 5297</li>
+          <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
+          <li><strong>Address:</strong> 60 Paya Lebar Road, #07-54, Paya Lebar Square, Singapore 409051</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BizGrants Consulting. All rights reserved.</span>
+      <span>For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs.</span>
+    </div>
   </div>
 </footer>
 

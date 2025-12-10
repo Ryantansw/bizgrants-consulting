@@ -10,7 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-/* UNIVERSAL FONT OVERRIDE */
+/* UNIVERSAL FONT OVERRIDE + BASE TYPOGRAPHY SCALE */
 body, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
   font-family: "Aptos", "Segoe UI", Arial, sans-serif !important;
   letter-spacing: -0.01em;
@@ -26,7 +26,28 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-size: 16px;          /* base body text */
+  line-height: 1.6;
 }
+
+/* Headings scale */
+h1 {
+  font-size: 2rem;          /* 32px */
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.5rem;        /* 24px */
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.25rem;       /* 20px */
+  font-weight: 700;
+}
+h4, h5, h6 {
+  font-size: 1.0625rem;     /* ~17px */
+  font-weight: 600;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -75,6 +96,7 @@ nav a {
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
   letter-spacing: 0.01em;
+  font-size: 0.95rem;       /* ~15px */
 }
 nav a.active,
 nav a:hover {
@@ -105,15 +127,14 @@ nav a:hover {
   padding: 0;
 }
 .hero h1 {
-  font-size: 2.2em;
-  font-weight: 700;
+  font-size: 2rem;          /* aligned with global h1 */
   margin-bottom: 0.5em;
   margin-top: 0;
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
 .hero p {
-  font-size: 1.17em;
+  font-size: 1rem;          /* 16px */
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -125,7 +146,7 @@ nav a:hover {
   border-radius: 30px;
   font-weight: 600;
   letter-spacing: 0.01em;
-  font-size: 1.05em;
+  font-size: 1rem;          /* 16px */
   margin: 1.3em auto 0 auto;
   box-shadow: 0 1px 8px rgba(15,82,186,0.07);
   transition: background 0.2s, box-shadow 0.2s;
@@ -142,7 +163,7 @@ nav a:hover {
 
 /* SECTION HEADINGS */
 section h2, .why-us h2, .slider-section h2 {
-  font-size: 1.4em;
+  font-size: 1.5rem;        /* 24px, same as global h2 */
   font-weight: 700;
   text-align: left;
   margin-top: 1.5em;
@@ -160,7 +181,7 @@ section h2, .why-us h2, .slider-section h2 {
 .why-us p {
   line-height: 1.7;
   margin-bottom: 1.1em;
-  font-size: 1.05em;
+  font-size: 1rem;          /* 16px */
 }
 
 /* SLIDER SECTION */
@@ -186,7 +207,7 @@ section h2, .why-us h2, .slider-section h2 {
   border-radius: 10px;
   box-shadow: 0 2px 7px rgba(0,0,0,0.06);
   font-weight: 500;
-  font-size: 1.06em;
+  font-size: 1rem;          /* 16px */
   color: #333;
   white-space: normal;
   word-break: break-word;
@@ -221,17 +242,17 @@ section h2, .why-us h2, .slider-section h2 {
 .ccp-card h3 {
   color: #0F52BA;
   margin-bottom: 1em;
-  font-size: 1.2em;
+  font-size: 1.25rem;       /* 20px */
   font-weight: 700;
 }
 .ccp-card p {
-  font-size: 1.03em;
+  font-size: 0.95rem;       /* ~15px */
   margin-bottom: 0;
   line-height: 1.65;
   color: #444;
 }
 .ccp-icon {
-  font-size: 2.2em;
+  font-size: 2rem;          /* 32px */
   color: #0F52BA;
   margin-bottom: 0.5em;
 }
@@ -253,14 +274,14 @@ section h2, .why-us h2, .slider-section h2 {
 }
 .card h3 {
   margin-top: 0;
-  font-size: 1.1em;
+  font-size: 1.25rem;       /* 20px */
   font-weight: 700;
   color: #0F52BA;
   margin-bottom: 1em;
 }
 .card p {
   margin: 0;
-  font-size: 1em;
+  font-size: 0.95rem;       /* ~15px */
   line-height: 1.7;
   color: #444;
 }
@@ -276,6 +297,7 @@ section h2, .why-us h2, .slider-section h2 {
 .contact-form label {
   font-weight: 600;
   margin-bottom: 0.3em;
+  font-size: 0.95rem;       /* ~15px */
 }
 .contact-form input,
 .contact-form textarea {
@@ -283,7 +305,7 @@ section h2, .why-us h2, .slider-section h2 {
   padding: 0.9em 1em;
   border: 1px solid #e3eaf6;
   border-radius: 6px;
-  font-size: 1em;
+  font-size: 0.95rem;       /* ~15px */
   box-sizing: border-box;
   resize: vertical;
 }
@@ -293,7 +315,7 @@ section h2, .why-us h2, .slider-section h2 {
   border: none;
   border-radius: 6px;
   padding: 0.9em 2em;
-  font-size: 1.08em;
+  font-size: 1rem;          /* 16px */
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
@@ -308,7 +330,7 @@ footer {
   color: white;
   text-align: center;
   padding: 2em 0;
-  font-size: 1em;
+  font-size: 1rem;          /* 16px */
   letter-spacing: 0.01em;
   margin-top: auto;
 }
@@ -328,7 +350,7 @@ main.main-content {
   .slide {
     min-width: 320px;
     max-width: 99vw;
-    font-size: 1em;
+    font-size: 0.95rem;     /* ~15px */
     padding: 1em 0.8em;
   }
   .card-grid, .grid {
@@ -363,14 +385,14 @@ main.main-content {
     display: block;
     margin-top: 1rem;
   }
-  .hero h1 { font-size: 1.22em; }
-  .hero p { font-size: 1em; }
+  .hero h1 { font-size: 1.5rem; }  /* 24px on small screens */
+  .hero p { font-size: 0.95rem; }
   .container { width: 97%; }
 }
 @media (max-width: 500px) {
   .slide {
     min-width: 240px;
-    font-size: 0.99em;
+    font-size: 0.93rem;
     padding: 0.7em 0.6em;
   }
   .hero { padding: 2.4em 0.7em 2em 0.7em; }
@@ -381,12 +403,12 @@ main.main-content {
 .salary-support-banner {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: centre;
+  align-items: centre;
   margin: 0 auto 1.7em auto;
   padding: 0.7em 0 0.2em 0;
   border-bottom: 4px solid #D32F2F;
-  font-size: 1.18em;
+  font-size: 1.1rem;        /* ~17px, slightly prominent */
   font-weight: 600;
   color: #0F52BA;
   background: #fff;

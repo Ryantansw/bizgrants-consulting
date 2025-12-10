@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Thank You | BizGrants Consulting</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <meta name="description" content="Thank you for subscribing to BizGrants Consulting. Stay updated with practical Workforce Singapore CCP and Job Redesign insights for employers and HR teams." />
+  <link rel="canonical" href="https://bizgrants.consulting/thank-you.html" />
+
+  <meta property="og:title" content="Thank You | BizGrants Consulting" />
+  <meta property="og:description" content="You are now subscribed to our CCP and grant insights for Singapore SMEs and HR teams." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta property="og:url" content="https://bizgrants.consulting/thank-you.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <style>
+    html, body { height: 100%; }
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+    .main-content { flex: 1 0 auto; }
+    footer { flex-shrink: 0; }
+
+    .hero-gradient {
+      background: linear-gradient(90deg, #0F52BA 0%, #89CFF0 100%);
+      text-align: center;
+      padding: 4rem 0 4rem 0;
+    }
+    .hero-content {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .hero-gradient h1 {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero-gradient p {
+      color: #fff;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-top: 0;
+    }
+
+    .thankyou-section {
+      padding: 3rem 0;
+    }
+    .thankyou-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+    .thankyou-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn-primary {
+      background: #0F52BA;
+      padding: 0.85rem 1.5rem;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .btn-secondary {
+      background: #e7f0ff;
+      padding: 0.85rem 1.5rem;
+      border-radius: 999px;
+      color: #0F52BA;
+      text-decoration: none;
+      border: 1px solid #c8d8ff;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .hero-gradient { padding: 3rem 1rem; }
+      .hero-gradient h1 { font-size: 2rem; }
+      .hero-gradient p { font-size: 1rem; }
+      .btn-row { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+      </div>
+      <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <div class="main-content">
+
+    <section class="hero-gradient">
+      <div class="hero-content">
+        <h1>Thank you, you are on our CCP & grant insights list</h1>
+        <p>You will receive practical breakdowns of Career Conversion Programmes, job redesign strategies and real case studies relevant to Singapore employers.</p>
+      </div>
+    </section>
+
+    <section class="thankyou-section">
+      <div class="container">
+        <h2>Useful next steps</h2>
+        <p>
+          If you are exploring Workforce Singapore funding, these resources will help you assess possible pathways for your company.  
+          You can also book a quick discussion for a no obligation eligibility check.
+        </p>
+
+        <div class="btn-row">
+          <a href="blog.html" class="btn-primary">Return to Blog</a>
+          <a href="services.html" class="btn-secondary">View CCP Pathways</a>
+          <a href="contact.html" class="btn-secondary">Book a Free Assessment</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

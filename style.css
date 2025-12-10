@@ -111,7 +111,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* HERO SECTION */
+/* HERO SECTION (simple blue hero used by some inner pages) */
 .hero {
   background: linear-gradient(135deg, #0F52BA, #89CFF0);
   color: #fff;
@@ -325,15 +325,55 @@ section h2, .why-us h2, .slider-section h2 {
   background: #1549A7;
 }
 
-/* FOOTER */
+/* FOOTER - STANDARD 3 COLUMN LAYOUT */
 footer {
-  background: #0F52BA;
-  color: white;
-  text-align: center;
-  padding: 2em 0;
-  font-size: 1rem;
-  letter-spacing: 0.01em;
-  margin-top: auto;
+  background: #0b1a3a;
+  color: rgba(255, 255, 255, 0.86);
+  padding: 2.8rem 0 2rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+/* 3-col footer grid */
+.footer-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.4fr 1.4fr;
+  gap: 2.2rem;
+  font-size: 0.9rem;
+}
+.footer-heading {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.footer-links li + li {
+  margin-top: 0.35rem;
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  padding-top: 1.1rem;
+  font-size: 0.78rem;
+  color: rgba(226, 232, 240, 0.85);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
 }
 
 /* FLEX LAYOUT FOR FULL HEIGHT PAGES */
@@ -366,9 +406,9 @@ main.main-content {
   }
 }
 
-/* RESPONSIVE DESIGN - TABLET / MOBILE NAV */
+/* RESPONSIVE DESIGN - TABLET / MOBILE NAV & FOOTER */
 @media (max-width: 768px) {
-  /* keep nav-container as a row so logo left, hamburger right */
+  /* keep nav row so logo left, burger right */
   .nav-container {
     flex-direction: row;
     align-items: center;
@@ -392,6 +432,11 @@ main.main-content {
   .hero h1 { font-size: 1.5rem; }
   .hero p { font-size: 0.95rem; }
   .container { width: 97%; }
+
+  .footer-layout {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
 }
 
 /* RESPONSIVE DESIGN - SMALL MOBILE */
@@ -421,7 +466,6 @@ main.main-content {
     font-size: 1.15rem;
   }
 }
-
 @media (max-width: 480px) {
   body {
     font-size: 14px;

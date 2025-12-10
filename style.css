@@ -164,7 +164,7 @@ nav a:hover {
 
 /* SECTION HEADINGS */
 section h2, .why-us h2, .slider-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.5rem;        /* 24px */
   font-weight: 700;
   text-align: left;
   margin-top: 1.5em;
@@ -368,9 +368,10 @@ main.main-content {
 
 /* RESPONSIVE DESIGN - TABLET / MOBILE NAV */
 @media (max-width: 768px) {
+  /* keep nav-container as a row so logo left, hamburger right */
   .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
   }
   nav ul {
     display: none;
@@ -386,7 +387,7 @@ main.main-content {
   }
   .hamburger {
     display: block;
-    margin-top: 1rem;
+    margin-top: 0;
   }
   .hero h1 { font-size: 1.5rem; }
   .hero p { font-size: 0.95rem; }

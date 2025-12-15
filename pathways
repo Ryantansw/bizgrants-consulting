@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCP Pathways | BizGrants Consulting</title>
+  <meta name="description" content="Reference guide to Career Conversion Programme (CCP) pathways in Singapore, including eligible roles and job families." />
+  <link rel="canonical" href="https://bizgrants.consulting/pathways" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background: #f5f7fb;
+      color: #0f285a;
+    }
+
+    /* HEADER – LOGO ONLY */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid rgba(15,40,90,0.06);
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0.9rem 0;
+    }
+    .logo-img {
+      height: 40px;
+      display: block;
+    }
+
+    /* HERO */
+    .page-hero {
+      background: radial-gradient(circle at top left, #e4edff 0, #ffffff 55%, #f5f7fb 100%);
+      padding: 3.5rem 0 2.8rem;
+      border-bottom: 1px solid rgba(15,40,90,0.06);
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      padding: 0.25rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(15,82,186,0.06);
+      color: #0b3f8a;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+    .page-hero h1 {
+      font-size: 2rem;
+      margin: 0 0 0.6rem;
+      letter-spacing: -0.02em;
+    }
+    .page-hero p {
+      max-width: 48rem;
+      font-size: 1rem;
+      color: #6b7280;
+      margin: 0;
+    }
+
+    /* PATHWAYS TABLE */
+    .pathways {
+      display: grid;
+      gap: 1.2rem;
+      margin-top: 3rem;
+    }
+    .pathway-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 10px 28px rgba(15,40,90,0.05);
+      overflow: hidden;
+    }
+    .pathway-top {
+      padding: 1.25rem 1.4rem;
+      background: linear-gradient(180deg, rgba(15,82,186,0.06), #ffffff);
+      border-bottom: 1px solid rgba(15,40,90,0.06);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.25rem;
+    }
+    .title-row {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .num {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15,82,186,0.08);
+      border: 1px solid rgba(15,40,90,0.08);
+      font-weight: 700;
+      color: #0b3f8a;
+      flex: 0 0 auto;
+    }
+    .title h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .title p {
+      margin: 0.35rem 0 0;
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+    .meta {
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+    .meta-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 0.6rem;
+    }
+    .meta-row strong {
+      color: #0f285a;
+      font-weight: 600;
+    }
+    .body {
+      padding: 1rem 1.4rem 1.4rem;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .chip {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      .pathway-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav-container">
+    <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-eyebrow">Singapore · CCP pathways</div>
+      <h1>Career Conversion Programme pathways</h1>
+      <p>
+        Reference guide to commonly supported Career Conversion Programme pathways in Singapore,
+        including role groupings and eligibility considerations for employers.
+      </p>
+    </div>
+  </section>
+
+  <section class="container" style="padding:3rem 0;">
+    <div class="pathways">
+
+      <!-- 1 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">1</div>
+            <div class="title">
+              <h3>Different job scope</h3>
+              <p>Roles with a substantial change in responsibilities or operating context.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New hires only</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,500</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>3 months</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Operations</span>
+            <span class="chip">Business development</span>
+            <span class="chip">Sales</span>
+            <span class="chip">Project roles</span>
+            <span class="chip">Admin with expanded scope</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">2</div>
+            <div class="title">
+              <h3>ESG / sustainability</h3>
+              <p>Sustainability and ESG responsibilities embedded within the role.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,800</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>6 months (new), 3 months (existing)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Sustainability analyst</span>
+            <span class="chip">ESG reporting</span>
+            <span class="chip">Carbon management</span>
+            <span class="chip">Energy management</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">3</div>
+            <div class="title">
+              <h3>Overseas markets</h3>
+              <p>Roles supporting overseas expansion and in-market execution.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$4,000</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>Up to 9 months</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Regional BD</span>
+            <span class="chip">Country manager</span>
+            <span class="chip">Regional operations</span>
+            <span class="chip">Regional partnerships</span>
+            <span class="chip">International expansion lead</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">4</div>
+            <div class="title">
+              <h3>Human resource functions</h3>
+              <p>Growth HR, people analytics and workforce transformation roles.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,200</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>4 months (new), 3 months (existing)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">HR business partner</span>
+            <span class="chip">Employee experience and relations</span>
+            <span class="chip">People analytics</span>
+            <span class="chip">Workforce planning</span>
+            <span class="chip">Learning and organisation development</span>
+            <span class="chip">HR operations and HR tech</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">5</div>
+            <div class="title">
+              <h3>Digital advertising and marketing</h3>
+              <p>Growth marketing and digital channel roles.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,500</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>6 months (new), 3 months (existing)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Digital marketing</span>
+            <span class="chip">Performance marketing</span>
+            <span class="chip">SEO / SEM</span>
+            <span class="chip">Social media</span>
+            <span class="chip">Ecommerce</span>
+            <span class="chip">Marketing analytics</span>
+            <span class="chip">Content and copywriting</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">6</div>
+            <div class="title">
+              <h3>Design professionals</h3>
+              <p>UX, UI and customer experience design roles.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,500</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>6 months (new), 3 months (existing)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">UX designer</span>
+            <span class="chip">UI designer</span>
+            <span class="chip">UX/UI designer</span>
+            <span class="chip">Customer experience designer</span>
+            <span class="chip">Interaction designer</span>
+            <span class="chip">Content designer</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">7</div>
+            <div class="title">
+              <h3>Biomedical manufacturing</h3>
+              <p>Production, QA/QC and bioprocess roles.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,150 (PMET), $1,800 (RnF)</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>12 months (new), 6 months (redeploy), 3 months (redesign)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Production operator</span>
+            <span class="chip">Assembly technician</span>
+            <span class="chip">Material handler</span>
+            <span class="chip">QA / QC specialist</span>
+            <span class="chip">Bioprocess engineer</span>
+            <span class="chip">Validation / regulatory affairs</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">8</div>
+            <div class="title">
+              <h3>Wholesale trade professionals</h3>
+              <p>Trade operations, supply chain and procurement roles.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$4,000 (new), $3,500 (existing)</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>6 months (new), 3 months (existing)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Trade operations</span>
+            <span class="chip">Trade finance</span>
+            <span class="chip">Procurement and sourcing</span>
+            <span class="chip">Supply chain</span>
+            <span class="chip">Risk and regulatory</span>
+            <span class="chip">Compliance</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">9</div>
+            <div class="title">
+              <h3>Built environment</h3>
+              <p>Architecture, engineering, construction and facilities roles.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,500</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>6 months (new), 3 months (existing)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Architect</span>
+            <span class="chip">Architectural associate</span>
+            <span class="chip">Mechanical engineer</span>
+            <span class="chip">Electrical engineer</span>
+            <span class="chip">Civil engineer</span>
+            <span class="chip">Quantity surveyor</span>
+            <span class="chip">Project manager</span>
+            <span class="chip">Site engineer</span>
+            <span class="chip">BIM coordinator</span>
+            <span class="chip">Facilities manager</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="pathway-card">
+        <div class="pathway-top">
+          <div class="title-row">
+            <div class="num">10</div>
+            <div class="title">
+              <h3>Infocomm sales and marketing professionals</h3>
+              <p>Technology, data, software and digital commercial roles.</p>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="meta-row"><strong>Eligible staff</strong><span>New and existing</span></div>
+            <div class="meta-row"><strong>Min. salary</strong><span>$3,000</span></div>
+            <div class="meta-row"><strong>Support duration</strong><span>6 months (new), 3 months (existing)</span></div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="chips">
+            <span class="chip">Digital sales and marketing</span>
+            <span class="chip">Data and AI</span>
+            <span class="chip">Software</span>
+            <span class="chip">Scrum / project management</span>
+            <span class="chip">Cybersecurity</span>
+            <span class="chip">Infrastructure and systems support</span>
+            <span class="chip">Cloud</span>
+            <span class="chip">Pre-sales consultant</span>
+            <span class="chip">Data engineer</span>
+            <span class="chip">Security operations analyst</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer – exact structure -->
+<footer>
+  <div class="container">
+    <div class="footer-layout">
+      <div>
+        <div class="footer-heading">BizGrants Consulting</div>
+        <p>
+          Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture-supported workforce transformation in Singapore.
+        </p>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <ul class="footer-links">
+          <li><a href="services.html">CCP advisory and role scoping</a></li>
+          <li><a href="services.html">Job redesign and OJT planning</a></li>
+          <li><a href="blog.html">Grant insights and guides</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <ul class="footer-links">
+          <li><strong>Contact Number:</strong> 8887 5297</li>
+          <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
+          <li><strong>Address:</strong> 60 Paya Lebar Road, #07-54, Paya Lebar Square, Singapore 409051</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 BizGrants Consulting. All rights reserved.</span>
+      <span>For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

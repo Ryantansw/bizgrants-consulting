@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>BizGrants JD Review Generator</title>
-
-<link rel="stylesheet" href="jd-style.css">
+<title>JD Review Generator</title>
+<link rel="stylesheet" href="/style.css">
 
 </head>
 
 <body>
 
-<h1>BizGrants JD Review Generator</h1>
+<header>
+<div class="container nav-container">
+<div class="logo">
+<img src="/logo.png" class="logo-img">
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>JD Review Generator</h1>
+<p>Create a client review page for job description refinement</p>
+</div>
+</section>
+
+<main class="main-content">
+<div class="container">
+
+<div class="card">
 
 <label>Client Name</label>
 <input id="company">
@@ -18,32 +36,41 @@
 <label>Job Title</label>
 <input id="role">
 
-<label>Paste Job Description</label>
-<textarea id="jd"></textarea>
+<label>Current Job Description</label>
+<textarea id="currentJD" rows="10"></textarea>
 
-<button onclick="generate()">Generate Client Review Link</button>
+<label>Suggested Job Description</label>
+<textarea id="suggestedJD" rows="10"></textarea>
+
+<button class="cta-btn" onclick="generate()">Generate Review Link</button>
 
 <div id="result"></div>
+
+</div>
+
+</div>
+</main>
 
 <script>
 
 function generate(){
 
 const company = encodeURIComponent(document.getElementById("company").value)
-
 const role = encodeURIComponent(document.getElementById("role").value)
 
-const jd = encodeURIComponent(document.getElementById("jd").value)
+const currentJD = encodeURIComponent(document.getElementById("currentJD").value)
+const suggestedJD = encodeURIComponent(document.getElementById("suggestedJD").value)
 
 const url =
-"https://bizgrants.consulting/jdreview/review.html?company="
-+ company +
+"https://bizgrants.consulting/jdreview/review.html?" +
+"company=" + company +
 "&role=" + role +
-"&jd=" + jd
+"&current=" + currentJD +
+"&suggested=" + suggestedJD
 
 document.getElementById("result").innerHTML =
-"<p>Send this link to client:</p>" +
-"<a href='"+url+"' target='_blank'>"+url+"</a>"
+"<p>Send this link to the client:</p>" +
+"<a href='"+url+"' target='_blank'>" + url + "</a>"
 
 }
 

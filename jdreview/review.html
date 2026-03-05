@@ -104,24 +104,25 @@ grid-template-columns:1fr;
 
 const params = new URLSearchParams(window.location.search)
 
-const company = params.get("company")
-const role = params.get("role")
-const staff = params.get("staff")
+const project = params.get("project")
 
-const key = company + "_" + role + "_" + staff
+fetch("/jdreview/projects/" + project + ".json")
 
-document.getElementById("companyField").value = company
-document.getElementById("roleField").value = role
-document.getElementById("staffField").value = staff
+.then(res => res.json())
+
+.then(data => {
 
 document.getElementById("titleInfo").innerText =
-company + " | " + role + " | " + staff
+data.company + " | " + data.role + " | " + data.staff
 
-document.getElementById("currentJD").value =
-localStorage.getItem(key + "_current") || ""
+document.getElementById("companyField").value = data.company
+document.getElementById("roleField").value = data.role
+document.getElementById("staffField").value = data.staff
 
-document.getElementById("suggestedJD").value =
-localStorage.getItem(key + "_suggested") || ""
+document.getElementById("currentJD").value = data.currentJD
+document.getElementById("suggestedJD").value = data.suggestedJD
+
+})
 
 </script>
 

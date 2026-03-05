@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>JD Review</title>
+
+<link rel="stylesheet" href="jd-style.css">
+
+</head>
+
+<body>
+
+<h1>Job Description Review</h1>
+
+<h3 id="companyName"></h3>
+
+<h4 id="roleName"></h4>
+
+<h2>Suggested Responsibilities</h2>
+
+<div id="suggestions"></div>
+
+<h2>Job Description</h2>
+
+<form action="https://formspree.io/f/maqpwndy" method="POST">
+
+<input type="hidden" id="companyField" name="company">
+<input type="hidden" id="roleField" name="role">
+
+<textarea id="jdText" name="final_jd"></textarea>
+
+<button type="submit">Submit JD Review</button>
+
+</form>
+
+<script src="jd-ai.js"></script>
+
+<script>
+
+const params = new URLSearchParams(window.location.search)
+
+const company = params.get("company")
+
+const role = params.get("role")
+
+const jd = decodeURIComponent(params.get("jd"))
+
+document.getElementById("companyName").innerText = company
+
+document.getElementById("roleName").innerText = role
+
+document.getElementById("jdText").value = jd
+
+document.getElementById("companyField").value = company
+
+document.getElementById("roleField").value = role
+
+generateSuggestions(jd)
+
+</script>
+
+</body>
+
+</html>

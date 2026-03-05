@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>BizGrants JD Review Generator</title>
+
+<link rel="stylesheet" href="jd-style.css">
+
+</head>
+
+<body>
+
+<h1>BizGrants JD Review Generator</h1>
+
+<label>Client Name</label>
+<input id="company">
+
+<label>Job Title</label>
+<input id="role">
+
+<label>Paste Job Description</label>
+<textarea id="jd"></textarea>
+
+<button onclick="generate()">Generate Client Review Link</button>
+
+<div id="result"></div>
+
+<script>
+
+function generate(){
+
+const company = encodeURIComponent(document.getElementById("company").value)
+
+const role = encodeURIComponent(document.getElementById("role").value)
+
+const jd = encodeURIComponent(document.getElementById("jd").value)
+
+const url =
+"https://bizgrants.consulting/jdreview/review.html?company="
++ company +
+"&role=" + role +
+"&jd=" + jd
+
+document.getElementById("result").innerHTML =
+"<p>Send this link to client:</p>" +
+"<a href='"+url+"' target='_blank'>"+url+"</a>"
+
+}
+
+</script>
+
+</body>
+</html>

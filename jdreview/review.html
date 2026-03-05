@@ -4,62 +4,68 @@
 <head>
 
 <title>JD Review</title>
-
-<link rel="stylesheet" href="jd-style.css">
+<link rel="stylesheet" href="/style.css">
 
 </head>
 
 <body>
 
+<header>
+<div class="container nav-container">
+<div class="logo">
+<img src="/logo.png" class="logo-img">
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
 <h1>Job Description Review</h1>
+<p>Please review the proposed job description and provide remarks if necessary.</p>
+</div>
+</section>
 
-<h3 id="companyName"></h3>
+<main class="main-content">
+<div class="container">
 
-<h4 id="roleName"></h4>
+<form action="https://formspree.io/f/maqpwndy" method="POST" class="contact-form">
 
-<h2>Suggested Responsibilities</h2>
+<input type="hidden" name="company" id="companyField">
+<input type="hidden" name="role" id="roleField">
 
-<div id="suggestions"></div>
+<h2>Current Job Description</h2>
+<textarea id="currentJD" name="current_jd"></textarea>
 
-<h2>Job Description</h2>
+<h2>Suggested Job Description</h2>
+<textarea id="suggestedJD" name="suggested_jd"></textarea>
 
-<form action="https://formspree.io/f/maqpwndy" method="POST">
-
-<input type="hidden" id="companyField" name="company">
-<input type="hidden" id="roleField" name="role">
-
-<textarea id="jdText" name="final_jd"></textarea>
+<h2>Remarks</h2>
+<textarea name="remarks" placeholder="Client comments or requested revisions"></textarea>
 
 <button type="submit">Submit JD Review</button>
 
 </form>
 
-<script src="jd-ai.js"></script>
+</div>
+</main>
 
 <script>
 
 const params = new URLSearchParams(window.location.search)
 
 const company = params.get("company")
-
 const role = params.get("role")
 
-const jd = decodeURIComponent(params.get("jd"))
-
-document.getElementById("companyName").innerText = company
-
-document.getElementById("roleName").innerText = role
-
-document.getElementById("jdText").value = jd
+const current = decodeURIComponent(params.get("current") || "")
+const suggested = decodeURIComponent(params.get("suggested") || "")
 
 document.getElementById("companyField").value = company
-
 document.getElementById("roleField").value = role
 
-generateSuggestions(jd)
+document.getElementById("currentJD").value = current
+document.getElementById("suggestedJD").value = suggested
 
 </script>
 
 </body>
-
 </html>

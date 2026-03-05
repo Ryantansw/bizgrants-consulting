@@ -26,47 +26,59 @@
 </section>
 
 <main class="main-content">
+
 <div class="container">
 
 <div class="card">
 
-<label>Client Name</label>
+<h2>Project Details</h2>
+
+<label>Client Company</label>
 <input id="company">
 
 <label>Job Title</label>
 <input id="role">
 
-<label>Current Job Description</label>
-<textarea id="currentJD" rows="10"></textarea>
+<label>Staff Name</label>
+<input id="staff">
 
-<label>Suggested Job Description</label>
-<textarea id="suggestedJD" rows="10"></textarea>
+<h2>Current Job Description</h2>
+<textarea id="currentJD" rows="12"></textarea>
 
-<button class="cta-btn" onclick="generate()">Generate Review Link</button>
+<h2>Suggested Job Description</h2>
+<textarea id="suggestedJD" rows="12"></textarea>
 
-<div id="result"></div>
+<button class="cta-btn" onclick="generate()">Generate Client Review Link</button>
+
+<div id="result" style="margin-top:20px;"></div>
 
 </div>
 
 </div>
+
 </main>
 
 <script>
 
 function generate(){
 
-const company = encodeURIComponent(document.getElementById("company").value)
-const role = encodeURIComponent(document.getElementById("role").value)
+const company = document.getElementById("company").value
+const role = document.getElementById("role").value
+const staff = document.getElementById("staff").value
 
-const currentJD = encodeURIComponent(document.getElementById("currentJD").value)
-const suggestedJD = encodeURIComponent(document.getElementById("suggestedJD").value)
+const current = document.getElementById("currentJD").value
+const suggested = document.getElementById("suggestedJD").value
+
+const key = company + "_" + role + "_" + staff
+
+localStorage.setItem(key + "_current", current)
+localStorage.setItem(key + "_suggested", suggested)
 
 const url =
-"https://bizgrants.consulting/jdreview/review.html?" +
-"company=" + company +
-"&role=" + role +
-"&current=" + currentJD +
-"&suggested=" + suggestedJD
+"https://bizgrants.consulting/jdreview/review.html?company="
++ encodeURIComponent(company)
++ "&role=" + encodeURIComponent(role)
++ "&staff=" + encodeURIComponent(staff)
 
 document.getElementById("result").innerHTML =
 "<p>Send this link to the client:</p>" +

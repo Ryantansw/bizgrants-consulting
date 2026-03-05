@@ -6,6 +6,32 @@
 <title>JD Review</title>
 <link rel="stylesheet" href="/style.css">
 
+<style>
+
+.jd-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2em;
+margin-top:2em;
+}
+
+.jd-box textarea{
+width:100%;
+min-height:420px;
+padding:1em;
+border:1px solid #e3eaf6;
+border-radius:6px;
+font-family:"Aptos","Segoe UI",Arial,sans-serif;
+}
+
+@media(max-width:900px){
+.jd-grid{
+grid-template-columns:1fr;
+}
+}
+
+</style>
+
 </head>
 
 <body>
@@ -19,34 +45,59 @@
 </header>
 
 <section class="hero">
+
 <div class="container">
+
 <h1>Job Description Review</h1>
-<p>Please review the proposed job description and provide remarks if necessary.</p>
+
+<p id="titleInfo"></p>
+
 </div>
+
 </section>
 
 <main class="main-content">
+
 <div class="container">
 
-<form action="https://formspree.io/f/maqpwndy" method="POST" class="contact-form">
+<form action="https://formspree.io/f/maqpwndy" method="POST">
 
 <input type="hidden" name="company" id="companyField">
 <input type="hidden" name="role" id="roleField">
+<input type="hidden" name="staff" id="staffField">
 
-<h2>Current Job Description</h2>
+<div class="jd-grid">
+
+<div class="jd-box">
+
+<h2>Current JD</h2>
+
 <textarea id="currentJD" name="current_jd"></textarea>
 
-<h2>Suggested Job Description</h2>
+</div>
+
+<div class="jd-box">
+
+<h2>Suggested JD</h2>
+
 <textarea id="suggestedJD" name="suggested_jd"></textarea>
 
-<h2>Remarks</h2>
-<textarea name="remarks" placeholder="Client comments or requested revisions"></textarea>
+</div>
 
-<button type="submit">Submit JD Review</button>
+</div>
+
+<h2 style="margin-top:2em;">Remarks</h2>
+
+<textarea name="remarks" style="width:100%;min-height:150px;"></textarea>
+
+<br><br>
+
+<button class="cta-btn" type="submit">Submit Review</button>
 
 </form>
 
 </div>
+
 </main>
 
 <script>
@@ -55,15 +106,22 @@ const params = new URLSearchParams(window.location.search)
 
 const company = params.get("company")
 const role = params.get("role")
+const staff = params.get("staff")
 
-const current = decodeURIComponent(params.get("current") || "")
-const suggested = decodeURIComponent(params.get("suggested") || "")
+const key = company + "_" + role + "_" + staff
 
 document.getElementById("companyField").value = company
 document.getElementById("roleField").value = role
+document.getElementById("staffField").value = staff
 
-document.getElementById("currentJD").value = current
-document.getElementById("suggestedJD").value = suggested
+document.getElementById("titleInfo").innerText =
+company + " | " + role + " | " + staff
+
+document.getElementById("currentJD").value =
+localStorage.getItem(key + "_current") || ""
+
+document.getElementById("suggestedJD").value =
+localStorage.getItem(key + "_suggested") || ""
 
 </script>
 

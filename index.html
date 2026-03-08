@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  
+  <!-- Preconnect hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://assets.calendly.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>BizGrants Consulting | Career Conversion, Job Redesign & Workforce Singapore Grant Advisory</title>
@@ -21,31 +26,10 @@
   <meta name="twitter:description" content="Singapore’s trusted partner for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture advisory. Get up to 90% salary support with full application support." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta name="twitter:site" content="@bizgrantsconsulting" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CWBH1DYTQB');
-  </script>
+  
 
   <!-- Apollo Website Tracker -->
-  <script>
-    function initApollo(){
-      var n = Math.random().toString(36).substring(7),
-          o = document.createElement("script");
-      o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n;
-      o.async = true;
-      o.defer = true;
-      o.onload = function(){
-        window.trackingFunctions.onLoad({appId:"699fd8cac132220015d03495"});
-      };
-      document.head.appendChild(o);
-    }
-    initApollo();
-  </script>
+  
 
   <!-- FAQPage Schema -->
   <script type="application/ld+json">
@@ -819,20 +803,7 @@
   <!-- Calendly Badge Widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    window.addEventListener("load", function () {
-      if (!window.__calendlyBadgeWidgetLoaded) {
-        Calendly.initBadgeWidget({
-          url: 'https://calendly.com/enquiries-bizgrants/30min',
-          text: 'Book a Call',
-          color: '#0069ff',
-          textColor: '#ffffff',
-          branding: true
-        });
-        window.__calendlyBadgeWidgetLoaded = true;
-      }
-    });
-  </script>
+  
 </head>
 <body>
   <header>
@@ -923,6 +894,7 @@
       </div>
     </section>
 
+
     <!-- Intro video -->
     <section class="section intro-video-section">
       <div class="container intro-layout">
@@ -943,6 +915,20 @@
             Your browser does not support the video tag.
           </video>
           <p class="intro-caption">Recorded for Singapore employers exploring CCP and job redesign opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stock image section -->
+    <section style="background:#ffffff; padding:3rem 0;">
+      <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+        <div>
+          <img src="images/stock/hero-consulting.jpg" alt="Professional business consulting meeting in Singapore" style="width:100%; border-radius:18px; object-fit:cover; box-shadow:0 12px 32px rgba(15,40,90,0.08);" loading="lazy" />
+        </div>
+        <div>
+          <div class="section-kicker">Structured workforce advisory</div>
+          <h2 class="section-title" style="font-size:1.6rem;">From eligibility assessment to claims documentation</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">We work directly with your HR team and hiring managers to assess eligibility, structure compliant job descriptions, design on the job training plans and prepare all documentation for submission. Our advisory covers the full lifecycle from initial assessment through to post-approval claims.</p>
         </div>
       </div>
     </section>
@@ -1183,6 +1169,21 @@
         </div>
       </div>
     </section>
+
+    <!-- Credibility section with stock image -->
+    <section style="background:var(--bg-section-alt); padding:3.5rem 0;">
+      <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+        <div>
+          <div class="section-kicker">Trusted by Singapore SMEs</div>
+          <h2 class="section-title" style="font-size:1.6rem;">Real advisory. Real results.</h2>
+          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">Our clients range from growing startups to established SMEs across sectors including F&B, biotech, engineering, hospitality and professional services. We bring the same structured, compliance-driven approach to every engagement, ensuring your application is positioned for approval.</p>
+          <a href="contact.html" class="cta-btn-primary" style="margin-top:1.2rem; display:inline-flex;">Discuss your hiring plans</a>
+        </div>
+        <div>
+          <img src="images/stock/team-collaboration.jpg" alt="Business team collaborating on workforce strategy" style="width:100%; border-radius:18px; object-fit:cover; box-shadow:0 12px 32px rgba(15,40,90,0.08);" loading="lazy" />
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -1214,76 +1215,19 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 BizGrants Consulting. All rights reserved.</span>
+        <span>© 2026 BizGrants Consulting. All rights reserved.</span>
         <span>For Singapore registered employers hiring or reskilling Singapore Citizens and PRs.</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      navLinks.classList.toggle('show');
-    }
-  </script>
+  
 
-  <script>
-    // Track clicks to Calendly hyperlinks (cta_click)
-    document.addEventListener('click', function (e) {
-      const link = e.target.closest('a');
-      if (link && link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
-        gtag('event', 'cta_click', {
-          event_category: 'Calendly',
-          event_label: link.href,
-          link_text: (link.textContent || '').trim(),
-          page_location: window.location.href
-        });
-      }
-    }, { capture: true });
+  
 
-    // Track Calendly badge / popup / inline widget interactions, and scheduled bookings
-    (function trackCalendlyWidget(){
-      function sendCTA(label){
-        if (typeof window.gtag === 'function') {
-          gtag('event','cta_click',{
-            event_category:'Calendly',
-            event_label: label,
-            page_location: window.location.href
-          });
-        }
-      }
-      const obs = new MutationObserver(function(){
-        const badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content');
-        if (badge && !badge.__bgTracked) {
-          badge.__bgTracked = true;
-          badge.addEventListener('click', function(){ sendCTA('badge_widget'); }, { capture: true });
-        }
-      });
-      obs.observe(document.documentElement, { childList: true, subtree: true });
-
-      window.addEventListener('message', function(ev){
-        try{
-          const originHost = new URL(ev.origin).hostname || '';
-          if (!/calendly\.com$/i.test(originHost)) return;
-          const data = typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
-          if (!data) return;
-
-          if (data.event &&
-              (data.event.indexOf('calendly.profile_page_viewed') === 0 ||
-               data.event.indexOf('calendly.event_type_viewed') === 0 ||
-               data.event.indexOf('calendly.date_and_time_selected') === 0)) {
-            sendCTA(data.event);
-          }
-
-          if (data.event === 'calendly.event_scheduled') {
-            if (typeof window.gtag === 'function') {
-              gtag('event','calendly_scheduled',{ event_category:'Calendly', page_location: window.location.href });
-            }
-          }
-        }catch(_){}
-      });
-    })();
-  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
+  <script src="shared.js" defer></script>
 </body>
 </html>
 

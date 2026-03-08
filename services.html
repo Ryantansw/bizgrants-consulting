@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  
+  <!-- Preconnect hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://assets.calendly.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | BizGrants Consulting</title>
   <meta name="description" content="Unlock up to 90% salary support with BizGrants Consulting. Find out which roles are eligible for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported funding in Singapore." />
@@ -22,32 +27,10 @@
   <meta name="twitter:site" content="@bizgrantsconsulting" />
 
   <!-- GA4 with debug + test ping -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-CWBH1DYTQB', { debug_mode: true });
-    window.addEventListener('load', function(){
-      gtag('event','site_debug_ping', { page_location: location.href });
-    });
-  </script>
+  
 
   <!-- Apollo Website Tracker -->
-  <script>
-    function initApollo(){
-      var n = Math.random().toString(36).substring(7),
-          o = document.createElement("script");
-      o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n;
-      o.async = true;
-      o.defer = true;
-      o.onload = function(){
-        window.trackingFunctions.onLoad({appId:"699fd8cac132220015d03495"});
-      };
-      document.head.appendChild(o);
-    }
-    initApollo();
-  </script>
+  
 
   <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -56,20 +39,7 @@
   <!-- Calendly Badge Widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script>
-    window.addEventListener("load", function () {
-      if (!window.__calendlyBadgeWidgetLoaded) {
-        Calendly.initBadgeWidget({
-          url: 'https://calendly.com/enquiries-bizgrants/30min',
-          text: 'Book a Call',
-          color: '#0069ff',
-          textColor: '#ffffff',
-          branding: true
-        });
-        window.__calendlyBadgeWidgetLoaded = true;
-      }
-    });
-  </script>
+  
 
   <style>
     /* Page-wide visual system to match homepage */
@@ -503,6 +473,18 @@
       </div>
     </section>
 
+    <!-- Visual credibility strip -->
+    <section style="background:#ffffff; padding:2.5rem 0;">
+      <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
+        <div>
+          <img src="images/stock/team-strategy.jpg" alt="Business strategy consulting session with team reviewing documents" style="width:100%; border-radius:16px; object-fit:cover; box-shadow:0 8px 24px rgba(15,40,90,0.06);" loading="lazy" />
+        </div>
+        <div>
+          <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.7;">Our advisory process begins with a detailed assessment of your company profile, planned hires and existing workforce. We identify which roles qualify for CCP, Job Redesign or SkillsFuture funding, then structure every element of the application to meet assessor expectations.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- CCP section -->
     <section class="container page-section" id="ccp">
       <div class="row">
@@ -634,17 +616,17 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 BizGrants Consulting. All rights reserved.</span>
+        <span>© 2026 BizGrants Consulting. All rights reserved.</span>
         <span>For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs.</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    function toggleMenu(){
-      document.getElementById('nav-links').classList.toggle('show');
-    }
+  
 
+  <!-- Google tag (gtag.js) -->
+  <!-- CCP Estimator Calculator -->
+  <script>
     // CCP estimator
     const MONTHS = {
       'Different Job Scope': { new: 3, existing: 3 },
@@ -658,105 +640,27 @@
       'Hotel, MICE, Attractions, Tour & Travel': { new: 6, existing: 3 },
       'Infocomm Sales & Marketing Professionals': { new: 6, existing: 3 }
     };
-
     const estBtn = document.getElementById('ccpEstimate');
     const result = document.getElementById('ccpResult');
-
     estBtn?.addEventListener('click', ()=>{
       const p = document.getElementById('ccpPathway').value;
       const t = document.getElementById('ccpHireType').value;
       const s = parseFloat(document.getElementById('ccpSalary').value || '0');
       if(!p || !t || !s){ alert('Select pathway, employment type and enter salary.'); return; }
-
       const months = (MONTHS[p] || {})[t] || 3;
       const std = Math.min(0.70 * s, 5000);
       const enh = Math.min(0.90 * s, 7500);
       const min = Math.round(std * months);
       const max = Math.round(enh * months);
-
       result.style.display = 'block';
       result.innerHTML = `<strong>Indicative duration:</strong> ${months} month(s)<br>
                           <strong>Estimated support:</strong> S$${min.toLocaleString()} to S$${max.toLocaleString()}`;
-
-      gtag('event','calculator_submit',{ section:'ccp_services', pathway:p, type:t });
+      if (typeof gtag === 'function') { gtag('event','calculator_submit',{ section:'ccp_services', pathway:p, type:t }); }
     });
-
-    // Track clicks to Calendly hyperlinks (cta_click). Also guard to avoid double fire from special button handler
-    document.addEventListener('click', function (e) {
-      const link = e.target.closest('a');
-      if (!link) return;
-      if (link.getAttribute('data-cta-fired') === '1') return;
-      if (link.href && link.href.includes('calendly.com/enquiries-bizgrants')) {
-        gtag('event', 'cta_click', {
-          event_category: 'Calendly',
-          event_label: link.href,
-          link_text: (link.textContent || '').trim(),
-          page_location: window.location.href
-        });
-      }
-    }, { capture: true });
-
-    // Fire cta_click specifically on the "Book a quick consult" CCP button and avoid double count
-    (function trackCcpBook(){
-      const btn = document.getElementById('ccpBook');
-      if (!btn) return;
-      btn.addEventListener('click', function () {
-        this.setAttribute('data-cta-fired','1');
-        gtag('event','cta_click',{
-          event_category:'Calendly',
-          event_label: this.href || 'ccpBook',
-          link_text: (this.textContent || '').trim(),
-          page_location: window.location.href
-        });
-        setTimeout(()=>this.removeAttribute('data-cta-fired'), 600);
-      }, { capture: true });
-    })();
-
-    // Track Calendly badge / popup / inline widget interactions, and scheduled bookings
-    (function trackCalendlyWidget(){
-      function sendCTA(label){
-        if (typeof window.gtag === 'function') {
-          gtag('event','cta_click',{
-            event_category:'Calendly',
-            event_label: label,
-            page_location: window.location.href
-          });
-        }
-      }
-      // Observe and wire the injected badge button
-      const obs = new MutationObserver(function(){
-        const badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content');
-        if (badge && !badge.__bgTracked) {
-          badge.__bgTracked = true;
-          badge.addEventListener('click', function(){ sendCTA('badge_widget'); }, { capture: true });
-        }
-      });
-      obs.observe(document.documentElement, { childList: true, subtree: true });
-
-      // Listen for Calendly postMessage events
-      window.addEventListener('message', function(ev){
-        try{
-          const originHost = new URL(ev.origin).hostname || '';
-          if (!/calendly\.com$/i.test(originHost)) return;
-          const data = typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
-          if (!data) return;
-
-          if (data.event &&
-              (data.event.indexOf('calendly.profile_page_viewed') === 0 ||
-               data.event.indexOf('calendly.event_type_viewed') === 0 ||
-               data.event.indexOf('calendly.date_and_time_selected') === 0)) {
-            sendCTA(data.event);
-          }
-
-          if (data.event === 'calendly.event_scheduled') {
-            if (typeof window.gtag === 'function') {
-              gtag('event','calendly_scheduled',{ event_category:'Calendly', page_location: window.location.href });
-            }
-          }
-        }catch(_){}
-      });
-    })();
   </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
+  <script src="shared.js" defer></script>
 </body>
 </html>
 

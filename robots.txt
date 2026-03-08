@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /jdreview/
+
+Sitemap: https://bizgrants.consulting/sitemap.xml

@@ -90,7 +90,7 @@ header {
 }
 
 .logo-img {
-  height: 146px !important;
+  height: 102px !important;
   width: auto !important;
   display: block;
 }
@@ -835,7 +835,7 @@ main, main.main-content {
 /* === RESPONSIVE: TABLET / MOBILE (max-width: 900px) === */
 @media (max-width: 900px) {
   .logo-img {
-    height: 114px !important;
+    height: 80px !important;
   }
   .slider { gap: 1em; }
   .slide {

@@ -1,0 +1,21 @@
+# BizGrants Consulting
+
+> Singapore CCP and Job Redesign grant advisory for SME employers. Up to 90% salary support.
+
+## Core pages
+
+- [Services](https://bizgrants.consulting/services.html): CCP and Job Redesign grant services
+- [CCP for Employers](https://bizgrants.consulting/ccp-for-employers.html): Step-by-step employer guide
+- [CCP Grant Funding](https://bizgrants.consulting/ccp-grant-singapore.html): How funding works
+- [Pathways](https://bizgrants.consulting/pathways.html): Eligible roles and pathways
+- [Contact](https://bizgrants.consulting/contact.html): Free consultation
+
+## Blog articles
+
+- [CCP Eligibility](https://bizgrants.consulting/blog/ccp-eligibility.html): Who qualifies for the Career Conversion Programme
+- [CCP Application Guide](https://bizgrants.consulting/blog/ccp-application-guide.html): Step-by-step CCP application process
+- [CCP Application Pitfalls](https://bizgrants.consulting/blog/ccp-application-pitfalls.html): Common CCP mistakes to avoid
+- [CCP vs JGI vs SFEC](https://bizgrants.consulting/blog/ccp-vs-jgi-sfec.html): Comparing CCP, JGI and SFEC grants
+- [CCP Reskilling Examples](https://bizgrants.consulting/blog/ccp-reskilling-examples.html): Real reskilling use cases
+- [CCP Flat-fee Consulting](https://bizgrants.consulting/blog/ccp-flatfee-consulting.html): Why flat-fee beats hourly for grant advisory
+- [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants.html): Grants that subsidise hiring

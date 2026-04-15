@@ -11,12 +11,15 @@
 
   <title>BizGrants Consulting | CCP & Job Redesign Grant Advisory Singapore</title>
   <meta name="description" content="Secure up to 90% salary support with Singapore’s leading CCP and job redesign grant consultants. Workforce Singapore, SkillsFuture, and government funding specialists." />
+  <link rel="preload" as="image" href="images/stock/hero-consulting.jpg" fetchpriority="high" />
   <link rel="canonical" href="https://bizgrants.consulting/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <!-- Open Graph & Twitter Cards -->
   <meta property="og:title" content="BizGrants Consulting | Career Conversion, Job Redesign & Workforce Singapore Grant Experts" />
   <meta property="og:description" content="Singapore’s trusted partner for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture advisory. Get up to 90% salary support with full application support." />
+  <meta property="og:locale" content="en_SG" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/" />
   <meta property="og:image" content="https://bizgrants.consulting/images/logo.png" />
@@ -73,18 +76,24 @@
   }
   </script>
 
-  <!-- LocalBusiness Schema -->
+  <!-- LocalBusiness / ProfessionalService Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "name": "BizGrants Consulting",
     "url": "https://bizgrants.consulting/",
-    "logo": "https://bizgrants.consulting/images/logo.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bizgrants.consulting/images/logo.png",
+      "width": 512,
+      "height": 512
+    },
     "image": "https://bizgrants.consulting/images/logo.png",
     "description": "Singapore's trusted advisory for Career Conversion Programmes (CCP), Job Redesign Grants, and SkillsFuture workforce funding.",
     "telephone": "+65 8887 5297",
     "email": "enquiries@bizgrants.consulting",
+    "foundingDate": "2023",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "60 Paya Lebar Road, #06-28, Paya Lebar Square",
@@ -100,6 +109,21 @@
     "areaServed": {
       "@type": "Country",
       "name": "Singapore"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+65-8887-5297",
+      "contactType": "customer service",
+      "areaServed": "SG",
+      "availableLanguage": ["English"]
     },
     "sameAs": [
       "https://www.linkedin.com/company/bizgrants-consulting"
@@ -844,12 +868,22 @@
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   
+  <meta name="geo.region" content="SG" />
+  <meta name="geo.placename" content="Singapore" />
+  <meta name="geo.position" content="1.3181;103.8931" />
+  <meta name="ICBM" content="1.3181, 103.8931" />
+  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/" />
+  <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/" />
+  <meta name="theme-color" content="#0F52BA" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="author" content="BizGrants Consulting" />
 </head>
 <body>
   <header>
     <div class="container nav-container">
       <div class="logo">
-        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+        <img width="1330" height="422" decoding="async" src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
       </div>
       <nav>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -882,7 +916,7 @@
           </div>
 
           <div class="hero-cta-row">
-            <a
+            <a rel="noopener noreferrer"
               href="https://calendly.com/enquiries-bizgrants/30min"
               onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
               target="_blank"
@@ -950,6 +984,8 @@
           </div>
         </div>
         <div class="intro-video-wrapper">
+          <!-- TODO: Replace self-hosted MP4 with YouTube embed for better performance, SEO and indexability.
+               <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="CCP Explainer" frameborder="0" allowfullscreen></iframe> -->
           <video class="intro-video" controls preload="metadata">
             <source src="CCP Explainer.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -963,7 +999,7 @@
     <section style="background:#ffffff; padding:3rem 0;">
       <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
         <div>
-          <img src="images/stock/hero-consulting.jpg" alt="Professional business consulting meeting in Singapore" style="width:100%; border-radius:18px; object-fit:cover; box-shadow:0 12px 32px rgba(15,40,90,0.08);" loading="lazy" />
+          <img width="1200" height="798" decoding="async" src="images/stock/hero-consulting.jpg" alt="Professional business consulting meeting in Singapore" style="width:100%; border-radius:18px; object-fit:cover; box-shadow:0 12px 32px rgba(15,40,90,0.08);" fetchpriority="high" />
         </div>
         <div>
           <div class="section-kicker">Structured workforce advisory</div>
@@ -1220,7 +1256,7 @@
           <a href="contact.html" class="cta-btn-primary" style="margin-top:1.2rem; display:inline-flex;">Discuss your hiring plans</a>
         </div>
         <div>
-          <img src="images/stock/team-collaboration.jpg" alt="Business team collaborating on workforce strategy" style="width:100%; border-radius:18px; object-fit:cover; box-shadow:0 12px 32px rgba(15,40,90,0.08);" loading="lazy" />
+          <img width="1200" height="675" decoding="async" src="images/stock/team-collaboration.jpg" alt="Business team collaborating on workforce strategy" style="width:100%; border-radius:18px; object-fit:cover; box-shadow:0 12px 32px rgba(15,40,90,0.08);" loading="lazy" />
         </div>
       </div>
     </section>

@@ -2,4 +2,19 @@ User-agent: *
 Allow: /
 Disallow: /jdreview/
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://bizgrants.consulting/sitemap.xml

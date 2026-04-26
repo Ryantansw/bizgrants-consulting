@@ -9,20 +9,22 @@
     })(window, document, "clarity", "script", "wbvqrgdn17");
   </script>
   <meta charset="UTF-8" />
-  
+
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://assets.calendly.com" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CCP & Job Redesign Grant Services | BizGrants Consulting</title>
-  <meta name="description" content="Unlock up to 90% salary support with BizGrants Consulting. Find out which roles are eligible for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported funding in Singapore." />
+  <meta name="description" content="Unlock up to 90% salary support with BizGrants Consulting. See which roles qualify for CCP, Job Redesign Grant and SkillsFuture funding in Singapore." />
   <link rel="canonical" href="https://bizgrants.consulting/services.html" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <!-- Open Graph & Twitter -->
   <meta property="og:title" content="Services | BizGrants Consulting" />
   <meta property="og:description" content="Unlock up to 90% salary support. See roles eligible for CCP, Job Redesign and SkillsFuture-supported funding in Singapore." />
+  <meta property="og:locale" content="en_SG" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/services.html" />
   <meta property="og:image" content="https://bizgrants.consulting/images/logo.png" />
@@ -33,20 +35,12 @@
   <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta name="twitter:site" content="@bizgrantsconsulting" />
 
-  <!-- GA4 with debug + test ping -->
-  
-
-  <!-- Apollo Website Tracker -->
-  
-
-  <!-- Fonts & CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- Calendly Badge Widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  
+
 
   <!-- Service Schema -->
   <script type="application/ld+json">
@@ -90,397 +84,98 @@
   </script>
 
   <style>
-    /* Page-wide visual system to match homepage */
-
-    body {
-      font-family: 'Plus Jakarta Sans', "Segoe UI", Arial, sans-serif;
-      background: #f5f7fb;
-      color: #0f285a;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    a {
-      color: #0f52ba;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Header aligned to homepage style */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(15, 40, 90, 0.06);
-    }
-
-    .nav-container {
-      display: flex;
+    /* Services-specific layout */
+    .services-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-9);
       align-items: center;
-      justify-content: space-between;
-      padding: 0.85rem 0;
     }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #0f285a;
-      position: relative;
-      padding-bottom: 0.1rem;
-    }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: #0f52ba;
-      transition: width 0.2s ease;
-    }
-
-    nav a:hover::after,
-    nav a.active::after {
+    .services-feature .feature-image {
       width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+      filter: saturate(0.9) contrast(1.02);
     }
-
-    .hamburger {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* All-white hero (Option A) */
-    .hero {
-      background: #ffffff;
-      padding: 4rem 0 3.2rem;
-      color: #0f285a;
-      text-align: left;
-    }
-
-    .hero .container {
-      max-width: 1120px;
-    }
-
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.22rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(15, 82, 186, 0.06);
-      color: #0b3f8a;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
+    .services-feature .feature-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--fs-tiny);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 0.9rem;
+      color: var(--ink-faint);
+      margin-bottom: var(--space-3);
     }
 
-    .hero h1 {
-      font-size: 2.1rem;
-      line-height: 1.2;
-      margin: 0 0 0.8rem 0;
-      letter-spacing: -0.02em;
+    /* Roles grid — three columns hairline divided */
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+      margin: var(--space-7) 0;
     }
-
-    .hero-subtitle {
-      font-size: 1.02rem;
-      max-width: 40rem;
-      color: #6b7280;
-      margin: 0;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: #6b7280;
-      margin-top: 0.7rem;
-      max-width: 40rem;
-    }
-
-    /* Flat, clean hero CTA on services page */
-    .services-hero-cta-row {
-      margin-top: 1.1rem;
-    }
-
-    .services-hero-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.85rem 1.6rem;
-      border-radius: 14px;
-      background: #0F52BA;
-      color: #ffffff !important;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      border: none;
-      box-shadow: none;
-      transition: background 0.18s ease;
-      white-space: nowrap;
-    }
-
-    .services-hero-cta:hover {
-      background: #1549A7;
-      text-decoration: none;
-    }
-
-    /* Section spacing */
-    main {
-      flex: 1;
+    .role-cell {
+      padding: var(--space-7) var(--space-6);
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
       display: flex;
       flex-direction: column;
+      gap: var(--space-3);
+      transition: background var(--t-fast);
     }
-
-    section.page-section {
-      padding: 3.5rem 0;
+    .role-cell:nth-child(3n) { border-right: none; }
+    .role-cell:hover { background: var(--paper-soft); }
+    .role-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--fs-tiny);
+      letter-spacing: 0.14em;
+      color: var(--ink-faint);
     }
-
-    section.page-section:first-of-type {
-      padding-top: 0;
-    }
-
-    section.page-section h2 {
-      font-size: 1.6rem;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-    }
-
-    section.page-section p {
-      font-size: 0.98rem;
-      color: #444;
-    }
-
-    /* CCP block retained, just sits in new visual system */
-    #ccp {
-      scroll-margin-top: 80px;
-      background:#F8FAFC;
-      border:1px solid #E5E7EB;
-      border-radius:16px;
-      padding:20px;
-      margin:32px auto;
-    }
-    #ccp .row {
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:16px;
-    }
-    #ccp .actions {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    #ccp .btn {
-      display:inline-block;
-      padding:12px 16px;
-      border-radius:12px;
-      font-weight:700;
-      text-decoration:none;
-    }
-    #ccp .btn-primary {
-      background:#0F52BA;
-      color:#fff;
-    }
-    #ccp .btn-outline {
-      border:2px solid #0F52BA;
-      color:#0F52BA;
-      background:#fff;
-    }
-    #ccp .cols-3 {
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:12px;
-      max-width:900px;
-    }
-    #ccp .result {
-      display:none;
-      margin-top:10px;
-      padding:10px;
-      border:1px dashed #CBD5E1;
-      border-radius:10px;
-      background:#fff;
-    }
-    @media (max-width: 900px){
-      #ccp .cols-3 { grid-template-columns:1fr; }
-    }
-
-    /* Card grid from existing styles (reused) */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2em;
-      margin-top: 2em;
-    }
-    .ccp-card {
-      background: #fff;
-      border: 1px solid #e3eaf6;
-      padding: 2.1em 2em;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(15,82,186,0.04);
-      transition: box-shadow 0.2s, border 0.2s;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      min-height: 260px;
-      margin-bottom: 0.5em;
-    }
-    .ccp-card h3 {
-      color: #0F52BA;
-      margin-bottom: 1em;
-      font-size: 1.2em;
-      font-weight: 700;
-    }
-    .ccp-card p {
-      font-size: 1.03em;
-      margin-bottom: 0;
-      line-height: 1.65;
-      color: #444;
-    }
-    .ccp-icon {
-      font-size: 2.2em;
-      color: #0F52BA;
-      margin-bottom: 0.5em;
-    }
-
-    /* Footer aligned with homepage footer */
-    footer {
-      background: #0b1a3a;
-      color: rgba(255, 255, 255, 0.86);
-      padding: 2.8rem 0 2rem;
-      margin-top: 3rem;
-      text-align: left;
-    }
-
-    .footer-layout {
-      display: grid;
-      grid-template-columns: 2fr 1.4fr 1.4fr;
-      gap: 2.2rem;
-      font-size: 0.9rem;
-    }
-
-    .footer-heading {
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 0.7rem;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .footer-links {
-      list-style: none;
-      padding-left: 0;
+    .role-cell h3 {
+      font-size: 1.0625rem;
       margin: 0;
+      letter-spacing: -0.012em;
+    }
+    .role-cell p {
+      font-size: var(--fs-small);
+      color: var(--ink-muted);
+      margin: 0;
+      line-height: 1.55;
     }
 
-    .footer-links li + li {
-      margin-top: 0.35rem;
+    @media (max-width: 880px) {
+      .services-feature { grid-template-columns: 1fr; gap: var(--space-7); }
+      .roles-grid { grid-template-columns: repeat(2, 1fr); }
+      .role-cell:nth-child(3n) { border-right: 1px solid var(--rule); }
+      .role-cell:nth-child(2n) { border-right: none; }
     }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.85);
-      text-decoration: none;
-      font-size: 0.88rem;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    .footer-bottom {
-      margin-top: 2rem;
-      border-top: 1px solid rgba(148, 163, 184, 0.35);
-      padding-top: 1.1rem;
-      font-size: 0.78rem;
-      color: rgba(226, 232, 240, 0.85);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-
-    /* Responsive nav + layout */
-    @media (max-width: 960px) {
-      .hero {
-        padding: 3rem 0 2.4rem;
-      }
-
-      nav ul {
-        position: absolute;
-        top: 100%;
-        right: 1rem;
-        background: #ffffff;
-        border-radius: 14px;
-        border: 1px solid rgba(15, 40, 90, 0.1);
-        box-shadow: 0 18px 40px rgba(15, 40, 90, 0.14);
-        padding: 0.75rem 1rem;
-        flex-direction: column;
-        gap: 0.5rem;
-        min-width: 170px;
-        display: none;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .hamburger {
-        display: block;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .hero h1 {
-        font-size: 1.7rem;
-      }
-      .hero-subtitle {
-        font-size: 0.95rem;
-      }
-      .card-grid {
-        gap: 1.2em;
-      }
-      .footer-layout {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 560px) {
+      .roles-grid { grid-template-columns: 1fr; }
+      .role-cell { border-right: none !important; }
     }
   </style>
+  <meta name="geo.region" content="SG" />
+  <meta name="geo.placename" content="Singapore" />
+  <meta name="geo.position" content="1.3181;103.8931" />
+  <meta name="ICBM" content="1.3181, 103.8931" />
+  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/services.html" />
+  <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/services.html" />
+  <meta name="theme-color" content="#0F52BA" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="author" content="BizGrants Consulting" />
 </head>
 
 <body>
   <header>
     <div class="container nav-container">
       <div class="logo">
-        <img src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+        <img width="1330" height="422" decoding="async" src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
       </div>
       <nav>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
         <ul id="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="services.html" class="active">Services</a></li>
@@ -492,141 +187,223 @@
   </header>
 
   <main>
-    <!-- New clean hero -->
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <div class="hero-eyebrow">Grant eligibility · CCP & job redesign</div>
+        <div class="hero-eyebrow">Services &middot; Grant eligibility &amp; advisory</div>
         <h1>Which roles in your company can qualify for government funding?</h1>
         <p class="hero-subtitle">
-          We work with Singapore employers to identify grant-eligible roles and map them to the right Career Conversion Programme,
-          Job Redesign Grant or SkillsFuture-supported pathway, across both new hires and existing staff.
+          We work with Singapore employers to identify grant-eligible roles and map them to the right Career Conversion Programme, Job Redesign Grant or SkillsFuture-supported pathway &mdash; across both new hires and existing staff.
         </p>
+        <div class="services-hero-cta-row">
+          <a rel="noopener noreferrer" href="https://calendly.com/enquiries-bizgrants/30min"
+             onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
+             target="_blank"
+             class="cta-btn-primary">
+            Book a free consultation
+          </a>
+          <a href="contact.html" class="btn-ghost">Email an eligibility request</a>
+        </div>
         <p class="hero-note">
           Suitable for HR, founders and business leaders planning hiring or role redesign in the next 3 to 6 months.
         </p>
-        <div class="services-hero-cta-row">
-          <a href="https://calendly.com/enquiries-bizgrants/30min"
-             onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
-             target="_blank"
-             class="services-hero-cta">
-            Book a free consultation
-          </a>
-        </div>
       </div>
     </section>
 
     <!-- Visual credibility strip -->
-    <section style="background:#ffffff; padding:2.5rem 0;">
-      <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
-        <div>
-          <img src="images/stock/team-strategy.jpg" alt="Business strategy consulting session with team reviewing documents" style="width:100%; border-radius:16px; object-fit:cover; box-shadow:0 8px 24px rgba(15,40,90,0.06);" loading="lazy" />
+    <section class="section">
+      <div class="container services-feature">
+        <div class="feature-image-wrap" style="position: relative;">
+          <img class="feature-image" width="1200" height="900" decoding="async" src="images/stock/team-strategy.jpg" alt="Business strategy consulting session with team reviewing documents" loading="lazy" />
         </div>
         <div>
-          <p style="font-size:0.95rem; color:var(--text-muted); line-height:1.7;">Our advisory process begins with a detailed assessment of your company profile, planned hires and existing workforce. We identify which roles qualify for CCP, Job Redesign or SkillsFuture funding, then structure every element of the application to meet assessor expectations.</p>
+          <div class="feature-meta">01 &middot; Engagement approach</div>
+          <h2 style="font-size: var(--fs-h2); margin-bottom: var(--space-5);">Assess. Map. Structure. Submit.</h2>
+          <p style="color: var(--ink-muted); font-size: 1.0625rem; line-height: 1.6;">
+            Every engagement begins with a detailed assessment of your company profile, planned hires and existing workforce. We identify which roles qualify for CCP, Job Redesign or SkillsFuture funding, then structure every element of the application to meet assessor expectations.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- CCP section -->
-    <section class="container page-section" id="ccp">
-      <div class="row">
-        <div>
-          <h2>Hired recently? Claim up to S$45,000 in CCP salary support</h2>
-          <p>If you have onboarded a new hire in the last three months, or looking to redesign certain job scopes, you may qualify for salary support through CCP, subject to WSG rules and caps. We scope eligibility, align JD and OJT, and handle submissions.</p>
-          <div class="actions">
-            <a id="ccpBook" class="btn btn-primary" href="https://calendly.com/enquiries-bizgrants/30min"
-               onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }" target="_blank">
-               Book a quick consult
-            </a>
-            <a id="ccpEmail" class="btn btn-outline" href="contact.html">
-              Email an eligibility request
-            </a>
-          </div>
+    <!-- CCP support estimator -->
+    <section class="section" style="background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">02 &middot; Salary support</div>
+          <h2 class="section-title">Hired recently? Claim up to S$45,000 in CCP salary support.</h2>
+          <p class="section-lead">
+            If you have onboarded a new hire in the last three months, or are looking to redesign certain job scopes, you may qualify for salary support through CCP &mdash; subject to WSG rules and caps. We scope eligibility, align JD and OJT, and handle submissions.
+          </p>
         </div>
 
-        <div>
-          <details style="margin-top:16px">
-            <summary style="cursor:pointer;font-weight:700">See an indicative estimate</summary>
-            <div style="margin-top:12px; max-width:900px">
-              <div class="cols-3">
-                <select id="ccpPathway">
-                  <option value="">Select pathway</option>
-                  <option>Different Job Scope</option>
-                  <option>ESG / Sustainability</option>
-                  <option>Overseas Markets</option>
-                  <option>Human Resource Functions</option>
-                  <option>Digital Advertising & Marketing</option>
-                  <option>Design Professionals</option>
-                  <option>Biomedical Manufacturing</option>
-                  <option>Wholesale Trade Professionals</option>
-                  <option>Hotel, MICE, Attractions, Tour & Travel</option>
-                  <option>Infocomm Sales & Marketing Professionals</option>
-                </select>
-                <select id="ccpHireType">
-                  <option value="">Employment type</option>
-                  <option value="new">New hire</option>
-                  <option value="existing">Existing staff</option>
-                </select>
-                <input id="ccpSalary" type="number" min="1500" step="50" placeholder="Monthly salary (SGD)" />
+        <div id="ccp">
+          <div class="row">
+            <div>
+              <div class="actions">
+                <a rel="noopener noreferrer" id="ccpBook" class="btn btn-primary" href="https://calendly.com/enquiries-bizgrants/30min"
+                   onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }" target="_blank">
+                   Book a quick consult
+                </a>
+                <a id="ccpEmail" class="btn btn-outline" href="contact.html">
+                  Email an eligibility request
+                </a>
               </div>
-
-              <button id="ccpEstimate" class="btn" style="margin-top:12px; background:#111827; color:#fff">Estimate support</button>
-              <div id="ccpResult" class="result"></div>
-
-              <p style="color:#6B7280; font-size:12px; margin-top:8px">
-                Figures are indicative only. Final support depends on eligibility and WSG approval, capped at S$45,000.
-              </p>
             </div>
-          </details>
+
+            <div>
+              <details style="margin-top: var(--space-5);">
+                <summary style="cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: var(--fs-tiny); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); font-weight: 500;">→ See an indicative estimate</summary>
+                <div style="margin-top: var(--space-5); max-width: 920px;">
+                  <div class="cols-3">
+                    <select id="ccpPathway">
+                      <option value="">Select pathway</option>
+                      <option>Different Job Scope</option>
+                      <option>ESG / Sustainability</option>
+                      <option>Overseas Markets</option>
+                      <option>Human Resource Functions</option>
+                      <option>Digital Advertising &amp; Marketing</option>
+                      <option>Design Professionals</option>
+                      <option>Biomedical Manufacturing</option>
+                      <option>Wholesale Trade Professionals</option>
+                      <option>Hotel, MICE, Attractions, Tour &amp; Travel</option>
+                      <option>Infocomm Sales &amp; Marketing Professionals</option>
+                    </select>
+                    <select id="ccpHireType">
+                      <option value="">Employment type</option>
+                      <option value="new">New hire</option>
+                      <option value="existing">Existing staff</option>
+                    </select>
+                    <input id="ccpSalary" type="number" min="1500" step="50" placeholder="Monthly salary (SGD)" />
+                  </div>
+
+                  <button id="ccpEstimate" class="btn btn-primary" style="margin-top: var(--space-5);">Estimate support</button>
+                  <div id="ccpResult" class="result"></div>
+
+                  <p style="color: var(--ink-faint); font-family: 'JetBrains Mono', monospace; font-size: var(--fs-tiny); letter-spacing: 0.06em; margin-top: var(--space-4);">
+                    Indicative figures only. Final support depends on eligibility and WSG approval, capped at S$45,000.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Roles grid -->
-    <section class="container page-section" style="padding-bottom:2em;">
-      <h2>Roles commonly supported by CCP & Job Redesign Grant</h2>
-      <p>Eligibility is subject to WSG and sector-specific criteria. Book a free assessment for confirmation.</p>
-      <div class="card-grid">
-        <div class="ccp-card"><span class="ccp-icon">📈</span><h3>SME Professionals</h3><p>For new hires transitioning into an expanded or altered job scope in SMEs.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">👥</span><h3>HR & People Roles</h3><p>Upskill your team or bring in HR talent for growth, planning, or digital HR transformation.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">🌱</span><h3>Sustainability & ESG Talent</h3><p>Embed sustainability with roles in ESG reporting, green procurement, and responsible operations.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">🏢</span><h3>Business Operations & Admin</h3><p>New hires in core business functions including admin, business development, and operations.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">📣</span><h3>Marketing, Digital & Branding</h3><p>Grow your brand with support for roles in digital marketing, campaigns, and content.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">🎨</span><h3>Customer Experience & Design</h3><p>Enhance customer journeys with experience design, UI/UX and creative roles.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">📊</span><h3>Data, AI & Analytics</h3><p>Leverage data with analytics, data engineering, and AI-focused roles.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">💼</span><h3>Digital Sales & Business Development</h3><p>Accelerate growth with support for sales, account management, and BD teams.</p></div>
-        <div class="ccp-card"><span class="ccp-icon">💻</span><h3>Tech, Software & Cybersecurity</h3><p>Modernise your tech stack with new hires or upskilled talent in software and cybersecurity.</p></div>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">03 &middot; Eligible roles</div>
+          <h2 class="section-title">Roles commonly supported by CCP and Job Redesign Grants.</h2>
+          <p class="section-lead">
+            Eligibility is subject to WSG and sector-specific criteria. Book a free assessment for confirmation across your hiring and redesign plans.
+          </p>
+        </div>
+
+        <div class="roles-grid">
+          <div class="role-cell">
+            <span class="role-num">R / 01</span>
+            <h3>SME Professionals</h3>
+            <p>For new hires transitioning into an expanded or altered job scope in SMEs.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 02</span>
+            <h3>HR &amp; People</h3>
+            <p>Upskill the team or bring in HR talent for growth, planning, or digital HR transformation.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 03</span>
+            <h3>Sustainability &amp; ESG</h3>
+            <p>Embed sustainability with roles in ESG reporting, green procurement, and responsible operations.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 04</span>
+            <h3>Business Operations</h3>
+            <p>New hires in core business functions including admin, business development, and operations.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 05</span>
+            <h3>Marketing &amp; Branding</h3>
+            <p>Grow your brand with support for digital marketing, campaigns, and content roles.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 06</span>
+            <h3>Customer Experience &amp; Design</h3>
+            <p>Enhance customer journeys with experience design, UI/UX and creative roles.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 07</span>
+            <h3>Data, AI &amp; Analytics</h3>
+            <p>Leverage data with analytics, data engineering, and AI-focused roles.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 08</span>
+            <h3>Sales &amp; Business Development</h3>
+            <p>Accelerate growth with support for sales, account management, and BD teams.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 09</span>
+            <h3>Tech, Software &amp; Cyber</h3>
+            <p>Modernise the stack with new hires or upskilled talent in software and cybersecurity.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="container page-section" style="padding-top:2em; margin-bottom:3.5rem;">
-      <h2>Frequently asked questions about CCP, job redesign and SkillsFuture grants</h2>
-      <div>
-        <strong>Which grant schemes are supported?</strong>
-        <p>We advise on Career Conversion Programme, Job Redesign Grant and related WSG funding.</p>
-        <strong>Can my company get salary support for upskilling?</strong>
-        <p>Yes, structured reskilling or upskilling may qualify for funding through CCP, Job Redesign, or SkillsFuture. <a href="contact.html">Check your eligibility</a>.</p>
-        <strong>Are all industries eligible?</strong>
-        <p>Most sectors qualify, including digital, tech, sustainability, HR, operations, and more. Contact us for industry-specific pathways.</p>
-        <strong>What if I have a unique role or business need?</strong>
-        <p>We provide custom grant mapping. Reach out for a tailored recommendation.</p>
-        <strong>Where can I see real project examples?</strong>
-        <p>See our <a href="blog.html">blog</a> or <a href="/#insights">recent approved projects</a> on the homepage.</p>
+    <section class="section" style="background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">04 &middot; Common questions</div>
+          <h2 class="section-title">Frequently asked questions about CCP, job redesign and SkillsFuture grants.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Which grant schemes are supported?</summary>
+            <p>We advise on Career Conversion Programme, Job Redesign Grant and related WSG funding initiatives, including SkillsFuture-supported pathways for reskilling and upskilling.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can my company get salary support for upskilling?</summary>
+            <p>Yes &mdash; structured reskilling or upskilling may qualify for funding through CCP, Job Redesign, or SkillsFuture. <a href="contact.html">Check your eligibility &rarr;</a></p>
+          </details>
+          <details class="faq-item">
+            <summary>Are all industries eligible?</summary>
+            <p>Most sectors qualify, including digital, tech, sustainability, HR, and operations. Contact us for industry-specific pathways.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I have a unique role or business need?</summary>
+            <p>We provide custom grant mapping. Reach out for a tailored recommendation aligned to your team and growth plans.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where can I see real project examples?</summary>
+            <p>See our <a href="blog.html">blog</a> or the <a href="/#insights">recent approved projects</a> on the homepage.</p>
+          </details>
+        </div>
       </div>
     </section>
 
     <!-- Related Guides -->
-    <section class="container page-section" style="padding-top:2em;">
-      <h2>Related guides</h2>
-      <ul>
-        <li><a href="wsg-career-conversion-programme.html">WSG Career Conversion Programme</a></li>
-        <li><a href="ccp-grant-singapore.html">CCP Grant in Singapore</a></li>
-        <li><a href="ccp-for-employers.html">CCP for Employers</a></li>
-        <li><a href="career-conversion-programmes.html">Career Conversion Programmes overview</a></li>
-        <li><a href="ccp-digital-marketing.html">CCP Digital Marketing</a></li>
-        <li><a href="ccp-sustainability.html">CCP Sustainability Professionals</a></li>
-      </ul>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">05 &middot; Resources</div>
+          <h2 class="section-title">Related guides</h2>
+        </div>
+
+        <div class="related-articles" style="margin-top: 0; padding-top: 0; border-top: 1px solid var(--ink);">
+          <div class="related-articles-grid">
+            <a href="wsg-career-conversion-programme.html">WSG Career Conversion Programme</a>
+            <a href="ccp-grant-singapore.html">CCP Grant in Singapore</a>
+            <a href="ccp-for-employers.html">CCP for Employers</a>
+            <a href="career-conversion-programmes.html">Career Conversion Programmes overview</a>
+            <a href="ccp-digital-marketing.html">CCP Digital Marketing</a>
+            <a href="ccp-sustainability.html">CCP Sustainability Professionals</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -636,40 +413,37 @@
         <div>
           <div class="footer-heading">BizGrants Consulting</div>
           <p>
-            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture-supported
-            workforce transformation in Singapore.
+            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture-supported workforce transformation in Singapore.
           </p>
         </div>
         <div>
           <div class="footer-heading">Services</div>
           <ul class="footer-links">
-            <li><a href="services.html">CCP advisory and role scoping</a></li>
-            <li><a href="services.html">Job redesign and OJT planning</a></li>
-            <li><a href="blog.html">Grant insights and guides</a></li>
+            <li><a href="services.html">CCP advisory &amp; role scoping</a></li>
+            <li><a href="services.html">Job redesign &amp; OJT planning</a></li>
+            <li><a href="blog.html">Grant insights &amp; guides</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-heading">Contact</div>
           <ul class="footer-links">
-            <li><strong>Contact Number:</strong> 8887 5297</li>
-            <li><strong>Email:</strong> enquiries@bizgrants.consulting</li>
-            <li><strong>Address:</strong> 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</li>
+            <li><strong>Telephone</strong>8887 5297</li>
+            <li><strong>Email</strong>enquiries@bizgrants.consulting</li>
+            <li><strong>Office</strong>60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 BizGrants Consulting. All rights reserved.</span>
-        <span>For Singapore-registered employers hiring or reskilling Singapore Citizens and PRs.</span>
+        <span>&copy; 2026 BizGrants Consulting</span>
+        <span>For Singapore-registered employers</span>
       </div>
     </div>
   </footer>
 
-  
 
-  <!-- Google tag (gtag.js) -->
+
   <!-- CCP Estimator Calculator -->
   <script>
-    // CCP estimator
     const MONTHS = {
       'Different Job Scope': { new: 3, existing: 3 },
       'ESG / Sustainability': { new: 6, existing: 3 },
@@ -684,11 +458,11 @@
     };
     const estBtn = document.getElementById('ccpEstimate');
     const result = document.getElementById('ccpResult');
-    estBtn?.addEventListener('click', ()=>{
+    estBtn?.addEventListener('click', () => {
       const p = document.getElementById('ccpPathway').value;
       const t = document.getElementById('ccpHireType').value;
       const s = parseFloat(document.getElementById('ccpSalary').value || '0');
-      if(!p || !t || !s){ alert('Select pathway, employment type and enter salary.'); return; }
+      if (!p || !t || !s) { alert('Select pathway, employment type and enter salary.'); return; }
       const months = (MONTHS[p] || {})[t] || 3;
       const std = Math.min(0.70 * s, 5000);
       const enh = Math.min(0.90 * s, 7500);
@@ -697,7 +471,7 @@
       result.style.display = 'block';
       result.innerHTML = `<strong>Indicative duration:</strong> ${months} month(s)<br>
                           <strong>Estimated support:</strong> S$${min.toLocaleString()} to S$${max.toLocaleString()}`;
-      if (typeof gtag === 'function') { gtag('event','calculator_submit',{ section:'ccp_services', pathway:p, type:t }); }
+      if (typeof gtag === 'function') { gtag('event', 'calculator_submit', { section: 'ccp_services', pathway: p, type: t }); }
     });
   </script>
 
@@ -705,5 +479,3 @@
   <script src="shared.js" defer></script>
 </body>
 </html>
-
-

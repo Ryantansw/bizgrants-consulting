@@ -1,0 +1,12 @@
+{
+  "name": "BizGrants Consulting",
+  "short_name": "BizGrants",
+  "description": "Singapore CCP and Job Redesign grant advisory",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0F52BA",
+  "icons": [
+    {"src": "/images/logo.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

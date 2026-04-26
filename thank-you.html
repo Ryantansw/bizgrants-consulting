@@ -28,82 +28,20 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <style>
-    html, body { height: 100%; }
-    body { min-height: 100vh; display: flex; flex-direction: column; }
-    .main-content { flex: 1 0 auto; }
-    footer { flex-shrink: 0; }
-
-    .hero-gradient {
-      background: linear-gradient(90deg, #0F52BA 0%, #89CFF0 100%);
-      text-align: center;
-      padding: 4rem 0 4rem 0;
-    }
-    .hero-content {
-      width: 100%;
-      max-width: 900px;
+    /* Thank-you page — minimal additions; main hero/btn styles come from style.css */
+    .hero-gradient .hero-content {
+      padding: 0;
+      max-width: var(--max-w);
+      width: 92%;
       margin: 0 auto;
-      padding: 0 1.5rem;
     }
-    .hero-gradient h1 {
-      color: #fff;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+    .hero-gradient .hero-content > .hero-eyebrow {
+      color: var(--on-dark-mute);
     }
-    .hero-gradient p {
-      color: #fff;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-top: 0;
+    .hero-gradient .hero-content > .hero-eyebrow::before {
+      background: var(--accent);
     }
-
-    .thankyou-section {
-      padding: 3rem 0;
-    }
-    .thankyou-section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-    .thankyou-section p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .btn-primary {
-      background: #0F52BA;
-      padding: 0.85rem 1.5rem;
-      border-radius: 999px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .btn-secondary {
-      background: #e7f0ff;
-      padding: 0.85rem 1.5rem;
-      border-radius: 999px;
-      color: #0F52BA;
-      text-decoration: none;
-      border: 1px solid #c8d8ff;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    @media (max-width: 700px) {
-      .hero-gradient { padding: 3rem 1rem; }
-      .hero-gradient h1 { font-size: 2rem; }
-      .hero-gradient p { font-size: 1rem; }
-      .btn-row { flex-direction: column; align-items: stretch; }
-    }
+    .hero-gradient h1 { max-width: 24ch; }
   </style>
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -138,23 +76,26 @@
 
     <section class="hero-gradient">
       <div class="hero-content">
-        <h1>Thank you, you are on our CCP & grant insights list</h1>
+        <div class="hero-eyebrow">Subscription confirmed</div>
+        <h1>You&rsquo;re on the CCP &amp; grant insights list.</h1>
         <p>You will receive practical breakdowns of Career Conversion Programmes, job redesign strategies and real case studies relevant to Singapore employers.</p>
       </div>
     </section>
 
     <section class="thankyou-section">
       <div class="container">
-        <h2>Useful next steps</h2>
-        <p>
-          If you are exploring Workforce Singapore funding, these resources will help you assess possible pathways for your company.  
-          You can also book a quick discussion for a no obligation eligibility check.
-        </p>
+        <div class="section-header">
+          <div class="section-kicker">Next steps</div>
+          <h2 class="section-title">Useful resources while you wait.</h2>
+          <p class="section-lead">
+            If you are exploring Workforce Singapore funding, these resources will help you assess possible pathways for your company. You can also book a quick discussion for a no-obligation eligibility check.
+          </p>
+        </div>
 
         <div class="btn-row">
-          <a href="blog.html" class="btn-primary">Return to Blog</a>
-          <a href="services.html" class="btn-secondary">View CCP Pathways</a>
-          <a href="contact.html" class="btn-secondary">Book a Free Assessment</a>
+          <a href="blog.html" class="btn-primary">Return to blog &rarr;</a>
+          <a href="services.html" class="btn-secondary">View CCP pathways</a>
+          <a href="contact.html" class="btn-secondary">Book a free assessment</a>
         </div>
       </div>
     </section>
@@ -164,7 +105,10 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 BizGrants Consulting. All rights reserved.</p>
+      <div class="footer-bottom">
+        <span>&copy; 2026 BizGrants Consulting</span>
+        <span>Singapore CCP &amp; Job Redesign Advisory</span>
+      </div>
     </div>
   </footer>
 

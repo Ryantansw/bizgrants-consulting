@@ -14,13 +14,23 @@
   <meta name="author" content="BizGrants Consulting" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .error-wrap { max-width: 720px; margin: 0 auto; padding: 5rem 1.5rem; text-align: center; }
-    .error-code { font-size: 5rem; font-weight: 700; color: #0f52ba; margin: 0; line-height: 1; }
-    .error-wrap h1 { font-size: 2rem; margin: 1rem 0; color: #0f285a; }
-    .error-wrap p { color: #6b7280; font-size: 1.05rem; line-height: 1.6; }
-    .error-links { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
-    .error-links a { display: inline-block; padding: 0.75rem 1.5rem; background: #0f52ba; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 600; }
-    .error-links a.secondary { background: #fff; color: #0f52ba; border: 1px solid #0f52ba; }
+    .error-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--fs-tiny);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: var(--space-5);
+    }
+    .error-meta::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      margin-right: var(--space-3);
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -41,22 +51,28 @@
   </header>
 
   <main>
-    <div class="error-wrap">
-      <p class="error-code">404</p>
-      <h1>Page not found</h1>
-      <p>
-        The page you were looking for has moved or does not exist. You can head back to the homepage, or read our latest CCP and Job Redesign grant guides on the blog.
-      </p>
-      <div class="error-links">
-        <a href="/">Back to home</a>
-        <a href="/blog.html" class="secondary">Read the blog</a>
+    <div class="container">
+      <div class="error-wrap">
+        <div class="error-meta">Status / 404 &middot; Document not located</div>
+        <p class="error-code">404</p>
+        <h1>Page not found.</h1>
+        <p>
+          The page you were looking for has moved or does not exist. Head back to the homepage, or read our latest CCP and Job Redesign grant guides on the blog.
+        </p>
+        <div class="error-links">
+          <a href="/">Back to home &rarr;</a>
+          <a href="/blog.html" class="secondary">Read the blog</a>
+        </div>
       </div>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p style="text-align:center; color:#6b7280; padding:2rem 0;">&copy; BizGrants Consulting. Singapore CCP and Job Redesign grant advisory.</p>
+      <div class="footer-bottom">
+        <span>&copy; 2026 BizGrants Consulting</span>
+        <span>Singapore CCP &amp; Job Redesign Advisory</span>
+      </div>
     </div>
   </footer>
 </body>

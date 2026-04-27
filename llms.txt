@@ -13,32 +13,32 @@
 ## Core pages
 
 - [Home](https://bizgrants.consulting/): Overview of the firm and headline funding scenarios
-- [Services](https://bizgrants.consulting/services.html): CCP and Job Redesign Grant advisory services
-- [About BizGrants Consulting](https://bizgrants.consulting/about.html): Firm profile, advisory principles, and engagement model
-- [Pathways](https://bizgrants.consulting/pathways.html): All CCP pathways with eligibility, salary minimums, and supported job families
-- [Contact](https://bizgrants.consulting/contact.html): Free consultation, NAP details
+- [Services](https://bizgrants.consulting/services/): CCP and Job Redesign Grant advisory services
+- [About BizGrants Consulting](https://bizgrants.consulting/about/): Firm profile, advisory principles, and engagement model
+- [Pathways](https://bizgrants.consulting/pathways/): All CCP pathways with eligibility, salary minimums, and supported job families
+- [Contact](https://bizgrants.consulting/contact/): Free consultation, NAP details
 
 ## Pillar guides
 
-- [WSG Career Conversion Programme](https://bizgrants.consulting/wsg-career-conversion-programme.html): Definitive employer guide to the WSG CCP
-- [CCP for Employers](https://bizgrants.consulting/ccp-for-employers.html): Step-by-step employer journey from eligibility to claims
-- [CCP Grant Funding](https://bizgrants.consulting/ccp-grant-singapore.html): How CCP funding works, caps, supported items, evidence
-- [Career Conversion Programmes overview](https://bizgrants.consulting/career-conversion-programmes.html): Plain-English orientation for HR and business owners
-- [CCP for Digital Marketing roles](https://bizgrants.consulting/ccp-digital-marketing.html): Role design and OJT examples for digital roles
-- [CCP for Sustainability roles](https://bizgrants.consulting/ccp-sustainability.html): Role design and OJT examples for sustainability/ESG roles
+- [WSG Career Conversion Programme](https://bizgrants.consulting/wsg-career-conversion-programme/): Definitive employer guide to the WSG CCP
+- [CCP for Employers](https://bizgrants.consulting/ccp-for-employers/): Step-by-step employer journey from eligibility to claims
+- [CCP Grant Funding](https://bizgrants.consulting/ccp-grant-singapore/): How CCP funding works, caps, supported items, evidence
+- [Career Conversion Programmes overview](https://bizgrants.consulting/career-conversion-programmes/): Plain-English orientation for HR and business owners
+- [CCP for Digital Marketing roles](https://bizgrants.consulting/ccp-digital-marketing/): Role design and OJT examples for digital roles
+- [CCP for Sustainability roles](https://bizgrants.consulting/ccp-sustainability/): Role design and OJT examples for sustainability/ESG roles
 
 ## Blog articles
 
-- [CCP Eligibility](https://bizgrants.consulting/blog/ccp-eligibility.html): Who qualifies for the Career Conversion Programme
-- [CCP Application Guide](https://bizgrants.consulting/blog/ccp-application-guide.html): Step-by-step CCP application process
-- [CCP Application Pitfalls](https://bizgrants.consulting/blog/ccp-application-pitfalls.html): Common CCP mistakes to avoid
-- [CCP vs JGI vs SFEC](https://bizgrants.consulting/blog/ccp-vs-jgi-sfec.html): Comparing CCP, Jobs Growth Incentive, and SFEC for employers
-- [CCP Reskilling Examples](https://bizgrants.consulting/blog/ccp-reskilling-examples.html): Real Singapore reskilling use cases
-- [CCP Flat-fee vs Success-fee Consulting](https://bizgrants.consulting/blog/ccp-flatfee-consulting.html): Why success-fee beats flat-fee for grant advisory
-- [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants.html): GRIT vs MCPP vs CCP, which programme fits SME hiring
+- [CCP Eligibility](https://bizgrants.consulting/blog/ccp-eligibility/): Who qualifies for the Career Conversion Programme
+- [CCP Application Guide](https://bizgrants.consulting/blog/ccp-application-guide/): Step-by-step CCP application process
+- [CCP Application Pitfalls](https://bizgrants.consulting/blog/ccp-application-pitfalls/): Common CCP mistakes to avoid
+- [CCP vs JGI vs SFEC](https://bizgrants.consulting/blog/ccp-vs-jgi-sfec/): Comparing CCP, Jobs Growth Incentive, and SFEC for employers
+- [CCP Reskilling Examples](https://bizgrants.consulting/blog/ccp-reskilling-examples/): Real Singapore reskilling use cases
+- [CCP Flat-fee vs Success-fee Consulting](https://bizgrants.consulting/blog/ccp-flatfee-consulting/): Why success-fee beats flat-fee for grant advisory
+- [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants/): GRIT vs MCPP vs CCP, which programme fits SME hiring
 
 ## Optional
 
-- [Blog index](https://bizgrants.consulting/blog.html): Full article hub
-- [Privacy Policy](https://bizgrants.consulting/privacy.html): PDPA-compliant data handling
-- [Terms of Service](https://bizgrants.consulting/terms.html): Site terms and engagement conditions
+- [Blog index](https://bizgrants.consulting/blog/): Full article hub
+- [Privacy Policy](https://bizgrants.consulting/privacy/): PDPA-compliant data handling
+- [Terms of Service](https://bizgrants.consulting/terms/): Site terms and engagement conditions

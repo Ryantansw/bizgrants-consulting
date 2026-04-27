@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wbvqrgdn17");
+  </script>
+
+  <!-- Preconnect hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://assets.calendly.com" />
+  <link rel="preconnect" href="https://www.clarity.ms" />
+  <title>CCP & Job Redesign Grant Services | BizGrants Consulting</title>
+  <meta name="description" content="Unlock up to 90% salary support with BizGrants Consulting. See which roles qualify for CCP, Job Redesign Grant and SkillsFuture funding in Singapore." />
+  <link rel="canonical" href="https://bizgrants.consulting/services/" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Open Graph & Twitter -->
+  <meta property="og:title" content="Services | BizGrants Consulting" />
+  <meta property="og:description" content="Unlock up to 90% salary support. See roles eligible for CCP, Job Redesign and SkillsFuture-supported funding in Singapore." />
+  <meta property="og:locale" content="en_SG" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bizgrants.consulting/services/" />
+  <meta property="og:image" content="https://bizgrants.consulting/images/logo.png" />
+  <meta property="og:site_name" content="BizGrants Consulting" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Services | BizGrants Consulting" />
+  <meta name="twitter:description" content="Unlock up to 90% salary support. See roles eligible for CCP, Job Redesign and SkillsFuture-supported funding in Singapore." />
+  <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
+  <meta name="twitter:site" content="@bizgrantsconsulting" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Calendly Badge Widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Grant Advisory & CCP Consulting",
+    "provider": {
+      "@type": "Organization",
+      "name": "BizGrants Consulting",
+      "url": "https://bizgrants.consulting/"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    "description": "End-to-end Career Conversion Programme (CCP) advisory, Job Redesign Grant consulting, and SkillsFuture funding support for Singapore employers."
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bizgrants.consulting/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://bizgrants.consulting/services/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Services-specific layout */
+    .services-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-9);
+      align-items: center;
+    }
+    .services-feature .feature-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+      filter: saturate(0.9) contrast(1.02);
+    }
+    .services-feature .feature-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--fs-tiny);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: var(--space-3);
+    }
+
+    /* Roles grid, three columns hairline divided */
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+      margin: var(--space-7) 0;
+    }
+    .role-cell {
+      padding: var(--space-7) var(--space-6);
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      transition: background var(--t-fast);
+    }
+    .role-cell:nth-child(3n) { border-right: none; }
+    .role-cell:hover { background: var(--paper-soft); }
+    .role-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--fs-tiny);
+      letter-spacing: 0.14em;
+      color: var(--ink-faint);
+    }
+    .role-cell h3 {
+      font-size: 1.0625rem;
+      margin: 0;
+      letter-spacing: -0.012em;
+    }
+    .role-cell p {
+      font-size: var(--fs-small);
+      color: var(--ink-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 880px) {
+      .services-feature { grid-template-columns: 1fr; gap: var(--space-7); }
+      .roles-grid { grid-template-columns: repeat(2, 1fr); }
+      .role-cell:nth-child(3n) { border-right: 1px solid var(--rule); }
+      .role-cell:nth-child(2n) { border-right: none; }
+    }
+    @media (max-width: 560px) {
+      .roles-grid { grid-template-columns: 1fr; }
+      .role-cell { border-right: none !important; }
+    }
+  </style>
+  <meta name="geo.region" content="SG" />
+  <meta name="geo.placename" content="Singapore" />
+  <meta name="geo.position" content="1.3181;103.8931" />
+  <meta name="ICBM" content="1.3181, 103.8931" />
+  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/services/" />
+  <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/services/" />
+  <meta name="theme-color" content="#0F52BA" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="author" content="BizGrants Consulting" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo">
+        <img width="1330" height="422" decoding="async" src="images/logo.png" alt="BizGrants Consulting" class="logo-img" />
+      </div>
+      <nav>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+        <ul id="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services/" class="active">Services</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-eyebrow">Services &middot; Grant eligibility &amp; advisory</div>
+        <h1>Which roles in your company can qualify for government funding?</h1>
+        <p class="hero-subtitle">
+          We work with Singapore employers to identify grant-eligible roles and map them to the right Career Conversion Programme, Job Redesign Grant or SkillsFuture-supported pathway, across both new hires and existing staff.
+        </p>
+        <div class="services-hero-cta-row">
+          <a rel="noopener noreferrer" href="https://calendly.com/enquiries-bizgrants/30min"
+             onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
+             target="_blank"
+             class="cta-btn-primary">
+            Book a free consultation
+          </a>
+          <a href="/contact/" class="btn-ghost">Email an eligibility request</a>
+        </div>
+        <p class="hero-note">
+          Suitable for HR, founders and business leaders planning hiring or role redesign in the next 3 to 6 months.
+        </p>
+      </div>
+    </section>
+
+    <!-- Visual credibility strip -->
+    <section class="section">
+      <div class="container services-feature">
+        <div class="feature-image-wrap" style="position: relative;">
+          <img class="feature-image" width="1200" height="900" decoding="async" src="images/stock/team-strategy.jpg" alt="Business strategy consulting session with team reviewing documents" loading="lazy" />
+        </div>
+        <div>
+          <div class="feature-meta">01 &middot; Engagement approach</div>
+          <h2 style="font-size: var(--fs-h2); margin-bottom: var(--space-5);">Assess. Map. Structure. Submit.</h2>
+          <p style="color: var(--ink-muted); font-size: 1.0625rem; line-height: 1.6;">
+            Every engagement begins with a detailed assessment of your company profile, planned hires and existing workforce. We identify which roles qualify for CCP, Job Redesign or SkillsFuture funding, then structure every element of the application to meet assessor expectations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CCP support estimator -->
+    <section class="section" style="background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">02 &middot; Salary support</div>
+          <h2 class="section-title">Hired recently? Claim up to S$45,000 in CCP salary support.</h2>
+          <p class="section-lead">
+            If you have onboarded a new hire in the last three months, or are looking to redesign certain job scopes, you may qualify for salary support through CCP, subject to WSG rules and caps. We scope eligibility, align JD and OJT, and handle submissions.
+          </p>
+        </div>
+
+        <div id="ccp">
+          <div class="row">
+            <div>
+              <div class="actions">
+                <a rel="noopener noreferrer" id="ccpBook" class="btn btn-primary" href="https://calendly.com/enquiries-bizgrants/30min"
+                   onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }" target="_blank">
+                   Book a quick consult
+                </a>
+                <a id="ccpEmail" class="btn btn-outline" href="/contact/">
+                  Email an eligibility request
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <details style="margin-top: var(--space-5);">
+                <summary style="cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: var(--fs-tiny); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); font-weight: 500;">→ See an indicative estimate</summary>
+                <div style="margin-top: var(--space-5); max-width: 920px;">
+                  <div class="cols-3">
+                    <select id="ccpPathway">
+                      <option value="">Select pathway</option>
+                      <option>Different Job Scope</option>
+                      <option>ESG / Sustainability</option>
+                      <option>Overseas Markets</option>
+                      <option>Human Resource Functions</option>
+                      <option>Digital Advertising &amp; Marketing</option>
+                      <option>Design Professionals</option>
+                      <option>Biomedical Manufacturing</option>
+                      <option>Wholesale Trade Professionals</option>
+                      <option>Hotel, MICE, Attractions, Tour &amp; Travel</option>
+                      <option>Infocomm Sales &amp; Marketing Professionals</option>
+                    </select>
+                    <select id="ccpHireType">
+                      <option value="">Employment type</option>
+                      <option value="new">New hire</option>
+                      <option value="existing">Existing staff</option>
+                    </select>
+                    <input id="ccpSalary" type="number" min="1500" step="50" placeholder="Monthly salary (SGD)" />
+                  </div>
+
+                  <button id="ccpEstimate" class="btn btn-primary" style="margin-top: var(--space-5);">Estimate support</button>
+                  <div id="ccpResult" class="result"></div>
+
+                  <p style="color: var(--ink-faint); font-family: 'JetBrains Mono', monospace; font-size: var(--fs-tiny); letter-spacing: 0.06em; margin-top: var(--space-4);">
+                    Indicative figures only. Final support depends on eligibility and WSG approval, capped at S$45,000.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roles grid -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">03 &middot; Eligible roles</div>
+          <h2 class="section-title">Roles commonly supported by CCP and Job Redesign Grants.</h2>
+          <p class="section-lead">
+            Eligibility is subject to WSG and sector-specific criteria. Book a free assessment for confirmation across your hiring and redesign plans.
+          </p>
+        </div>
+
+        <div class="roles-grid">
+          <div class="role-cell">
+            <span class="role-num">R / 01</span>
+            <h3>SME Professionals</h3>
+            <p>For new hires transitioning into an expanded or altered job scope in SMEs.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 02</span>
+            <h3>HR &amp; People</h3>
+            <p>Upskill the team or bring in HR talent for growth, planning, or digital HR transformation.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 03</span>
+            <h3>Sustainability &amp; ESG</h3>
+            <p>Embed sustainability with roles in ESG reporting, green procurement, and responsible operations.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 04</span>
+            <h3>Business Operations</h3>
+            <p>New hires in core business functions including admin, business development, and operations.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 05</span>
+            <h3>Marketing &amp; Branding</h3>
+            <p>Grow your brand with support for digital marketing, campaigns, and content roles.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 06</span>
+            <h3>Customer Experience &amp; Design</h3>
+            <p>Enhance customer journeys with experience design, UI/UX and creative roles.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 07</span>
+            <h3>Data, AI &amp; Analytics</h3>
+            <p>Leverage data with analytics, data engineering, and AI-focused roles.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 08</span>
+            <h3>Sales &amp; Business Development</h3>
+            <p>Accelerate growth with support for sales, account management, and BD teams.</p>
+          </div>
+          <div class="role-cell">
+            <span class="role-num">R / 09</span>
+            <h3>Tech, Software &amp; Cyber</h3>
+            <p>Modernise the stack with new hires or upskilled talent in software and cybersecurity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">04 &middot; Common questions</div>
+          <h2 class="section-title">Frequently asked questions about CCP, job redesign and SkillsFuture grants.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Which grant schemes are supported?</summary>
+            <p>We advise on Career Conversion Programme, Job Redesign Grant and related WSG funding initiatives, including SkillsFuture-supported pathways for reskilling and upskilling.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can my company get salary support for upskilling?</summary>
+            <p>Yes, structured reskilling or upskilling may qualify for funding through CCP, Job Redesign, or SkillsFuture. <a href="/contact/">Check your eligibility &rarr;</a></p>
+          </details>
+          <details class="faq-item">
+            <summary>Are all industries eligible?</summary>
+            <p>Most sectors qualify, including digital, tech, sustainability, HR, and operations. Contact us for industry-specific pathways.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I have a unique role or business need?</summary>
+            <p>We provide custom grant mapping. Reach out for a tailored recommendation aligned to your team and growth plans.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where can I see real project examples?</summary>
+            <p>See our <a href="/blog/">blog</a> or the <a href="/#insights">recent approved projects</a> on the homepage.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">05 &middot; Resources</div>
+          <h2 class="section-title">Related guides</h2>
+        </div>
+
+        <div class="related-articles" style="margin-top: 0; padding-top: 0; border-top: 1px solid var(--ink);">
+          <div class="related-articles-grid">
+            <a href="/wsg-career-conversion-programme/">WSG Career Conversion Programme</a>
+            <a href="/ccp-grant-singapore/">CCP Grant in Singapore</a>
+            <a href="/ccp-for-employers/">CCP for Employers</a>
+            <a href="/career-conversion-programmes/">Career Conversion Programmes overview</a>
+            <a href="/ccp-digital-marketing/">CCP Digital Marketing</a>
+            <a href="/ccp-sustainability/">CCP Sustainability Professionals</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-layout">
+        <div>
+          <div class="footer-heading">BizGrants Consulting</div>
+          <p>
+            Advisory for Workforce Singapore Career Conversion Programmes, job redesign grants and SkillsFuture-supported workforce transformation in Singapore.
+          </p>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
+            <li><a href="/services/">CCP advisory &amp; role scoping</a></li>
+            <li><a href="/services/">Job redesign &amp; OJT planning</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><strong>Telephone</strong><a href="tel:+6588875297">+65 8887 5297</a></li>
+            <li><strong>Email</strong>enquiries@bizgrants.consulting</li>
+            <li><strong>Office</strong>60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 BizGrants Consulting &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></span>
+        <span>For Singapore-registered employers</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- CCP Estimator Calculator -->
+  <script>
+    const MONTHS = {
+      'Different Job Scope': { new: 3, existing: 3 },
+      'ESG / Sustainability': { new: 6, existing: 3 },
+      'Overseas Markets': { new: 9, existing: 3 },
+      'Human Resource Functions': { new: 4, existing: 3 },
+      'Digital Advertising & Marketing': { new: 6, existing: 3 },
+      'Design Professionals': { new: 6, existing: 3 },
+      'Biomedical Manufacturing': { new: 12, existing: 6 },
+      'Wholesale Trade Professionals': { new: 6, existing: 3 },
+      'Hotel, MICE, Attractions, Tour & Travel': { new: 6, existing: 3 },
+      'Infocomm Sales & Marketing Professionals': { new: 6, existing: 3 }
+    };
+    const estBtn = document.getElementById('ccpEstimate');
+    const result = document.getElementById('ccpResult');
+    estBtn?.addEventListener('click', () => {
+      const p = document.getElementById('ccpPathway').value;
+      const t = document.getElementById('ccpHireType').value;
+      const s = parseFloat(document.getElementById('ccpSalary').value || '0');
+      if (!p || !t || !s) { alert('Select pathway, employment type and enter salary.'); return; }
+      const months = (MONTHS[p] || {})[t] || 3;
+      const std = Math.min(0.70 * s, 5000);
+      const enh = Math.min(0.90 * s, 7500);
+      const min = Math.round(std * months);
+      const max = Math.round(enh * months);
+      result.style.display = 'block';
+      result.innerHTML = `<strong>Indicative duration:</strong> ${months} month(s)<br>
+                          <strong>Estimated support:</strong> S$${min.toLocaleString()} to S$${max.toLocaleString()}`;
+      if (typeof gtag === 'function') { gtag('event', 'calculator_submit', { section: 'ccp_services', pathway: p, type: t }); }
+    });
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
+  <script src="shared.js" defer></script>
+</body>
+</html>

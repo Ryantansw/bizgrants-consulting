@@ -1,8 +1,14 @@
 /* ============================================================
    BizGrants Consulting - Shared JavaScript
    Consolidated from inline scripts across all pages.
-   Last updated: March 2026
+   Last updated: April 2026
    ============================================================ */
+
+/* === Booking URL (single source of truth) ===
+   Used by the badge widget below and by inline CTAs across the site.
+   Change this one line to repoint every "Book a Call" CTA to a different
+   scheduling page. */
+window.BIZGRANTS_BOOKING_URL = 'https://www.calendarsync.app/availability/bizgrants';
 
 /* === Mobile Menu Toggle === */
 function toggleMenu() {
@@ -33,45 +39,46 @@ gtag('config', 'G-CWBH1DYTQB');
   document.head.appendChild(o);
 })();
 
-/* === Calendly Badge Widget === */
-/* Skip on thank-you and 404 pages where the badge would be friction or wasted load. */
+/* === CalendarSync Floating Badge ===
+   Skip on thank-you and 404 pages where the badge is friction or wasted load. */
 window.addEventListener('load', function () {
   var path = window.location.pathname;
   var skipBadge = /\/(thank-you|404)\/?$/.test(path) || path.endsWith('/404.html');
   if (skipBadge) return;
-  if (!window.__calendlyBadgeWidgetLoaded && typeof Calendly !== 'undefined') {
-    Calendly.initBadgeWidget({
-      url: 'https://calendly.com/enquiries-bizgrants/30min',
+  if (!window.__bookingBadgeLoaded && typeof CalendarSync !== 'undefined') {
+    CalendarSync.initBadge({
+      url: window.BIZGRANTS_BOOKING_URL,
       text: 'Book a Call',
-      color: '#0069ff',
-      textColor: '#ffffff',
-      branding: true
+      color: '#0e1733',
+      textColor: '#ffffff'
     });
-    window.__calendlyBadgeWidgetLoaded = true;
+    window.__bookingBadgeLoaded = true;
   }
 });
 
-/* === Calendly Click Tracking (GA4) === */
+/* === Booking Click Tracking (GA4) ===
+   Fires a cta_click event whenever a visitor clicks a link to the booking URL. */
 document.addEventListener('click', function (e) {
   var link = e.target.closest('a');
-  if (link && link.href && link.href.indexOf('calendly.com/enquiries-bizgrants') !== -1) {
-    if (typeof gtag === 'function') {
-      gtag('event', 'cta_click', {
-        event_category: 'Calendly',
-        event_label: link.href,
-        link_text: (link.textContent || '').trim(),
-        page_location: window.location.href
-      });
-    }
+  if (!link || !link.href) return;
+  if (link.href.indexOf('calendarsync.app/availability/bizgrants') === -1) return;
+  if (typeof gtag === 'function') {
+    gtag('event', 'cta_click', {
+      event_category: 'Booking',
+      event_label: link.href,
+      link_text: (link.textContent || '').trim(),
+      page_location: window.location.href
+    });
   }
 }, { capture: true });
 
-/* === Calendly Widget Interaction Tracking === */
-(function trackCalendlyWidget() {
+/* === Booking Badge Click Tracking ===
+   Watches for the badge mounting in the DOM and tracks clicks on it. */
+(function trackBookingBadge() {
   function sendCTA(label) {
     if (typeof window.gtag === 'function') {
       gtag('event', 'cta_click', {
-        event_category: 'Calendly',
+        event_category: 'Booking',
         event_label: label,
         page_location: window.location.href
       });
@@ -79,33 +86,11 @@ document.addEventListener('click', function (e) {
   }
 
   var obs = new MutationObserver(function () {
-    var badge = document.querySelector('.calendly-badge-widget, .calendly-badge-content');
+    var badge = document.querySelector('[data-booking-badge], .cs-badge, .calendarsync-badge');
     if (badge && !badge.__bgTracked) {
       badge.__bgTracked = true;
       badge.addEventListener('click', function () { sendCTA('badge_widget'); }, { capture: true });
     }
   });
   obs.observe(document.documentElement, { childList: true, subtree: true });
-
-  window.addEventListener('message', function (ev) {
-    try {
-      var originHost = new URL(ev.origin).hostname || '';
-      if (!/calendly\.com$/i.test(originHost)) return;
-      var data = typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
-      if (!data) return;
-
-      if (data.event &&
-          (data.event.indexOf('calendly.profile_page_viewed') === 0 ||
-           data.event.indexOf('calendly.event_type_viewed') === 0 ||
-           data.event.indexOf('calendly.date_and_time_selected') === 0)) {
-        sendCTA(data.event);
-      }
-
-      if (data.event === 'calendly.event_scheduled') {
-        if (typeof window.gtag === 'function') {
-          gtag('event', 'calendly_scheduled', { event_category: 'Calendly', page_location: window.location.href });
-        }
-      }
-    } catch (_) {}
-  });
 })();

@@ -229,32 +229,10 @@
       position: relative;
     }
 
-    .intro-video-wrapper::before {
-      content: 'CCP / 02:00';
-      position: absolute;
-      top: var(--space-4);
-      left: var(--space-5);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: var(--fs-tiny);
-      letter-spacing: 0.14em;
-      color: oklch(1 0 0 / 0.55);
-      z-index: 2;
-      pointer-events: none;
-    }
-
     .intro-video {
       width: 100%;
       height: auto;
       display: block;
-    }
-
-    .intro-caption {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: var(--fs-tiny);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-top: var(--space-4);
     }
 
     /* Editorial image+text */
@@ -284,21 +262,6 @@
 
     .feature-image-wrap {
       position: relative;
-    }
-    .feature-image-wrap .feature-cap {
-      position: absolute;
-      bottom: var(--space-4);
-      left: var(--space-5);
-      right: var(--space-5);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: var(--fs-tiny);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: oklch(1 0 0 / 0.85);
-      background: oklch(0.18 0.05 258 / 0.4);
-      backdrop-filter: blur(8px);
-      padding: 6px 10px;
-      width: fit-content;
     }
 
     @media (max-width: 880px) {
@@ -487,7 +450,6 @@
               Your browser does not support the video tag.
             </video>
           </div>
-          <p class="intro-caption">Recorded for Singapore employers / 2026</p>
         </div>
       </div>
     </section>
@@ -497,7 +459,6 @@
       <div class="container feature-row">
         <div class="feature-image-wrap">
           <img class="feature-image" width="1200" height="800" decoding="async" src="images/stock/hero-consulting.jpg" alt="Professional business consulting meeting in Singapore" fetchpriority="high" />
-          <div class="feature-cap">Advisory engagement / Singapore</div>
         </div>
         <div>
           <div class="feature-meta">03 &middot; Workforce advisory scope</div>
@@ -766,7 +727,6 @@
         </div>
         <div class="feature-image-wrap">
           <img class="feature-image" width="1200" height="800" decoding="async" src="images/stock/team-collaboration.jpg" alt="Business team collaborating on workforce strategy" loading="lazy" />
-          <div class="feature-cap">Workforce strategy review</div>
         </div>
       </div>
     </section>

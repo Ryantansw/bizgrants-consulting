@@ -1,6 +1,6 @@
 # BizGrants Consulting
 
-> Singapore CCP, Job Redesign Grant, and SkillsFuture grant advisory for SME and corporate employers. Founded 2023 by Ryan Tan. Success-fee model — employers pay only when grants are approved. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
+> Singapore CCP, Job Redesign Grant, and SkillsFuture grant advisory for SME and corporate employers. Founded 2023. Success-fee model — employers pay only when grants are approved. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
 
 ## Glossary
 
@@ -14,7 +14,7 @@
 
 - [Home](https://bizgrants.consulting/): Overview of the firm and headline funding scenarios
 - [Services](https://bizgrants.consulting/services.html): CCP and Job Redesign Grant advisory services
-- [About Ryan Tan](https://bizgrants.consulting/about.html): Founder bio, credentials, and engagement model
+- [About BizGrants Consulting](https://bizgrants.consulting/about.html): Firm profile, advisory principles, and engagement model
 - [Pathways](https://bizgrants.consulting/pathways.html): All CCP pathways with eligibility, salary minimums, and supported job families
 - [Contact](https://bizgrants.consulting/contact.html): Free consultation, NAP details
 

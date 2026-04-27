@@ -17,42 +17,57 @@
   <link rel="preconnect" href="https://assets.calendly.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
 
-  <title>About Ryan Tan | Founder, BizGrants Consulting Singapore</title>
-  <meta name="description" content="Ryan Tan is the founder of BizGrants Consulting, advising Singapore SMEs on Career Conversion Programmes, Job Redesign Grants, and SkillsFuture funding." />
+  <title>About BizGrants Consulting | Singapore CCP &amp; Grant Advisory Firm</title>
+  <meta name="description" content="BizGrants Consulting is a Singapore grant advisory firm specialising in Career Conversion Programmes, Job Redesign Grants, and SkillsFuture-supported workforce funding for SME and corporate employers." />
   <link rel="canonical" href="https://bizgrants.consulting/about.html" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
   <!-- Open Graph & Twitter -->
-  <meta property="og:title" content="About Ryan Tan | Founder, BizGrants Consulting" />
-  <meta property="og:description" content="Founder & Grant Consultant at BizGrants Consulting Singapore. CCP, Job Redesign Grant, and SkillsFuture advisory." />
-  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About BizGrants Consulting | Singapore CCP & Grant Advisory" />
+  <meta property="og:description" content="A Singapore grant advisory firm focused on CCP, Job Redesign Grant, and SkillsFuture funding. Success-fee model for SMEs and corporates." />
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/about.html" />
   <meta property="og:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta property="og:locale" content="en_SG" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Ryan Tan | Founder, BizGrants Consulting" />
-  <meta name="twitter:description" content="Founder & Grant Consultant at BizGrants Consulting Singapore." />
+  <meta name="twitter:title" content="About BizGrants Consulting | Singapore CCP & Grant Advisory" />
+  <meta name="twitter:description" content="A Singapore grant advisory firm focused on CCP, Job Redesign Grant, and SkillsFuture funding." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/logo.png" />
   <meta name="twitter:site" content="@bizgrantsconsulting" />
 
-  <!-- Person Schema (founder) -->
+  <!-- Organization Schema (canonical, referenced by @id from elsewhere) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://bizgrants.consulting/about.html#person",
-    "name": "Ryan Tan",
-    "jobTitle": "Founder & Grant Consultant",
-    "worksFor": {
-      "@type": "Organization",
-      "@id": "https://bizgrants.consulting/#organization",
-      "name": "BizGrants Consulting",
-      "url": "https://bizgrants.consulting/"
+    "@type": "Organization",
+    "@id": "https://bizgrants.consulting/#organization",
+    "name": "BizGrants Consulting",
+    "alternateName": "BizGrants",
+    "url": "https://bizgrants.consulting/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bizgrants.consulting/images/logo.png",
+      "width": 512,
+      "height": 512
     },
-    "url": "https://bizgrants.consulting/about.html",
     "image": "https://bizgrants.consulting/images/logo.png",
+    "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
+    "foundingDate": "2023",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "60 Paya Lebar Road, #06-28, Paya Lebar Square",
+      "addressLocality": "Singapore",
+      "postalCode": "409051",
+      "addressCountry": "SG"
+    },
+    "telephone": "+65 8887 5297",
+    "email": "enquiries@bizgrants.consulting",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Singapore"
+    },
     "knowsAbout": [
       "Career Conversion Programme",
       "Workforce Singapore",
@@ -64,10 +79,9 @@
       "On-the-job training (OJT)"
     ],
     "knowsLanguage": ["en-SG"],
-    "nationality": {
-      "@type": "Country",
-      "name": "Singapore"
-    }
+    "sameAs": [
+      "https://www.linkedin.com/company/bizgrants-consulting"
+    ]
   }
   </script>
 
@@ -89,7 +103,7 @@
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "url": "https://bizgrants.consulting/about.html",
-    "mainEntity": {"@id": "https://bizgrants.consulting/about.html#person"}
+    "mainEntity": {"@id": "https://bizgrants.consulting/#organization"}
   }
   </script>
 
@@ -105,75 +119,51 @@
       padding: var(--space-9) 0 var(--space-8);
       border-bottom: 1px solid var(--rule);
     }
-    .about-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-      gap: var(--space-9);
-      align-items: start;
-    }
-    .about-portrait {
-      width: 100%;
-      aspect-ratio: 4/5;
-      object-fit: cover;
-      border: 1px solid var(--rule);
-      filter: saturate(0.92) contrast(1.02);
-      background: var(--paper-soft);
-    }
-    .about-portrait-placeholder {
-      width: 100%;
-      aspect-ratio: 4/5;
-      border: 1px solid var(--rule);
-      background: var(--paper-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink-faint);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: var(--fs-tiny);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
     .about-hero h1 {
-      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3.25rem);
       letter-spacing: -0.025em;
-      margin: 0 0 var(--space-4);
-      max-width: 18ch;
+      margin: 0 0 var(--space-5);
+      max-width: 22ch;
     }
     .about-hero .lede {
       font-size: 1.125rem;
       color: var(--ink-muted);
-      max-width: 50ch;
+      max-width: 60ch;
       line-height: 1.55;
-      margin: 0 0 var(--space-6);
+      margin: 0 0 var(--space-7);
     }
 
-    .credentials-grid {
+    .principles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 0;
       border-top: 1px solid var(--ink);
       border-bottom: 1px solid var(--rule);
-      margin: var(--space-7) 0;
+      margin: var(--space-8) 0;
     }
-    .credentials-grid > div {
-      padding: var(--space-6) var(--space-5);
+    .principles-grid > div {
+      padding: var(--space-7) var(--space-6);
       border-right: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
     }
-    .credentials-grid > div:last-child { border-right: none; }
-    .credentials-grid strong {
-      display: block;
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 1.0625rem;
-      color: var(--ink);
-      margin-bottom: var(--space-2);
-      letter-spacing: -0.01em;
-      font-weight: 600;
+    .principles-grid > div:last-child { border-right: none; }
+    .principles-grid .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: var(--fs-tiny);
+      letter-spacing: 0.14em;
+      color: var(--ink-faint);
+      margin-bottom: var(--space-3);
     }
-    .credentials-grid span {
+    .principles-grid h3 {
+      font-size: 1.1rem;
+      margin: 0 0 var(--space-3);
+      letter-spacing: -0.012em;
+    }
+    .principles-grid p {
       font-size: var(--fs-small);
       color: var(--ink-muted);
-      line-height: 1.5;
+      line-height: 1.55;
+      margin: 0;
     }
 
     .about-section {
@@ -188,35 +178,17 @@
       margin-bottom: var(--space-5);
       letter-spacing: -0.015em;
     }
-    .about-section p {
+    .about-section p,
+    .about-section li {
       font-size: 1.0625rem;
       line-height: 1.7;
       color: var(--ink-body);
     }
-
-    .placeholder-note {
-      background: oklch(0.97 0.04 60);
-      border: 1px solid var(--accent);
-      padding: var(--space-5) var(--space-6);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: var(--fs-small);
-      color: var(--ink);
-      margin: var(--space-7) 0;
-      letter-spacing: -0.005em;
-      line-height: 1.55;
-    }
-    .placeholder-note strong {
-      display: block;
-      text-transform: uppercase;
-      font-size: var(--fs-tiny);
-      letter-spacing: 0.14em;
-      color: var(--accent-deep);
-      margin-bottom: var(--space-3);
-    }
+    .about-section ul { padding-left: 1.2em; }
+    .about-section li { margin-bottom: var(--space-3); }
 
     @media (max-width: 880px) {
-      .about-layout { grid-template-columns: 1fr; gap: var(--space-7); }
-      .credentials-grid > div { border-right: none; }
+      .principles-grid > div { border-right: none; }
     }
   </style>
 
@@ -246,95 +218,92 @@
 
   <main>
     <section class="about-hero">
-      <div class="container about-layout">
-        <div>
-          <!-- TODO: replace with a real portrait at images/ryan-tan.jpg (recommended 800x1000, JPG/WebP) -->
-          <div class="about-portrait-placeholder">[ Portrait &mdash; Ryan Tan ]</div>
-        </div>
-        <div>
-          <div class="hero-eyebrow">About &middot; Founder</div>
-          <h1>Ryan Tan, advising Singapore employers on workforce grants since 2023.</h1>
-          <p class="lede">
-            Founder &amp; Grant Consultant at BizGrants Consulting. I help Singapore SMEs and corporates secure salary support through Workforce Singapore&rsquo;s Career Conversion Programmes, Job Redesign Grants, and SkillsFuture-aligned funding.
-          </p>
-          <div class="hero-cta-row">
-            <a rel="noopener noreferrer"
-              href="https://calendly.com/enquiries-bizgrants/30min"
-              onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
-              target="_blank"
-              class="cta-btn-primary">
-              Book a 30-min call
-            </a>
-            <!-- TODO: replace # with your LinkedIn URL once finalised, e.g. https://www.linkedin.com/in/ryan-tan-grants/ -->
-            <a href="#" target="_blank" rel="noopener" class="btn-ghost">View LinkedIn profile</a>
-          </div>
+      <div class="container">
+        <div class="hero-eyebrow">About &middot; BizGrants Consulting</div>
+        <h1>A Singapore grant advisory firm built for compliant, structured outcomes.</h1>
+        <p class="lede">
+          BizGrants Consulting helps Singapore SMEs and corporates secure salary support through Workforce Singapore&rsquo;s Career Conversion Programmes (CCP), Job Redesign Grants, and SkillsFuture-aligned funding. Founded in 2023 and based at Paya Lebar Square.
+        </p>
+        <div class="hero-cta-row">
+          <a rel="noopener noreferrer"
+            href="https://calendly.com/enquiries-bizgrants/30min"
+            onclick="if (typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/enquiries-bizgrants/30min'}); return false; }"
+            target="_blank"
+            class="cta-btn-primary">
+            Book a 30-min call
+          </a>
+          <a href="services.html" class="btn-ghost">Explore services</a>
         </div>
       </div>
     </section>
 
     <div class="container">
-      <div class="placeholder-note">
-        <strong>Editor note &mdash; placeholders to fill</strong>
-        This About page is structured for E-E-A-T (Google's expertise/authoritativeness/trust signals) and includes Person + AboutPage schema. Before publishing widely, please fill in the four <code>TODO</code> markers below: (1) portrait image, (2) LinkedIn URL above, (3) the credentials grid stats, and (4) the &ldquo;What I work on&rdquo; specifics. Each is marked clearly in the source. Search the file for <code>TODO</code> to find them.
-      </div>
-
-      <div class="credentials-grid">
-        <!-- TODO: replace these four placeholder figures with real numbers -->
+      <div class="principles-grid">
         <div>
-          <strong>2023</strong>
-          <span>Founded BizGrants Consulting in Singapore</span>
+          <div class="num">01</div>
+          <h3>Compliance-led</h3>
+          <p>Every application is structured to meet Workforce Singapore&rsquo;s assessor expectations &mdash; documentation pack, OJT plan, and evidence path planned from day one.</p>
         </div>
         <div>
-          <strong>[ X ]+ years</strong>
-          <span>Working with Singapore SMEs on workforce funding</span>
+          <div class="num">02</div>
+          <h3>Success-fee model</h3>
+          <p>Initial scoping is free. Advisory fees are payable only when an application is approved. Risk sits with us, not with you.</p>
         </div>
         <div>
-          <strong>[ X ]+ approved</strong>
-          <span>CCP and Job Redesign applications structured to date</span>
+          <div class="num">03</div>
+          <h3>Bespoke, not templated</h3>
+          <p>Each engagement starts from your hiring or redesign plan &mdash; not from a generic JD library. Role scope and OJT activities are designed for your business.</p>
         </div>
         <div>
-          <strong>[ S$X ]M+</strong>
-          <span>In salary support secured for client roles</span>
+          <div class="num">04</div>
+          <h3>Singapore-only focus</h3>
+          <p>All work is anchored to current WSG guidelines, programme partner requirements, and PDPA-compliant handling of employer and candidate data.</p>
         </div>
       </div>
     </div>
 
     <section class="about-section">
-      <h2>How I came to grant advisory</h2>
+      <h2>What we do</h2>
       <p>
-        <!-- TODO: replace this with Ryan's real backstory — 2-3 paragraphs about prior career, what led to founding BizGrants. Example below is a plausible placeholder. -->
-        Before founding BizGrants Consulting in 2023, I spent years in roles where I saw firsthand how much workforce funding was left unclaimed by Singapore employers &mdash; not because the schemes weren&rsquo;t available, but because the documentation, role redesign, and OJT planning required to secure them sat outside what most HR teams had bandwidth for. The funding existed; the bridge to it didn&rsquo;t.
-      </p>
-      <p>
-        That gap became the work. BizGrants Consulting was set up to be a single point of contact for SMEs who want to hire mid-career talent, redesign roles, or upskill existing staff &mdash; and need someone to translate business plans into the language Workforce Singapore programme partners can approve.
-      </p>
-
-      <h2>What I work on</h2>
-      <p>
-        <!-- TODO: optionally tighten this to specifics — e.g. "Most of my engagements are with [F&B groups / biotech SMEs / engineering firms] hiring [X kind of role]." Lists below are illustrative. -->
-        My engagements typically cover four areas:
+        Our advisory covers the full lifecycle of a workforce grant application:
       </p>
       <ul>
-        <li><strong>CCP scoping &amp; pathway selection</strong> &mdash; mapping a hiring or reskilling plan to the right Workforce Singapore programme partner and pathway.</li>
+        <li><strong>Eligibility &amp; pathway scoping</strong> &mdash; mapping your hiring or reskilling plan to the right Workforce Singapore programme and pathway.</li>
         <li><strong>Job redesign &amp; OJT plan drafting</strong> &mdash; translating responsibilities into assessor-ready job descriptions, OJT activities, KPIs, and milestones.</li>
         <li><strong>Documentation &amp; submission</strong> &mdash; preparing the application pack (ACRA, salary evidence, CPF statements, undertakings) and managing programme-partner clarifications.</li>
-        <li><strong>Claims support</strong> &mdash; structuring the post-approval evidence and claim submissions so the salary support actually flows through to payroll.</li>
+        <li><strong>Claims support</strong> &mdash; structuring post-approval evidence and claim submissions so salary support flows through to payroll.</li>
       </ul>
 
-      <h2>How I work</h2>
+      <h2>Who we work with</h2>
       <p>
-        Every engagement starts with a free 30-minute scoping call. If there&rsquo;s a real fit &mdash; meaning the role, the candidate profile, and the company structure all line up against an existing CCP pathway &mdash; we move to a written engagement letter on a <strong>success-fee model</strong>. You don&rsquo;t pay until the application is approved.
+        Singapore-registered employers hiring or reskilling Singapore Citizens and Permanent Residents. Most engagements are with SMEs and growing corporates across F&amp;B, biotech, engineering, hospitality, professional services, and tech. Roles span sustainability, digital, HR, operations, sales, and engineering.
+      </p>
+
+      <h2>How we work</h2>
+      <p>
+        Every engagement starts with a free 30-minute scoping call. If a CCP, Job Redesign Grant, or related pathway is a real fit, we move to a written engagement letter on a <strong>success-fee basis</strong>. You don&rsquo;t pay until the application is approved.
       </p>
       <p>
-        I keep client lists deliberately small because every CCP application is bespoke. The work is structured: clear documentation, weekly progress notes, and direct access to me throughout. No agency layer, no junior associates passing your file around.
+        We keep client lists deliberately small because every CCP application is bespoke. Expect clear documentation, weekly progress notes, and direct access throughout &mdash; no agency layer, no junior associates passing your file around.
+      </p>
+
+      <h2>Compliance &amp; data handling</h2>
+      <p>
+        BizGrants Consulting operates under Singapore law. Personal data shared during enquiries and engagements is handled in accordance with the Personal Data Protection Act 2012 (PDPA) &mdash; see our <a href="privacy.html">Privacy Policy</a>. Engagement terms, including the success-fee structure and the limits of our advisory role, are set out in our <a href="terms.html">Terms of Service</a> and detailed in each engagement letter.
+      </p>
+      <p>
+        We do not guarantee approval. Our role is to scope eligible roles, structure compliant documentation, and manage the submission process. Final approval rests with WSG and its programme partners.
       </p>
 
       <h2>Contact</h2>
+      <ul>
+        <li><strong>Telephone:</strong> <a href="tel:+6588875297">+65 8887 5297</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6588875297">wa.me/6588875297</a></li>
+        <li><strong>Email:</strong> <a href="mailto:enquiries@bizgrants.consulting">enquiries@bizgrants.consulting</a></li>
+        <li><strong>Office:</strong> 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051</li>
+      </ul>
       <p>
-        The fastest way to reach me is by <a href="https://wa.me/6588875297">WhatsApp</a>, by phone on <a href="tel:+6588875297">+65 8887 5297</a>, or via email at <a href="mailto:enquiries@bizgrants.consulting">enquiries@bizgrants.consulting</a>. Office is at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
-      </p>
-      <p>
-        Or just <a href="contact.html">send a brief through the contact page</a> and I&rsquo;ll respond within one business day.
+        Or <a href="contact.html">send a brief through the contact page</a> and we&rsquo;ll respond within one business day.
       </p>
     </section>
   </main>

@@ -14,6 +14,7 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="preconnect" href="https://assets.calendly.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
 
@@ -58,20 +59,81 @@
   
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "dateModified":"2026-03-25",
-    "mainEntity":[
-      {"@type":"Question","name":"What does CCP funding cover?","acceptedAnswer":{"@type":"Answer","text":"Funding supports salary during structured OJT and, where applicable, approved training. We map your plan to the correct pathway."}},
-      {"@type":"Question","name":"How do I plan evidence for claims?","acceptedAnswer":{"@type":"Answer","text":"Keep an OJT log, training records, supervisor sign offs and payroll evidence. We provide a simple tracker and templates."}}
-    ]
-  }
-  </script>
-  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/ccp-grant-singapore/" />
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the maximum salary support for a single CCP placement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "S$45,000 per eligible employee. The actual amount depends on the monthly salary, the co-funding rate that applies (70% standard or 90% enhanced for SMEs and mature workers), and the OJT duration of the chosen pathway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the 70% vs 90% co-funding rate decided?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two factors: (1) whether the employer qualifies as an SME under the prevailing definition, and (2) whether the employee is a mature worker. Both criteria are checked at application time. Most SMEs hiring or reskilling a Singaporean PMET into a redesigned role will qualify for the enhanced 90% rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the employer pay the employee's salary upfront?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. CCP salary support is a reimbursement, not an upfront grant. You pay the employee's salary in full each month, then claim a percentage back at the end of the OJT period (or in cycles for longer placements)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long after submitting a claim do we receive payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typically 4-8 weeks from claim submission to reimbursement reaching the employer's bank account. Faster turnarounds happen when the evidence pack is complete on first submission and no clarifications are requested."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can salary support be claimed retroactively?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Support is only claimed for OJT periods that fall within the approved start and end dates of the placement. Salary paid before the official OJT start is not reimbursable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the employee leaves before the OJT ends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claims for completed months are still submittable. Future months not delivered cannot be claimed. Previously approved support that has been paid is generally not clawed back if the engagement was genuine, but the unused balance lapses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can CCP funding be combined with the Jobs Growth Incentive (JGI) or SFEC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes. Eligibility windows and overlapping coverage matter. JGI is a hiring-side incentive; SFEC is a training-side credit. CCP is the OJT-anchored salary support. We model combinations during scoping so each scheme covers a distinct cost. See the CCP vs JGI vs SFEC comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the CCP cap per role, per employee, or per company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per eligible placement, meaning per employee per CCP application. A company running multiple CCP placements (each with their own redesigned role and OJT plan) can claim up to the cap on each placement separately."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/ccp-grant-singapore/" />
   <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/ccp-grant-singapore/" />
   <meta name="theme-color" content="#0F52BA" />
-  <link rel="apple-touch-icon" href="/images/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
   <!-- Service Schema -->
@@ -79,17 +141,13 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "CCP Grant Funding Advisory",
-    "provider": {
-      "@type": "Organization",
-      "name": "BizGrants Consulting",
-      "url": "https://bizgrants.consulting/"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Singapore"
-    },
-    "description": "Advisory on how Career Conversion Programme funding works for Singapore employers, including eligibility, supported costs, and claim evidence."
+    "name": "CCP Grant Funding Advisory",
+    "url": "https://bizgrants.consulting/ccp-grant-singapore/",
+    "serviceType": "Career Conversion Programme advisory",
+    "provider": {"@id": "https://bizgrants.consulting/#organization"},
+    "areaServed": {"@type": "Country", "name": "Singapore"},
+    "description": "Advisory on Career Conversion Programme funding mechanics for Singapore employers, including eligibility, supported costs, claim cycles, and evidence requirements.",
+    "offers": {"@type": "Offer", "priceCurrency": "SGD", "description": "Success-fee model: pay only when grants are approved, capped at S$45,000 salary support per eligible placement"}
   }
   </script>
 </head>

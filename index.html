@@ -14,6 +14,7 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="preconnect" href="https://assets.calendly.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
 
@@ -43,42 +44,75 @@
 
   <!-- FAQPage Schema -->
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is eligible for the Career Conversion Programme (CCP)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most Singapore-registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles may be eligible for CCP funding. The specifics differ across programme partners and job families, so we usually start with a quick eligibility discussion based on your planned hires and existing staff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much salary support can my company receive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depending on the CCP and your SME status, employers may receive up to 70% to 90% salary support for the programme duration. We help frame the job scope, structured OJT and documentation so the application aligns clearly with programme criteria."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of roles are usually supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In practice we see a wide range, digital marketing, sustainability, HR and people roles, sales and business development, operations, tech and product, and specialised engineering. The key is a clear conversion in skills, industry or scope."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we get started with an application?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most employers begin with a short call to map planned hires and internal reskilling needs against the different CCP pathways. From there, we prepare a simple action plan, documentation checklist and timeline for each potential application."
+      }
+    }
+  ]
+}
+</script>
+
+  <!-- Organization Schema (canonical, referenced by @id from blog publisher/author) -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Who is eligible for the Career Conversion Programme (CCP)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most Singapore registered companies hiring or reskilling Singapore Citizens or PRs into new or redesigned roles are eligible for CCP funding. Eligibility may also extend to job redesign and upskilling initiatives. Book a free eligibility check with us."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much salary support can I get?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eligible companies may receive up to 90% salary support for new hires, job redesign, or structured reskilling through the CCP, Job Redesign Grant, or SkillsFuture initiatives."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What roles can be supported?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Roles in digital, sustainability, HR, tech, marketing, business operations, and more may qualify. See our Services page for examples."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a success fee model?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. With BizGrants Consulting, you only pay when a grant is approved, which keeps it risk free for SMEs and corporates. We specialise in success fee grant consulting."
-        }
-      }
+    "@type": "Organization",
+    "@id": "https://bizgrants.consulting/#organization",
+    "name": "BizGrants Consulting",
+    "alternateName": "BizGrants",
+    "url": "https://bizgrants.consulting/",
+    "logo": {
+      "@type": "ImageObject",
+      "@id": "https://bizgrants.consulting/#logo",
+      "url": "https://bizgrants.consulting/images/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "image": {"@id": "https://bizgrants.consulting/#logo"},
+    "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
+    "foundingDate": "2023",
+    "knowsAbout": [
+      "Career Conversion Programme",
+      "Workforce Singapore",
+      "Job Redesign Grant",
+      "SkillsFuture",
+      "Singapore SME workforce funding"
+    ],
+    "knowsLanguage": ["en-SG"],
+    "sameAs": [
+      "https://www.linkedin.com/company/bizgrants-consulting"
     ]
   }
   </script>
@@ -88,6 +122,7 @@
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://bizgrants.consulting/#business",
     "name": "BizGrants Consulting",
     "url": "https://bizgrants.consulting/",
     "logo": {
@@ -130,11 +165,12 @@
       "telephone": "+65 8887 5297",
       "contactType": "customer service",
       "areaServed": "SG",
-      "availableLanguage": ["English"]
+      "availableLanguage": ["en-SG"]
     },
     "sameAs": [
       "https://www.linkedin.com/company/bizgrants-consulting"
     ],
+    "currenciesAccepted": "SGD",
     "priceRange": "$$"
   }
   </script>
@@ -144,12 +180,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://bizgrants.consulting/#website",
     "name": "BizGrants Consulting",
     "url": "https://bizgrants.consulting/",
-    "publisher": {
-      "@type": "Organization",
-      "name": "BizGrants Consulting"
-    }
+    "publisher": {"@id": "https://bizgrants.consulting/#organization"},
+    "inLanguage": "en-SG"
   }
   </script>
 
@@ -334,10 +369,10 @@
   <meta name="geo.placename" content="Singapore" />
   <meta name="geo.position" content="1.3181;103.8931" />
   <meta name="ICBM" content="1.3181, 103.8931" />
-  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/" />
+  <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/" />
   <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/" />
   <meta name="theme-color" content="#0F52BA" />
-  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
 </head>

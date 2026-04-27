@@ -14,6 +14,7 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="preconnect" href="https://assets.calendly.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
 
@@ -32,6 +33,21 @@
       {"@type":"ListItem","position":2,"name":"Guides","item":"https://bizgrants.consulting/career-conversion-programmes/"},
       {"@type":"ListItem","position":3,"name":"WSG Career Conversion Programme","item":"https://bizgrants.consulting/wsg-career-conversion-programme/"}
     ]
+  }
+  </script>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "WSG Career Conversion Programme Advisory",
+    "url": "https://bizgrants.consulting/wsg-career-conversion-programme/",
+    "serviceType": "Workforce Singapore Career Conversion Programme advisory",
+    "provider": {"@id": "https://bizgrants.consulting/#organization"},
+    "areaServed": {"@type": "Country", "name": "Singapore"},
+    "description": "Singapore-specific advisory for employers on the Workforce Singapore Career Conversion Programme: eligibility framework, pathway mapping, redesigned job descriptions, structured OJT plans, and end-to-end submission management.",
+    "offers": {"@type": "Offer", "priceCurrency": "SGD", "description": "Success-fee model: pay only when grants are approved, capped at S$45,000 salary support per eligible placement"}
   }
   </script>
 
@@ -58,34 +74,81 @@
   
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "dateModified": "2026-03-25",
-    "mainEntity": [{
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
       "@type": "Question",
-      "name": "What is the Career Conversion Programme in Singapore?",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "The CCP supports employers to hire or reskill mid-career workers into redesigned roles with structured OJT. BizGrants scopes job redesign, drafts OJT, and manages submission with the programme partner." }},{
+      "name": "How much salary support can a single CCP placement bring in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to S$45,000 per eligible employee on a single CCP placement. The exact amount depends on the employee's monthly salary, the pathway's OJT duration, and whether your company qualifies for SME-enhanced rates (90%) or the standard rate (70%)."
+      }
+    },
+    {
       "@type": "Question",
-      "name": "Who is eligible as an employer?",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "Singapore-registered companies are eligible when the role shows genuine scope change or skills conversion, supported by a structured OJT plan and the required employer and candidate documents. Existing staff must typically show at least 50% change in job content, while new hires must be Singapore Citizens or Permanent Residents." }},{
+      "name": "Can the CCP be used for an existing staff member?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, provided the role is being meaningfully redesigned (typically at least 50% change in job content) and the employee will follow a structured OJT plan to acquire the new skills required. Pure title changes or minor scope tweaks won't qualify."
+      }
+    },
+    {
       "@type": "Question",
-      "name": "How long does a typical CCP take?",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "Timelines vary by pathway and document readiness. We plan milestones backwards from your intended start and keep you on track." }},{
+      "name": "How long does CCP approval take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical end-to-end timelines are 2 to 6 weeks depending on the pathway, document readiness, and the volume of clarifications requested by the assessor. Sustainability and overseas-market pathways tend to need more iteration than \"different job scope\" placements."
+      }
+    },
+    {
       "@type": "Question",
-      "name": "What documents are required?",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "Company particulars, employment contract, salary proof, CPF statements, previous employment history, and signed undertakings. We provide checklists and templates." }
-    }]
-  }
-  </script>
-  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/wsg-career-conversion-programme/" />
+      "name": "What roles are typically supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roles in digital marketing, sustainability and ESG, HR and people functions, sales and business development, design, biomedical manufacturing, wholesale trade, hotel and tourism, infocomm, and built-environment professions. The full sector list is in the CCP pathways reference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the CCP be combined with other government schemes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some employers stack the CCP with related schemes like the SkillsFuture Enterprise Credit (SFEC) or sector-specific transformation grants. Combinations depend on the role, the timing, and which costs each scheme actually covers, we work this through during scoping. See CCP vs JGI vs SFEC for a comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documents does an employer need to submit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard pack: company ACRA particulars, employment contract, salary evidence, CPF contribution statements, previous employment history (for the candidate), signed undertakings, the redesigned job description, and the OJT plan. Pathway-specific evidence may be added."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the employee leaves mid-OJT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Salary support is claimed only for periods the employee is actually employed and undergoing OJT. Mid-programme exits typically end the placement; previously claimed support is not generally clawed back if the engagement was genuine, but the unclaimed remainder lapses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the CCP only for SMEs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Larger Singapore-registered employers can apply too. SMEs typically attract the enhanced co-funding rate (90% vs 70%) and longer support windows, but the eligibility framework itself is open to corporates of any size."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/wsg-career-conversion-programme/" />
   <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/wsg-career-conversion-programme/" />
   <meta name="theme-color" content="#0F52BA" />
-  <link rel="apple-touch-icon" href="/images/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
 </head>

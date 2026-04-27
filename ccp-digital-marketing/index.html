@@ -14,6 +14,7 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="preconnect" href="https://assets.calendly.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
 
@@ -58,20 +59,81 @@
   
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "dateModified":"2026-03-25",
-    "mainEntity":[
-      {"@type":"Question","name":"Which digital roles fit CCP well?","acceptedAnswer":{"@type":"Answer","text":"Digital Marketing Executive, Performance Marketer, CRM Specialist, Content Lead, Marketing Analyst. The role should show a clear scope shift and learning path."}},
-      {"@type":"Question","name":"What are typical OJT themes?","acceptedAnswer":{"@type":"Answer","text":"Typical OJT themes cover analytics and tracking setup, SEO and content strategy, paid media campaign build and optimisation, CRM and email automation, plus reporting and experimentation workflows. Each theme is tied to measurable milestones so the supervisor can sign off progress against the skills map."}}
-    ]
-  }
-  </script>
-  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/ccp-digital-marketing/" />
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which digital roles fit this pathway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Digital Marketing Executive, Performance Marketer, Marketing Analyst, CRM Specialist, Content Lead, Growth Marketer, and similar. The role should show measurable digital scope (analytics, paid media, CRM, content), not just \"general marketing\" with vague responsibilities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a generalist marketing role qualify?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes, if the OJT plan can credibly show the employee building specific digital capabilities (analytics setup, paid media management, etc.) over the programme period. A pure brand or events role with no measurable digital component usually doesn't fit this pathway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you frame an existing-staff redesign for this pathway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The before-and-after JD has to show genuine scope change, ideally at least 50% new responsibilities. A common frame: someone moving from broad marketing coordination into a focused performance/analytics role, with the OJT covering the new technical capabilities they need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if our marketing stack is already mature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Then the OJT focuses on the next layer: experimentation rigor, attribution modelling, advanced segmentation, marketing-mix analysis, etc. The point isn't to teach basics; it's to build the next capability the role needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the OJT include external training?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, pathway permitting, approved external training (recognised industry programmes, SkillsFuture-aligned courses) can supplement the on-the-job activities. We map this during scoping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What evidence does the assessor look for during claims?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OJT logs showing weekly activities mapped to the plan, supervisor sign-offs, output samples (campaign reports, content briefs, analytics dashboards), and payroll evidence. The output samples are the most differentiated evidence for a digital marketing placement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is funding capped for higher-salary marketing hires?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The S$45,000 cap is per placement. A marketing hire at S$5,500/month under the 90% SME rate, on a 6-month OJT, hits S$29,700 (under the cap). At S$8,500/month, the placement caps out at S$45,000 well before the 6 months are up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we run two digital marketing CCP placements at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each is its own application with its own JD and OJT plan (no copy-paste). Companies building marketing teams often run an analytics-focused and a content/paid-focused placement in parallel."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/ccp-digital-marketing/" />
   <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/ccp-digital-marketing/" />
   <meta name="theme-color" content="#0F52BA" />
-  <link rel="apple-touch-icon" href="/images/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
   <!-- Service Schema -->
@@ -79,17 +141,13 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "CCP for Digital Marketing Professionals",
-    "provider": {
-      "@type": "Organization",
-      "name": "BizGrants Consulting",
-      "url": "https://bizgrants.consulting/"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Singapore"
-    },
-    "description": "Advisory for structuring Career Conversion Programme roles and OJT plans for digital marketing professionals in Singapore."
+    "name": "CCP for Digital Marketing Roles Advisory",
+    "url": "https://bizgrants.consulting/ccp-digital-marketing/",
+    "serviceType": "Career Conversion Programme advisory",
+    "provider": {"@id": "https://bizgrants.consulting/#organization"},
+    "areaServed": {"@type": "Country", "name": "Singapore"},
+    "description": "Career Conversion Programme advisory for digital marketing roles in Singapore, including OJT design across analytics, SEO, paid media, CRM, and reporting.",
+    "offers": {"@type": "Offer", "priceCurrency": "SGD", "description": "Success-fee model: pay only when grants are approved, capped at S$45,000 salary support per eligible placement"}
   }
   </script>
 </head>

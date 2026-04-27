@@ -14,6 +14,7 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="preconnect" href="https://assets.calendly.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
 
@@ -31,6 +32,21 @@
       {"@type":"ListItem","position":1,"name":"Home","item":"https://bizgrants.consulting/"},
       {"@type":"ListItem","position":2,"name":"Career Conversion Programmes","item":"https://bizgrants.consulting/career-conversion-programmes/"}
     ]
+  }
+  </script>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "CCP Pathway Comparison Advisory",
+    "url": "https://bizgrants.consulting/career-conversion-programmes/",
+    "serviceType": "Career Conversion Programme advisory",
+    "provider": {"@id": "https://bizgrants.consulting/#organization"},
+    "areaServed": {"@type": "Country", "name": "Singapore"},
+    "description": "Comparison and selection across 10+ Career Conversion Programme pathways for Singapore employers, with sector-specific pathway recommendations.",
+    "offers": {"@type": "Offer", "priceCurrency": "SGD", "description": "Success-fee model: pay only when grants are approved, capped at S$45,000 salary support per eligible placement"}
   }
   </script>
 
@@ -57,21 +73,81 @@
   
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "dateModified":"2026-03-25",
-    "mainEntity":[
-      {"@type":"Question","name":"What are Career Conversion Programmes?","acceptedAnswer":{"@type":"Answer","text":"CCPs help Singapore employers to hire or reskill mid career workers into redesigned roles, supported by structured on-the-job training and approved classroom learning. Workforce Singapore co-funds a significant portion of salary during the training period so employers can absorb the learning curve while building new capabilities."}},
-      {"@type":"Question","name":"Which CCP should I choose?","acceptedAnswer":{"@type":"Answer","text":"It depends on the role, whether it is a new hire or existing staff, and the extent of scope change. We assess fit and recommend the right pathway."}},
-      {"@type":"Question","name":"Do I need a new job description?","acceptedAnswer":{"@type":"Answer","text":"Yes, the redesigned role and OJT should reflect the future scope and skills. We provide assessor ready examples and templates."}}
-    ]
-  }
-  </script>
-  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/career-conversion-programmes/" />
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a single role qualify for more than one pathway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sometimes. A role with both digital marketing scope and overseas-market execution might fit either pathway. The right call depends on which OJT scaffolding more authentically reflects the actual capability being built. We work this through during scoping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the role doesn't fit any sector pathway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The \"different job scope\" pathway is the catch-all for new hires moving into substantially different responsibilities. It has the shortest OJT (3 months) and the broadest fit, but is new-hire only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can existing staff use any pathway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most sector pathways accept both new hires and existing staff (with shorter OJT for existing). The notable exception is \"different job scope\", which is new-hire only. For existing-staff redesigns, ESG/sustainability, HR functions, digital marketing, and overseas markets all work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the S$45,000 cap interact with longer pathways?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Longer pathways (e.g., biomedical manufacturing at 12 months) are constrained by the cap rather than the duration. A high-salary placement on a long pathway will reach S$45,000 well before the 12 months are up, with the rest of the OJT delivered without further reimbursement. We model this during scoping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If we hire in two related roles, do we run them as one application?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Each placement is its own CCP application with its own redesigned JD and OJT plan. Companies often run 2-4 placements in parallel; we structure them so each one stands on its own merits without copy-paste between them (assessors look for that)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"at least 50% change in job content\" actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For an existing staff redesign, half or more of the responsibilities should be new or substantially different from before. Pure title changes, minor tooling additions, or scope tweaks won't qualify. We document the before-and-after explicitly so the scope change is visible to the assessor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long before we see the first salary support reach our payroll?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From the start of the OJT to first claim payout, expect roughly 3-5 months (3-month minimum OJT + 4-8 weeks for the claim cycle). Longer pathways pay out in tranches across the OJT period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we change pathway after submission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Practically, no, the pathway shapes the JD, OJT, and evidence. If something changes materially before approval, the application is usually withdrawn and re-scoped. After approval, the pathway is fixed."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/career-conversion-programmes/" />
   <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/career-conversion-programmes/" />
   <meta name="theme-color" content="#0F52BA" />
-  <link rel="apple-touch-icon" href="/images/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
 </head>

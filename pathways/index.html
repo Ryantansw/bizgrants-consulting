@@ -14,6 +14,7 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="preconnect" href="https://assets.calendly.com" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <title>CCP Pathways & Eligible Roles in Singapore | BizGrants Consulting</title>
@@ -29,6 +30,42 @@
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bizgrants.consulting/"},
       {"@type": "ListItem", "position": 2, "name": "CCP Pathways", "item": "https://bizgrants.consulting/pathways/"}
+    ]
+  }
+  </script>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "CCP Pathway Reference & Eligibility Mapping",
+    "url": "https://bizgrants.consulting/pathways/",
+    "serviceType": "Career Conversion Programme advisory",
+    "provider": {"@id": "https://bizgrants.consulting/#organization"},
+    "areaServed": {"@type": "Country", "name": "Singapore"},
+    "description": "Reference of all 10+ Workforce Singapore Career Conversion Programme pathways with eligibility criteria, salary minimums, OJT durations, and supported job families by sector.",
+    "offers": {"@type": "Offer", "priceCurrency": "SGD", "description": "Success-fee model: pay only when grants are approved, capped at S$45,000 salary support per eligible placement"}
+  }
+  </script>
+
+  <!-- ItemList of CCP pathways -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "CCP pathways in Singapore",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Different job scope"},
+      {"@type": "ListItem", "position": 2, "name": "ESG / Sustainability"},
+      {"@type": "ListItem", "position": 3, "name": "Overseas markets"},
+      {"@type": "ListItem", "position": 4, "name": "Human resource functions"},
+      {"@type": "ListItem", "position": 5, "name": "Digital advertising and marketing"},
+      {"@type": "ListItem", "position": 6, "name": "Design professionals"},
+      {"@type": "ListItem", "position": 7, "name": "Biomedical manufacturing"},
+      {"@type": "ListItem", "position": 8, "name": "Wholesale trade professionals"},
+      {"@type": "ListItem", "position": 9, "name": "Built environment"},
+      {"@type": "ListItem", "position": 10, "name": "Infocomm sales and marketing professionals"}
     ]
   }
   </script>
@@ -269,10 +306,10 @@
 
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <link rel="alternate" hreflang="en-sg" href="https://bizgrants.consulting/pathways/" />
+  <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/pathways/" />
   <link rel="alternate" hreflang="x-default" href="https://bizgrants.consulting/pathways/" />
   <meta name="theme-color" content="#0F52BA" />
-  <link rel="apple-touch-icon" href="/images/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
 </head>

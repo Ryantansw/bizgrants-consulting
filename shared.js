@@ -34,7 +34,11 @@ gtag('config', 'G-CWBH1DYTQB');
 })();
 
 /* === Calendly Badge Widget === */
+/* Skip on thank-you and 404 pages where the badge would be friction or wasted load. */
 window.addEventListener('load', function () {
+  var path = window.location.pathname;
+  var skipBadge = /\/(thank-you|404)\/?$/.test(path) || path.endsWith('/404.html');
+  if (skipBadge) return;
   if (!window.__calendlyBadgeWidgetLoaded && typeof Calendly !== 'undefined') {
     Calendly.initBadgeWidget({
       url: 'https://calendly.com/enquiries-bizgrants/30min',

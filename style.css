@@ -1000,6 +1000,36 @@ details.faq-item div {
   background: #fff;
 }
 
+.contact-form .consent-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: var(--fs-small);
+  color: var(--ink-muted);
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+  line-height: 1.55;
+  cursor: pointer;
+  align-items: start;
+}
+
+.contact-form .consent-row input[type="checkbox"] {
+  width: auto;
+  margin: 4px 0 0;
+  padding: 0;
+  border: 1px solid var(--rule-strong);
+  cursor: pointer;
+}
+
+.contact-form .consent-row a {
+  color: var(--brand-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .contact-form button[type="submit"] {
   align-self: flex-start;
   margin-top: var(--space-7);

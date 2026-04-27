@@ -1,0 +1,12 @@
+# Local development artifacts
+.claude/
+explainer-video/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.swp

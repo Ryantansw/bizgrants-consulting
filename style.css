@@ -1,5 +1,5 @@
 /* ============================================================
-   BizGrants Consulting — Civic Brief design system
+   BizGrants Consulting, Civic Brief design system
    Editorial, document-precise advisory aesthetic.
    ============================================================ */
 
@@ -15,7 +15,7 @@ button { font: inherit; }
 
 /* ---------- Design tokens (OKLCH) ---------- */
 :root {
-  /* Surfaces — tinted toward navy hue 260 */
+  /* Surfaces, tinted toward navy hue 260 */
   --paper:        oklch(0.985 0.005 260);          /* page bg */
   --paper-soft:   oklch(0.97 0.008 260);           /* alt section */
   --surface:      oklch(0.99 0.003 260);           /* cards / specimen */
@@ -30,11 +30,11 @@ button { font: inherit; }
   --ink-faint:  oklch(0.62 0.015 260);
 
   /* Brand */
-  --brand:        oklch(0.46 0.16 258);            /* primary action — preserves #0f52ba feel */
+  --brand:        oklch(0.46 0.16 258);            /* primary action, preserves #0f52ba feel */
   --brand-deep:   oklch(0.36 0.14 258);            /* hover, links on light */
   --brand-tint:   oklch(0.96 0.03 258);            /* faint brand wash */
 
-  /* Accent — Singapore civic ochre, used sparingly */
+  /* Accent, Singapore civic ochre, used sparingly */
   --accent:       oklch(0.66 0.13 60);
   --accent-deep:  oklch(0.55 0.13 60);
 
@@ -42,7 +42,7 @@ button { font: inherit; }
   --on-dark:      oklch(0.96 0.01 260);
   --on-dark-mute: oklch(0.78 0.015 260);
 
-  /* Spacing — 4pt scale, semantic */
+  /* Spacing, 4pt scale, semantic */
   --space-2:  4px;
   --space-3:  8px;
   --space-4:  12px;
@@ -54,7 +54,7 @@ button { font: inherit; }
   --space-10: 96px;
   --space-11: 128px;
 
-  /* Type scale — fluid for marketing */
+  /* Type scale, fluid for marketing */
   --fs-display: clamp(2.5rem, 1.4rem + 4.4vw, 4.25rem);
   --fs-h1:      clamp(2rem,   1.3rem + 2.8vw, 3rem);
   --fs-h2:      clamp(1.5rem, 1.15rem + 1.5vw, 2.125rem);
@@ -76,7 +76,7 @@ button { font: inherit; }
   --radius-sm:  6px;
   --radius:     10px;
 
-  /* Legacy compatibility — old code references these */
+  /* Legacy compatibility, old code references these */
   --bg-page:        var(--paper);
   --bg-white:       var(--surface);
   --bg-section-alt: var(--paper-soft);
@@ -237,7 +237,7 @@ nav a.active { color: var(--ink); }
   color: var(--ink);
 }
 
-/* ---------- Hero (default — used by inner pages) ---------- */
+/* ---------- Hero (default, used by inner pages) ---------- */
 .hero {
   background: var(--surface);
   padding: var(--space-10) 0 var(--space-9);
@@ -723,7 +723,7 @@ section.page-section:first-of-type { padding-top: var(--space-7); }
 
 .bordered-box + .bordered-box { margin-top: var(--space-5); }
 
-/* ---------- Card grid (fallback for inheriting pages — flattened) ---------- */
+/* ---------- Card grid (fallback for inheriting pages, flattened) ---------- */
 .card-grid,
 .grid {
   display: grid;
@@ -901,7 +901,7 @@ details.faq-item div {
   }
 }
 
-/* ---------- Slider (testimonials / quotes — flattened) ---------- */
+/* ---------- Slider (testimonials / quotes, flattened) ---------- */
 .slider-section {
   padding: var(--space-9) 0;
   background: var(--paper-soft);

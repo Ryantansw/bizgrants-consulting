@@ -1,14 +1,14 @@
 # BizGrants Consulting
 
-> Singapore CCP, Job Redesign Grant, and SkillsFuture grant advisory for SME and corporate employers. Founded 2023. Success-fee model — employers pay only when grants are approved. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
+> Singapore CCP, Job Redesign Grant, and SkillsFuture grant advisory for SME and corporate employers. Founded 2023. Success-fee model, employers pay only when grants are approved. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
 
 ## Glossary
 
-- **CCP** — Career Conversion Programme: Workforce Singapore funding that supports employers to hire or reskill mid-career workers (Singapore Citizens and PRs) into new or redesigned roles, with structured on-the-job training (OJT).
-- **WSG** — Workforce Singapore: the statutory board administering CCP, Job Redesign Grants, and related employment-support schemes.
-- **JRG** — Job Redesign Grant: funding to redesign existing roles for productivity, transformation, or technology adoption.
-- **SkillsFuture** — Singapore's national upskilling movement; SkillsFuture-supported funding underpins many CCPs and reskilling initiatives.
-- **OJT** — On-the-Job Training: structured, supervised training delivered as part of an employee's day-to-day work, central to every CCP application.
+- **CCP**, Career Conversion Programme: Workforce Singapore funding that supports employers to hire or reskill mid-career workers (Singapore Citizens and PRs) into new or redesigned roles, with structured on-the-job training (OJT).
+- **WSG**, Workforce Singapore: the statutory board administering CCP, Job Redesign Grants, and related employment-support schemes.
+- **JRG**, Job Redesign Grant: funding to redesign existing roles for productivity, transformation, or technology adoption.
+- **SkillsFuture**, Singapore's national upskilling movement; SkillsFuture-supported funding underpins many CCPs and reskilling initiatives.
+- **OJT**, On-the-Job Training: structured, supervised training delivered as part of an employee's day-to-day work, central to every CCP application.
 
 ## Core pages
 
@@ -22,7 +22,7 @@
 
 - [WSG Career Conversion Programme](https://bizgrants.consulting/wsg-career-conversion-programme.html): Definitive employer guide to the WSG CCP
 - [CCP for Employers](https://bizgrants.consulting/ccp-for-employers.html): Step-by-step employer journey from eligibility to claims
-- [CCP Grant Funding](https://bizgrants.consulting/ccp-grant-singapore.html): How CCP funding works — caps, supported items, evidence
+- [CCP Grant Funding](https://bizgrants.consulting/ccp-grant-singapore.html): How CCP funding works, caps, supported items, evidence
 - [Career Conversion Programmes overview](https://bizgrants.consulting/career-conversion-programmes.html): Plain-English orientation for HR and business owners
 - [CCP for Digital Marketing roles](https://bizgrants.consulting/ccp-digital-marketing.html): Role design and OJT examples for digital roles
 - [CCP for Sustainability roles](https://bizgrants.consulting/ccp-sustainability.html): Role design and OJT examples for sustainability/ESG roles
@@ -35,7 +35,7 @@
 - [CCP vs JGI vs SFEC](https://bizgrants.consulting/blog/ccp-vs-jgi-sfec.html): Comparing CCP, Jobs Growth Incentive, and SFEC for employers
 - [CCP Reskilling Examples](https://bizgrants.consulting/blog/ccp-reskilling-examples.html): Real Singapore reskilling use cases
 - [CCP Flat-fee vs Success-fee Consulting](https://bizgrants.consulting/blog/ccp-flatfee-consulting.html): Why success-fee beats flat-fee for grant advisory
-- [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants.html): GRIT vs MCPP vs CCP — which programme fits SME hiring
+- [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants.html): GRIT vs MCPP vs CCP, which programme fits SME hiring
 
 ## Optional
 

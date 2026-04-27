@@ -647,10 +647,13 @@ section.page-section:first-of-type { padding-top: var(--space-7); }
   display: grid;
   grid-template-columns: 92px 1fr 1.6fr;
   gap: var(--space-6);
-  padding: var(--space-6) 0;
+  padding: var(--space-6) var(--space-5);
+  margin: 0 calc(-1 * var(--space-5));
   border-bottom: 1px solid var(--rule);
   align-items: baseline;
+  transition: background var(--t-fast);
 }
+a.case-file:hover { background: oklch(0.94 0.01 260); text-decoration: none; }
 
 .case-code {
   font-family: 'JetBrains Mono', monospace;

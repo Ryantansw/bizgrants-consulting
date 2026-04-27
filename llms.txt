@@ -15,8 +15,17 @@
 - [Home](https://bizgrants.consulting/): Overview of the firm and headline funding scenarios
 - [Services](https://bizgrants.consulting/services/): CCP and Job Redesign Grant advisory services
 - [About BizGrants Consulting](https://bizgrants.consulting/about/): Firm profile, advisory principles, and engagement model
+- [Case Studies](https://bizgrants.consulting/case-studies/): Five anonymized CCP engagements across travel media, medtech, F&B, built environment, and fund management
 - [Pathways](https://bizgrants.consulting/pathways/): All CCP pathways with eligibility, salary minimums, and supported job families
 - [Contact](https://bizgrants.consulting/contact/): Free consultation, NAP details
+
+## Case studies
+
+- [Travel media workforce build-out](https://bizgrants.consulting/case-studies/travel-media-workforce-buildout/): Six concurrent role tracks for a content-to-commerce SME transition
+- [Medtech Job Redesign + new-hire conversion](https://bizgrants.consulting/case-studies/medtech-job-redesign-reskilling/): GMP and AI/GenAI competency build at a regulated medical device manufacturer
+- [F&B parallel conversions](https://bizgrants.consulting/case-studies/fnb-people-operations-conversion/): People & Culture and Operations leadership conversions in the same cohort window
+- [Built environment Innovation Lead](https://bizgrants.consulting/case-studies/built-environment-innovation-lead/): Sector-pathway career conversion at an M&E services contractor
+- [Fund management finance cohort](https://bizgrants.consulting/case-studies/fund-management-finance-cohort/): Master OJT blueprint for CFO, Fund Accountant, and Investment Professional roles
 
 ## Pillar guides
 

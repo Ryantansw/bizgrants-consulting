@@ -1,6 +1,6 @@
 # BizGrants Consulting
 
-> Singapore CCP, Job Redesign Grant, and SkillsFuture grant advisory for SME and corporate employers. Founded 2023. Success-fee model, employers pay only when grants are approved. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
+> Singapore CCP, Job Redesign Grant, and SkillsFuture grant advisory for SME and corporate employers. Founded 2023. Legal name BizGrants Consulting Pte. Ltd. Success-fee model, employers pay only when grants are approved. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
 
 ## Glossary
 
@@ -15,7 +15,7 @@
 - [Home](https://bizgrants.consulting/): Overview of the firm and headline funding scenarios
 - [Services](https://bizgrants.consulting/services/): CCP and Job Redesign Grant advisory services
 - [About BizGrants Consulting](https://bizgrants.consulting/about/): Firm profile, advisory principles, and engagement model
-- [Case Studies](https://bizgrants.consulting/case-studies/): Five anonymized CCP engagements across travel media, medtech, F&B, built environment, and fund management
+- [Case Studies](https://bizgrants.consulting/case-studies/): Fifteen anonymized CCP engagements across travel media, medtech, F&B, built environment, fund management, biotech, fintech, hospitality, SaaS, AI consulting, cleantech, industrial manufacturing, digital media, beauty, and real estate
 - [Pathways](https://bizgrants.consulting/pathways/): All CCP pathways with eligibility, salary minimums, and supported job families
 - [Contact](https://bizgrants.consulting/contact/): Free consultation, NAP details
 
@@ -26,6 +26,16 @@
 - [F&B parallel conversions](https://bizgrants.consulting/case-studies/fnb-people-operations-conversion/): People & Culture and Operations leadership conversions in the same cohort window
 - [Built environment Innovation Lead](https://bizgrants.consulting/case-studies/built-environment-innovation-lead/): Sector-pathway career conversion at an M&E services contractor
 - [Fund management finance cohort](https://bizgrants.consulting/case-studies/fund-management-finance-cohort/): Master OJT blueprint for CFO, Fund Accountant, and Investment Professional roles
+- [Single-cell biotech twin reskilling](https://bizgrants.consulting/case-studies/biotech-commercial-reskilling/): Two scientists reskilled into hybrid commercial-and-applications leads
+- [Fintech AI payments cohort](https://bizgrants.consulting/case-studies/fintech-ai-payments-cohort/): Five-role coordinated cohort during a strategic pivot to enterprise AI payments
+- [Hospitality multi-property cohort](https://bizgrants.consulting/case-studies/hospitality-multi-property/): Five corporate-office roles with shared sustainability and governance modules
+- [SaaS mobile app rolling cohorts](https://bizgrants.consulting/case-studies/saas-mobile-app-cohorts/): Four staggered CCP cohorts over 18 months across product, engineering, and digital marketing
+- [Data analytics AI reskilling](https://bizgrants.consulting/case-studies/data-ai-consultancy-reskilling/): Senior consultant reskilled into AI-aligned delivery lead with TSC-mapped OJT
+- [Cleantech water purification commercial conversion](https://bizgrants.consulting/case-studies/cleantech-water-purification/): First senior commercial hire outside a founder-led sales motion at a deeptech SME
+- [Industrial climate solutions twin engineering](https://bizgrants.consulting/case-studies/industrial-climate-engineers/): Two engineers reskilled for multi-vertical applications scope across regulated environments
+- [Digital media phased cohort](https://bizgrants.consulting/case-studies/digital-media-phased-cohort/): Six staggered hires submitted in monthly tranches across editorial, sales, and operations
+- [Beauty and aesthetics regional reskilling](https://bizgrants.consulting/case-studies/beauty-aesthetics-reskilling/): Marketing executive reskilled into digital-marketing-and-analytics specialist with launch-anchored OJT
+- [Property services twin senior conversion](https://bizgrants.consulting/case-studies/real-estate-services-twin/): Parallel senior strategic and operations conversions at a scaling property services SME
 
 ## Pillar guides
 

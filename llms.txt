@@ -57,6 +57,7 @@
 - [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants/): GRIT vs MCPP vs CCP, which programme fits SME hiring
 - [SkillsFuture Enterprise Credit Guide](https://bizgrants.consulting/blog/skillsfuture-enterprise-credit/): How the S$10,000 SFEC credit works for Singapore SMEs, eligibility, qualifying activities, and how to claim
 - [Productivity Solutions Grant Guide](https://bizgrants.consulting/blog/productivity-solutions-grant/): How PSG works for Singapore SMEs, IMDA pre-approved vendors, supported solution categories, and Business Grants Portal application flow
+- [Enterprise Development Grant Application Guide](https://bizgrants.consulting/blog/enterprise-development-grant/): How EDG works for Singapore SMEs across the three pillars (Core Capabilities, Innovation, Market Access), funding caps, and project scoping
 
 ## Optional
 

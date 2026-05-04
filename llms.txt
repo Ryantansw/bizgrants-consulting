@@ -55,6 +55,7 @@
 - [CCP Reskilling Examples](https://bizgrants.consulting/blog/ccp-reskilling-examples/): Real Singapore reskilling use cases
 - [CCP Flat-fee vs Success-fee Consulting](https://bizgrants.consulting/blog/ccp-flatfee-consulting/): Why success-fee beats flat-fee for grant advisory
 - [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants/): GRIT vs MCPP vs CCP, which programme fits SME hiring
+- [SkillsFuture Enterprise Credit Guide](https://bizgrants.consulting/blog/skillsfuture-enterprise-credit/): How the S$10,000 SFEC credit works for Singapore SMEs, eligibility, qualifying activities, and how to claim
 
 ## Optional
 

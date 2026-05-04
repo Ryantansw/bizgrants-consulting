@@ -219,6 +219,13 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://bizgrants.consulting/blog/skillsfuture-enterprise-credit/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Legal -->
   <url>
     <loc>https://bizgrants.consulting/privacy/</loc>

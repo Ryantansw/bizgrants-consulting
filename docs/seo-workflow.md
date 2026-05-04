@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 17)
+**Last run:** 2026-05-04 (task 18)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -45,7 +45,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 
 ## New content targeting SME grants keywords (Singapore and Southeast Asia)
 
-- [ ] **18. Publish "SkillsFuture Enterprise Credit (SFEC) Guide for Singapore SMEs".** Long-form blog article (≥ 1,500 words) targeting the keyword *SkillsFuture Enterprise Credit*. Cover eligibility, $10,000 credit mechanic, qualifying activities, claim process. Include FAQ section, BlogPosting + BreadcrumbList + FAQPage schema, per-page OG card.
+- [x] **18. Publish "SkillsFuture Enterprise Credit (SFEC) Guide for Singapore SMEs".** Long-form blog article (≥ 1,500 words) targeting the keyword *SkillsFuture Enterprise Credit*. Cover eligibility, $10,000 credit mechanic, qualifying activities, claim process. Include FAQ section, BlogPosting + BreadcrumbList + FAQPage schema, per-page OG card. _(2026-05-04: Published at `/blog/skillsfuture-enterprise-credit/`. Body 1,567 words. Sections: what is SFEC, eligibility (3-level test), qualifying activities, layering with CCP/JRG, claim process (4 stages), common pitfalls, 6-question FAQ. BlogPosting + BreadcrumbList + 6-question FAQPage schema all valid. OG card `/images/og/b-sfec.png` generated. Listed in sitemap, llms.txt, and the blog hub grid.)_
 - [ ] **19. Publish "Productivity Solutions Grant (PSG) for Singapore SMEs".** Long-form blog article (≥ 1,500 words) targeting *Productivity Solutions Grant Singapore*. Cover supported solution categories, IMDA-pre-approved vendors, application flow. Same schema set as task 18.
 - [ ] **20. Publish "Enterprise Development Grant (EDG) Application Guide".** Long-form blog article (≥ 1,500 words) targeting *Enterprise Development Grant Singapore*. Cover the three pillars (Core Capabilities, Innovation, Market Access), funding caps, project scoping. Same schema set.
 - [ ] **21. Publish "Mid-Career Pathways Programme (MCPP) vs CCP for Singapore Employers".** Comparison-style blog article (≥ 1,200 words) targeting *Mid-Career Pathways Programme employer*. Position MCPP for shorter attachments, CCP for longer redesigned roles. Internal-link from the existing CCP hiring grants article.

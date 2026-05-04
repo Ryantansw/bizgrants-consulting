@@ -55,78 +55,79 @@
   <script src="https://www.calendarsync.app/embed.js" async></script>
   
 
+  <!-- FAQPage Schema -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the maximum salary support for a single CCP placement?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "S$45,000 per eligible employee. The actual amount depends on the monthly salary, the co-funding rate that applies (70% standard or 90% enhanced for SMEs and mature workers), and the OJT duration of the chosen pathway."
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the maximum salary support for a single CCP placement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "S$45,000 per eligible employee. The actual amount depends on the monthly salary, the co-funding rate that applies (70% standard or 90% enhanced for SMEs and mature workers), and the OJT duration of the chosen pathway."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the 70% vs 90% co-funding rate decided?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Two factors: (1) whether the employer qualifies as an SME under the prevailing definition, and (2) whether the employee is a mature worker. Both criteria are checked at application time. Most SMEs hiring or reskilling a Singaporean PMET into a redesigned role will qualify for the enhanced 90% rate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the employer pay the employee's salary upfront?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. CCP salary support is a reimbursement, not an upfront grant. You pay the employee's salary in full each month, then claim a percentage back at the end of the OJT period (or in cycles for longer placements)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long after submitting a claim do we receive payment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically 4–8 weeks from claim submission to reimbursement reaching the employer's bank account. Faster turnarounds happen when the evidence pack is complete on first submission and no clarifications are requested."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can salary support be claimed retroactively?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Support is only claimed for OJT periods that fall within the approved start and end dates of the placement. Salary paid before the official OJT start is not reimbursable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the employee leaves before the OJT ends?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Claims for completed months are still submittable. Future months not delivered cannot be claimed. Previously approved support that has been paid is generally not clawed back if the engagement was genuine, but the unused balance lapses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can CCP funding be combined with the Jobs Growth Incentive (JGI) or SFEC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sometimes. Eligibility windows and overlapping coverage matter. JGI is a hiring-side incentive; SFEC is a training-side credit. CCP is the OJT-anchored salary support. We model combinations during scoping so each scheme covers a distinct cost. See the CCP vs JGI vs SFEC comparison."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the CCP cap per role, per employee, or per company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per eligible placement, meaning per employee per CCP application. A company running multiple CCP placements (each with their own redesigned role and OJT plan) can claim up to the cap on each placement separately."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "How is the 70% vs 90% co-funding rate decided?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Two factors: (1) whether the employer qualifies as an SME under the prevailing definition, and (2) whether the employee is a mature worker. Both criteria are checked at application time. Most SMEs hiring or reskilling a Singaporean PMET into a redesigned role will qualify for the enhanced 90% rate."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does the employer pay the employee's salary upfront?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. CCP salary support is a reimbursement, not an upfront grant. You pay the employee's salary in full each month, then claim a percentage back at the end of the OJT period (or in cycles for longer placements)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long after submitting a claim do we receive payment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typically 4-8 weeks from claim submission to reimbursement reaching the employer's bank account. Faster turnarounds happen when the evidence pack is complete on first submission and no clarifications are requested."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can salary support be claimed retroactively?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Support is only claimed for OJT periods that fall within the approved start and end dates of the placement. Salary paid before the official OJT start is not reimbursable."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if the employee leaves before the OJT ends?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Claims for completed months are still submittable. Future months not delivered cannot be claimed. Previously approved support that has been paid is generally not clawed back if the engagement was genuine, but the unused balance lapses."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can CCP funding be combined with the Jobs Growth Incentive (JGI) or SFEC?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sometimes. Eligibility windows and overlapping coverage matter. JGI is a hiring-side incentive; SFEC is a training-side credit. CCP is the OJT-anchored salary support. We model combinations during scoping so each scheme covers a distinct cost. See the CCP vs JGI vs SFEC comparison."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the CCP cap per role, per employee, or per company?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Per eligible placement, meaning per employee per CCP application. A company running multiple CCP placements (each with their own redesigned role and OJT plan) can claim up to the cap on each placement separately."
-      }
-    }
-  ]
-}
-</script>
+    ]
+  }
+  </script>
 
   <meta name="theme-color" content="#0F52BA" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />

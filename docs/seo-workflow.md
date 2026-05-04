@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 27)
+**Last run:** 2026-05-04 (task 28)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -64,7 +64,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 
 ## Broken-link check
 
-- [ ] **28. Run a sitewide broken-link crawl.** Use a crawler to scan all internal and outbound links across the site. Fix any internal 404s. For outbound 404s, decide per-link whether to remove, replace, or wayback. Re-test until clean.
+- [x] **28. Run a sitewide broken-link crawl.** Use a crawler to scan all internal and outbound links across the site. Fix any internal 404s. For outbound 404s, decide per-link whether to remove, replace, or wayback. Re-test until clean. _(2026-05-04: Crawled all 50 unique internal URLs and 11 unique external URLs across production HTML. Internal: 0 broken (all internal links resolve to existing files). External: 1 real broken link found, the WSG canonical CCP URL (`/home/employers-industry-partners/wsg-programmes-employer-support/career-conversion-programmes`) which 404s after a WSG site restructure. Replaced with `https://www.wsg.gov.sg/` (safe homepage) across 8 files: 6 pillars + 2 blog articles. Other reported "external errors" were false positives: preconnect hints (fonts.googleapis.com, fonts.gstatic.com) and bare relative paths (favicon.ico, style.css) miscategorised by the crawler.)_
 
 ## Core Web Vitals
 

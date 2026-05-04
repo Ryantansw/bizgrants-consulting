@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 11)
+**Last run:** 2026-05-04 (task 12)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -33,7 +33,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 - [x] **9. Validate LocalBusiness / ProfessionalService JSON-LD.** Required fields: `@id`, `name`, `legalName`, `address`, `geo`, `telephone`, `email`, `openingHoursSpecification`, `contactPoint`, `hasMap` (canonical Google Business Profile URL), `paymentAccepted`, `currenciesAccepted: SGD`, `priceRange`, `areaServed`. Confirm consistency across the 12 pages that define the entity. _(2026-05-04: 11 pages define LocalBusiness @id (Mon-Fri opening hours, full PostalAddress with country=SG, GeoCoordinates, +65 8887 5297, canonical GBP URL on hasMap, Bank Transfer/Invoice paymentAccepted, SGD/$$ priceRange). Zero validation problems. 100% consistent across all 11 pages on legalName, telephone, email, priceRange, paymentAccepted.)_
 - [x] **10. Validate BreadcrumbList JSON-LD on every subdirectory page.** Confirm `position` numbering is correct, `item` URLs are absolute HTTPS URLs, and the breadcrumb structure matches the visible nav breadcrumb on the page. _(2026-05-04: 36 of 37 pages have BreadcrumbList; homepage doesn't need one. Found 5 pillar pages with a 3-item schema (Home > Guides > Pillar) that didn't match the visible page (no on-page breadcrumb, no parent "Guides" hub in the actual sitemap). Simplified those 5 to 2-item (Home > Pillar) to match path depth and align with the absent visible breadcrumb. Re-validation: 0 position errors, all URLs absolute HTTPS, all depths now correct.)_
 - [x] **11. Validate FAQPage JSON-LD against visible prose.** For every blog article and pillar guide that has visible Q&A, confirm the schema's `Question.name` and `Answer.text` exactly match the rendered prose. Resync any drift. _(2026-05-04: 14 pages with FAQPage schema. 12 had drift: en-dash `–` in visible vs hyphen `-` in schema for ranges (3-5 months, 4-8 weeks, etc.); answer-text drift on 3 blog articles where the internal-link sweep added trailing context the schema didn't have; ccp-hiring-grants visible FAQ used `<br />` self-closing not `<br>` so wasn't extracted before. Regenerated all 14 schemas from visible prose. Re-validation: 0 drift.)_
-- [ ] **12. Validate BlogPosting and Article JSON-LD.** On every blog article and case study, confirm `headline` is under 110 characters, `wordCount` matches the actual rendered word count, `datePublished` and `dateModified` are valid ISO 8601 dates, and `image` references a real per-page asset.
+- [x] **12. Validate BlogPosting and Article JSON-LD.** On every blog article and case study, confirm `headline` is under 110 characters, `wordCount` matches the actual rendered word count, `datePublished` and `dateModified` are valid ISO 8601 dates, and `image` references a real per-page asset. _(2026-05-04: 22 articles checked. Found 32 problems: 11 pages had `image: logo.png` (rewired to per-page OG cards), 15 case studies missed `wordCount` (computed from prose and inserted), 5 case studies had headlines over 110 chars (trimmed to 65–89). Re-validation: 0 problems remaining.)_
 
 ## Content optimization for existing pages
 

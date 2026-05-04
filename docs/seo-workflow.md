@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04
+**Last run:** 2026-05-04 (task 2)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -17,7 +17,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 ## Full site audit
 
 - [x] **1. Run the full SEO audit.** Invoke `/seo audit https://bizgrants.consulting`. Capture the SEO Health Score and the per-category breakdown (Technical, Content, On-Page, Schema, Performance, AI Search, Images). Compare against the previous audit run. _(2026-05-04: SEO Health Score **91/100**, up from 88 on 2026-04-28. Per category: Technical 95, Content 91, On-Page 91, Schema 96, Performance 80 (no measurement infra), AI Search/GEO 93, Images 90. Progression: 59 → 79 → 88 → 91.)_
-- [ ] **2. Verify all sitemap URLs return HTTP 200.** Crawl every URL listed in `sitemap.xml`. Report any 4xx/5xx responses or unexpected redirect chains. Fix or remove broken entries.
+- [x] **2. Verify all sitemap URLs return HTTP 200.** Crawl every URL listed in `sitemap.xml`. Report any 4xx/5xx responses or unexpected redirect chains. Fix or remove broken entries. _(2026-05-04: crawled all 37 URLs in sitemap.xml; 0 problems. Every URL returned HTTP 200 with no redirects.)_
 - [ ] **3. Audit indexability directives.** Walk every page; confirm `<meta name="robots">` has `index,follow` (no accidental `noindex`), and confirm `robots.txt` allows the major search engines and AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot).
 
 ## Metadata optimization

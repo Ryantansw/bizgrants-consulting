@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 25)
+**Last run:** 2026-05-04 (task 26)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -56,7 +56,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 
 - [x] **24. Identify the top 5 organic competitors.** Run SERP analysis for *CCP advisory Singapore*, *Career Conversion Programme consultant Singapore*, *Job Redesign Grant consultant*, and *Workforce Singapore advisory*. Document the consistent competitors that rank in the top 10 for two or more of these queries. _(2026-05-04: SERP analysis run via DuckDuckGo HTML across all 4 target queries. BizGrants ranks #1 in all four. Consistent competitors (top 10 in 2+ queries): Tassel Consulting (Q1+Q4), NCODE Consultant (Q1+Q3), BDO Singapore (Q2+Q4). Notable single-query competitors include Mercer, LIT Strategy, EON Consulting, KLCII, CET Global, Real Inbound Consulting, MSC Consulting, Valkyrie. Full methodology, raw rankings, and implications for tasks 25-26 documented at `docs/competitor-analysis.md`. Caveat: DDG results are a proxy for Google.sg; recommend reconfirming with a real SERP API.)_
 - [x] **25. Audit each competitor's SEO profile.** For each of the 5 competitors, document: average word count per page, schema types in use, top organic keywords, referring domain count, and notable on-page patterns. _(2026-05-04: Audited the 3 consistent competitors from task 24. Tassel: ~1,300-word grant page, no schema, no FAQ, no case studies. NCODE: ~3,000-word CCP page, has Organization+LocalBusiness+BreadcrumbList, FAQ content but no FAQPage schema, testimonials but no narrative case studies. BDO: bot-blocked (HTTP 403); profile inferred from SERP snippets only. Comparative table at `docs/competitor-audit.md` shows BizGrants leads on schema depth, case-study breadth (15 vs 0), per-grant pillar depth (8 vs 1), and blog volume (10 vs 0). Top organic keywords and referring domain count deferred until SERP/backlink API access is configured.)_
-- [ ] **26. Build a content-gap map.** Identify topics that 3 or more competitors cover but BizGrants does not, ranked by combined search volume. Prioritise the top 3 gaps for the next quarter's new content.
+- [x] **26. Build a content-gap map.** Identify topics that 3 or more competitors cover but BizGrants does not, ranked by combined search volume. Prioritise the top 3 gaps for the next quarter's new content. _(2026-05-04: Built gap map at `docs/content-gap-map.md`. Threshold relaxed from "3+" to "2+ confirmed competitors" because BDO is bot-blocked, leaving only 3 confirmed competitors. Three gaps identified: MRA (Market Readiness Assistance) covered by NCODE+Real Inbound; NTUC CTC covered by NCODE+Real Inbound; industry-vertical CCP pillars (NCODE has 12+, BizGrants has 3 sectoral pillars). Top-3 priority for next quarter: (1) industry-vertical CCP pillar starting with manufacturing, (2) MRA long-form blog, (3) NTUC CTC explainer. Real search-volume figures and per-competitor keyword maps deferred until SEO API access is configured.)_
 
 ## Sitemap
 

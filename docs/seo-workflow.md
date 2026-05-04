@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 7)
+**Last run:** 2026-05-04 (task 8)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -29,7 +29,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 
 ## Schema markup
 
-- [ ] **8. Validate Organization JSON-LD on every page that defines it.** Required fields: `@id`, `name`, `legalName: BizGrants Consulting Pte. Ltd.`, `url`, `logo`, `description`, `foundingDate`, `knowsAbout`, `knowsLanguage`, `sameAs`. Run all blocks through Schema.org validator and Google Rich Results Test.
+- [x] **8. Validate Organization JSON-LD on every page that defines it.** Required fields: `@id`, `name`, `legalName: BizGrants Consulting Pte. Ltd.`, `url`, `logo`, `description`, `foundingDate`, `knowsAbout`, `knowsLanguage`, `sameAs`. Run all blocks through Schema.org validator and Google Rich Results Test. _(2026-05-04: 12 pages define the Organization @id. All pass every required-field check: @id correct, name "BizGrants Consulting", legalName "BizGrants Consulting Pte. Ltd.", url canonical, logo as ImageObject, description present, foundingDate 2023, knowsAbout array, knowsLanguage en-SG, sameAs list with LinkedIn. Zero validation problems.)_
 - [ ] **9. Validate LocalBusiness / ProfessionalService JSON-LD.** Required fields: `@id`, `name`, `legalName`, `address`, `geo`, `telephone`, `email`, `openingHoursSpecification`, `contactPoint`, `hasMap` (canonical Google Business Profile URL), `paymentAccepted`, `currenciesAccepted: SGD`, `priceRange`, `areaServed`. Confirm consistency across the 12 pages that define the entity.
 - [ ] **10. Validate BreadcrumbList JSON-LD on every subdirectory page.** Confirm `position` numbering is correct, `item` URLs are absolute HTTPS URLs, and the breadcrumb structure matches the visible nav breadcrumb on the page.
 - [ ] **11. Validate FAQPage JSON-LD against visible prose.** For every blog article and pillar guide that has visible Q&A, confirm the schema's `Question.name` and `Answer.text` exactly match the rendered prose. Resync any drift.

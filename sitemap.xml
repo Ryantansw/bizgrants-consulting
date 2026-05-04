@@ -175,6 +175,13 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://bizgrants.consulting/regional-hq-workforce-funding/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blog Articles -->
   <url>
     <loc>https://bizgrants.consulting/blog/ccp-eligibility/</loc>

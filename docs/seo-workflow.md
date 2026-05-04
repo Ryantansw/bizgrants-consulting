@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 26)
+**Last run:** 2026-05-04 (task 27)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -60,7 +60,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 
 ## Sitemap
 
-- [ ] **27. Verify `sitemap.xml` is complete and current.** Confirm every indexable page is listed, all `<lastmod>` dates reflect actual change dates, and `robots.txt` includes a `Sitemap:` directive pointing at the canonical sitemap URL.
+- [x] **27. Verify `sitemap.xml` is complete and current.** Confirm every indexable page is listed, all `<lastmod>` dates reflect actual change dates, and `robots.txt` includes a `Sitemap:` directive pointing at the canonical sitemap URL. _(2026-05-04: sitemap has 43 entries, file system has 43 production indexable pages, perfect 1:1 match. Zero missing entries, zero orphaned entries. All lastmod dates within 90 days. `robots.txt` has `Sitemap: https://bizgrants.consulting/sitemap.xml` directive pointing at the canonical URL. XML validates clean.)_
 
 ## Broken-link check
 

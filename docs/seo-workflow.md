@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 15)
+**Last run:** 2026-05-04 (task 16)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -40,7 +40,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 - [x] **13. Audit heading hierarchy on every page.** Confirm exactly one `<h1>` per page and a logical `<h2>` / `<h3>` structure with no skipped levels. Fix any pages that wrap multiple H1s or rely on H3 directly under H1. _(2026-05-04: 6 pages had level skips. 5 pillar/index pages had H2→H4 skips (cards using H4 directly under section H2); promoted 18 H4s to H3 across those pages. /about/ had H1→H3 skip (4 principle cards used H3 with no parent H2); inserted "Our advisory principles" H2 wrapper above the principles grid. All 37 pages now have exactly one H1 and no level skips.)_
 - [x] **14. Audit `<img alt>` text sitewide.** Every `<img>` should have descriptive alt text. Replace any empty or missing alts. Decorative-only images should use `alt=""` explicitly. _(2026-05-04: 42 `<img>` tags scanned across all production pages. 100% have descriptive alt text. Zero missing alt attributes, zero empty `alt=""`. No fixes required.)_
 - [x] **15. Sweep for em-dashes sitewide.** Replace any `—` (U+2014) or `&mdash;` with commas, colons, or periods per the project style rule. En-dashes for ranges (e.g. `2023&ndash;2026`) are fine. _(2026-05-04: grep across the entire repo for `—` and `&mdash;` returned a single match: this very task description, which uses the em-dash literal as part of explaining the rule. Zero em-dashes in production HTML, content, or schema. Site already passing.)_
-- [ ] **16. Audit internal-link density on every blog article.** Each article body must contain at least one inline link to a pillar guide and at least one to a relevant case study. Add missing links where natural.
+- [x] **16. Audit internal-link density on every blog article.** Each article body must contain at least one inline link to a pillar guide and at least one to a relevant case study. Add missing links where natural. _(2026-05-04: 7 blog articles audited. All pass: every article body has at least 1 pillar link and 1 case-study link. Per-article counts (pillars, cases): app-guide (3,1), pitfalls (1,1), eligibility (1,1), flatfee (1,1), hiring-grants (1,1), reskilling-examples (2,1), vs-jgi-sfec (1,1). No additions needed.)_
 - [ ] **17. Verify blog article word counts.** Every article body should be 1,200 words or more. Where the rendered count differs from the schema-asserted `wordCount`, recount and resync the schema.
 
 ## New content targeting SME grants keywords (Singapore and Southeast Asia)

@@ -2,7 +2,7 @@
 
 A 30-task workflow for the ongoing SEO maintenance of [bizgrants.consulting](https://bizgrants.consulting), a static HTML site hosted on GitHub Pages.
 
-**Last run:** 2026-05-04 (task 3)
+**Last run:** 2026-05-04 (task 4)
 
 Tasks are atomic: each one has a single, completable definition of done. Run through them in order on a quarterly cadence, or pick individual tasks ad-hoc when a specific area needs attention.
 
@@ -22,7 +22,7 @@ Tasks are atomic: each one has a single, completable definition of done. Run thr
 
 ## Metadata optimization
 
-- [ ] **4. Audit `<title>` tags sitewide.** Each title should be under 60 characters, include the primary keyword for the page, and follow the convention `<Page descriptor> | BizGrants` or `... | BizGrants Consulting`. Flag and rewrite any that are over length, generic, or missing brand suffix.
+- [x] **4. Audit `<title>` tags sitewide.** Each title should be under 60 characters, include the primary keyword for the page, and follow the convention `<Page descriptor> | BizGrants` or `... | BizGrants Consulting`. Flag and rewrite any that are over length, generic, or missing brand suffix. _(2026-05-04: audited 37 production pages. Rewrote 34 titles: 29 were over 60 chars, 9 lacked brand suffix. Final state: 0 over 60 chars, 0 without brand. Median title length now 52 chars.)_
 - [ ] **5. Audit `<meta name="description">` sitewide.** Each description should be 140 to 160 characters, contain at least one target keyword, and end with a soft call to action. Flag any that are duplicated across pages.
 - [ ] **6. Verify Open Graph and Twitter Card metadata on every page.** Each page must have: `og:title`, `og:description`, `og:image`, `og:url`, `og:type`, `og:locale` (set to `en_SG`), `og:site_name`, plus the equivalent `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`. Fill any gaps.
 - [ ] **7. Confirm each page uses its own per-page OG card.** Every page should reference `/images/og/<slug>.png` rather than the homepage logo. Generate any missing card via the Civic Brief OG generator and wire the meta tag.

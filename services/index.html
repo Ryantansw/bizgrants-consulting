@@ -345,11 +345,12 @@
                       <option>Overseas Markets</option>
                       <option>Human Resource Functions</option>
                       <option>Digital Advertising &amp; Marketing</option>
-                      <option>Design Professionals</option>
                       <option>Biomedical Manufacturing</option>
                       <option>Wholesale Trade Professionals</option>
-                      <option>Hotel, MICE, Attractions, Tour &amp; Travel</option>
-                      <option>Infocomm Sales &amp; Marketing Professionals</option>
+                      <option>Built Environment Professionals</option>
+                      <option>Infocomm Professionals</option>
+                      <option>Retail Professionals</option>
+                      <option>MICE Professionals</option>
                     </select>
                     <select id="ccpHireType">
                       <option value="">Employment type</option>
@@ -412,8 +413,8 @@
           </div>
           <div class="role-cell">
             <span class="role-num">R / 06</span>
-            <h3>Customer Experience &amp; Design</h3>
-            <p>Enhance customer journeys with experience design, UI/UX and creative roles.</p>
+            <h3>Customer Experience &amp; Retail</h3>
+            <p>Enhance customer journeys with retail operations, e-commerce and omni-channel experience roles.</p>
           </div>
           <div class="role-cell">
             <span class="role-num">R / 07</span>
@@ -528,16 +529,17 @@
   <!-- CCP Estimator Calculator -->
   <script>
     const MONTHS = {
-      'Different Job Scope': { new: 3, existing: 3 },
+      'Different Job Scope': { new: 3 },
       'ESG / Sustainability': { new: 6, existing: 3 },
-      'Overseas Markets': { new: 9, existing: 3 },
+      'Overseas Markets': { new: 9, existing: 9 },
       'Human Resource Functions': { new: 4, existing: 3 },
       'Digital Advertising & Marketing': { new: 6, existing: 3 },
-      'Design Professionals': { new: 6, existing: 3 },
       'Biomedical Manufacturing': { new: 12, existing: 6 },
       'Wholesale Trade Professionals': { new: 6, existing: 3 },
-      'Hotel, MICE, Attractions, Tour & Travel': { new: 6, existing: 3 },
-      'Infocomm Sales & Marketing Professionals': { new: 6, existing: 3 }
+      'Built Environment Professionals': { new: 6, existing: 3 },
+      'Infocomm Professionals': { new: 6, existing: 3 },
+      'Retail Professionals': { new: 6, existing: 3 },
+      'MICE Professionals': { new: 6, existing: 3 }
     };
     const estBtn = document.getElementById('ccpEstimate');
     const result = document.getElementById('ccpResult');
@@ -546,7 +548,8 @@
       const t = document.getElementById('ccpHireType').value;
       const s = parseFloat(document.getElementById('ccpSalary').value || '0');
       if (!p || !t || !s) { alert('Select pathway, employment type and enter salary.'); return; }
-      const months = (MONTHS[p] || {})[t] || 3;
+      const months = (MONTHS[p] || {})[t];
+      if (!months) { result.style.display = 'block'; result.innerHTML = '<strong>Note:</strong> The Different Job Scope pathway supports new hires only. Select "New hire" to estimate.'; return; }
       const std = Math.min(0.70 * s, 5000);
       const enh = Math.min(0.90 * s, 7500);
       const min = Math.round(std * months);

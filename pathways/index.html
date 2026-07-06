@@ -1086,6 +1086,12 @@
 
 
 
+  <script>
+    function toggleAllDetails(open) {
+      document.querySelectorAll('details.block').forEach(function (d) { d.open = open; });
+    }
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
   <script src="/shared.js" defer></script>

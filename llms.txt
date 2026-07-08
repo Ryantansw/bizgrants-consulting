@@ -16,7 +16,7 @@
 - [Services](https://bizgrants.consulting/services/): CCP and Job Redesign Grant advisory services
 - [About BizGrants Consulting](https://bizgrants.consulting/about/): Firm profile, advisory principles, and engagement model
 - [Case Studies](https://bizgrants.consulting/case-studies/): Fifteen anonymized CCP engagements across travel media, medtech, F&B, built environment, fund management, biotech, fintech, hospitality, SaaS, AI consulting, cleantech, industrial manufacturing, digital media, beauty, and real estate
-- [Pathways](https://bizgrants.consulting/pathways/): All CCP pathways with eligibility, salary minimums, and supported job families
+- [Pathways](https://bizgrants.consulting/pathways/): The 12 CCP pathways in Singapore with eligibility, salary minimums, and supported job families. The pathways are: (1) Different job scope, (2) ESG / sustainability, (3) Overseas markets, (4) Human resource functions, (5) Digital advertising and marketing, (6) Biomedical manufacturing, (7) Wholesale trade professionals, (8) Built environment professionals, (9) Infocomm professionals, (10) Retail professionals, (11) MICE professionals, (12) Advanced manufacturing (automation, robotics, IoT and manufacturing engineering roles).
 - [Contact](https://bizgrants.consulting/contact/): Free consultation, NAP details
 
 ## Case studies

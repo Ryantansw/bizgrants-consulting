@@ -47,6 +47,7 @@
 - [CCP for Sustainability roles](https://bizgrants.consulting/ccp-sustainability/): Role design and OJT examples for sustainability/ESG roles
 - [CCP for Healthcare roles](https://bizgrants.consulting/ccp-healthcare/): Role design and OJT examples for clinical, allied health, and healthcare admin roles in Singapore
 - [CCP for Manufacturing roles](https://bizgrants.consulting/ccp-manufacturing/): Role design and OJT examples for automation, robotics, IoT, precision engineering, and production roles in Singapore
+- [CCP for Overseas Market roles](https://bizgrants.consulting/ccp-overseas-markets/): Role design and OJT examples for regional and international market-expansion roles, and how the pathway pairs with the MRA grant
 - [Regional HQ Workforce Funding](https://bizgrants.consulting/regional-hq-workforce-funding/): How CCP, Job Redesign Grant, SFEC, and PSG/EDG layer to support Southeast Asian companies establishing a Singapore regional HQ
 
 ## Blog articles
@@ -64,6 +65,8 @@
 - [MCPP vs CCP](https://bizgrants.consulting/blog/mcpp-vs-ccp/): Comparison of Mid-Career Pathways Programme and Career Conversion Programme for Singapore employers, with a decision framework and sequencing pattern
 - [Market Readiness Assistance (MRA) Grant](https://bizgrants.consulting/blog/market-readiness-assistance-grant/): How the EnterpriseSG MRA grant supports Singapore SMEs expanding overseas, its three activity categories, funding and eligibility, and how it complements the Overseas Markets CCP pathway
 - [Company Training Committee (CTC) Grant](https://bizgrants.consulting/blog/company-training-committee-grant/): How the NTUC/e2i CTC Grant helps Singapore companies fund business transformation and worker upskilling, and how it layers with CCP, SFEC, and PSG
+- [Enterprise Financing Scheme (EFS)](https://bizgrants.consulting/blog/enterprise-financing-scheme/): How the EnterpriseSG EFS provides government risk-shared financing (loans, not grants) for Singapore SMEs, its loan products, and how it differs from grant support
+- [Singapore Government Grants for SMEs](https://bizgrants.consulting/blog/singapore-government-grants-for-smes/): A comparison hub of CCP, JRG, SFEC, PSG, EDG, MRA, CTC, and EFS with a decision framework for which scheme fits which need
 
 ## Optional
 

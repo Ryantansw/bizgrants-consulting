@@ -1239,6 +1239,15 @@ details.faq-item div {
   border-top: 1px solid var(--ink);
 }
 
+/* Blog articles: align the Related articles block with the 760px article column
+   (it is a sibling of the article container, so it needs the same width + padding
+   to avoid spanning full-width flush to the viewport edge). */
+.blog-article-container + .related-articles {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
 .related-articles h3 {
   font-family: 'JetBrains Mono', monospace;
   font-size: var(--fs-tiny);

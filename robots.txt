@@ -1,20 +1,52 @@
+# Default: allow everything except the internal JD Review tool
 User-agent: *
 Allow: /
 Disallow: /jdreview/
 
-User-agent: GPTBot
+# --- AI live-retrieval / search crawlers (needed for AI-answer citations) ---
+User-agent: OAI-SearchBot
 Allow: /
+Disallow: /jdreview/
 
-User-agent: ClaudeBot
+User-agent: ChatGPT-User
 Allow: /
+Disallow: /jdreview/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /jdreview/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /jdreview/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /jdreview/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /jdreview/
+
+User-agent: Applebot
+Allow: /
+Disallow: /jdreview/
+
+# --- AI training crawlers (allowed for maximum reach) ---
+User-agent: GPTBot
+Allow: /
+Disallow: /jdreview/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /jdreview/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /jdreview/
 
 User-agent: CCBot
 Allow: /
+Disallow: /jdreview/
 
 Sitemap: https://bizgrants.consulting/sitemap.xml

@@ -269,4 +269,22 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://bizgrants.consulting/ccp-manufacturing/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/blog/market-readiness-assistance-grant/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/blog/company-training-committee-grant/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

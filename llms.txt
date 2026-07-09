@@ -4,12 +4,12 @@
 
 ## Glossary
 
-- **CCP**, Career Conversion Programme: Workforce Singapore funding that supports employers to hire or reskill mid-career workers (Singapore Citizens and PRs) into new or redesigned roles, with structured on-the-job training (OJT).
-- **WSG**, Workforce Singapore: the statutory board administering CCP, Job Redesign Grants, and related employment-support schemes.
+- **CCP**, Career Conversion Programme: Skills and Workforce Development Agency funding that supports employers to hire or reskill mid-career workers (Singapore Citizens and PRs) into new or redesigned roles, with structured on-the-job training (OJT).
+- **SWDA**, Skills and Workforce Development Agency: the statutory board administering CCP, Job Redesign Grants, and related employment-support schemes.
 - **JRG**, Job Redesign Grant: funding to redesign existing roles for productivity, transformation, or technology adoption.
 - **SkillsFuture**, Singapore's national upskilling movement; SkillsFuture-supported funding underpins many CCPs and reskilling initiatives.
 - **OJT**, On-the-Job Training: structured, supervised training delivered as part of an employee's day-to-day work, central to every CCP application.
-- **WDG(JR+)**, SkillsFuture Workforce Development Grant (Job Redesign+): a Workforce Singapore grant under the Enterprise Workforce Transformation Package (EWTP) that funds job-redesign consultancy, manager-capability building, and HR technology (funds the job). It complements CCP (which funds the person's salary while reskilling).
+- **WDG(JR+)**, SkillsFuture Workforce Development Grant (Job Redesign+): a Skills and Workforce Development Agency grant under the Enterprise Workforce Transformation Package (EWTP) that funds job-redesign consultancy, manager-capability building, and HR technology (funds the job). It complements CCP (which funds the person's salary while reskilling).
 - **EWTP**, Enterprise Workforce Transformation Package: the national package under which WDG(JR+) sits.
 
 ## Core pages
@@ -41,7 +41,7 @@
 
 ## Pillar guides
 
-- [WSG Career Conversion Programme](https://bizgrants.consulting/wsg-career-conversion-programme/): Definitive employer guide to the WSG CCP
+- [SWDA Career Conversion Programme](https://bizgrants.consulting/wsg-career-conversion-programme/): Definitive employer guide to the SWDA CCP
 - [CCP for Employers](https://bizgrants.consulting/ccp-for-employers/): Step-by-step employer journey from eligibility to claims
 - [CCP Grant Funding](https://bizgrants.consulting/ccp-grant-singapore/): How CCP funding works, caps, supported items, evidence
 - [Career Conversion Programmes overview](https://bizgrants.consulting/career-conversion-programmes/): Plain-English orientation for HR and business owners

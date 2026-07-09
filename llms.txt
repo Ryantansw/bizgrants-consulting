@@ -5,7 +5,7 @@
 ## Glossary
 
 - **CCP**, Career Conversion Programme: Skills and Workforce Development Agency funding that supports employers to hire or reskill mid-career workers (Singapore Citizens and PRs) into new or redesigned roles, with structured on-the-job training (OJT).
-- **SWDA**, Skills and Workforce Development Agency: the statutory board administering CCP, Job Redesign Grants, and related employment-support schemes.
+- **SWDA**, Skills and Workforce Development Agency (formerly Workforce Singapore): the statutory board administering CCP, Job Redesign Grants, and related employment-support schemes.
 - **JRG**, Job Redesign Grant: funding to redesign existing roles for productivity, transformation, or technology adoption.
 - **SkillsFuture**, Singapore's national upskilling movement; SkillsFuture-supported funding underpins many CCPs and reskilling initiatives.
 - **OJT**, On-the-Job Training: structured, supervised training delivered as part of an employee's day-to-day work, central to every CCP application.

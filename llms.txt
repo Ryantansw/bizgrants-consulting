@@ -9,6 +9,8 @@
 - **JRG**, Job Redesign Grant: funding to redesign existing roles for productivity, transformation, or technology adoption.
 - **SkillsFuture**, Singapore's national upskilling movement; SkillsFuture-supported funding underpins many CCPs and reskilling initiatives.
 - **OJT**, On-the-Job Training: structured, supervised training delivered as part of an employee's day-to-day work, central to every CCP application.
+- **WDG(JR+)**, SkillsFuture Workforce Development Grant (Job Redesign+): a Workforce Singapore grant under the Enterprise Workforce Transformation Package (EWTP) that funds job-redesign consultancy, manager-capability building, and HR technology (funds the job). It complements CCP (which funds the person's salary while reskilling).
+- **EWTP**, Enterprise Workforce Transformation Package: the national package under which WDG(JR+) sits.
 
 ## Core pages
 
@@ -48,6 +50,7 @@
 - [CCP for Healthcare roles](https://bizgrants.consulting/ccp-healthcare/): Role design and OJT examples for clinical, allied health, and healthcare admin roles in Singapore
 - [CCP for Manufacturing roles](https://bizgrants.consulting/ccp-manufacturing/): Role design and OJT examples for automation, robotics, IoT, precision engineering, and production roles in Singapore
 - [CCP for Overseas Market roles](https://bizgrants.consulting/ccp-overseas-markets/): Role design and OJT examples for regional and international market-expansion roles, and how the pathway pairs with the MRA grant
+- [Workforce Transformation & Job Redesign](https://bizgrants.consulting/workforce-transformation/): How BizGrants redesigns roles and stacks two funding pillars, WDG(JR+) to fund the job redesign and CCP to fund the reskilling, for Singapore employers
 - [Regional HQ Workforce Funding](https://bizgrants.consulting/regional-hq-workforce-funding/): How CCP, Job Redesign Grant, SFEC, and PSG/EDG layer to support Southeast Asian companies establishing a Singapore regional HQ
 
 ## Blog articles
@@ -67,6 +70,8 @@
 - [Company Training Committee (CTC) Grant](https://bizgrants.consulting/blog/company-training-committee-grant/): How the NTUC/e2i CTC Grant helps Singapore companies fund business transformation and worker upskilling, and how it layers with CCP, SFEC, and PSG
 - [Enterprise Financing Scheme (EFS)](https://bizgrants.consulting/blog/enterprise-financing-scheme/): How the EnterpriseSG EFS provides government risk-shared financing (loans, not grants) for Singapore SMEs, its loan products, and how it differs from grant support
 - [Singapore Government Grants for SMEs](https://bizgrants.consulting/blog/singapore-government-grants-for-smes/): A comparison hub of CCP, JRG, SFEC, PSG, EDG, MRA, CTC, and EFS with a decision framework for which scheme fits which need
+- [WDG(JR+) Job Redesign Grant](https://bizgrants.consulting/blog/wdg-job-redesign-grant/): How the SkillsFuture Workforce Development Grant (Job Redesign+) under EWTP funds job redesign for Singapore employers, its three components, nett-fee model, eligibility, and how it stacks with CCP
+- [The Business Case for Job Redesign](https://bizgrants.consulting/blog/business-case-for-job-redesign/): Why Singapore employers need to redesign jobs now, covering AI, manpower cost, an ageing workforce, sustainability, and skills obsolescence, and how WDG(JR+) and CCP fund the change
 
 ## Optional
 

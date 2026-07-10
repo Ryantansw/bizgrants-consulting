@@ -714,6 +714,7 @@ a.case-file:hover { background: oklch(0.94 0.01 260); text-decoration: none; }
 }
 
 .bordered-box h4,
+.note-box h3,
 .note-box h4 {
   font-size: 0.95rem;
   margin: 0 0 var(--space-4);

@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <!-- Main Pages -->
   <url>
     <loc>https://bizgrants.consulting/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <video:video>
+      <video:thumbnail_loc>https://bizgrants.consulting/images/video/poster-homepage-explainer.png</video:thumbnail_loc>
+      <video:title>BizGrants in 90 seconds: two funding pillars for workforce transformation</video:title>
+      <video:description>A 90-second explainer of how Singapore SMEs pair WDG(JR+) job redesign funding with Career Conversion Programme salary support, and how BizGrants manages both end to end.</video:description>
+      <video:content_loc>https://bizgrants.consulting/videos/bizgrants-homepage-explainer.mp4</video:content_loc>
+      <video:duration>91</video:duration>
+    </video:video>
   </url>
   <url>
     <loc>https://bizgrants.consulting/services/</loc>
@@ -140,9 +148,16 @@
   <!-- Pillar / Guide Pages -->
   <url>
     <loc>https://bizgrants.consulting/wsg-career-conversion-programme/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://bizgrants.consulting/images/video/poster-ccp-explainer.png</video:thumbnail_loc>
+      <video:title>The Career Conversion Programme, explained in under a minute</video:title>
+      <video:description>A one-minute explainer of the SWDA Career Conversion Programme: up to 90% salary support when Singapore employers reskill new hires or existing staff into redesigned roles.</video:description>
+      <video:content_loc>https://bizgrants.consulting/videos/bizgrants-ccp-explainer.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+    </video:video>
   </url>
   <url>
     <loc>https://bizgrants.consulting/career-conversion-programmes/</loc>
@@ -307,9 +322,16 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/workforce-transformation/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://bizgrants.consulting/images/video/poster-wdgjr-explainer.png</video:thumbnail_loc>
+      <video:title>WDG(JR+) job redesign funding, explained in about a minute</video:title>
+      <video:description>A short explainer of the Workforce Development Grant (Job Redesign Plus) under EWTP: up to 70% funding for SMEs, capped at $150,000, to redesign jobs in Singapore.</video:description>
+      <video:content_loc>https://bizgrants.consulting/videos/bizgrants-wdgjr-explainer.mp4</video:content_loc>
+      <video:duration>67</video:duration>
+    </video:video>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/wdg-job-redesign-grant/</loc>

@@ -53,6 +53,13 @@
 - [Workforce Transformation & Job Redesign](https://bizgrants.consulting/workforce-transformation/): How BizGrants redesigns roles and stacks two funding pillars, WDG(JR+) to fund the job redesign and CCP to fund the reskilling, for Singapore employers
 - [CCP for Retail roles](https://bizgrants.consulting/ccp-retail/): Role design and OJT examples for retail operations, e-commerce, and omni-channel conversions in Singapore
 - [CCP for F&B roles](https://bizgrants.consulting/ccp-fnb/): How Singapore F&B employers use CCP pathways and job redesign for service, kitchen, and operations conversions
+- [CCP for HR roles](https://bizgrants.consulting/ccp-hr/): Role design and OJT examples for growth HR conversions, from HR admin to business partnering, people analytics, and HR tech
+- [CCP for Biomedical roles](https://bizgrants.consulting/ccp-biomedical/): Role design and OJT examples for biomedical manufacturing conversions, with the lineup's longest new-hire OJT window
+- [CCP for Wholesale Trade roles](https://bizgrants.consulting/ccp-wholesale-trade/): Role design and OJT examples for trade operations, procurement, supply chain, and compliance conversions
+- [CCP for Built Environment roles](https://bizgrants.consulting/ccp-built-environment/): Role design and OJT examples across architecture, engineering, construction, BIM, and facilities management
+- [CCP for Infocomm & Tech roles](https://bizgrants.consulting/ccp-infocomm/): Role design and OJT examples for data and AI, software, cybersecurity, cloud, and digital sales conversions
+- [CCP for MICE & Events roles](https://bizgrants.consulting/ccp-mice/): Role design and OJT examples for events, conferences, exhibitions, and attractions conversions
+- [CCP for Logistics roles](https://bizgrants.consulting/ccp-logistics/): How Singapore logistics employers route conversions through CCP pathways as warehouses automate and supply chains digitalise
 - [Regional HQ Workforce Funding](https://bizgrants.consulting/regional-hq-workforce-funding/): How CCP, Job Redesign Grant, SFEC, and PSG/EDG layer to support Southeast Asian companies establishing a Singapore regional HQ
 
 ## Blog articles
@@ -75,6 +82,7 @@
 - [WDG(JR+) Job Redesign Grant](https://bizgrants.consulting/blog/wdg-job-redesign-grant/): How the SkillsFuture Workforce Development Grant (Job Redesign+) under EWTP funds job redesign for Singapore employers, its three components, nett-fee model, eligibility, and how it stacks with CCP
 - [The Business Case for Job Redesign](https://bizgrants.consulting/blog/business-case-for-job-redesign/): Why Singapore employers need to redesign jobs now, covering AI, manpower cost, an ageing workforce, sustainability, and skills obsolescence, and how WDG(JR+) and CCP fund the change
 - [Jobs Transformation Maps (JTM)](https://bizgrants.consulting/blog/jobs-transformation-maps/): What JTMs are, which sectors have them, and how to anchor CCP and WDG(JR+) submissions to a sector's map
+- [Job Redesign Grant Singapore, 2026 guide](https://bizgrants.consulting/blog/job-redesign-grant-singapore/): What the job redesign grant means now: PSG-JR ended December 2025 and WDG(JR+) is the enhanced successor
 
 ## Optional
 

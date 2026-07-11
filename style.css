@@ -170,7 +170,9 @@ a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 
 strong { font-weight: 600; color: var(--ink); }
 small  { font-size: var(--fs-small); color: var(--ink-muted); }
 
-ul, ol { padding-left: 1.2em; margin: 0 0 var(--space-5); }
+/* Lists share the prose measure so they align with paragraphs in wide
+   sections; layout lists (nav, footer, grids) override with max-width: none. */
+ul, ol { padding-left: 1.2em; margin: 0 0 var(--space-5); max-width: var(--max-prose); }
 li { margin-bottom: 0.35em; }
 li::marker { color: var(--ink-faint); }
 

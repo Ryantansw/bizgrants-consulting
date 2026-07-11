@@ -1,6 +1,6 @@
 # BizGrants Consulting
 
-> Singapore CCP, Job Redesign Grant, and SkillsFuture grant advisory for SME and corporate employers. Founded 2023. Legal name BizGrants Consulting Pte. Ltd. Success-fee model, employers pay only when grants are approved. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
+> Singapore workforce transformation and grant advisory for SME and corporate employers, covering the Career Conversion Programme (CCP), WDG(JR+) job redesign funding, and SkillsFuture schemes, managed end to end. Founded 2023. Legal name BizGrants Consulting Pte. Ltd. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
 
 ## Glossary
 
@@ -69,7 +69,6 @@
 - [CCP Application Pitfalls](https://bizgrants.consulting/blog/ccp-application-pitfalls/): Common CCP mistakes to avoid
 - [CCP vs JGI vs SFEC](https://bizgrants.consulting/blog/ccp-vs-jgi-sfec/): Comparing CCP, Jobs Growth Incentive, and SFEC for employers
 - [CCP Reskilling Examples](https://bizgrants.consulting/blog/ccp-reskilling-examples/): Real Singapore reskilling use cases
-- [CCP Flat-fee vs Success-fee Consulting](https://bizgrants.consulting/blog/ccp-flatfee-consulting/): Why success-fee beats flat-fee for grant advisory
 - [CCP Hiring Grants](https://bizgrants.consulting/blog/ccp-hiring-grants/): GRIT vs MCPP vs CCP, which programme fits SME hiring
 - [SkillsFuture Enterprise Credit Guide](https://bizgrants.consulting/blog/skillsfuture-enterprise-credit/): How the S$10,000 SFEC credit works for Singapore SMEs, eligibility, qualifying activities, and how to claim
 - [Productivity Solutions Grant Guide](https://bizgrants.consulting/blog/productivity-solutions-grant/): How PSG works for Singapore SMEs, IMDA pre-approved vendors, supported solution categories, and Business Grants Portal application flow

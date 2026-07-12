@@ -1120,6 +1120,9 @@ details.faq-item div {
 }
 
 /* ---------- Guide / pillar page sections ---------- */
+/* Center guide / pillar reading column to match blog + case-study articles */
+.guide-section { max-width: 760px; margin-inline: auto; }
+
 .guide-section { padding: var(--space-8) 0 0; }
 .guide-section h2 {
   font-size: var(--fs-h2);
@@ -1145,6 +1148,7 @@ details.faq-item div {
   border-radius: 0;
   box-shadow: none;
   padding: 0 var(--space-5);
+  min-width: 0;
 }
 
 .blog-article-container h1 {
@@ -1625,6 +1629,29 @@ footer .container { color: var(--on-dark); }
   .logo-img { height: 49px !important; }
   nav a { font-size: var(--fs-small); }
   .slide { min-width: 280px; padding: var(--space-6); font-size: var(--fs-small); }
+}
+
+/* ---------- Responsive safety (narrow screens) ---------- */
+/* Long CTA labels wrap instead of overflowing the viewport */
+@media (max-width: 480px) {
+  .cta-btn,
+  .cta-btn-primary,
+  .hero-cta-generic,
+  .services-hero-cta,
+  .contact-hero-cta,
+  .guide-hero-cta {
+    white-space: normal;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+/* Wide tables scroll within their column instead of breaking the page layout */
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  contain: inline-size;
+  margin: 0 0 var(--space-5);
 }
 
 /* ---------- Print ---------- */

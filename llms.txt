@@ -80,6 +80,9 @@
 - [Singapore Government Grants for SMEs](https://bizgrants.consulting/blog/singapore-government-grants-for-smes/): A comparison hub of CCP, JRG, SFEC, PSG, EDG, MRA, CTC, and EFS with a decision framework for which scheme fits which need
 - [WDG(JR+) Job Redesign Grant](https://bizgrants.consulting/blog/wdg-job-redesign-grant/): How the SkillsFuture Workforce Development Grant (Job Redesign+) under EWTP funds job redesign for Singapore employers, its three components, nett-fee model, eligibility, and how it stacks with CCP
 - [The Business Case for Job Redesign](https://bizgrants.consulting/blog/business-case-for-job-redesign/): Why Singapore employers need to redesign jobs now, covering AI, manpower cost, an ageing workforce, sustainability, and skills obsolescence, and how WDG(JR+) and CCP fund the change
+- [SkillsFuture Enterprise Credit Expiry](https://bizgrants.consulting/blog/skillsfuture-enterprise-credit-expiry/): How SFEC batches expire, checking your balance and expiry date, and how the credit layers on top of grant co-funding
+- [SWDA Singapore](https://bizgrants.consulting/blog/swda-singapore/): What the Skills and Workforce Development Agency is, how it relates to Workforce Singapore and SkillsFuture Singapore, and the employer schemes it administers
+- [AI and Job Redesign Singapore](https://bizgrants.consulting/blog/ai-job-redesign-singapore/): How AI adoption changes the task mix inside roles, how to redesign jobs around it, and which schemes fund the redesign and reskilling
 - [Jobs Transformation Maps (JTM)](https://bizgrants.consulting/blog/jobs-transformation-maps/): What JTMs are, which sectors have them, and how to anchor CCP and WDG(JR+) submissions to a sector's map
 - [Job Redesign Grant Singapore, 2026 guide](https://bizgrants.consulting/blog/job-redesign-grant-singapore/): What the job redesign grant means now: PSG-JR ended December 2025 and WDG(JR+) is the enhanced successor
 

@@ -39,6 +39,32 @@ suggestions.
   existing employee being reskilled, so indicatively up to about **S$22,500 per
   staff member**. Six months and ~S$45,000 is the **new hire** figure, not the
   existing-staff one.
+- **CCP has two tiers with DIFFERENT monthly caps.** Enhanced: indicatively up
+  to 90%, capped at indicatively up to S$7,500 a month, for employers meeting
+  the SME definition **or** for mature-worker hires (indicatively aged 40 and
+  above). Standard: indicatively up to 70%, capped at indicatively up to
+  **S$5,000** a month, for everyone else. Both cap at indicatively up to
+  S$45,000 per placement. Quoting S$7,500 as a single universal cap understates
+  nothing but overstates the standard tier by 50%, and `/ccp-grant-singapore/`
+  contradicts it on the site a click away.
+- **A "you only pay X%" claim dies above the monthly cap.** The cap is on the
+  support, never on the employer's cost. Indicatively about 10% net holds only
+  to a salary of about S$8,300 a month (90% of that is the S$7,500 cap), and
+  about 30% only to about S$7,100 (70% of that is the S$5,000 cap). Above those
+  the employer's share rises. Any net-cost percentage in copy must carry that
+  ceiling, and the cap must be attached to the support, not to the cost.
+- **CCP salary support is a reimbursement, not a discount.** The employer pays
+  the full salary each month and claims back after the OJT period or claim
+  milestone, typically 4 to 8 weeks later. Never let copy imply a reduced
+  monthly outlay.
+- **CCP eligibility gates worth stating in cold copy.** Singapore Citizen or PR
+  hires only, into a newly created or substantially redesigned role, with the
+  application generally in before or shortly after the start date. Omitting the
+  citizenship gate wastes both sides' time on the call.
+- **Bridge SWDA to WSG on first mention.** The site always writes "Skills and
+  Workforce Development Agency (formerly Workforce Singapore)". The mandated
+  compliance line says "WSG", so without the bridge an email names two
+  unconnected agencies, which reads as a scam pattern to a cold recipient.
 - **SFEC offsets out-of-pocket cost.** Up to S$10,000 per **company**, one-off.
   It does not scale with headcount, so no SFEC sentence should ever end in "per
   staff", and spending it does not "unlock" salary support.

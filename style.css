@@ -1536,6 +1536,16 @@ footer .container { color: var(--on-dark); }
 }
 .comparison-table th[scope="row"] { text-align: left; }
 
+/* ---------- Dated scheme-change notice on guides ---------- */
+.grant-update {
+  margin: var(--space-6) 0;
+  padding: var(--space-5) var(--space-6);
+  background: var(--paper-soft);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+}
+.grant-update p { margin: 0; max-width: none; font-size: var(--fs-small); line-height: 1.6; color: var(--ink-body); }
+
 /* ---------- Process panel (editorial step list in feature rows) ---------- */
 .process-panel {
   background: var(--paper-soft);

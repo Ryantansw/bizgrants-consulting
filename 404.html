@@ -78,6 +78,9 @@
       </div>
     </div>
   </footer>
-  <script>function toggleMenu(){var u=document.getElementById('nav-links'),b=document.querySelector('.hamburger');if(!u)return;var o=u.classList.toggle('show');if(b)b.setAttribute('aria-expanded',String(o));}</script>
+  <script>function toggleMenu(f){var u=document.getElementById('nav-links'),b=document.querySelector('.hamburger');if(!u)return;var o=u.classList.toggle('show',typeof f==='boolean'?f:!u.classList.contains('show'));if(b)b.setAttribute('aria-expanded',String(o));}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('nav-links').classList.contains('show')){toggleMenu(false);document.querySelector('.hamburger').focus();}});
+document.addEventListener('click',function(e){if(document.getElementById('nav-links').classList.contains('show')&&!e.target.closest('header'))toggleMenu(false);});
+document.querySelector('header nav').addEventListener('focusout',function(e){if(e.relatedTarget&&!e.relatedTarget.closest('header'))toggleMenu(false);});</script>
 </body>
 </html>

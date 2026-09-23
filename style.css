@@ -629,7 +629,7 @@ section.section { padding: var(--space-10) 0; }
   align-items: baseline;
   transition: background var(--t-fast);
 }
-a.case-file:hover { background: var(--paper-soft); text-decoration: none; }
+a.case-file:hover { background: var(--surface); text-decoration: none; }
 
 .case-code {
   font-family: 'JetBrains Mono', monospace;

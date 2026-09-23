@@ -14,9 +14,9 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.calendarsync.app" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
@@ -32,6 +32,8 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://bizgrants.consulting/blog/ccp-eligibility/" />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/b-eligibility.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -45,6 +47,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/style.css" />
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
 
   <!-- GA4 -->
   <script src="https://www.calendarsync.app/embed.js" async></script>
@@ -165,11 +168,9 @@
 <body>
   <header>
     <div class="container nav-container">
-      <div class="logo">
-        <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-      </div>
+      <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
       <nav>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
         <ul id="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/services/">Services</a></li>
@@ -181,6 +182,7 @@
       </nav>
     </div>
   </header>
+<main>
 
   <div class="blog-article-container">
     <nav aria-label="Breadcrumb" class="breadcrumb" style="font-size:0.85rem;color:#6b7280;margin-bottom:0.75rem;"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>What is the Career Conversion Programme and who is eligible in Singapore?</span></nav>
@@ -280,6 +282,7 @@
       </div>
     </div>
 
+</main>
   <footer>
     <div class="container">
       <div class="footer-layout">

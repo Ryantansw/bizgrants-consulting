@@ -14,9 +14,9 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -70,11 +70,9 @@
   <!-- Header -->
   <header>
     <div class="container nav-container">
-      <div class="logo">
-        <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-      </div>
+      <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
       <nav>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
         <ul id="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/services/">Services</a></li>
@@ -86,6 +84,7 @@
       </nav>
     </div>
   </header>
+<main>
 
   <!-- Main -->
   <div class="main-content">
@@ -119,6 +118,7 @@
   </div>
 
   <!-- Footer -->
+</main>
   <footer>
     <div class="container">
       <div class="footer-bottom">

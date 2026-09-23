@@ -10,13 +10,43 @@
    scheduling page. */
 window.BIZGRANTS_BOOKING_URL = 'https://www.calendarsync.app/availability/bizgrants';
 
-/* === Mobile Menu Toggle === */
-function toggleMenu() {
+/* === Mobile Menu Toggle ===
+   Pass true/false to force a state; with no argument it toggles.
+   Keeps aria-expanded on the hamburger in step with the menu. */
+function toggleMenu(force) {
   var navLinks = document.getElementById('nav-links');
-  if (navLinks) {
-    navLinks.classList.toggle('show');
-  }
+  var button = document.querySelector('.hamburger');
+  if (!navLinks) return;
+  var open = typeof force === 'boolean' ? force : !navLinks.classList.contains('show');
+  navLinks.classList.toggle('show', open);
+  if (button) button.setAttribute('aria-expanded', String(open));
 }
+
+/* Menu accessibility: announce state, and close on Escape, on a tap outside
+   the header, or when keyboard focus leaves the header. shared.js is
+   deferred, so the header is already parsed here. */
+(function initMenu() {
+  var button = document.querySelector('.hamburger');
+  var navLinks = document.getElementById('nav-links');
+  if (!button || !navLinks) return;
+  button.type = 'button';
+  button.setAttribute('aria-controls', 'nav-links');
+  button.setAttribute('aria-expanded', 'false');
+  if (!button.getAttribute('aria-label')) button.setAttribute('aria-label', 'Toggle menu');
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && navLinks.classList.contains('show')) {
+      toggleMenu(false);
+      button.focus();
+    }
+  });
+  document.addEventListener('click', function (e) {
+    if (navLinks.classList.contains('show') && !e.target.closest('header')) toggleMenu(false);
+  });
+  var nav = button.closest('nav') || navLinks.parentNode;
+  nav.addEventListener('focusout', function (e) {
+    if (e.relatedTarget && !e.relatedTarget.closest('header')) toggleMenu(false);
+  });
+})();
 
 /* === GA4 (Google Analytics) === */
 window.dataLayer = window.dataLayer || [];

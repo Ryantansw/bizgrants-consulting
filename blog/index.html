@@ -14,9 +14,9 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.calendarsync.app" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
@@ -25,6 +25,7 @@
   <title>Singapore CCP & Grant Insights | BizGrants Blog</title>
 
   <link rel="stylesheet" href="/style.css" />
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
 
   <meta name="description" content="CCP, Job Redesign and SkillsFuture funding insights for Singapore employers. Practical guides, case studies and application tips from BizGrants." />
   <link rel="canonical" href="https://bizgrants.consulting/blog/" />
@@ -36,6 +37,8 @@
   <meta property="og:title" content="CCP & Job Redesign Grant Insights | Singapore Grants Blog | BizGrants Consulting Advisory" />
   <meta property="og:description" content="Guides, FAQs, and real-world advice on CCP, job redesign grant, SkillsFuture, and government funding for Singapore companies. Unlock up to 90% salary support." />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/blog.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://bizgrants.consulting/blog/" />
   <meta property="og:locale" content="en_SG" />
   <meta property="og:type" content="website" />
@@ -320,11 +323,9 @@
 
 <header>
   <div class="container nav-container">
-    <div class="logo">
-      <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-    </div>
+    <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
     <nav>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/services/">Services</a></li>
@@ -336,6 +337,7 @@
     </nav>
   </div>
 </header>
+<main>
 
 <div class="main-content">
 
@@ -558,6 +560,7 @@
 
 </div>
 
+</main>
 <footer>
   <div class="container">
     <div class="footer-layout">

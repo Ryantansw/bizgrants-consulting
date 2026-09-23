@@ -23,7 +23,7 @@
   <link rel="dns-prefetch" href="https://assets.apollo.io" />
 
   <title>CCP Case Studies: Singapore Engagements | BizGrants</title>
-  <meta name="description" content="Fifteen anonymized Career Conversion Programme case studies from BizGrants Consulting (2023-2026) across 15 Singapore industry sectors. Read them all." />
+  <meta name="description" content="Anonymized Career Conversion Programme case studies from BizGrants Consulting (2023-2026) across Singapore industry sectors, with strategy and outcomes." />
   <link rel="canonical" href="https://bizgrants.consulting/case-studies/" />
   <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/case-studies/" />
   <link rel="alternate" hreflang="en" href="https://bizgrants.consulting/case-studies/" />
@@ -166,7 +166,25 @@
         {"@type": "ListItem", "position": 12, "name": "Industrial Climate Solutions Manufacturer", "url": "https://bizgrants.consulting/case-studies/industrial-climate-engineers/"},
         {"@type": "ListItem", "position": 13, "name": "Multi-Outlet Digital Media and Marketing Group", "url": "https://bizgrants.consulting/case-studies/digital-media-phased-cohort/"},
         {"@type": "ListItem", "position": 14, "name": "Boutique Beauty and Aesthetics SME", "url": "https://bizgrants.consulting/case-studies/beauty-aesthetics-reskilling/"},
-        {"@type": "ListItem", "position": 15, "name": "Property Services and Real-Estate Network", "url": "https://bizgrants.consulting/case-studies/real-estate-services-twin/"}
+        {"@type": "ListItem", "position": 15, "name": "Property Services and Real-Estate Network", "url": "https://bizgrants.consulting/case-studies/real-estate-services-twin/"},
+        {"@type": "ListItem", "position": 16, "name": "Financial market infrastructure / digital exchange", "url": "https://bizgrants.consulting/case-studies/regulated-exchange-finance-tech-cohort/"},
+        {"@type": "ListItem", "position": 17, "name": "Cybersecurity / ICT infrastructure", "url": "https://bizgrants.consulting/case-studies/cybersecurity-presales-conversion-to-claim/"},
+        {"@type": "ListItem", "position": 18, "name": "Corporate training / organisational capability consulting", "url": "https://bizgrants.consulting/case-studies/consultancy-four-roles-four-pathways/"},
+        {"@type": "ListItem", "position": 19, "name": "Architecture / interior design practice", "url": "https://bizgrants.consulting/case-studies/design-practice-multi-year-programme/"},
+        {"@type": "ListItem", "position": 20, "name": "Electronics distribution / wholesale trade", "url": "https://bizgrants.consulting/case-studies/electronics-distribution-ai-job-redesign/"},
+        {"@type": "ListItem", "position": 21, "name": "Social service / registered charity (IPC)", "url": "https://bizgrants.consulting/case-studies/social-service-non-corporate-eligibility/"},
+        {"@type": "ListItem", "position": 22, "name": "Experiential education group", "url": "https://bizgrants.consulting/case-studies/education-group-multi-entity-conversions/"},
+        {"@type": "ListItem", "position": 23, "name": "Private education / enrichment", "url": "https://bizgrants.consulting/case-studies/education-back-office-cohort/"},
+        {"@type": "ListItem", "position": 24, "name": "Furniture manufacturing / design retail", "url": "https://bizgrants.consulting/case-studies/furniture-manufacturer-sales-ops-cohort/"},
+        {"@type": "ListItem", "position": 25, "name": "Luxury retail / bespoke tailoring", "url": "https://bizgrants.consulting/case-studies/bespoke-tailoring-digital-function/"},
+        {"@type": "ListItem", "position": 26, "name": "Food services / restaurant group", "url": "https://bizgrants.consulting/case-studies/food-services-whitelist-pathway/"},
+        {"@type": "ListItem", "position": 27, "name": "IT managed services / technical support", "url": "https://bizgrants.consulting/case-studies/it-services-technician-to-leadership/"},
+        {"@type": "ListItem", "position": 28, "name": "Healthcare operations", "url": "https://bizgrants.consulting/case-studies/healthcare-vp-operations-conversion/"},
+        {"@type": "ListItem", "position": 29, "name": "Marine and offshore services", "url": "https://bizgrants.consulting/case-studies/marine-services-manpower-aligned-conversion/"},
+        {"@type": "ListItem", "position": 30, "name": "Business consulting / brand strategy", "url": "https://bizgrants.consulting/case-studies/consultancy-three-channel-comparison/"},
+        {"@type": "ListItem", "position": 31, "name": "Climate technology / water and sustainability", "url": "https://bizgrants.consulting/case-studies/climate-tech-dual-entity-workforce-plan/"},
+        {"@type": "ListItem", "position": 32, "name": "Global consumer goods multinational", "url": "https://bizgrants.consulting/case-studies/consumer-goods-mnc-conversion/"},
+        {"@type": "ListItem", "position": 33, "name": "Environmental and facilities services", "url": "https://bizgrants.consulting/case-studies/environmental-services-workforce-scan/"}
       ]
     }
   }
@@ -271,6 +289,8 @@
       gap: var(--space-4);
       padding: var(--space-8) 0 var(--space-4);
     }
+    /* Stays hidden without JS, when every row is already visible */
+    .case-reveal[hidden] { display: none; }
     .case-reveal-count {
       font-family: 'JetBrains Mono', monospace;
       font-size: var(--fs-tiny);
@@ -312,7 +332,7 @@
         <div class="hero-eyebrow">Case studies &middot; CCP engagements 2023&ndash;2026</div>
         <h1>Past Career Conversion Programme Engagements</h1>
         <p class="hero-subtitle">
-          Fifteen engagements drawn from BizGrants Consulting&rsquo;s work with Singapore SMEs and corporates between 2023 and 2026. Company names, individuals, and product specifics are anonymized to respect client confidentiality. The strategies described and outcomes achieved are factual.
+          Engagements drawn from BizGrants Consulting&rsquo;s work with Singapore SMEs and corporates between 2023 and 2026. Company names, individuals, and product specifics are anonymized to respect client confidentiality. The strategies described and outcomes achieved are factual.
         </p>
         <div class="hero-cta-row">
           <a rel="noopener noreferrer" href="https://www.calendarsync.app/availability/bizgrants"

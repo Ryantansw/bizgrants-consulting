@@ -188,6 +188,11 @@
       margin-top: var(--space-7);
       border-top: 1px solid var(--ink);
     }
+    /* Keep long chips, grid cells and summaries inside narrow phones */
+    .pathways { grid-template-columns: minmax(0, 1fr); }
+    .pathway-card .grid > * { min-width: 0; }
+    .chip { white-space: normal; }
+    details.block summary { overflow-wrap: anywhere; }
 
     .pathway-card {
       background: transparent;
@@ -1122,7 +1127,7 @@
   </section>
 
   <!-- WDG(JR+) cross-link: for roles not on the pathway list -->
-  <section style="background: var(--surface-deep); color: var(--on-dark); border-top: 3px solid var(--accent);">
+  <section class="section-dark" style="background: var(--surface-deep); color: var(--on-dark); border-top: 3px solid var(--accent);">
     <div class="container" style="padding: var(--space-8) 0;">
       <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin:0 0 var(--space-4);">Not on this list?</div>
       <h2 style="color:var(--on-dark); max-width:26ch; font-size:clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem); margin:0 0 var(--space-5);">Don&rsquo;t see the role you&rsquo;re trying to redesign into?</h2>

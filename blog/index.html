@@ -71,7 +71,7 @@
     /* Article cards as a hairline editorial grid */
     .blog-grid-section .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
       gap: 0;
       border-top: 1px solid var(--ink);
       border-bottom: 1px solid var(--rule);
@@ -105,7 +105,7 @@
       margin: 0;
       flex: 1;
     }
-    .blog-grid-section .card a {
+    .blog-grid-section .card > a {
       font-family: 'JetBrains Mono', monospace;
       font-size: var(--fs-tiny);
       letter-spacing: 0.14em;
@@ -118,12 +118,14 @@
       gap: var(--space-3);
       transition: color var(--t-fast);
     }
-    .blog-grid-section .card a::after {
+    .blog-grid-section .card > a::after {
       content: '\2192';
       transition: transform var(--t-fast);
     }
-    .blog-grid-section .card:hover a { color: var(--ink); }
-    .blog-grid-section .card:hover a::after { transform: translateX(3px); }
+    .blog-grid-section .card:hover > a { color: var(--ink); }
+    .blog-grid-section .card:hover > a::after { transform: translateX(3px); }
+    .blog-grid-section .card h3 a { color: inherit; text-decoration: none; }
+    .blog-grid-section .card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
     /* FAQ section */
     .blog-faq-section {
@@ -250,11 +252,11 @@
       background: oklch(1 0 0 / 0.04);
       color: var(--on-dark);
       font-family: 'Hanken Grotesk', sans-serif;
-      font-size: var(--fs-small);
+      font-size: 1rem;
       border-radius: 0;
       transition: border-color var(--t-fast), background var(--t-fast);
     }
-    .email-optin-form input::placeholder { color: oklch(1 0 0 / 0.45); }
+    .email-optin-form input::placeholder { color: oklch(1 0 0 / 0.6); }
     .email-optin-form input:focus { outline: none; border-color: var(--on-dark); background: oklch(1 0 0 / 0.08); }
 
     .email-optin-form button {
@@ -361,114 +363,114 @@
 
     <div class="grid">
       <div class="card">
-  <h3>Job Redesign Grant in Singapore: what it means in 2026</h3>
+  <h3><a href="/blog/job-redesign-grant-singapore/">Job Redesign Grant in Singapore: what it means in 2026</a></h3>
   <p>PSG-JR ended in December 2025. What the job redesign grant means now, how WDG(JR+) replaced it, and what to do next depending on where you are.</p>
-  <a href="/blog/job-redesign-grant-singapore/">Read More →</a>
+  <a href="/blog/job-redesign-grant-singapore/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>CTC Grant vs WDG(JR+): which job redesign funding fits</h3>
+  <h3><a href="/blog/ctc-grant-vs-wdg-job-redesign/">CTC Grant vs WDG(JR+): which job redesign funding fits</a></h3>
   <p>The two Singapore job redesign funding routes compared on cap, cash flow, governance and worker outcomes, plus how to sequence both.</p>
-  <a href="/blog/ctc-grant-vs-wdg-job-redesign/">Read More →</a>
+  <a href="/blog/ctc-grant-vs-wdg-job-redesign/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>SkillsFuture Enterprise Credit expiry: use it before it lapses</h3>
+  <h3><a href="/blog/skillsfuture-enterprise-credit-expiry/">SkillsFuture Enterprise Credit expiry: use it before it lapses</a></h3>
   <p>SFEC is issued in time-limited batches and the current one expires in November. How to check your balance, and how the credit layers on top of grant co-funding.</p>
-  <a href="/blog/skillsfuture-enterprise-credit-expiry/">Read More →</a>
+  <a href="/blog/skillsfuture-enterprise-credit-expiry/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>SWDA Singapore: what the agency does</h3>
+  <h3><a href="/blog/swda-singapore/">SWDA Singapore: what the agency does</a></h3>
   <p>What the Skills and Workforce Development Agency is, how it relates to Workforce Singapore and SkillsFuture Singapore, and which employer schemes sit under it.</p>
-  <a href="/blog/swda-singapore/">Read More →</a>
+  <a href="/blog/swda-singapore/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>AI and job redesign for Singapore employers</h3>
+  <h3><a href="/blog/ai-job-redesign-singapore/">AI and job redesign for Singapore employers</a></h3>
   <p>AI changes the task mix inside roles before it changes headcount. How to redesign a job around it, and which schemes fund the redesign and the reskilling.</p>
-  <a href="/blog/ai-job-redesign-singapore/">Read More →</a>
+  <a href="/blog/ai-job-redesign-singapore/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>Jobs Transformation Maps: anchoring CCP and WDG(JR+) submissions</h3>
+  <h3><a href="/blog/jobs-transformation-maps/">Jobs Transformation Maps: anchoring CCP and WDG(JR+) submissions</a></h3>
   <p>What JTMs are, which sectors have them, and how to use a sector map to make a redesigned role credible and fundable.</p>
-  <a href="/blog/jobs-transformation-maps/">Read More →</a>
+  <a href="/blog/jobs-transformation-maps/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>The Business Case for Job Redesign in Singapore</h3>
+  <h3><a href="/blog/business-case-for-job-redesign/">The Business Case for Job Redesign in Singapore</a></h3>
   <p>Why employers need to redesign jobs now: AI, manpower cost, an ageing workforce, sustainability and skills obsolescence, and how WDG(JR+) and CCP fund the change.</p>
-  <a href="/blog/business-case-for-job-redesign/">Read More →</a>
+  <a href="/blog/business-case-for-job-redesign/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>WDG(JR+) Job Redesign Grant in Singapore</h3>
+  <h3><a href="/blog/wdg-job-redesign-grant/">WDG(JR+) Job Redesign Grant in Singapore</a></h3>
   <p>How the SkillsFuture Workforce Development Grant (Job Redesign+) funds job redesign, its three components and nett-fee model, and how it stacks with CCP.</p>
-  <a href="/blog/wdg-job-redesign-grant/">Read More →</a>
+  <a href="/blog/wdg-job-redesign-grant/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>Singapore Government Grants for SMEs: which one fits</h3>
+  <h3><a href="/blog/singapore-government-grants-for-smes/">Singapore Government Grants for SMEs: which one fits</a></h3>
   <p>A comparison of CCP, Job Redesign, SFEC, PSG, EDG, MRA, CTC and EFS, with a decision framework for choosing and layering the right schemes.</p>
-  <a href="/blog/singapore-government-grants-for-smes/">Read More →</a>
+  <a href="/blog/singapore-government-grants-for-smes/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>Enterprise Financing Scheme (EFS) in Singapore</h3>
+  <h3><a href="/blog/enterprise-financing-scheme/">Enterprise Financing Scheme (EFS) in Singapore</a></h3>
   <p>How the EnterpriseSG EFS provides government risk-shared financing for SMEs, its loan products, and why financing differs from grant support.</p>
-  <a href="/blog/enterprise-financing-scheme/">Read More →</a>
+  <a href="/blog/enterprise-financing-scheme/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>Market Readiness Assistance (MRA) Grant in Singapore</h3>
+  <h3><a href="/blog/market-readiness-assistance-grant/">Market Readiness Assistance (MRA) Grant in Singapore</a></h3>
   <p>How the EnterpriseSG MRA grant supports SMEs expanding overseas, its three activity categories, funding and eligibility, and how it complements the Overseas Markets CCP pathway.</p>
-  <a href="/blog/market-readiness-assistance-grant/">Read More →</a>
+  <a href="/blog/market-readiness-assistance-grant/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>NTUC Company Training Committee (CTC) Grant</h3>
+  <h3><a href="/blog/company-training-committee-grant/">NTUC Company Training Committee (CTC) Grant</a></h3>
   <p>How the NTUC and e2i CTC Grant helps Singapore companies fund business transformation and worker upskilling, and how it layers with CCP, SFEC, and PSG.</p>
-  <a href="/blog/company-training-committee-grant/">Read More →</a>
+  <a href="/blog/company-training-committee-grant/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>MCPP vs CCP: Mid-Career Pathways vs Career Conversion Programme</h3>
+  <h3><a href="/blog/mcpp-vs-ccp/">MCPP vs CCP: Mid-Career Pathways vs Career Conversion Programme</a></h3>
   <p>When to use Mid-Career Pathways Programme vs Career Conversion Programme. Allowance vs salary support, attachment vs redesigned role, decision framework.</p>
-  <a href="/blog/mcpp-vs-ccp/">Read More →</a>
+  <a href="/blog/mcpp-vs-ccp/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>Enterprise Development Grant (EDG) Application Guide</h3>
+  <h3><a href="/blog/enterprise-development-grant/">Enterprise Development Grant (EDG) Application Guide</a></h3>
   <p>How EDG works for Singapore SMEs across the three pillars (Core Capabilities, Innovation, Market Access), funding caps, and project scoping.</p>
-  <a href="/blog/enterprise-development-grant/">Read More →</a>
+  <a href="/blog/enterprise-development-grant/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>Productivity Solutions Grant (PSG) Guide for Singapore SMEs</h3>
+  <h3><a href="/blog/productivity-solutions-grant/">Productivity Solutions Grant (PSG) Guide for Singapore SMEs</a></h3>
   <p>How PSG works, supported solution categories, IMDA pre-approved vendors, and the Business Grants Portal application flow. Layered with CCP and SFEC.</p>
-  <a href="/blog/productivity-solutions-grant/">Read More →</a>
+  <a href="/blog/productivity-solutions-grant/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>SkillsFuture Enterprise Credit (SFEC) Guide for Singapore SMEs</h3>
+  <h3><a href="/blog/skillsfuture-enterprise-credit/">SkillsFuture Enterprise Credit (SFEC) Guide for Singapore SMEs</a></h3>
   <p>How the S$10,000 SFEC credit works, who qualifies, what it covers, and how to claim. Layered with CCP and Job Redesign Grant.</p>
-  <a href="/blog/skillsfuture-enterprise-credit/">Read More →</a>
+  <a href="/blog/skillsfuture-enterprise-credit/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-  <h3>Hiring Grants in Singapore: types of government support for employers to hire</h3>
+  <h3><a href="/blog/ccp-hiring-grants/">Hiring Grants in Singapore: types of government support for employers to hire</a></h3>
   <p>A practical overview of hiring-related support, where CCP sits, and how SMEs can plan conversions properly.</p>
-  <a href="/blog/ccp-hiring-grants/">Read More →</a>
+  <a href="/blog/ccp-hiring-grants/" aria-hidden="true" tabindex="-1">Read More</a>
 </div>
       <div class="card">
-        <h3>What is the Career Conversion Programme (CCP)?</h3>
-        <p>Understand eligibility, pathways and why more employers are tapping CCP in 2025.</p>
-        <a href="/blog/ccp-eligibility/">Read More →</a>
+        <h3><a href="/blog/ccp-eligibility/">What is the Career Conversion Programme (CCP)?</a></h3>
+        <p>Understand eligibility, pathways and why more employers are tapping CCP.</p>
+        <a href="/blog/ccp-eligibility/" aria-hidden="true" tabindex="-1">Read More</a>
       </div>
       <div class="card">
-        <h3>How to Apply for a CCP in 2025</h3>
+        <h3><a href="/blog/ccp-application-guide/">How to Apply for a CCP in Singapore</a></h3>
         <p>A step-by-step walkthrough for HR managers and SMEs applying for Skills and Workforce Development Agency funding.</p>
-        <a href="/blog/ccp-application-guide/">Read More →</a>
+        <a href="/blog/ccp-application-guide/" aria-hidden="true" tabindex="-1">Read More</a>
       </div>
       <div class="card">
-        <h3>CCP vs JGI vs SFEC</h3>
+        <h3><a href="/blog/ccp-vs-jgi-sfec/">CCP vs JGI vs SFEC</a></h3>
         <p>A practical comparison to help employers prioritise salary support schemes.</p>
-        <a href="/blog/ccp-vs-jgi-sfec/">Read More →</a>
+        <a href="/blog/ccp-vs-jgi-sfec/" aria-hidden="true" tabindex="-1">Read More</a>
       </div>
       <div class="card">
-        <h3>Reskilling Examples & Case Studies</h3>
+        <h3><a href="/blog/ccp-reskilling-examples/">Reskilling Examples & Case Studies</a></h3>
         <p>Real Singapore examples showing how successful CCP conversions are evaluated.</p>
-        <a href="/blog/ccp-reskilling-examples/">Read More →</a>
+        <a href="/blog/ccp-reskilling-examples/" aria-hidden="true" tabindex="-1">Read More</a>
       </div>
       <div class="card">
-        <h3>Common CCP Application Mistakes</h3>
+        <h3><a href="/blog/ccp-application-pitfalls/">Common CCP Application Mistakes</a></h3>
         <p>Learn the top rejection reasons and how to avoid them.</p>
-        <a href="/blog/ccp-application-pitfalls/">Read More →</a>
+        <a href="/blog/ccp-application-pitfalls/" aria-hidden="true" tabindex="-1">Read More</a>
       </div>
     </div>
   </section>
@@ -515,6 +517,7 @@
           type="text"
           id="name"
           name="name"
+          autocomplete="name"
           placeholder="e.g. John Tan, HR Manager"
           required
         />
@@ -524,6 +527,7 @@
           type="text"
           id="company"
           name="company"
+          autocomplete="organization"
           placeholder="e.g. ABC Engineering Pte Ltd"
         />
 
@@ -532,6 +536,7 @@
           type="email"
           id="email"
           name="email"
+          autocomplete="email"
           placeholder="you@company.com"
           required
         />

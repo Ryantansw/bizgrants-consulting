@@ -215,13 +215,6 @@
       gap: var(--space-9);
       align-items: center;
     }
-    .services-feature .feature-image {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border: 1px solid var(--rule);
-      filter: saturate(0.9) contrast(1.02);
-    }
     .services-feature .feature-meta {
       font-family: 'JetBrains Mono', monospace;
       font-size: var(--fs-tiny);
@@ -337,8 +330,14 @@
     <!-- Visual credibility strip -->
     <section class="section">
       <div class="container services-feature">
-        <div class="feature-image-wrap" style="position: relative;">
-          <img class="feature-image" width="1200" height="900" decoding="async" src="/images/stock/team-strategy.webp" alt="Business strategy consulting session with team reviewing documents" />
+        <div class="process-panel">
+          <p class="process-panel-label">Engagement / four steps</p>
+          <ol class="process-steps">
+            <li><span class="process-step-num">01</span><span><span class="process-step-title">Assess</span><span class="process-step-text">Your company profile, planned hires and existing workforce.</span></span></li>
+            <li><span class="process-step-num">02</span><span><span class="process-step-title">Map</span><span class="process-step-text">Which roles qualify for CCP, Job Redesign or SkillsFuture funding.</span></span></li>
+            <li><span class="process-step-num">03</span><span><span class="process-step-title">Structure</span><span class="process-step-text">Every element of the application.</span></span></li>
+            <li><span class="process-step-num">04</span><span><span class="process-step-title">Submit</span><span class="process-step-text">Built to meet assessor expectations.</span></span></li>
+          </ol>
         </div>
         <div>
           <div class="feature-meta">01 &middot; Engagement approach</div>

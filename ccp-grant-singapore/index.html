@@ -14,9 +14,9 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.calendarsync.app" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
@@ -49,12 +49,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/ccp-grant-singapore/" />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/p-ccp-grant.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CCP Grant in Singapore (SWDA, formerly WSG) | How the Funding Works" />
   <meta name="twitter:description" content="A plain English guide to CCP funding, eligibility and documentation for Singapore employers." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/og/p-ccp-grant.png" />
   <link rel="stylesheet" href="/style.css" />
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
 
   <!-- CalendarSync booking widget -->
   <script src="https://www.calendarsync.app/embed.js" async></script>
@@ -151,8 +154,8 @@
       "@type": "ImageObject",
       "@id": "https://bizgrants.consulting/#logo",
       "url": "https://bizgrants.consulting/images/logo.png",
-      "width": 512,
-      "height": 512
+      "width": 1330,
+      "height": 422
     },
     "image": {"@id": "https://bizgrants.consulting/#logo"},
     "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
@@ -235,16 +238,14 @@
     "description": "Advisory on Career Conversion Programme funding mechanics for Singapore employers, including eligibility, supported costs, claim cycles, and evidence requirements."
   }
   </script>
-  <script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+  <script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
 </head>
 <body>
   <header>
     <div class="container nav-container">
-      <div class="logo">
-        <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-      </div>
+      <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
       <nav>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
         <ul id="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/services/">Services</a></li>
@@ -256,10 +257,11 @@
       </nav>
     </div>
   </header>
+<main>
 
   <section class="hero">
     <div class="container">
-      <div class="hero-eyebrow">Guide &middot; Funding mechanics &middot; Updated April 2026</div>
+      <div class="hero-eyebrow">Guide &middot; Funding mechanics &middot; Updated August 2026</div>
       <h1>CCP grant funding in Singapore: caps, claims, and how the money actually flows.</h1>
       <p class="hero-subtitle">If you understand <em>what</em> the <a href="https://www.wsg.gov.sg/" rel="noopener noreferrer" target="_blank">CCP</a> is and <em>how</em> the application process works, the next question is the money: how much, when, and against what evidence. This page covers the funding mechanics, salary support caps, the 70% vs 90% co-funding split, claim cycles, evidence requirements, and timing from approval to payout. <a href="/case-studies/fund-management-finance-cohort/">A regulated fund manager cohort</a> shows how the cap shapes a multi-role build.</p>
       <div class="hero-cta-row">
@@ -296,7 +298,7 @@
         <style>
           .ff-ink { fill: #0e1733; }
           .ff-body { fill: #4a4f60; }
-          .ff-faint { fill: #9ea3b3; }
+          .ff-faint { fill: #6b7079; }
           .ff-rule { stroke: #d8dae0; }
           .ff-ink-rule { stroke: #0e1733; }
           .ff-accent { stroke: #c89060; }
@@ -507,6 +509,7 @@
     </ul>
   </section>
 
+</main>
   <footer>
     <div class="container">
       <div class="footer-layout">

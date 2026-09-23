@@ -13,9 +13,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.calendarsync.app" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
@@ -30,6 +30,8 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://bizgrants.consulting/blog/market-readiness-assistance-grant/" />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/b-mra.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Market Readiness Assistance (MRA) Grant Guide for Singapore SMEs" />
@@ -43,6 +45,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="stylesheet" href="/style.css" />
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
 
   <script src="https://www.calendarsync.app/embed.js" async></script>
 
@@ -53,8 +56,8 @@
     "@type": "BlogPosting",
     "headline": "Market Readiness Assistance (MRA) Grant Guide for Singapore SMEs",
     "description": "How the Market Readiness Assistance grant helps Singapore SMEs enter overseas markets: the three supportable activity categories, funding, eligibility, and the Business Grants Portal application flow.",
-    "author": {"@type": "Organization", "name": "BizGrants Consulting", "url": "https://bizgrants.consulting/", "logo": {"@type": "ImageObject", "url": "https://bizgrants.consulting/images/logo.png", "width": 512, "height": 512}},
-    "publisher": {"@type": "Organization", "name": "BizGrants Consulting", "url": "https://bizgrants.consulting/", "logo": {"@type": "ImageObject", "url": "https://bizgrants.consulting/images/logo.png", "width": 512, "height": 512}},
+    "author": {"@id": "https://bizgrants.consulting/#organization", "@type": "Organization", "name": "BizGrants Consulting", "url": "https://bizgrants.consulting/", "logo": {"@type": "ImageObject", "url": "https://bizgrants.consulting/images/logo.png", "width": 1330, "height": 422}},
+    "publisher": {"@id": "https://bizgrants.consulting/#organization", "@type": "Organization", "name": "BizGrants Consulting", "url": "https://bizgrants.consulting/", "logo": {"@type": "ImageObject", "url": "https://bizgrants.consulting/images/logo.png", "width": 1330, "height": 422}},
     "datePublished": "2026-07-08",
     "dateModified": "2026-07-09",
     "inLanguage": "en-SG",
@@ -124,14 +127,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
-  <script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+  <script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
 </head>
 <body>
 <header>
   <div class="container nav-container">
-    <div class="logo">
-      <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-    </div>
+    <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
     <nav>
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
       <ul id="nav-links">
@@ -145,11 +146,12 @@
     </nav>
   </div>
 </header>
+<main>
 
 <div class="blog-article-container">
   <nav aria-label="Breadcrumb" class="breadcrumb" style="font-size:0.85rem;color:#6b7280;margin-bottom:0.75rem;"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Market Readiness Assistance (MRA) Grant Guide for Singapore SMEs</span></nav>
   <h1>Market Readiness Assistance (MRA) Grant Guide for Singapore SMEs</h1>
-  <p class="last-updated" style="font-size:0.85rem;color:#6b7280;margin:0 0 0.5rem 0;">Last updated: 8 July 2026</p>
+  <p class="last-updated" style="font-size:0.85rem;color:#6b7280;margin:0 0 0.5rem 0;">Last updated: <time datetime="2026-07-09">9 July 2026</time></p>
   <div class="blog-byline">
     <span class="author-name">BizGrants Consulting</span>
     <span>&middot;</span>
@@ -255,6 +257,7 @@
     </div>
   </div>
 
+</main>
 <footer>
   <div class="container">
     <div class="footer-layout">

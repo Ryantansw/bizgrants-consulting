@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -34,7 +34,7 @@ grid-template-columns:1fr;
 }
 
 </style>
-<script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+<script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
 </head>
 
 <body>
@@ -42,10 +42,11 @@ grid-template-columns:1fr;
 <header>
 <div class="container nav-container">
 <div class="logo">
-<img src="/images/logo.png" class="logo-img">
+<img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
 </div>
 </div>
 </header>
+<main>
 
 <section class="hero">
 
@@ -59,7 +60,6 @@ grid-template-columns:1fr;
 
 </section>
 
-<main class="main-content">
 
 <div class="container">
 
@@ -75,7 +75,7 @@ grid-template-columns:1fr;
 
 <h2>Current JD</h2>
 
-<textarea id="currentJD" name="current_jd"></textarea>
+<textarea id="currentJD" name="current_jd" aria-label="Current JD"></textarea>
 
 </div>
 
@@ -83,7 +83,7 @@ grid-template-columns:1fr;
 
 <h2>Suggested JD</h2>
 
-<textarea id="suggestedJD" name="suggested_jd"></textarea>
+<textarea id="suggestedJD" name="suggested_jd" aria-label="Suggested JD"></textarea>
 
 </div>
 
@@ -91,7 +91,7 @@ grid-template-columns:1fr;
 
 <h2 style="margin-top:2em;">Remarks</h2>
 
-<textarea name="remarks" style="width:100%;min-height:150px;"></textarea>
+<textarea name="remarks" aria-label="Remarks" style="width:100%;min-height:150px;"></textarea>
 
 <br><br>
 

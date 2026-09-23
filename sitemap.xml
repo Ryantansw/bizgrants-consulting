@@ -5,20 +5,20 @@
   <!-- Main Pages -->
   <url>
     <loc>https://bizgrants.consulting/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
       <video:thumbnail_loc>https://bizgrants.consulting/images/video/poster-homepage-explainer.png</video:thumbnail_loc>
-      <video:title>BizGrants in 90 seconds: two funding pillars for workforce transformation</video:title>
-      <video:description>A 90-second explainer of how Singapore SMEs pair WDG(JR+) job redesign funding with Career Conversion Programme salary support, and how BizGrants manages both end to end.</video:description>
+      <video:title>Workforce transformation, funded: WDG(JR+) and CCP in 90 seconds</video:title>
+      <video:description>A 90-second explainer for Singapore employers on the two funding pillars: WDG(JR+) funds the job redesign, and the Career Conversion Programme funds salaries while staff reskill into the redesigned roles.</video:description>
       <video:content_loc>https://bizgrants.consulting/videos/bizgrants-homepage-explainer.mp4</video:content_loc>
       <video:duration>91</video:duration>
     </video:video>
   </url>
   <url>
     <loc>https://bizgrants.consulting/services/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/pathways/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -50,7 +50,7 @@
   <!-- Case Studies -->
   <url>
     <loc>https://bizgrants.consulting/case-studies/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -148,13 +148,13 @@
   <!-- Pillar / Guide Pages -->
   <url>
     <loc>https://bizgrants.consulting/wsg-career-conversion-programme/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <video:video>
       <video:thumbnail_loc>https://bizgrants.consulting/images/video/poster-ccp-explainer.png</video:thumbnail_loc>
       <video:title>The Career Conversion Programme, explained in under a minute</video:title>
-      <video:description>A one-minute explainer of the SWDA Career Conversion Programme: up to 90% salary support when Singapore employers reskill new hires or existing staff into redesigned roles.</video:description>
+      <video:description>A one-minute explainer of the Skills and Workforce Development Agency Career Conversion Programme for Singapore employers: salary support while mid-career staff reskill into new or redesigned roles.</video:description>
       <video:content_loc>https://bizgrants.consulting/videos/bizgrants-ccp-explainer.mp4</video:content_loc>
       <video:duration>56</video:duration>
     </video:video>
@@ -173,7 +173,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/ccp-grant-singapore/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -192,7 +192,7 @@
 
   <url>
     <loc>https://bizgrants.consulting/regional-hq-workforce-funding/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -207,13 +207,13 @@
   <!-- Blog Articles -->
   <url>
     <loc>https://bizgrants.consulting/blog/ccp-eligibility/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/ccp-application-guide/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -244,7 +244,7 @@
 
   <url>
     <loc>https://bizgrants.consulting/blog/skillsfuture-enterprise-credit/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -273,13 +273,13 @@
   <!-- Legal -->
   <url>
     <loc>https://bizgrants.consulting/privacy/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/terms/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -298,7 +298,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/company-training-committee-grant/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -316,32 +316,32 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/singapore-government-grants-for-smes/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/workforce-transformation/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <video:video>
       <video:thumbnail_loc>https://bizgrants.consulting/images/video/poster-wdgjr-explainer.png</video:thumbnail_loc>
-      <video:title>WDG(JR+) job redesign funding, explained in about a minute</video:title>
-      <video:description>A short explainer of the Workforce Development Grant (Job Redesign Plus) under EWTP: up to 70% funding for SMEs, capped at $150,000, to redesign jobs in Singapore.</video:description>
+      <video:title>WDG(JR+): the job redesign grant, explained in about a minute</video:title>
+      <video:description>A short explainer of the SkillsFuture Workforce Development Grant (Job Redesign+): what it funds, the nett-fee model, and how it pairs with the Career Conversion Programme for Singapore employers.</video:description>
       <video:content_loc>https://bizgrants.consulting/videos/bizgrants-wdgjr-explainer.mp4</video:content_loc>
       <video:duration>67</video:duration>
     </video:video>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/wdg-job-redesign-grant/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/business-case-for-job-redesign/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -359,7 +359,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/jobs-transformation-maps/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -407,13 +407,13 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/job-redesign-grant-singapore/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/skillsfuture-enterprise-credit-expiry/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

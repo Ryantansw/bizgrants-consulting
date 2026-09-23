@@ -14,9 +14,9 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.calendarsync.app" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
@@ -56,8 +56,8 @@
       "@type": "ImageObject",
       "@id": "https://bizgrants.consulting/#logo",
       "url": "https://bizgrants.consulting/images/logo.png",
-      "width": 512,
-      "height": 512
+      "width": 1330,
+      "height": 422
     },
     "image": {"@id": "https://bizgrants.consulting/#logo"},
     "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
@@ -147,12 +147,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/career-conversion-programmes/" />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/p-ccp-pathways.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Career Conversion Programmes in Singapore | Employer Overview" />
   <meta name="twitter:description" content="Compare CCP pathways, eligibility and steps. Singapore specific guidance for HR and business owners." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/og/p-ccp-pathways.png" />
   <link rel="stylesheet" href="/style.css" />
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
 
   <!-- CalendarSync booking widget -->
   <script src="https://www.calendarsync.app/embed.js" async></script>
@@ -177,7 +180,7 @@
         "name": "What if the role doesn’t fit any sector pathway?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The \"different job scope\" pathway is the catch-all for new hires moving into substantially different responsibilities. It has the shortest OJT (3 months) and the broadest fit, but is new-hire only."
+          "text": "The “different job scope” pathway is the catch-all for new hires moving into substantially different responsibilities. It has the shortest OJT (3 months) and the broadest fit, but is new-hire only."
         }
       },
       {
@@ -185,7 +188,7 @@
         "name": "Can existing staff use any pathway?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most sector pathways accept both new hires and existing staff (with shorter OJT for existing). The notable exception is \"different job scope\", which is new-hire only. For existing-staff redesigns, ESG/sustainability, HR functions, digital marketing, and overseas markets all work."
+          "text": "Most sector pathways accept both new hires and existing staff (with shorter OJT for existing). The notable exception is “different job scope”, which is new-hire only. For existing-staff redesigns, ESG/sustainability, HR functions, digital marketing, and overseas markets all work."
         }
       },
       {
@@ -236,16 +239,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
-  <script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+  <script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
 </head>
 <body>
   <header>
     <div class="container nav-container">
-      <div class="logo">
-        <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-      </div>
+      <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
       <nav>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
         <ul id="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/services/">Services</a></li>
@@ -257,10 +258,11 @@
       </nav>
     </div>
   </header>
+<main>
 
   <section class="hero">
     <div class="container">
-      <div class="hero-eyebrow">Guide &middot; Pathway comparison &middot; Updated April 2026</div>
+      <div class="hero-eyebrow">Guide &middot; Pathway comparison &middot; Updated July 2026</div>
       <h1>Which Career Conversion Programme fits your company?</h1>
       <p class="hero-subtitle">There are 12 <a href="https://www.wsg.gov.sg/" rel="noopener noreferrer" target="_blank">Career Conversion Programme</a> pathways in Singapore, each with its own salary minimum, OJT duration, and eligibility rules. The right choice depends on whether you&rsquo;re hiring or reskilling, the sector you operate in, and the scope change involved. This guide compares the options so you can match a pathway to your situation in minutes. See <a href="/case-studies/travel-media-workforce-buildout/">a multi-pathway selection example</a> at a content-to-commerce SME.</p>
       <div class="hero-cta-row">
@@ -417,7 +419,7 @@
         <style>
           .ft-ink { fill: #0e1733; }
           .ft-body { fill: #4a4f60; }
-          .ft-faint { fill: #9ea3b3; }
+          .ft-faint { fill: #6b7079; }
           .ft-rule { stroke: #d8dae0; }
           .ft-ink-rule { stroke: #0e1733; }
           .ft-line { stroke: #74798a; fill: none; }
@@ -554,6 +556,7 @@
     </ul>
   </section>
 
+</main>
   <footer>
     <div class="container">
       <div class="footer-layout">

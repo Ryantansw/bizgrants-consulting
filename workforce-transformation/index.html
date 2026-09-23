@@ -13,9 +13,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.calendarsync.app" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
@@ -37,6 +37,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/workforce-transformation/" />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/p-workforce-transformation.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Workforce Transformation &amp; Job Redesign in Singapore" />
@@ -64,7 +66,7 @@
     "name": "BizGrants Consulting",
     "alternateName": "BizGrants",
     "url": "https://bizgrants.consulting/",
-    "logo": {"@type": "ImageObject","@id": "https://bizgrants.consulting/#logo","url": "https://bizgrants.consulting/images/logo.png","width": 512,"height": 512},
+    "logo": {"@type": "ImageObject","@id": "https://bizgrants.consulting/#logo","url": "https://bizgrants.consulting/images/logo.png","width": 1330,"height": 422},
     "image": {"@id": "https://bizgrants.consulting/#logo"},
     "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
     "foundingDate": "2023",
@@ -155,13 +157,14 @@
   </script>
 
   <link rel="stylesheet" href="/style.css" />
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
   <script src="https://www.calendarsync.app/embed.js" async></script>
 
   <meta name="theme-color" content="#0F52BA" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
-  <script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+  <script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
   <!-- VideoObject Schema -->
   <script type="application/ld+json">
   {
@@ -180,9 +183,7 @@
 <body>
   <header>
     <div class="container nav-container">
-      <div class="logo">
-        <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-      </div>
+      <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
       <nav>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
         <ul id="nav-links">
@@ -221,7 +222,7 @@
         <h2 class="section-title">WDG(JR+), explained in about a minute.</h2>
       </div>
       <div style="max-width: 880px; border: 1px solid var(--rule); background: var(--paper-soft); padding: var(--space-4);">
-        <video controls preload="metadata" poster="/images/video/poster-wdgjr-explainer.png" style="width: 100%; height: auto; display: block;">
+        <video controls preload="none" width="1280" height="720" poster="/images/video/poster-wdgjr-explainer.webp" style="width: 100%; height: auto; display: block;">
           <source src="/videos/bizgrants-wdgjr-explainer.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -266,7 +267,7 @@
     <section class="container guide-section">
       <div class="section-header">
         <div class="section-kicker">04 &middot; What a job-redesign engagement delivers</div>
-        <h2 class="section-title">The tangible outputs of a redesign project.</h2>
+        <h2 class="section-title">The tangible outputs of a workforce redesign project.</h2>
       </div>
       <p>A workforce redesign engagement is not a workshop and a slide deck. We start by mapping the current work at task level, then produce a defined set of outputs the business can act on:</p>
       <ul>
@@ -335,7 +336,10 @@
         <h2 class="section-title">Related guides and next steps.</h2>
       </div>
       <ul>
-        <li><a href="/blog/wdg-job-redesign-grant/">WDG(JR+) job redesign grant: the full scheme guide</a></li>
+        <li><a href="/blog/wdg-job-redesign-grant/">Workforce Development Grant (JR+): the full scheme guide</a></li>
+        <li><a href="/blog/job-redesign-grant-singapore/">Job redesign grant in Singapore: what changed in 2026</a></li>
+        <li><a href="/blog/ctc-grant-vs-wdg-job-redesign/">CTC Grant vs WDG(JR+): choosing a job redesign funding route</a></li>
+        <li><a href="/blog/company-training-committee-grant/">NTUC Company Training Committee (CTC) Grant guide</a></li>
         <li><a href="/blog/business-case-for-job-redesign/">The business case for job redesign in Singapore</a></li>
         <li><a href="/blog/jobs-transformation-maps/">Jobs Transformation Maps: anchoring submissions to your sector&rsquo;s map</a></li>
         <li><a href="/wsg-career-conversion-programme/">SWDA Career Conversion Programme: employer guide</a></li>

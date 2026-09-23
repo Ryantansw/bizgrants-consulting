@@ -14,9 +14,9 @@
   <!-- Preconnect hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="preconnect" href="https://www.calendarsync.app" />
   <link rel="preconnect" href="https://www.clarity.ms" />
   <link rel="dns-prefetch" href="https://huntsales.io" />
@@ -38,12 +38,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/services/" />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/services.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Services | BizGrants Consulting" />
   <meta name="twitter:description" content="Unlock up to 90% salary support. See roles eligible for CCP, Job Redesign and SkillsFuture-supported funding in Singapore." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/og/services.png" />
   <link rel="stylesheet" href="/style.css" />
+  <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
 
   <!-- CalendarSync booking widget -->
   <script src="https://www.calendarsync.app/embed.js" async></script>
@@ -62,8 +65,8 @@
       "@type": "ImageObject",
       "@id": "https://bizgrants.consulting/#logo",
       "url": "https://bizgrants.consulting/images/logo.png",
-      "width": 512,
-      "height": 512
+      "width": 1330,
+      "height": 422
     },
     "image": {"@id": "https://bizgrants.consulting/#logo"},
     "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
@@ -183,7 +186,7 @@
       {
         "@type": "Question",
         "name": "Can my company get salary support for upskilling?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Yes, structured reskilling or upskilling may qualify for funding through CCP, Job Redesign, or SkillsFuture. Check your eligibility."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes, structured reskilling or upskilling may qualify for funding through CCP, Job Redesign, or SkillsFuture. Check your eligibility →"}
       },
       {
         "@type": "Question",
@@ -286,15 +289,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="author" content="BizGrants Consulting" />
-  <script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+  <script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
 </head>
 
 <body>
   <header>
     <div class="container nav-container">
-      <div class="logo">
-        <img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
-      </div>
+      <div class="logo"><a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a></div>
       <nav>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
         <ul id="nav-links">
@@ -316,7 +317,7 @@
         <div class="hero-eyebrow">Services &middot; Grant eligibility &amp; advisory</div>
         <h1>Which roles in your company can qualify for government funding?</h1>
         <p class="hero-subtitle">
-          We work with Singapore employers to identify grant-eligible roles and map them to the right Career Conversion Programme, Job Redesign Grant or SkillsFuture-supported pathway, across both new hires and existing staff.
+          We work with Singapore employers to identify grant-eligible roles and map them to the right Career Conversion Programme, <a href="/blog/job-redesign-grant-singapore/">Job Redesign Grant</a> or SkillsFuture-supported pathway, across both new hires and existing staff.
         </p>
         <div class="services-hero-cta-row">
           <a rel="noopener noreferrer" href="https://www.calendarsync.app/availability/bizgrants"
@@ -337,7 +338,7 @@
     <section class="section">
       <div class="container services-feature">
         <div class="feature-image-wrap" style="position: relative;">
-          <img class="feature-image" width="1200" height="900" decoding="async" src="/images/stock/team-strategy.webp" alt="Business strategy consulting session with team reviewing documents" loading="lazy" />
+          <img class="feature-image" width="1200" height="900" decoding="async" src="/images/stock/team-strategy.webp" alt="Business strategy consulting session with team reviewing documents" />
         </div>
         <div>
           <div class="feature-meta">01 &middot; Engagement approach</div>
@@ -376,10 +377,10 @@
 
             <div>
               <details style="margin-top: var(--space-5);">
-                <summary style="cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: var(--fs-tiny); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); font-weight: 500;">→ See an indicative estimate</summary>
+                <summary style="cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: var(--fs-tiny); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); font-weight: 500; padding-block: 12px;">→ See an indicative estimate</summary>
                 <div style="margin-top: var(--space-5); max-width: 920px;">
                   <div class="cols-3">
-                    <select id="ccpPathway">
+                    <select id="ccpPathway" aria-label="CCP pathway">
                       <option value="">Select pathway</option>
                       <option>Different Job Scope</option>
                       <option>ESG / Sustainability</option>
@@ -394,12 +395,12 @@
                       <option>MICE Professionals</option>
                       <option>Advanced Manufacturing</option>
                     </select>
-                    <select id="ccpHireType">
+                    <select id="ccpHireType" aria-label="Employment type">
                       <option value="">Employment type</option>
                       <option value="new">New hire</option>
                       <option value="existing">Existing staff</option>
                     </select>
-                    <input id="ccpSalary" type="number" min="1500" step="50" placeholder="Monthly salary (SGD)" />
+                    <input id="ccpSalary" type="number" inputmode="numeric" min="1500" step="50" placeholder="Monthly salary (SGD)" aria-label="Monthly salary in SGD" />
                   </div>
 
                   <button id="ccpEstimate" class="btn btn-primary" style="margin-top: var(--space-5);">Estimate support</button>

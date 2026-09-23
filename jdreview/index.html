@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -8,7 +8,7 @@
 <title>JD Review Generator</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" href="/style.css">
-<script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+<script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
 </head>
 
 <body>
@@ -16,10 +16,11 @@
 <header>
 <div class="container nav-container">
 <div class="logo">
-<img src="/images/logo.png" class="logo-img">
+<img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" />
 </div>
 </div>
 </header>
+<main>
 
 <section class="hero">
 <div class="container">
@@ -28,7 +29,6 @@
 </div>
 </section>
 
-<main class="main-content">
 
 <div class="container">
 
@@ -36,20 +36,20 @@
 
 <h2>Project Details</h2>
 
-<label>Client Company</label>
+<label for="company">Client Company</label>
 <input id="company">
 
-<label>Job Title</label>
+<label for="role">Job Title</label>
 <input id="role">
 
-<label>Staff Name</label>
+<label for="staff">Staff Name</label>
 <input id="staff">
 
 <h2>Current Job Description</h2>
-<textarea id="currentJD" rows="12"></textarea>
+<textarea id="currentJD" rows="12" aria-label="Current JD"></textarea>
 
 <h2>Suggested Job Description</h2>
-<textarea id="suggestedJD" rows="12"></textarea>
+<textarea id="suggestedJD" rows="12" aria-label="Suggested JD"></textarea>
 
 <button class="cta-btn" onclick="generate()">Generate Client Review Link</button>
 

@@ -6,13 +6,12 @@
   <title>Page not found (404) | BizGrants Consulting</title>
   <meta name="description" content="Sorry, the page you were looking for does not exist. Return to BizGrants Consulting for Singapore CCP and Job Redesign grant advisory." />
   <meta name="robots" content="noindex,follow" />
-  <link rel="canonical" href="https://bizgrants.consulting/404.html" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0F52BA" />
   <meta name="author" content="BizGrants Consulting" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
   <style>
     .error-meta {
       font-family: 'JetBrains Mono', monospace;
@@ -32,15 +31,16 @@
       vertical-align: middle;
     }
   </style>
-  <script defer src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
+  <script async src="https://huntsales.io/api/tracking/script?t=9396c69016b3d10f2ddeb897da888778"></script>
 </head>
 <body>
   <header>
     <div class="container nav-container">
       <div class="logo">
-        <a href="/"><img decoding="async" width="1330" height="422" src="/images/logo.png" alt="BizGrants Consulting" class="logo-img" /></a>
+        <a href="/" class="logo-link"><img width="480" height="152" decoding="async" src="/images/logo.webp" alt="BizGrants Consulting" class="logo-img" fetchpriority="high" /></a>
       </div>
       <nav>
+        <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">&#9776;</button>
         <ul id="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/services/">Services</a></li>
@@ -78,5 +78,9 @@
       </div>
     </div>
   </footer>
+  <script>function toggleMenu(f){var u=document.getElementById('nav-links'),b=document.querySelector('.hamburger');if(!u)return;var o=u.classList.toggle('show',typeof f==='boolean'?f:!u.classList.contains('show'));if(b)b.setAttribute('aria-expanded',String(o));}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('nav-links').classList.contains('show')){toggleMenu(false);document.querySelector('.hamburger').focus();}});
+document.addEventListener('click',function(e){if(document.getElementById('nav-links').classList.contains('show')&&!e.target.closest('header'))toggleMenu(false);});
+document.querySelector('header nav').addEventListener('focusout',function(e){if(e.relatedTarget&&!e.relatedTarget.closest('header'))toggleMenu(false);});</script>
 </body>
 </html>

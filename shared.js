@@ -56,11 +56,12 @@ gtag('config', 'G-CWBH1DYTQB');
 
 /* === Apollo Website Tracker === */
 (function initApollo() {
-  var n = Math.random().toString(36).substring(7),
+  // Daily cache key: repeat page views reuse the browser cache instead of
+  // re-downloading the tracker, which is never more than a day old.
+  var v = Math.floor(Date.now() / 864e5),
       o = document.createElement('script');
-  o.src = 'https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=' + n;
+  o.src = 'https://assets.apollo.io/micro/website-tracker/tracker.iife.js?v=' + v;
   o.async = true;
-  o.defer = true;
   o.onload = function () {
     if (window.trackingFunctions && window.trackingFunctions.onLoad) {
       window.trackingFunctions.onLoad({ appId: '699fd8cac132220015d03495' });

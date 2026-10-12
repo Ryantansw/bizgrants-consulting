@@ -50,7 +50,7 @@
   <!-- Case Studies -->
   <url>
     <loc>https://bizgrants.consulting/case-studies/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/case-studies/medtech-job-redesign-reskilling/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/case-studies/biotech-commercial-reskilling/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/case-studies/industrial-climate-engineers/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -437,7 +437,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/case-studies/cybersecurity-presales-conversion-to-claim/</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -461,7 +461,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/case-studies/social-service-non-corporate-eligibility/</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -491,7 +491,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/case-studies/food-services-whitelist-pathway/</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -534,6 +534,96 @@
   <url>
     <loc>https://bizgrants.consulting/case-studies/environmental-services-workforce-scan/</loc>
     <lastmod>2026-08-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/ai-software-presales-reroute-to-claim/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/fintech-ai-audit-function-conversion/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/legal-practice-ai-practitioner-conversion/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/exchange-job-redesign-org-scan/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/it-asset-disposition-operations-conversion/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/food-distribution-sales-to-ecommerce-redesign/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/energy-efficiency-startup-twin-sales-hires/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/oncology-clinic-nurse-to-business-development/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/insurance-broker-banker-conversion/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/industrial-cooling-four-hires-three-pathways/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/medical-device-pivot-five-roles/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/consultancy-overseas-markets-redeployment/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/deep-tech-scientist-to-venture-development/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/gym-operator-approval-reversed-related-entity/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bizgrants.consulting/case-studies/childrens-fitness-job-redesign-service-length/</loc>
+    <lastmod>2026-10-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>

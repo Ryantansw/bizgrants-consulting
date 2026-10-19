@@ -137,7 +137,15 @@
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
+        <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/blog/" class="active">Blog</a></li>
@@ -160,7 +168,7 @@
     <span>10 min read</span>
   </div>
 
-  <p>Most Singapore employers still run their organisations on job descriptions written for a different decade. The tasks have quietly changed, the tools have changed, and the labour market around those roles has changed, but the design of the job has not. That gap is no longer a minor inefficiency. It is a strategic risk, and it shows up as capped productivity, roles that cannot attract talent, and slow AI adoption. The question is no longer whether to change how work is organised, but how quickly. This article makes the business case for <strong>job redesign</strong> as the central lever of <strong>workforce transformation in Singapore</strong>, and explains why redesigning the work itself, rather than simply hiring more or training more, is what makes gains stick. If you want the practical playbook alongside the argument, our <a href="/workforce-transformation/">workforce transformation advisory</a> pillar sets out how the pieces fit together.</p>
+  <p>Most Singapore employers still run their organisations on job descriptions written for a different decade. The tasks have quietly changed, the tools have changed, and the labour market around those roles has changed, but the design of the job has not. That gap is no longer a minor inefficiency. It is a strategic risk, and it shows up as capped productivity, roles that cannot attract talent, and slow AI adoption. The question is no longer whether to change how work is organised, but how quickly. This article makes the business case for <strong>job redesign</strong> as the central lever of <strong>workforce transformation in Singapore</strong>, and explains why redesigning the work itself, rather than simply hiring more or training more, is what makes gains stick. If you want the practical playbook alongside the argument, our <a href="/services/wdg-job-redesign/">workforce transformation advisory</a> pillar sets out how the pieces fit together.</p>
 
   <h2>Why the design of roles is now a strategic risk</h2>
   <p>A job is, at its core, a bundle of tasks tied to a set of tools and a level of decision-making. When any of those three shift, the bundle drifts out of alignment. In Singapore, all three are shifting at once. Software now absorbs work that used to fill an afternoon. The people available to do the remaining work are fewer and more expensive. And the expectations placed on every function, from finance to operations, now include obligations that did not exist when the role was first scoped. A role left unchanged in that environment does not stay still. It slowly becomes a worse deal for both the employer and the employee: the employer pays rising wages for stagnant output, and the employee spends their day on tasks that a machine could do and a competitor's staff no longer do.</p>
@@ -205,7 +213,7 @@
 
   <h2>How Singapore helps fund the change</h2>
   <p>The encouraging part of the case is that an employer does not carry the full cost alone. Singapore co-funds the two most expensive parts of transformation. The redesign work itself, from diagnosis to role scoping to technology enablement, can be supported through a job redesign grant such as <a href="/blog/wdg-job-redesign-grant/">WDG(JR+)</a>, which is designed to fund the reshaping of the job. The other expensive part, paying people while they reskill into the redesigned role, can be supported through a <a href="/wsg-career-conversion-programme/">Career Conversion Programme</a>, which offsets salary during the reskilling period so that transformation does not mean paying twice for the same seat.</p>
-  <p>Structured together, these two schemes reduce both the cash cost and the risk of change, which is often what unlocks a project that would otherwise sit on the shelf. Support levels and eligibility are subject to prevailing criteria, so verify current terms before applying. Our <a href="/workforce-transformation/">workforce transformation advisory</a> covers how the funding is sequenced around a redesign in practice.</p>
+  <p>Structured together, these two schemes reduce both the cash cost and the risk of change, which is often what unlocks a project that would otherwise sit on the shelf. Support levels and eligibility are subject to prevailing criteria, so verify current terms before applying. Our <a href="/services/wdg-job-redesign/">workforce transformation advisory</a> covers how the funding is sequenced around a redesign in practice.</p>
 
   <h2>What redesign looks like across sectors</h2>
   <p>The argument becomes concrete when you picture the roles. None of the examples below names a company; each describes a direction of travel that is already common.</p>
@@ -275,10 +283,13 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-          <li><a href="/services/">CCP advisory and role scoping</a></li>
-          <li><a href="/services/">Job redesign and OJT planning</a></li>
-          <li><a href="/blog/">Grant insights and guides</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
         </ul>
       </div>
       <div>

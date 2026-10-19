@@ -35,7 +35,7 @@
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
 
   <meta property="og:title" content="CCP & Job Redesign Grant Insights | Singapore Grants Blog | BizGrants Consulting Advisory" />
-  <meta property="og:description" content="Guides, FAQs, and real-world advice on CCP, job redesign grant, SkillsFuture, and government funding for Singapore companies. Unlock up to 90% salary support." />
+  <meta property="og:description" content="Guides, FAQs, and real-world advice on CCP, job redesign grant, SkillsFuture, and government funding for Singapore companies. Get 70% or 90% salary support." />
   <meta property="og:image" content="https://bizgrants.consulting/images/og/blog.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -46,7 +46,7 @@
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="CCP & Job Redesign Grant Insights | Singapore Grants Blog | BizGrants Consulting Advisory" />
-  <meta name="twitter:description" content="Guides, FAQs, and real-world advice on CCP, job redesign grant, SkillsFuture, and government funding for Singapore companies. Unlock up to 90% salary support." />
+  <meta name="twitter:description" content="Guides, FAQs, and real-world advice on CCP, job redesign grant, SkillsFuture, and government funding for Singapore companies. Get 70% or 90% salary support." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/og/blog.png" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
@@ -332,7 +332,15 @@
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
+        <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/blog/" class="active">Blog</a></li>
@@ -586,10 +594,13 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-            <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-          <li><a href="/services/">CCP advisory and role scoping</a></li>
-          <li><a href="/services/">Job redesign and OJT planning</a></li>
-          <li><a href="/blog/">Grant insights and guides</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
         </ul>
       </div>
       <div>

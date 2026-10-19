@@ -137,7 +137,15 @@
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
+        <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/blog/" class="active">Blog</a></li>
@@ -186,7 +194,7 @@
 
   <h2>How SFEC layers on top of a grant</h2>
   <p>The most valuable thing to understand about SFEC is that it applies in sequence with other funding rather than competing with it. Take a job redesign project funded under WDG(JR+) as the worked example, because it is the case most Singapore SMEs will encounter this year.</p>
-  <p>The grant co-funds a share of the project cost first. For an SME that is indicatively up to 70 per cent, which leaves the company carrying the remaining co-funding portion. SFEC is then applied against <em>that remaining amount</em>, supporting a further share of it, up to the credit the company holds. The compounding effect is the point: a company with unused credit ends up carrying materially less of the project cost than the headline co-funding rate on its own would suggest.</p>
+  <p>The grant co-funds a share of the project cost first. For an SME that is indicatively 70%, which leaves the company carrying the remaining co-funding portion. SFEC is then applied against <em>that remaining amount</em>, supporting a further share of it, up to the credit the company holds. The compounding effect is the point: a company with unused credit ends up carrying materially less of the project cost than the headline co-funding rate on its own would suggest.</p>
   <p>Two conditions govern whether that stack actually works. The company has to hold available credit, and the spend has to be a supportable activity under the credit&rsquo;s rules as well as fundable under the grant. Neither is automatic. Treat any worked example, including this one, as illustrative and subject to prevailing criteria and your own eligibility.</p>
   <p>There is also a sequencing trap worth naming. Under WDG(JR+), committing to a consultant before the Letter of Offer is issued makes the application ineligible, which in turn removes the grant layer that the credit was meant to sit on top of. Rushing to &ldquo;use the credit before November&rdquo; by signing something early is precisely the wrong move.</p>
 
@@ -206,7 +214,7 @@
 
   <h2>What to do this month</h2>
   <p>If you suspect you hold unused credit, the sequence is straightforward. Check the portal and establish the actual balance and expiry attached to your company. Identify whether there is workforce or job redesign work you were going to do anyway in the next year, since pulling genuine work forward is very different from inventing a project to absorb credit. Then map the timeline backwards from the expiry, allowing for scoping, application, and the Letter of Offer, and see whether the window is realistic. If it is not, you at least know that cleanly, and can plan against the next batch instead.</p>
-  <p>For most SMEs the honest answer is that the credit is worth acting on only when it is attached to a change the business already needed. That is the test worth applying before anything else. If you want the wider funding picture, our guide to <a href="/blog/singapore-government-grants-for-smes/">Singapore government grants for SMEs</a> sets out how the main schemes fit together, and our <a href="/workforce-transformation/">workforce transformation</a> pillar covers the job redesign side in depth.</p>
+  <p>For most SMEs the honest answer is that the credit is worth acting on only when it is attached to a change the business already needed. That is the test worth applying before anything else. If you want the wider funding picture, our guide to <a href="/blog/singapore-government-grants-for-smes/">Singapore government grants for SMEs</a> sets out how the main schemes fit together, and our <a href="/services/wdg-job-redesign/">workforce transformation</a> pillar covers the job redesign side in depth.</p>
 
   <div class="blog-article-faq">
     <h2>FAQ on SkillsFuture Enterprise Credit expiry</h2>
@@ -254,10 +262,13 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-          <li><a href="/services/">CCP advisory and role scoping</a></li>
-          <li><a href="/services/">Job redesign and OJT planning</a></li>
-          <li><a href="/blog/">Grant insights and guides</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
         </ul>
       </div>
       <div>

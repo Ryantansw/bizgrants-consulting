@@ -97,7 +97,7 @@
       {
         "@type": "Question",
         "name": "How is MCPP different from CCP?",
-        "acceptedAnswer": {"@type": "Answer", "text": "MCPP is an attachment with allowance support; CCP is a permanent placement with salary support. MCPP suits mature-worker trials in adjacent industries with shorter durations. CCP suits structural reskilling into a redesigned permanent role with longer OJT. MCPP caps at S$3,800 per month allowance; CCP supports up to 90 per cent of salary capped at S$45,000 per placement. MCPP is for trials; CCP is for hires."}
+        "acceptedAnswer": {"@type": "Answer", "text": "MCPP is an attachment with allowance support; CCP is a permanent placement with salary support. MCPP suits mature-worker trials in adjacent industries with shorter durations. CCP suits structural reskilling into a redesigned permanent role with longer OJT. MCPP caps at S$3,800 per month allowance; CCP supports 70% or 90% of salary capped at S$45,000 per placement. MCPP is for trials; CCP is for hires."}
       },
       {
         "@type": "Question",
@@ -137,7 +137,15 @@
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
+        <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/blog/" class="active">Blog</a></li>
@@ -178,7 +186,7 @@
   <h3>Funding shape</h3>
   <ul>
     <li><strong>MCPP</strong>: The host employer pays a defined monthly allowance during the attachment period, capped historically at <strong>S$3,800 per month</strong>. Skills and Workforce Development Agency co-funds part of the allowance. The funding amount is bounded by the cap regardless of the candidate's prior salary level.</li>
-    <li><strong>CCP</strong>: The candidate is paid a market salary by the employer, who then claims back up to <strong>90 per cent</strong> at the enhanced rate for workers aged 40 and above or long-term unemployed (or 70 per cent standard) during the OJT period, capped at <strong>S$45,000 per placement</strong>. The funding scales with the salary up to the cap.</li>
+    <li><strong>CCP</strong>: The candidate is paid a market salary by the employer, who then claims back <strong>90%</strong> at the enhanced rate for workers aged 40 and above or long-term unemployed (or 70% standard) during the OJT period, capped at <strong>S$45,000 per placement</strong>. The funding scales with the salary up to the cap.</li>
   </ul>
 
   <h3>Duration</h3>
@@ -226,7 +234,7 @@
       <li><strong>Q:</strong> What is Mid-Career Pathways Programme (MCPP)?<br />
           <strong>A:</strong> Mid-Career Pathways Programme (MCPP) is a Skills and Workforce Development Agency scheme that places mature workers (typically aged 40 and above) into attachment-style roles with host employers. The host pays a defined monthly allowance (capped historically at S$3,800 per month), with co-funding from Skills and Workforce Development Agency. MCPP is designed as a shorter trial-style placement, not a permanent reskilling track.</li>
       <li><strong>Q:</strong> How is MCPP different from CCP?<br />
-          <strong>A:</strong> MCPP is an attachment with allowance support; CCP is a permanent placement with salary support. MCPP suits mature-worker trials in adjacent industries with shorter durations. CCP suits structural reskilling into a redesigned permanent role with longer OJT. MCPP caps at S$3,800 per month allowance; CCP supports up to 90 per cent of salary capped at S$45,000 per placement. MCPP is for trials; CCP is for hires.</li>
+          <strong>A:</strong> MCPP is an attachment with allowance support; CCP is a permanent placement with salary support. MCPP suits mature-worker trials in adjacent industries with shorter durations. CCP suits structural reskilling into a redesigned permanent role with longer OJT. MCPP caps at S$3,800 per month allowance; CCP supports 70% or 90% of salary capped at S$45,000 per placement. MCPP is for trials; CCP is for hires.</li>
       <li><strong>Q:</strong> When should an employer use MCPP rather than CCP?<br />
           <strong>A:</strong> Use MCPP when: the candidate is aged 40 or above, the placement is exploratory rather than committed, the employer wants to test fit before offering a permanent role, the duration is shorter (typically 4 to 6 months), and the allowance level is appropriate for the role. Use CCP when: the role is being structurally redesigned, the candidate will be a permanent hire, the OJT scope justifies a 3 to 12 month structured training plan, and salary support up to S$45,000 makes the economics work.</li>
       <li><strong>Q:</strong> Can MCPP convert to a permanent CCP placement afterwards?<br />
@@ -266,10 +274,13 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-          <li><a href="/services/">CCP advisory and role scoping</a></li>
-          <li><a href="/services/">Job redesign and OJT planning</a></li>
-          <li><a href="/blog/">Grant insights and guides</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
         </ul>
       </div>
       <div>

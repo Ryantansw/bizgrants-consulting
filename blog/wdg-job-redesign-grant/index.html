@@ -97,7 +97,7 @@
       {
         "@type": "Question",
         "name": "How much does WDG(JR+) fund?",
-        "acceptedAnswer": {"@type": "Answer", "text": "WDG(JR+) typically co-funds up to 70 per cent of qualifying costs for SMEs and up to 50 per cent for non-SMEs, capped at S$150,000 per enterprise. Within that cap, Workforce Consultancy is supported up to S$50,000, Capability Building Initiatives up to S$60,000, and Workforce Tech Solutions up to S$90,000. Companies can tap the grant more than once until the S$150,000 cap is reached. These figures are subject to prevailing Skills and Workforce Development Agency criteria and should be verified before applying."}
+        "acceptedAnswer": {"@type": "Answer", "text": "WDG(JR+) typically co-funds 70% of qualifying costs for SMEs and 50% for non-SMEs, capped at S$150,000 per enterprise. Within that cap, Workforce Consultancy is supported up to S$50,000, Capability Building Initiatives up to S$60,000, and Workforce Tech Solutions up to S$90,000. Companies can tap the grant more than once until the S$150,000 cap is reached. These figures are subject to prevailing Skills and Workforce Development Agency criteria and should be verified before applying."}
       },
       {
         "@type": "Question",
@@ -137,7 +137,15 @@
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
+        <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/blog/" class="active">Blog</a></li>
@@ -160,7 +168,7 @@
     <span>8 min read</span>
   </div>
 
-  <p>The <strong>Workforce Development Grant (Job Redesign+)</strong>, usually shortened to <strong>WDG(JR+)</strong>, is the scheme Singapore employers use to fund <a href="/workforce-transformation/">workforce redesign</a>: rethinking how work is organised rather than simply buying a piece of software. If you are comparing options more broadly, our guide to the <a href="/blog/job-redesign-grant-singapore/">job redesign grant in Singapore</a> covers what changed in 2026 and which scheme now applies. It sits inside the Enterprise Workforce Transformation Package (EWTP), was launched in March 2026, and is administered by Skills and Workforce Development Agency (formerly Workforce Singapore). WDG(JR+) replaced the job redesign support that used to sit under the Productivity Solutions Grant (the PSG-JR track), which ended on 31 December 2025. If your last engagement with job redesign funding was through PSG, the mechanics have changed in ways worth understanding before you commit. This guide covers what WDG(JR+) is, its three components and how they must be bundled, funding levels, the nett-fee model, eligibility, the four-step application, and how the grant pairs with the Career Conversion Programme. Every figure here is indicative and subject to prevailing Skills and Workforce Development Agency criteria, so verify current numbers before applying. For the wider context, see our <a href="/workforce-transformation/">workforce transformation</a> pillar.</p>
+  <p>The <strong>Workforce Development Grant (Job Redesign+)</strong>, usually shortened to <strong>WDG(JR+)</strong>, is the scheme Singapore employers use to fund <a href="/services/wdg-job-redesign/">workforce redesign</a>: rethinking how work is organised rather than simply buying a piece of software. If you are comparing options more broadly, our guide to the <a href="/blog/job-redesign-grant-singapore/">job redesign grant in Singapore</a> covers what changed in 2026 and which scheme now applies. It sits inside the Enterprise Workforce Transformation Package (EWTP), was launched in March 2026, and is administered by Skills and Workforce Development Agency (formerly Workforce Singapore). WDG(JR+) replaced the job redesign support that used to sit under the Productivity Solutions Grant (the PSG-JR track), which ended on 31 December 2025. If your last engagement with job redesign funding was through PSG, the mechanics have changed in ways worth understanding before you commit. This guide covers what WDG(JR+) is, its three components and how they must be bundled, funding levels, the nett-fee model, eligibility, the four-step application, and how the grant pairs with the Career Conversion Programme. Every figure here is indicative and subject to prevailing Skills and Workforce Development Agency criteria, so verify current numbers before applying. For the wider context, see our <a href="/services/wdg-job-redesign/">workforce transformation</a> pillar.</p>
 
   <h2>What is WDG(JR+)?</h2>
   <p>WDG(JR+) is a co-funding grant designed to help Singapore employers redesign jobs, build workforce capability, and adopt workforce technology as a single, coordinated effort. The emphasis is on the <em>job</em>: how roles are structured, which tasks are automated or reallocated, how line managers and HR support the change, and how staff are prepared for redesigned work. It is deliberately broader than a technology-purchase grant, because job redesign that stops at buying a tool rarely delivers durable productivity gains.</p>
@@ -178,8 +186,8 @@
   <h2>How much does WDG(JR+) fund?</h2>
   <p>WDG(JR+) co-funds a share of qualifying costs, with the exact share depending on company size:</p>
   <ul>
-    <li><strong>SMEs</strong>: typically up to <strong>70 per cent</strong> of qualifying costs.</li>
-    <li><strong>Non-SMEs</strong>: typically up to <strong>50 per cent</strong> of qualifying costs.</li>
+    <li><strong>SMEs</strong>: typically <strong>70%</strong> of qualifying costs.</li>
+    <li><strong>Non-SMEs</strong>: typically <strong>50%</strong> of qualifying costs.</li>
     <li><strong>Overall cap</strong>: S$150,000 per enterprise, across all components and multiple applications.</li>
   </ul>
   <p>These percentages and the cap are indicative. Funding levels for Singapore grants are reviewed periodically, and the split that applies to your project depends on your enterprise classification and the prevailing Skills and Workforce Development Agency criteria at the time you apply. Treat the numbers here as a planning baseline and confirm the current rates before you scope a budget. The per-enterprise cap, rather than a per-project cap, means a company can sequence more than one redesign effort over time, provided the running total stays within S$150,000.</p>
@@ -243,7 +251,7 @@
       <li><strong>Q:</strong> What is the WDG(JR+) job redesign grant?<br />
           <strong>A:</strong> WDG(JR+) is the SkillsFuture Workforce Development Grant (Job Redesign+), part of the Enterprise Workforce Transformation Package launched in March 2026 and administered by Skills and Workforce Development Agency. It co-funds job redesign and workforce transformation projects across three components: Workforce Consultancy, Capability Building Initiatives, and Workforce Tech Solutions. It replaced the job redesign support previously offered under the Productivity Solutions Grant (PSG-JR), which ended on 31 December 2025. All figures are subject to prevailing Skills and Workforce Development Agency criteria, so verify before applying.</li>
       <li><strong>Q:</strong> How much does WDG(JR+) fund?<br />
-          <strong>A:</strong> WDG(JR+) typically co-funds up to 70 per cent of qualifying costs for SMEs and up to 50 per cent for non-SMEs, capped at S$150,000 per enterprise. Within that cap, Workforce Consultancy is supported up to S$50,000, Capability Building Initiatives up to S$60,000, and Workforce Tech Solutions up to S$90,000. Companies can tap the grant more than once until the S$150,000 cap is reached. These figures are subject to prevailing Skills and Workforce Development Agency criteria and should be verified before applying.</li>
+          <strong>A:</strong> WDG(JR+) typically co-funds 70% of qualifying costs for SMEs and 50% for non-SMEs, capped at S$150,000 per enterprise. Within that cap, Workforce Consultancy is supported up to S$50,000, Capability Building Initiatives up to S$60,000, and Workforce Tech Solutions up to S$90,000. Companies can tap the grant more than once until the S$150,000 cap is reached. These figures are subject to prevailing Skills and Workforce Development Agency criteria and should be verified before applying.</li>
       <li><strong>Q:</strong> Who is eligible for WDG(JR+)?<br />
           <strong>A:</strong> The company must be registered or incorporated and operating in Singapore, with at least three local employees who are Singapore Citizens or Permanent Residents. Critically, at the point of application the company must not have paid for, or signed a contract or purchase order for, the job redesign or workforce consultancy work. Committing to the consultant early makes the application ineligible, so the safest course is to sign nothing until the Letter of Offer is accepted. Final eligibility is subject to prevailing Skills and Workforce Development Agency criteria, so verify before applying.</li>
       <li><strong>Q:</strong> How is WDG(JR+) different from the old PSG job redesign support?<br />
@@ -284,10 +292,13 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-          <li><a href="/services/">CCP advisory and role scoping</a></li>
-          <li><a href="/services/">Job redesign and OJT planning</a></li>
-          <li><a href="/blog/">Grant insights and guides</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
         </ul>
       </div>
       <div>

@@ -24,7 +24,7 @@
   <link rel="dns-prefetch" href="https://assets.apollo.io" />
 
   <title>BizGrants | Workforce Transformation &amp; Grants SG</title>
-  <meta name="description" content="Singapore workforce transformation advisory: WDG(JR+) to redesign jobs and CCP to fund reskilling, with up to 90% salary support. Book a free call." />
+  <meta name="description" content="Singapore workforce transformation advisory: WDG(JR+) to redesign jobs and CCP to fund reskilling, with 70% or 90% salary support. Book a free call." />
   <link rel="canonical" href="https://bizgrants.consulting/" />
   <link rel="alternate" hreflang="en-SG" href="https://bizgrants.consulting/" />
   <link rel="alternate" hreflang="en" href="https://bizgrants.consulting/" />
@@ -34,7 +34,7 @@
 
   <!-- Open Graph & Twitter Cards -->
   <meta property="og:title" content="BizGrants Consulting | Career Conversion, Job Redesign & SWDA Grant Experts" />
-  <meta property="og:description" content="Singapore’s trusted partner for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture advisory. Get up to 90% salary support with full application support." />
+  <meta property="og:description" content="Singapore’s trusted partner for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture advisory. Get 70% or 90% salary support with full application support." />
   <meta property="og:locale" content="en_SG" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bizgrants.consulting/" />
@@ -44,7 +44,7 @@
   <meta property="og:site_name" content="BizGrants Consulting" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="BizGrants Consulting | Career Conversion, Job Redesign & SWDA Grant Experts" />
-  <meta name="twitter:description" content="Singapore’s trusted partner for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture advisory. Get up to 90% salary support with full application support." />
+  <meta name="twitter:description" content="Singapore’s trusted partner for Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture advisory. Get 70% or 90% salary support with full application support." />
   <meta name="twitter:image" content="https://bizgrants.consulting/images/og/home.png" />
   <!-- Apollo Website Tracker -->
 
@@ -68,7 +68,7 @@
         "name": "How much salary support can my company receive?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Depending on the CCP and the employee profile (the enhanced rate is for workers aged 40 and above or long-term unemployed), employers may receive up to 70% to 90% salary support for the programme duration. We help frame the job scope, structured OJT and documentation so the application aligns clearly with programme criteria."
+          "text": "Depending on the CCP and the employee profile (the enhanced rate is for workers aged 40 and above or long-term unemployed), employers may receive 70% to 90% salary support for the programme duration. We help frame the job scope, structured OJT and documentation so the application aligns clearly with programme criteria."
         }
       },
       {
@@ -408,7 +408,15 @@
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
         <ul id="nav-links">
           <li><a href="/" class="active">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
           <li><a href="/about/">About</a></li>
           <li><a href="/case-studies/">Case Studies</a></li>
           <li><a href="/blog/">Blog</a></li>
@@ -426,7 +434,7 @@
           <div class="hero-eyebrow">Singapore · Workforce Transformation &amp; Grant Advisory</div>
           <h1>Workforce funding that&rsquo;s structured, documented, and approved.</h1>
           <p class="lede">
-            A workforce transformation advisory built on two funding pillars: WDG(JR+) to redesign roles and build manager capability, and Career Conversion Programmes to fund salaries while your people reskill into them. We scope, structure and see both through.
+            A workforce transformation advisory built on three pillars: Career Conversion Programme salary support, WDG(JR+) job redesign and AI Transformation. We scope, structure and see each one through.
           </p>
 
           <div class="hero-badges">
@@ -474,26 +482,32 @@
     </section>
 
 
-    <!-- Two funding pillars band (prominent) -->
+    <!-- Three service pillars band (prominent) -->
     <section class="section-dark" style="background: var(--surface-deep); color: var(--on-dark); border-top: 3px solid var(--accent);">
       <div class="container" style="padding: var(--space-8) 0;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin:0 0 var(--space-4);">Two funding pillars</div>
-        <h2 style="color:var(--on-dark); max-width:22ch; font-size:clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem); margin:0 0 var(--space-6);">WDG(JR+) funds the job redesign. CCP funds the reskilling.</h2>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:var(--space-7); border-top:1px solid rgba(255,255,255,0.16); padding-top:var(--space-6);">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin:0 0 var(--space-4);">Three service pillars</div>
+        <h2 style="color:var(--on-dark); max-width:26ch; font-size:clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem); margin:0 0 var(--space-6);">Hire, redesign and automate, with the funding to match.</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:var(--space-7); border-top:1px solid rgba(255,255,255,0.16); padding-top:var(--space-6);">
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:0 0 var(--space-3);">Pillar 01 &middot; The job</div>
-            <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; font-weight:600; color:var(--on-dark); margin:0 0 var(--space-3);"><a href="/workforce-transformation/" style="color:var(--on-dark); text-decoration:none;">WDG(JR+)</a></div>
-            <p style="color:var(--on-dark-mute); margin:0 0 var(--space-4); max-width:46ch; line-height:1.55;">The new Skills and Workforce Development Agency (SWDA) grant that funds job redesign, manager capability and HR tech. Up to 70% for SMEs, capped at S$150,000 per enterprise.</p>
-            <a href="/workforce-transformation/" style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); text-decoration:none;">Watch the WDG(JR+) explainer &rarr;</a>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin:0 0 var(--space-3);">Pillar 01 &middot; The person</div>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; font-weight:600; color:var(--on-dark); margin:0 0 var(--space-3);"><a href="/services/career-conversion-programme/" style="color:var(--on-dark); text-decoration:none;">Career Conversion Programme</a></h3>
+            <p style="color:var(--on-dark-mute); margin:0 0 var(--space-4); max-width:46ch; line-height:1.55;">Salary support for new hires and existing staff.</p>
+            <p style="margin:0;"><a href="/services/career-conversion-programme/" style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); text-decoration:none;">Explore CCP &rarr;</a></p>
           </div>
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--on-dark-mute); margin:0 0 var(--space-3);">Pillar 02 &middot; The person</div>
-            <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; font-weight:600; color:var(--on-dark); margin:0 0 var(--space-3);"><a href="/wsg-career-conversion-programme/" style="color:var(--on-dark); text-decoration:none;">Career Conversion Programmes</a></div>
-            <p style="color:var(--on-dark-mute); margin:0 0 var(--space-4); max-width:46ch; line-height:1.55;">Salary support while your people reskill into the redesigned roles. Up to around 90%, about S$45,000 over a typical six-month programme.</p>
-            <a href="/wsg-career-conversion-programme/" style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); text-decoration:none;">Watch the CCP explainer &rarr;</a>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--on-dark-mute); margin:0 0 var(--space-3);">Pillar 02 &middot; The job</div>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; font-weight:600; color:var(--on-dark); margin:0 0 var(--space-3);"><a href="/services/wdg-job-redesign/" style="color:var(--on-dark); text-decoration:none;">WDG(JR+) job redesign</a></h3>
+            <p style="color:var(--on-dark-mute); margin:0 0 var(--space-4); max-width:46ch; line-height:1.55;">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</p>
+            <p style="margin:0;"><a href="/services/wdg-job-redesign/" style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); text-decoration:none;">Explore WDG(JR+) &rarr;</a></p>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--on-dark-mute); margin:0 0 var(--space-3);">Pillar 03 &middot; The workflow</div>
+            <h3 style="font-family:'Bricolage Grotesque',sans-serif; font-size:1.5rem; font-weight:600; color:var(--on-dark); margin:0 0 var(--space-3);"><a href="/services/ai-transformation/" style="color:var(--on-dark); text-decoration:none;">AI Transformation</a></h3>
+            <p style="color:var(--on-dark-mute); margin:0 0 var(--space-4); max-width:46ch; line-height:1.55;">Automate your workflows with 70% project funding, and train your team to run them.</p>
+            <p style="margin:0;"><a href="/services/ai-transformation/" style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); text-decoration:none;">Explore AI &rarr;</a> &middot; <a href="/services/ai-transformation/use-cases/" style="font-family:'JetBrains Mono',monospace; font-size:var(--fs-tiny); letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); text-decoration:none;">47 use cases &rarr;</a></p>
           </div>
         </div>
-        <p style="color:var(--on-dark-mute); font-size:var(--fs-small); margin:var(--space-6) 0 0;">Redesign the role first, then convert, because the two grants pay for different cost components. Figures are subject to prevailing SWDA criteria. <a href="/workforce-transformation/" style="color:var(--on-dark); text-decoration:underline; text-underline-offset:3px;">See how workforce transformation works &rarr;</a></p>
+        <p style="color:var(--on-dark-mute); font-size:var(--fs-small); margin:var(--space-6) 0 0;">All funding is subject to eligibility and approval. <a href="/services/" style="color:var(--on-dark); text-decoration:underline; text-underline-offset:3px;">See all services &rarr;</a></p>
       </div>
     </section>
 
@@ -503,7 +517,7 @@
         <div>
           <div class="section-header">
             <div class="section-kicker">02 &middot; 90-second overview</div>
-            <h2 class="section-title">Two funding pillars, one 90-second explainer.</h2>
+            <h2 class="section-title">How CCP and WDG(JR+) work together, in 90 seconds.</h2>
             <p class="section-lead">
               A short explainer for employers on how the two pillars work together: WDG(JR+) funds the job redesign, and the Career Conversion Programme funds salaries while your people reskill into the redesigned roles.
             </p>
@@ -624,7 +638,7 @@
           <div class="bordered-box">
             <h3>How employers benefit</h3>
             <ul>
-              <li>Receive up to 70% to 90% salary support for eligible staff on structured on-the-job training.</li>
+              <li>Receive 70% to 90% salary support for eligible staff on structured on-the-job training.</li>
               <li>Reduce hiring and training costs when building new capabilities in digital, sustainability, tech, HR and more.</li>
               <li>Tap into a broader mid-career talent pool while maintaining a sustainable payroll.</li>
               <li>Align job redesign with real business needs instead of purely HR-driven initiatives.</li>
@@ -670,11 +684,11 @@
           <div class="bordered-box">
             <h3>Two funding pillars: the job and the person</h3>
             <ul>
-              <li><strong>WDG(JR+) funds the job.</strong> The redesign consultancy, manager capability and HR tech, up to 70% for SMEs and capped at S$150,000 per enterprise.</li>
-              <li><strong>CCP funds the person.</strong> Salary support while your staff reskill into the redesigned roles, up to around 90% and about S$45,000 over a typical six-month programme.</li>
+              <li><strong>WDG(JR+) funds the job.</strong> The redesign consultancy, manager capability and HR tech, 70% for SMEs and capped at S$150,000 per enterprise.</li>
+              <li><strong>CCP funds the person.</strong> Salary support while your staff reskill into the redesigned roles, 70% or 90% of monthly salary over a typical six-month programme.</li>
               <li><strong>They stack.</strong> Redesign the role first, then convert, because the two grants pay for different cost components.</li>
             </ul>
-            <p>Figures are subject to prevailing Skills and Workforce Development Agency criteria. <a href="/workforce-transformation/">See how workforce transformation works &rarr;</a></p>
+            <p>Figures are subject to prevailing Skills and Workforce Development Agency criteria. <a href="/services/wdg-job-redesign/">See how workforce transformation works &rarr;</a></p>
           </div>
         </div>
       </div>
@@ -766,7 +780,7 @@
           <details class="faq-item">
             <summary>How much salary support can my company receive?</summary>
             <p>
-              Depending on the CCP and the employee profile (the enhanced rate is for workers aged 40 and above or long-term unemployed), employers may receive up to 70% to 90% salary support for the programme duration. We help frame the job scope, structured OJT and documentation so the application aligns clearly with programme criteria.
+              Depending on the CCP and the employee profile (the enhanced rate is for workers aged 40 and above or long-term unemployed), employers may receive 70% to 90% salary support for the programme duration. We help frame the job scope, structured OJT and documentation so the application aligns clearly with programme criteria.
             </p>
           </details>
 
@@ -819,7 +833,7 @@
             <div class="guide-title">CCP pathways, eligible roles by sector</div>
             <div class="guide-desc">Reference of all 12 CCP pathways with eligibility, salary minimums and supported job families.</div>
           </a>
-          <a href="/workforce-transformation/" class="guide-card">
+          <a href="/services/wdg-job-redesign/" class="guide-card">
             <div class="guide-num">G / 05</div>
             <div class="guide-title">Workforce transformation &amp; job redesign</div>
             <div class="guide-desc">How WDG(JR+) funds the job redesign and CCP funds the reskilling, and how the two stack for Singapore employers.</div>
@@ -861,9 +875,12 @@
         <div>
           <div class="footer-heading">Services</div>
           <ul class="footer-links">
-            <li><a href="/workforce-transformation/">Workforce transformation &amp; job redesign</a></li>
-            <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-            <li><a href="/services/">CCP advisory &amp; role scoping</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
             <li><a href="/blog/">Grant insights &amp; guides</a></li>
           </ul>
         </div>

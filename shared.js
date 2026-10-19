@@ -48,6 +48,39 @@ function toggleMenu(force) {
   });
 })();
 
+/* === Services dropdown in the main nav ===
+   The toggle button opens and closes the submenu; Escape, a click outside
+   or focus leaving the dropdown closes it. On narrow screens the submenu
+   is always shown inside the mobile menu, so the toggle is hidden by CSS. */
+(function initNavDropdown() {
+  var drops = document.querySelectorAll('.nav-dropdown');
+  Array.prototype.forEach.call(drops, function (drop) {
+    var btn = drop.querySelector('.nav-dropdown-toggle');
+    if (!btn) return;
+    function setOpen(open) {
+      drop.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setOpen(!drop.classList.contains('open'));
+    });
+    drop.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drop.classList.contains('open')) {
+        e.stopPropagation();
+        setOpen(false);
+        btn.focus();
+      }
+    });
+    drop.addEventListener('focusout', function (e) {
+      if (!e.relatedTarget || !drop.contains(e.relatedTarget)) setOpen(false);
+    });
+    document.addEventListener('click', function (e) {
+      if (!drop.contains(e.target)) setOpen(false);
+    });
+  });
+})();
+
 /* === GA4 (Google Analytics) === */
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }

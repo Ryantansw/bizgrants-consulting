@@ -176,7 +176,15 @@
         <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
         <ul id="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/services/">Services</a></li>
+          <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
           <li><a href="/about/">About</a></li>
           <li><a href="/case-studies/">Case Studies</a></li>
           <li><a href="/blog/">Blog</a></li>
@@ -259,7 +267,7 @@
         <div class="section-kicker">05 &middot; Eligibility realities for wholesalers</div>
         <h2 class="section-title">What trading firms need in place before applying.</h2>
       </div>
-      <p>Three eligibility realities decide most wholesale trade applications. First, the employer must be Singapore-registered and the candidate must be a Singapore Citizen or Permanent Resident. Second, the role must be substantially different from the candidate&rsquo;s prior job for a new hire, or genuinely redesigned for an existing employee. Third, the timing and tenure conditions must be met: new hires generally need a permanent or twelve-month-plus contract with the programme starting within about three months of employment, while existing staff generally need to have been employed for more than a year and be supported by a business transformation and <a href="/workforce-transformation/">job redesign</a> plan.</p>
+      <p>Three eligibility realities decide most wholesale trade applications. First, the employer must be Singapore-registered and the candidate must be a Singapore Citizen or Permanent Resident. Second, the role must be substantially different from the candidate&rsquo;s prior job for a new hire, or genuinely redesigned for an existing employee. Third, the timing and tenure conditions must be met: new hires generally need a permanent or twelve-month-plus contract with the programme starting within about three months of employment, while existing staff generally need to have been employed for more than a year and be supported by a business transformation and <a href="/services/wdg-job-redesign/">job redesign</a> plan.</p>
       <p>For trading firms, the redesign test is where applications most often wobble. A wholesaler adopting a B2B platform or digital trade documentation genuinely changes roles, but the job description has to show it. If a converted coordinator&rsquo;s daily tasks read the same as before with a digital label attached, the scope-change claim is weak regardless of the firm&rsquo;s transformation story. Strong applications show the redesigned role on the headcount plan as a distinct function, with new accountabilities tied to the platform, analytics or compliance capability the firm is actually building. The structured training plan should be validated and endorsed before it commences, not reconstructed afterwards.</p>
     </section>
 
@@ -325,7 +333,7 @@
         <li><a href="/wsg-career-conversion-programme/">SWDA Career Conversion Programme: full employer guide</a></li>
         <li><a href="/ccp-for-employers/">CCP for Employers: step-by-step process</a></li>
         <li><a href="/ccp-grant-singapore/">CCP grant funding mechanics, caps, and claims</a></li>
-        <li><a href="/workforce-transformation/">Workforce transformation and job redesign advisory</a></li>
+        <li><a href="/services/wdg-job-redesign/">Workforce transformation and job redesign advisory</a></li>
         <li><a href="/blog/jobs-transformation-maps/">Jobs Transformation Maps: using sector roadmaps in grant applications</a></li>
       </ul>
     </section>
@@ -356,9 +364,12 @@
         <div>
           <div class="footer-heading">Services</div>
           <ul class="footer-links">
-            <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
             <li><a href="/case-studies/">Case studies</a></li>
-            <li><a href="/services/">CCP advisory &amp; role scoping</a></li>
             <li><a href="/blog/">Grant insights &amp; guides</a></li>
           </ul>
         </div>

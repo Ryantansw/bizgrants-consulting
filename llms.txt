@@ -26,7 +26,7 @@
 - [Services hub](https://bizgrants.consulting/services/): Three pillars: CCP salary support, WDG(JR+) job redesign and AI Transformation
 - [Career Conversion Programme](https://bizgrants.consulting/services/career-conversion-programme/): 70% to 90% salary support for new hires and existing staff, with pathway checks, applications and claims
 - [WDG(JR+) job redesign](https://bizgrants.consulting/services/wdg-job-redesign/): 70% funded job redesign for SMEs (50% non-SMEs), capped at $150,000 per enterprise, with redesigned staff invited to apply for CCP
-- [AI Transformation](https://bizgrants.consulting/services/ai-transformation/): AI and automation funded under WDG(JR+) Scope 3, paired with job redesign, built by our Technology Partner
+- [AI Transformation](https://bizgrants.consulting/services/ai-transformation/): AI and automation funded under WDG(JR+) Scope 3, paired with job redesign, built by our tech team
 - [AI use case library](https://bizgrants.consulting/services/ai-transformation/use-cases/): 47 AI use cases for Singapore SMEs by function and industry
 
 ## Case studies

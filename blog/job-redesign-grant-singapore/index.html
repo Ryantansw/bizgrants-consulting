@@ -137,7 +137,15 @@
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
+        <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/blog/" class="active">Blog</a></li>
@@ -225,7 +233,7 @@
 
   <h2>How job redesign funding pairs with CCP salary support</h2>
   <p>WDG(JR+) is only half of the workforce-funding picture. It funds the <strong>job</strong>: the consultancy, capability building and technology that turn an old role into a new one. It does not fund the <strong>person</strong> who has to grow into that role. That is the territory of the <a href="/wsg-career-conversion-programme/">Career Conversion Programme (CCP)</a>, which provides salary support while an existing employee or a new mid-career hire is reskilled into a new or substantively redesigned role.</p>
-  <p>Because the two schemes fund different costs, they can often be used in sequence on the same transformation, subject to the rule that no single cost is funded twice. The pattern we see work most often is <strong>redesign, then convert</strong>: use WDG(JR+) to diagnose the operation, redesign the roles and put the enabling technology in place, then use CCP salary support to fund the months in which the affected employees are trained into the redesigned roles. The redesign project also produces exactly the evidence a CCP application needs, because a documented job-redesign blueprint is the cleanest way to show an assessor that a role is genuinely new rather than relabelled. Sequencing, timing and stacking rules vary by case, so verify the combination against prevailing SWDA criteria; our <a href="/workforce-transformation/">workforce transformation</a> pillar page sets out how the full funding stack fits together.</p>
+  <p>Because the two schemes fund different costs, they can often be used in sequence on the same transformation, subject to the rule that no single cost is funded twice. The pattern we see work most often is <strong>redesign, then convert</strong>: use WDG(JR+) to diagnose the operation, redesign the roles and put the enabling technology in place, then use CCP salary support to fund the months in which the affected employees are trained into the redesigned roles. The redesign project also produces exactly the evidence a CCP application needs, because a documented job-redesign blueprint is the cleanest way to show an assessor that a role is genuinely new rather than relabelled. Sequencing, timing and stacking rules vary by case, so verify the combination against prevailing SWDA criteria; our <a href="/services/wdg-job-redesign/">workforce transformation</a> pillar page sets out how the full funding stack fits together.</p>
 
   <h2>What to do next, depending on your situation</h2>
   <p><strong>If your company has never used job-redesign funding.</strong> You are starting at a good moment, because the current scheme is the most generous version of this support to date. Start with the problem, not the grant: identify the roles where technology adoption or process change is creating a real gap between what the job is and what it needs to become. Then read our <a href="/blog/wdg-job-redesign-grant/">WDG(JR+) guide</a> for the component structure and application flow, and shortlist pre-approved consultants whose sector experience matches yours. Do not commit to anyone until the Letter of Offer arrives.</p>
@@ -280,10 +288,13 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-          <li><a href="/services/">CCP advisory and role scoping</a></li>
-          <li><a href="/services/">Job redesign and OJT planning</a></li>
-          <li><a href="/blog/">Grant insights and guides</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
         </ul>
       </div>
       <div>

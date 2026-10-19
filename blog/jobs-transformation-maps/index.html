@@ -137,7 +137,15 @@
       <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
       <ul id="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/services/">Services</a></li>
+        <li class="nav-dropdown">
+            <a href="/services/">Services</a><button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-services-menu" aria-label="Show Services menu"></button>
+            <ul class="nav-submenu" id="nav-services-menu">
+            <li><a href="/services/career-conversion-programme/"><span class="nav-sub-title">Career Conversion Programme</span><span class="nav-sub-desc">Salary support for new hires and existing staff.</span></a></li>
+            <li><a href="/services/wdg-job-redesign/"><span class="nav-sub-title">WDG(JR+) job redesign</span><span class="nav-sub-desc">Redesign jobs with 70% funding. Redesigned staff can then be invited to apply for CCP salary support.</span></a></li>
+            <li><a href="/services/ai-transformation/"><span class="nav-sub-title">AI Transformation</span><span class="nav-sub-desc">Automate your workflows with 70% project funding, and train your team to run them.</span></a></li>
+            <li><a href="/services/ai-transformation/use-cases/"><span class="nav-sub-title">AI use case library</span><span class="nav-sub-desc">Practical AI use cases by function and industry, with the roles each one redesigns.</span></a></li>
+            </ul>
+          </li>
         <li><a href="/about/">About</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/blog/" class="active">Blog</a></li>
@@ -160,7 +168,7 @@
     <span>8 min read</span>
   </div>
 
-  <p>If you are preparing a workforce-transformation submission in Singapore, the single most useful public document you can read before writing a word is your sector&rsquo;s <strong>Jobs Transformation Map (JTM)</strong>. A Jobs Transformation Map in Singapore is a sector-level study, published under the SkillsFuture movement and developed with industry, unions and government agencies, that sets out how technology and industry trends are expected to reshape the jobs and skills in a sector over roughly the next three to five years. For employers, the JTM is more than a policy paper. It is the reference document that assessors at the Skills and Workforce Development Agency (SWDA, formerly Workforce Singapore) and its appointed programme administrators tend to use when they judge whether a redesigned role is genuinely where the sector is heading. This guide explains what a JTM is, which sectors have one, why the maps matter for schemes such as the <a href="/wsg-career-conversion-programme/">Career Conversion Programme (CCP)</a> and <a href="/blog/wdg-job-redesign-grant/">WDG(JR+)</a>, and how to translate a JTM into a stronger submission. It sits alongside our <a href="/workforce-transformation/">workforce transformation</a> pillar, which covers the full funding stack.</p>
+  <p>If you are preparing a workforce-transformation submission in Singapore, the single most useful public document you can read before writing a word is your sector&rsquo;s <strong>Jobs Transformation Map (JTM)</strong>. A Jobs Transformation Map in Singapore is a sector-level study, published under the SkillsFuture movement and developed with industry, unions and government agencies, that sets out how technology and industry trends are expected to reshape the jobs and skills in a sector over roughly the next three to five years. For employers, the JTM is more than a policy paper. It is the reference document that assessors at the Skills and Workforce Development Agency (SWDA, formerly Workforce Singapore) and its appointed programme administrators tend to use when they judge whether a redesigned role is genuinely where the sector is heading. This guide explains what a JTM is, which sectors have one, why the maps matter for schemes such as the <a href="/wsg-career-conversion-programme/">Career Conversion Programme (CCP)</a> and <a href="/blog/wdg-job-redesign-grant/">WDG(JR+)</a>, and how to translate a JTM into a stronger submission. It sits alongside our <a href="/services/wdg-job-redesign/">workforce transformation</a> pillar, which covers the full funding stack.</p>
 
   <h2>What is a Jobs Transformation Map?</h2>
   <p>A JTM is a forward-looking study of one sector&rsquo;s workforce. Each map is typically commissioned by the relevant government agencies together with industry associations and unions, researched with employers in the sector, and published under the SkillsFuture banner. The output is a role-by-role analysis of how work in the sector is expected to change: which job tasks are likely to decline as technology absorbs them, which tasks will grow in importance, which entirely new roles are expected to emerge, and what skills gaps the existing workforce needs to close to make the transition.</p>
@@ -256,10 +264,13 @@
       <div>
         <div class="footer-heading">Services</div>
         <ul class="footer-links">
-          <li><a href="/pathways/">CCP pathways &amp; eligible roles</a></li>
-          <li><a href="/services/">CCP advisory and role scoping</a></li>
-          <li><a href="/services/">Job redesign and OJT planning</a></li>
-          <li><a href="/blog/">Grant insights and guides</a></li>
+            <li><a href="/services/career-conversion-programme/">Career Conversion Programme</a></li>
+            <li><a href="/services/wdg-job-redesign/">WDG(JR+) job redesign</a></li>
+            <li><a href="/services/ai-transformation/">AI Transformation</a></li>
+            <li><a href="/services/ai-transformation/use-cases/">AI use case library</a></li>
+            <li><a href="/pathways/">CCP Programme Pathways</a></li>
+            <li><a href="/case-studies/">Case studies</a></li>
+            <li><a href="/blog/">Grant insights &amp; guides</a></li>
         </ul>
       </div>
       <div>

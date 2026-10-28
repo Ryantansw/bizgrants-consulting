@@ -81,7 +81,7 @@
     var runner = new Runner(root);
     var flows = Array.prototype.slice.call(root.querySelectorAll('.wf-flow'));
     var chips = Array.prototype.slice.call(root.querySelectorAll('.wf-chip'));
-    var select = root.querySelector('#wf-select');
+    var select = root.querySelector('.wf-select-wrap select');
     var toggle = root.querySelector('.wf-toggle');
     if (!flows.length) return;
 

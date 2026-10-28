@@ -2059,13 +2059,12 @@ nav ul.nav-submenu a:hover, nav ul.nav-submenu a:focus-visible { background: var
 .wf-select-wrap { display: none; }
 .wf-select-wrap label { display: block; font-family: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace; font-size: var(--fs-tiny); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: var(--space-2); }
 .wf-select-wrap select { width: 100%; padding: 10px 12px; font: inherit; border: 1px solid var(--rule); border-radius: var(--radius-sm); background: var(--surface); color: var(--ink); }
-.wf:not(.is-enhanced) .wf-picker, .wf:not(.is-enhanced) .wf-toggle { display: none; }
+.wf:not(.is-enhanced) .wf-picker { display: none; }
 .wf-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); margin: var(--space-6) 0 0; padding-top: var(--space-4); border-top: 1px solid var(--rule); }
 .wf-single .wf-bar { margin-top: 0; }
-.wf-legend { margin: 0; font-size: var(--fs-small); color: var(--ink-muted); }
+.wf-legend { margin: 0; max-width: none; font-size: var(--fs-small); color: var(--ink-muted); }
 .wf-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); vertical-align: middle; margin-right: 4px; }
 .wf-legend-team { font-family: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace; font-size: var(--fs-tiny); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); border-top: 3px solid var(--accent); padding-top: 2px; display: inline-block; white-space: nowrap; }
-.wf-toggle { padding: 8px 14px; }
 
 .wf-flow { margin-top: var(--space-6); scroll-margin-top: 110px; }
 .wf-flow[hidden] { display: none; }

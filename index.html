@@ -511,12 +511,294 @@
       </div>
     </section>
 
+    <!-- AI workflows in motion -->
+    <section class="section" id="ai-at-work">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">02 &middot; AI at work</div>
+          <h2 class="section-title">When something comes in, here is what AI does next.</h2>
+          <p class="section-lead">Six everyday workflows, step by step. AI does the reading, checking and drafting, your team approves what matters, and each step shows the value it adds. Projects like these can be funded at 70% under WDG(JR+), subject to eligibility and approval.</p>
+        </div>
+        <div class="wf" data-wf>
+          <div class="wf-picker">
+            <p class="wf-picker-label" id="wf-label-home">Pick a workflow</p>
+            <div class="wf-chips" role="group" aria-labelledby="wf-label-home">
+            <button type="button" class="wf-chip" data-flow="finance" aria-pressed="true" aria-controls="wf-finance">Finance</button>
+            <button type="button" class="wf-chip" data-flow="sales" aria-pressed="false" aria-controls="wf-sales">Sales</button>
+            <button type="button" class="wf-chip" data-flow="service" aria-pressed="false" aria-controls="wf-service">Customer service</button>
+            <button type="button" class="wf-chip" data-flow="hr" aria-pressed="false" aria-controls="wf-hr">HR</button>
+            <button type="button" class="wf-chip" data-flow="logistics" aria-pressed="false" aria-controls="wf-logistics">Logistics</button>
+            <button type="button" class="wf-chip" data-flow="construction" aria-pressed="false" aria-controls="wf-construction">Construction</button>
+            </div>
+            <div class="wf-select-wrap">
+              <label for="wf-select">Choose a workflow</label>
+              <select id="wf-select">
+                <option value="finance">Finance: Supplier invoice to payment</option>
+                <option value="sales">Sales: Enquiry to quotation</option>
+                <option value="service">Customer service: WhatsApp enquiry to resolution</option>
+                <option value="hr">HR: Job application to interview</option>
+                <option value="logistics">Logistics: Shipping documents to customer update</option>
+                <option value="construction">Construction: Site photos to daily report</option>
+              </select>
+            </div>
+          </div>
+          <div class="wf-bar">
+            <p class="wf-legend"><span class="wf-dot" aria-hidden="true"></span> The dot follows the work from step to step. <span class="wf-legend-team">Your team</span> marks where a person approves.</p>
+            <button type="button" class="wf-toggle btn-ghost">Pause animation</button>
+          </div>
+          <div class="wf-flows">
+        <article class="wf-flow" id="wf-finance" data-flow="finance">
+          <p class="wf-area">Finance and accounts</p>
+          <h3 class="wf-name">Supplier invoice to payment</h3>
+          <p class="wf-trigger">When a supplier invoice lands in your inbox:</p>
+          <ol class="wf-steps" style="--n: 5;">
+            <li class="wf-step" data-kind="in">
+              <span class="wf-kind">Comes in</span>
+              <strong class="wf-title">Invoice arrives</strong>
+              <span class="wf-desc">A PDF by email, or an e-invoice through InvoiceNow.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Captured the moment it lands</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">AI reads it</strong>
+              <span class="wf-desc">Supplier, amounts, GST and line items are extracted.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No re-keying</span>
+            </li>
+            <li class="wf-step" data-kind="check">
+              <span class="wf-kind">AI checks</span>
+              <strong class="wf-title">Three-way match</strong>
+              <span class="wf-desc">Checked against the purchase order and delivery order.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Mismatches caught before payment</span>
+            </li>
+            <li class="wf-step" data-kind="team">
+              <span class="wf-kind">Your team</span>
+              <strong class="wf-title">Accounts reviews exceptions</strong>
+              <span class="wf-desc">Only mismatches and new suppliers need a person.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Judgement where it matters</span>
+            </li>
+            <li class="wf-step" data-kind="sys">
+              <span class="wf-kind">Updates</span>
+              <strong class="wf-title">Posted and scheduled</strong>
+              <span class="wf-desc">Entered in your accounting software, with payment queued.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Books stay current</span>
+            </li>
+          </ol>
+          <p class="wf-role"><strong>How the job changes:</strong> Accounts executive: from keying in invoices to reviewing exceptions and supplier terms. <a href="/services/ai-transformation/use-cases/#uc-invoice-capture-and-three-way-matching">See the use case &rarr;</a></p>
+        </article>
+        <article class="wf-flow" id="wf-sales" data-flow="sales">
+          <p class="wf-area">Sales</p>
+          <h3 class="wf-name">Enquiry to quotation</h3>
+          <p class="wf-trigger">When a customer sends a request for quotation:</p>
+          <ol class="wf-steps" style="--n: 6;">
+            <li class="wf-step" data-kind="in">
+              <span class="wf-kind">Comes in</span>
+              <strong class="wf-title">RFQ arrives</strong>
+              <span class="wf-desc">By email or WhatsApp, often as a PDF or a photo.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No enquiry missed</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">AI reads the request</strong>
+              <span class="wf-desc">Items, quantities and delivery dates are picked out.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No retyping</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">Prices and stock pulled</strong>
+              <span class="wf-desc">From your price list, stock levels and past quotes.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Consistent pricing</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">Quote drafted</strong>
+              <span class="wf-desc">In your template, with terms and lead times.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> First draft done for you</span>
+            </li>
+            <li class="wf-step" data-kind="team">
+              <span class="wf-kind">Your team</span>
+              <strong class="wf-title">Sales approves and sends</strong>
+              <span class="wf-desc">Checks the margin, adjusts and sends.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Your team owns the price</span>
+            </li>
+            <li class="wf-step" data-kind="sys">
+              <span class="wf-kind">Updates</span>
+              <strong class="wf-title">CRM updated</strong>
+              <span class="wf-desc">Quote logged, with a follow-up reminder set.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Nothing slips through</span>
+            </li>
+          </ol>
+          <p class="wf-role"><strong>How the job changes:</strong> Sales coordinator: from typing quotes to approving them and managing margins. <a href="/services/ai-transformation/use-cases/#uc-rfq-to-quotation">See the use case &rarr;</a></p>
+        </article>
+        <article class="wf-flow" id="wf-service" data-flow="service">
+          <p class="wf-area">Customer service</p>
+          <h3 class="wf-name">WhatsApp enquiry to resolution</h3>
+          <p class="wf-trigger">When a customer messages you, at any hour:</p>
+          <ol class="wf-steps" style="--n: 5;">
+            <li class="wf-step" data-kind="in">
+              <span class="wf-kind">Comes in</span>
+              <strong class="wf-title">Customer messages</strong>
+              <span class="wf-desc">On WhatsApp or web chat, day or night.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Answered after hours too</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">Assistant answers</strong>
+              <span class="wf-desc">From your FAQs, policies and order data.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Consistent answers</span>
+            </li>
+            <li class="wf-step" data-kind="check">
+              <span class="wf-kind">AI checks</span>
+              <strong class="wf-title">Knows its limits</strong>
+              <span class="wf-desc">Complaints and unusual requests are flagged.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Complex cases reach a person</span>
+            </li>
+            <li class="wf-step" data-kind="team">
+              <span class="wf-kind">Your team</span>
+              <strong class="wf-title">Your team takes over</strong>
+              <span class="wf-desc">With the full conversation and order history.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No repeating the story</span>
+            </li>
+            <li class="wf-step" data-kind="sys">
+              <span class="wf-kind">Updates</span>
+              <strong class="wf-title">Logged and tagged</strong>
+              <span class="wf-desc">Every exchange saved to your CRM or helpdesk.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> See what customers ask most</span>
+            </li>
+          </ol>
+          <p class="wf-role"><strong>How the job changes:</strong> Customer service officer: from repeat questions to complex cases, and improving the assistant. <a href="/services/ai-transformation/use-cases/#uc-24-7-chat-assistant-on-whatsapp-and-web">See the use case &rarr;</a></p>
+        </article>
+        <article class="wf-flow" id="wf-hr" data-flow="hr">
+          <p class="wf-area">HR and admin</p>
+          <h3 class="wf-name">Job application to interview</h3>
+          <p class="wf-trigger">When applications come in for an open role:</p>
+          <ol class="wf-steps" style="--n: 5;">
+            <li class="wf-step" data-kind="in">
+              <span class="wf-kind">Comes in</span>
+              <strong class="wf-title">Applications arrive</strong>
+              <span class="wf-desc">From job portals and your careers email.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> One inbox, one list</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">CVs read and summarised</strong>
+              <span class="wf-desc">Experience and skills pulled into one view.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No manual sorting</span>
+            </li>
+            <li class="wf-step" data-kind="check">
+              <span class="wf-kind">AI checks</span>
+              <strong class="wf-title">Screened against your criteria</strong>
+              <span class="wf-desc">A ranked shortlist, with the reasons shown.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Consistent first pass</span>
+            </li>
+            <li class="wf-step" data-kind="team">
+              <span class="wf-kind">Your team</span>
+              <strong class="wf-title">HR decides</strong>
+              <span class="wf-desc">A person reviews the shortlist and picks who to meet.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> People make the hiring call</span>
+            </li>
+            <li class="wf-step" data-kind="sys">
+              <span class="wf-kind">Updates</span>
+              <strong class="wf-title">Interviews booked</strong>
+              <span class="wf-desc">Invites sent and calendars updated.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No back-and-forth emails</span>
+            </li>
+          </ol>
+          <p class="wf-role"><strong>How the job changes:</strong> HR executive: from first-pass screening to interviews and candidate experience. <a href="/services/ai-transformation/use-cases/#uc-cv-screening">See the use case &rarr;</a></p>
+        </article>
+        <article class="wf-flow" id="wf-logistics" data-flow="logistics">
+          <p class="wf-area">Logistics and freight</p>
+          <h3 class="wf-name">Shipping documents to customer update</h3>
+          <p class="wf-trigger">When shipment documents arrive:</p>
+          <ol class="wf-steps" style="--n: 6;">
+            <li class="wf-step" data-kind="in">
+              <span class="wf-kind">Comes in</span>
+              <strong class="wf-title">Documents arrive</strong>
+              <span class="wf-desc">Bill of lading, commercial invoice and packing list.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Captured on arrival</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">Data extracted</strong>
+              <span class="wf-desc">Consignee, HS codes, weights and values.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No re-keying</span>
+            </li>
+            <li class="wf-step" data-kind="check">
+              <span class="wf-kind">AI checks</span>
+              <strong class="wf-title">Cross-checked</strong>
+              <span class="wf-desc">The documents are compared for mismatches.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Discrepancies caught early</span>
+            </li>
+            <li class="wf-step" data-kind="team">
+              <span class="wf-kind">Your team</span>
+              <strong class="wf-title">Operations reviews flags</strong>
+              <span class="wf-desc">Only mismatches need a person.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Exceptions, not paperwork</span>
+            </li>
+            <li class="wf-step" data-kind="sys">
+              <span class="wf-kind">Updates</span>
+              <strong class="wf-title">Ready for permits</strong>
+              <span class="wf-desc">Data prepared for the permit application and your freight system.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Fewer delays at clearance</span>
+            </li>
+            <li class="wf-step" data-kind="out">
+              <span class="wf-kind">Result</span>
+              <strong class="wf-title">Customer updated</strong>
+              <span class="wf-desc">A proactive status update goes out.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Fewer status calls</span>
+            </li>
+          </ol>
+          <p class="wf-role"><strong>How the job changes:</strong> Documentation executive: from re-keying documents to managing exceptions. <a href="/services/ai-transformation/use-cases/#uc-shipping-and-trade-document-processing">See the use case &rarr;</a></p>
+        </article>
+        <article class="wf-flow" id="wf-construction" data-flow="construction">
+          <p class="wf-area">Construction and built environment</p>
+          <h3 class="wf-name">Site photos to daily report</h3>
+          <p class="wf-trigger">When the site supervisor sends the day’s photos:</p>
+          <ol class="wf-steps" style="--n: 5;">
+            <li class="wf-step" data-kind="in">
+              <span class="wf-kind">Comes in</span>
+              <strong class="wf-title">Photos and a voice note</strong>
+              <span class="wf-desc">Sent from site on WhatsApp.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Captured in the moment</span>
+            </li>
+            <li class="wf-step" data-kind="ai">
+              <span class="wf-kind">AI does</span>
+              <strong class="wf-title">Report drafted</strong>
+              <span class="wf-desc">Progress, manpower and issues written up.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> No evening paperwork</span>
+            </li>
+            <li class="wf-step" data-kind="check">
+              <span class="wf-kind">AI checks</span>
+              <strong class="wf-title">Safety items flagged</strong>
+              <span class="wf-desc">Missing barricades or PPE in the photos are highlighted.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Hazards surfaced</span>
+            </li>
+            <li class="wf-step" data-kind="team">
+              <span class="wf-kind">Your team</span>
+              <strong class="wf-title">Coordinator approves</strong>
+              <span class="wf-desc">Edits and confirms the report.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> An accurate record</span>
+            </li>
+            <li class="wf-step" data-kind="sys">
+              <span class="wf-kind">Updates</span>
+              <strong class="wf-title">Filed and shared</strong>
+              <span class="wf-desc">Sent to the client and filed for progress claims.</span>
+              <span class="wf-value"><span class="wf-value-label">Value</span> Claims backed by evidence</span>
+            </li>
+          </ol>
+          <p class="wf-role"><strong>How the job changes:</strong> Site supervisor: from paperwork to coordination and safety. <a href="/services/ai-transformation/use-cases/#uc-site-progress-and-safety-reporting">See the use case &rarr;</a></p>
+        </article>
+          </div>
+        </div>
+        <p style="margin-top: var(--space-6);"><a href="/services/ai-transformation/use-cases/#workflows">See all 22 workflows, by function and industry &rarr;</a> &middot; <a href="/services/ai-transformation/">How AI transformation works &rarr;</a></p>
+      </div>
+    </section>
+
     <!-- Intro video -->
     <section class="section" style="background: var(--paper-soft); border-bottom: 1px solid var(--rule);">
       <div class="container intro-layout">
         <div>
           <div class="section-header">
-            <div class="section-kicker">02 &middot; 90-second overview</div>
+            <div class="section-kicker">03 &middot; 90-second overview</div>
             <h2 class="section-title">How CCP and WDG(JR+) work together, in 90 seconds.</h2>
             <p class="section-lead">
               A short explainer for employers on how the two pillars work together: WDG(JR+) funds the job redesign, and the Career Conversion Programme funds salaries while your people reskill into the redesigned roles.
@@ -549,7 +831,7 @@
           <p class="process-panel-note">Working directly with HR, hiring managers and founders.</p>
         </div>
         <div>
-          <div class="feature-meta">03 &middot; Workforce advisory scope</div>
+          <div class="feature-meta">04 &middot; Workforce advisory scope</div>
           <h2 style="font-size: var(--fs-h2); margin-bottom: var(--space-5);">From eligibility assessment to claims documentation.</h2>
           <p style="color: var(--ink-muted); font-size: 1.0625rem; line-height: 1.6;">
             We work directly with HR, hiring managers and founders to assess eligibility, structure compliant job descriptions, design on-the-job training plans, and prepare the documentation required for submission. The advisory covers the full lifecycle, initial assessment through to post-approval claims.
@@ -565,7 +847,7 @@
     <section class="section" style="background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">04 &middot; Advisory differentiators</div>
+          <div class="section-kicker">05 &middot; Advisory differentiators</div>
           <h2 class="section-title">Why Singapore employers choose BizGrants as their CCP partner.</h2>
           <p class="section-lead">
             We work alongside HR, business leaders and founders to diagnose workforce needs, redesign roles and position applications clearly against programme criteria. The work is built around clarity, structure and hands-on documentation support.
@@ -627,7 +909,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">05 &middot; Programme overview</div>
+          <div class="section-kicker">06 &middot; Programme overview</div>
           <h2 class="section-title">Career Conversion Programmes, simply explained.</h2>
           <p class="section-lead">
             Career Conversion Programmes (CCPs) and <a href="/blog/job-redesign-grant-singapore/">job redesign grants</a> are Skills and Workforce Development Agency and SkillsFuture initiatives that help employers reskill or upskill staff, hire mid-career professionals and redesign existing jobs for digital, sustainability and business transformation.
@@ -662,7 +944,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">06 &middot; Why transform now</div>
+          <div class="section-kicker">07 &middot; Why transform now</div>
           <h2 class="section-title">Why redesign jobs now.</h2>
           <p class="section-lead">
             The way roles were designed a few years ago no longer matches the work. AI, rising manpower costs and a tighter, ageing workforce are reshaping what every job needs to do. Redesigning roles, then funding the reskilling, is how Singapore employers stay productive without simply adding headcount.
@@ -698,7 +980,7 @@
     <section class="section" style="background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">07 &middot; Selected case studies</div>
+          <div class="section-kicker">08 &middot; Selected case studies</div>
           <h2 class="section-title">Anonymized CCP engagements we have run.</h2>
           <p class="section-lead">
             Five engagements drawn from our work with Singapore SMEs and corporates between 2023 and 2026. Company names, individuals, and product specifics are anonymized; the strategies and outcomes are factual. Each links to the full case study.
@@ -762,7 +1044,7 @@
     <section class="section" id="insights">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">08 &middot; Common questions</div>
+          <div class="section-kicker">09 &middot; Common questions</div>
           <h2 class="section-title">Frequently asked questions about CCP and job redesign grants.</h2>
           <p class="section-lead">
             Typical questions HR teams, business owners and hiring managers ask when first exploring CCP and related grants.
@@ -805,7 +1087,7 @@
     <section class="section" style="background: var(--paper-soft); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);">
       <div class="container">
         <div class="section-header">
-          <div class="section-kicker">09 &middot; Resources</div>
+          <div class="section-kicker">10 &middot; Resources</div>
           <h2 class="section-title">CCP and grant resources for Singapore employers.</h2>
         </div>
 
@@ -846,7 +1128,7 @@
     <section class="section">
       <div class="container feature-row">
         <div>
-          <div class="feature-meta">10 &middot; Trusted by Singapore SMEs</div>
+          <div class="feature-meta">11 &middot; Trusted by Singapore SMEs</div>
           <h2 style="font-size: var(--fs-h2); margin-bottom: var(--space-5);">Real advisory. Compliance-led results.</h2>
           <p style="color: var(--ink-muted); font-size: 1.0625rem; line-height: 1.6;">
             Our clients range from growing startups to established SMEs across F&amp;B, biotech, engineering, hospitality and professional services. We bring the same structured, compliance-driven approach to every engagement, ensuring your application is positioned for approval.
@@ -905,6 +1187,8 @@
 
 
   <!-- Google tag (gtag.js) -->
+  <script src="/workflow.js" defer></script>
+  <script src="/motion.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
   <script src="/shared.js" defer></script>
 </body>

@@ -2,8 +2,9 @@
    Animated workflow explorer (AI Transformation pages).
    Every workflow is in the HTML. This script moves a dot from step to
    step, highlights each step's value as the dot arrives, and switches
-   between workflows. It loops while on screen, stops off screen, and does
-   not animate for visitors who prefer reduced motion.
+   between workflows. It loops while on screen, stops off screen, has a
+   small pause control, and does not animate for visitors who prefer
+   reduced motion.
    ============================================================ */
 (function () {
   var STEP_MS = 1900;
@@ -17,6 +18,7 @@
     this.i = -1;
     this.timers = [];
     this.still = reduce;
+    this.paused = false;
     this.visible = false;
   }
   Runner.prototype.clear = function () {
@@ -31,7 +33,7 @@
     this.flow = flow;
     this.steps = Array.prototype.slice.call(flow.querySelectorAll('.wf-step'));
     this.reset();
-    if (this.still) this.showAll();
+    if (this.still || this.paused) this.showAll();
     else this.run();
   };
   Runner.prototype.reset = function () {
@@ -43,12 +45,12 @@
   };
   Runner.prototype.run = function () {
     this.clear();
-    if (this.still || !this.visible) return;
+    if (this.still || this.paused || !this.visible) return;
     var self = this;
     this.later(function () { self.tick(); }, this.i < 0 ? 300 : 500);
   };
   Runner.prototype.tick = function () {
-    if (this.still || !this.visible) return;
+    if (this.still || this.paused || !this.visible) return;
     var self = this, s = this.steps;
     if (this.i >= 0) {
       s[this.i].classList.remove('is-active', 'is-sending');
@@ -65,12 +67,23 @@
       this.later(function () { cur.classList.add('is-sending'); }, STEP_MS - 950);
     }
     this.later(function () { self.tick(); }, STEP_MS);
+  };  Runner.prototype.setPaused = function (p) {
+    this.paused = p;
+    if (p) {
+      this.clear();
+      this.steps.forEach(function (st) { st.classList.remove('is-sending'); });
+    } else {
+      if (this.i < 0) this.reset();
+      this.run();
+    }
   };
+
   Array.prototype.forEach.call(document.querySelectorAll('[data-wf]'), function (root) {
     var runner = new Runner(root);
     var flows = Array.prototype.slice.call(root.querySelectorAll('.wf-flow'));
     var chips = Array.prototype.slice.call(root.querySelectorAll('.wf-chip'));
     var select = root.querySelector('.wf-select-wrap select');
+    var pause = root.querySelector('.wf-pause');
     if (!flows.length) return;
 
     function show(id) {
@@ -88,6 +101,17 @@
       c.addEventListener('click', function () { show(c.getAttribute('data-flow')); });
     });
     if (select) select.addEventListener('change', function () { show(select.value); });
+
+    // WCAG 2.2.2: anything that moves on its own for over five seconds needs a pause
+    if (pause) {
+      if (reduce) pause.hidden = true;
+      pause.addEventListener('click', function () {
+        var p = !runner.paused;
+        runner.setPaused(p);
+        pause.setAttribute('aria-pressed', String(p));
+        pause.title = p ? 'Play animation' : 'Pause animation';
+      });
+    }
 
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {

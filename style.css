@@ -2130,7 +2130,7 @@ nav ul.nav-submenu a:hover, nav ul.nav-submenu a:focus-visible { background: var
   font-weight: 600;
   transition: background 300ms ease, color 300ms ease;
 }
-.wf-value-label { font-family: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); margin-right: 4px; }
+.wf-value-label { font-family: 'JetBrains Mono', 'JetBrains Mono Fallback', monospace; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-deep); margin-right: 6px; }
 .wf-role { margin: var(--space-6) 0 0; font-size: var(--fs-small); color: var(--ink-body); }
 
 /* Connector between steps: a dotted line, with a travelling dot */

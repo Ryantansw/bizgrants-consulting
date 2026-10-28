@@ -69,10 +69,16 @@
       tip.style.left = x + 'px';
       tip.style.top = (s.top - f.top - 8) + 'px';
     }
-    function hide() { tip.hidden = true; }
+    // WCAG 1.4.13: the tooltip stays while hovered, and Escape dismisses it
+    var timer = null;
+    function hide() { clearTimeout(timer); tip.hidden = true; }
+    function hideSoon() { clearTimeout(timer); timer = setTimeout(hide, 300); }
     Array.prototype.forEach.call(fig.querySelectorAll('.fund-seg[data-tip]'), function (seg) {
-      seg.addEventListener('mouseenter', function () { show(seg); });
-      seg.addEventListener('mouseleave', hide);
+      seg.addEventListener('mouseenter', function () { clearTimeout(timer); show(seg); });
+      seg.addEventListener('mouseleave', hideSoon);
     });
+    tip.addEventListener('mouseenter', function () { clearTimeout(timer); });
+    tip.addEventListener('mouseleave', hideSoon);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
   });
 })();

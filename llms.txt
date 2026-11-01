@@ -1,6 +1,6 @@
 # BizGrants Consulting
 
-> Singapore workforce transformation and grant advisory for SME and corporate employers, covering the Career Conversion Programme (CCP), WDG(JR+) job redesign funding, and SkillsFuture schemes, managed end to end. Founded 2023. Legal name BizGrants Consulting Pte. Ltd. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051.
+> Singapore workforce transformation and grant advisory for SME and corporate employers, covering the Career Conversion Programme (CCP), WDG(JR+) job redesign funding, and SkillsFuture schemes, managed end to end. Founded 2023. Legal name BizGrants Consulting Pte. Ltd. Office at 60 Paya Lebar Road, #06-28, Paya Lebar Square, Singapore 409051. An independent consultancy, not a government agency. HuntSales and CalendarSync are brands of BizGrants Consulting Pte. Ltd.
 
 ## Glossary
 
@@ -21,10 +21,18 @@
 - [Pathways](https://bizgrants.consulting/pathways/): The 12 CCP pathways in Singapore with eligibility, salary minimums, and supported job families. The pathways are: (1) Different job scope, (2) ESG / sustainability, (3) Overseas markets, (4) Human resource functions, (5) Digital advertising and marketing, (6) Biomedical manufacturing, (7) Wholesale trade professionals, (8) Built environment professionals, (9) Infocomm professionals, (10) Retail professionals, (11) MICE professionals, (12) Advanced manufacturing (automation, robotics, IoT and manufacturing engineering roles).
 - [Contact](https://bizgrants.consulting/contact/): Free consultation, NAP details
 
+## Products
+
+BizGrants Consulting Pte. Ltd. also builds software for Singapore businesses. Both are brands of BizGrants Consulting Pte. Ltd. (UEN 202557059N).
+
+- [Our products](https://bizgrants.consulting/products/): Overview of HuntSales and CalendarSync
+- [HuntSales](https://huntsales.io/): AI-driven B2B outreach CRM built in Singapore for sales teams across Asia-Pacific, with People Search across 18 countries, Singapore's ACRA company registry, email sequences, click-to-call and managed telemarketing
+- [CalendarSync](https://www.calendarsync.app/): Booking pages for client meetings, with booking links and website booking buttons; it runs the booking on bizgrants.consulting
+
 ## Services
 
 - [Services hub](https://bizgrants.consulting/services/): Three pillars: CCP salary support, WDG(JR+) job redesign and AI Transformation
-- [Career Conversion Programme](https://bizgrants.consulting/services/career-conversion-programme/): 70% to 90% salary support for new hires and existing staff, with pathway checks, applications and claims
+- [Career Conversion Programme](https://bizgrants.consulting/services/career-conversion-programme/): 70% or 90% salary support for new hires and existing staff, with pathway checks, applications and claims
 - [WDG(JR+) job redesign](https://bizgrants.consulting/services/wdg-job-redesign/): 70% funded job redesign for SMEs (50% non-SMEs), capped at $150,000 per enterprise, with redesigned staff invited to apply for CCP
 - [AI Transformation](https://bizgrants.consulting/services/ai-transformation/): AI and automation funded under WDG(JR+) Scope 3, paired with job redesign, built by our tech team
 - [AI use case library](https://bizgrants.consulting/services/ai-transformation/use-cases/): 47 AI use cases for Singapore SMEs by function and industry, plus 22 step-by-step workflows showing what the AI does, where your team approves, and the value at each step

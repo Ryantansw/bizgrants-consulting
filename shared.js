@@ -136,6 +136,24 @@ document.addEventListener('click', function (e) {
   }
 }, { capture: true });
 
+/* === Product Click Tracking (GA4) ===
+   Fires product_click when a visitor follows a link to HuntSales or
+   CalendarSync, BizGrants brands. Booking links are tracked above. */
+document.addEventListener('click', function (e) {
+  var link = e.target.closest('a');
+  if (!link || !link.href) return;
+  var product = /huntsales\.io/.test(link.href) ? 'HuntSales' : /calendarsync\.app/.test(link.href) ? 'CalendarSync' : '';
+  if (!product || link.href.indexOf('/availability/') !== -1) return;
+  if (typeof gtag === 'function') {
+    gtag('event', 'product_click', {
+      product: product,
+      link_url: link.href,
+      link_text: (link.textContent || '').trim(),
+      page_location: window.location.href
+    });
+  }
+}, { capture: true });
+
 /* === Booking Badge Click Tracking ===
    Watches for the badge mounting in the DOM and tracks clicks on it. */
 (function trackBookingBadge() {

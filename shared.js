@@ -136,6 +136,23 @@ document.addEventListener('click', function (e) {
   }
 }, { capture: true });
 
+/* === Booking Confirmed Tracking (GA4 / Google Ads) ===
+   The CalendarSync booking pop-up posts {source: 'calendarsync-embed',
+   type: 'booked'} when a visitor confirms a booking on this site. Bookings
+   made directly on the CalendarSync page (for example by our telemarketers
+   on a client's behalf) never reach this page, so they are not counted. */
+window.addEventListener('message', function (e) {
+  if (e.origin !== 'https://www.calendarsync.app') return;
+  var d = e.data;
+  if (!d || d.source !== 'calendarsync-embed' || d.type !== 'booked') return;
+  if (typeof gtag === 'function') {
+    gtag('event', 'book_appointment', {
+      event_category: 'Booking',
+      page_location: window.location.href
+    });
+  }
+});
+
 /* === Product Click Tracking (GA4) ===
    Fires product_click when a visitor follows a link to HuntSales or
    CalendarSync, BizGrants brands. Booking links are tracked above. */

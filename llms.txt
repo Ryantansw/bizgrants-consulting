@@ -23,7 +23,7 @@
 
 ## Products
 
-BizGrants Consulting Pte. Ltd. also builds software for Singapore businesses. Both are brands of BizGrants Consulting Pte. Ltd. (UEN 202557059N).
+BizGrants Consulting Pte. Ltd. also builds software for Singapore businesses. Both are brands of BizGrants Consulting Pte. Ltd.
 
 - [Our products](https://bizgrants.consulting/products/): Overview of HuntSales and CalendarSync
 - [HuntSales](https://huntsales.io/): AI-driven B2B outreach CRM built in Singapore for sales teams across Asia-Pacific, with People Search across 18 countries, Singapore's ACRA company registry, email sequences, click-to-call and managed telemarketing

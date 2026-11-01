@@ -106,39 +106,64 @@
   <!-- Organization Schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://bizgrants.consulting/#organization",
-    "name": "BizGrants Consulting",
-    "alternateName": "BizGrants",
-    "url": "https://bizgrants.consulting/",
-    "logo": {
-      "@type": "ImageObject",
-      "@id": "https://bizgrants.consulting/#logo",
-      "url": "https://bizgrants.consulting/images/logo.png",
-      "width": 1330,
-      "height": 422
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://bizgrants.consulting/#organization",
+  "name": "BizGrants Consulting",
+  "alternateName": "BizGrants",
+  "url": "https://bizgrants.consulting/",
+  "logo": {
+    "@type": "ImageObject",
+    "@id": "https://bizgrants.consulting/#logo",
+    "url": "https://bizgrants.consulting/images/logo.png",
+    "width": 1330,
+    "height": 422
+  },
+  "image": {
+    "@id": "https://bizgrants.consulting/#logo"
+  },
+  "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
+  "foundingDate": "2023",
+  "knowsAbout": [
+    "Career Conversion Programme",
+    "Skills and Workforce Development Agency",
+    "Workforce Singapore",
+    "Job Redesign Grant",
+    "SkillsFuture",
+    "Singapore SME workforce funding",
+    "AI transformation",
+    "Workforce Development Grant (Job Redesign+)",
+    "EDGE Grant",
+    "Enterprise Compute Initiative"
+  ],
+  "knowsLanguage": [
+    "en-SG"
+  ],
+  "legalName": "BizGrants Consulting Pte. Ltd.",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "UEN",
+    "value": "202557059N"
+  },
+  "brand": [
+    {
+      "@type": "Brand",
+      "name": "HuntSales",
+      "url": "https://huntsales.io",
+      "description": "AI-driven B2B outreach CRM for Singapore and Asia-Pacific sales teams"
     },
-    "image": {"@id": "https://bizgrants.consulting/#logo"},
-    "description": "Singapore grant advisory firm specialising in Career Conversion Programme (CCP), Job Redesign Grant, and SkillsFuture-supported workforce funding for SME and corporate employers.",
-    "foundingDate": "2023",
-    "knowsAbout": [
-      "Career Conversion Programme",
-      "Skills and Workforce Development Agency",
-      "Workforce Singapore",
-      "Job Redesign Grant",
-      "SkillsFuture",
-      "Singapore SME workforce funding"
-    ],
-    "knowsLanguage": ["en-SG"],
-    "legalName": "BizGrants Consulting Pte. Ltd.",
-    "identifier": {"@type": "PropertyValue", "propertyID": "UEN", "value": "202557059N"},
-    "brand": {"@type": "Brand", "name": "HuntSales", "url": "https://huntsales.io"},
-    "sameAs": [
-      "https://www.linkedin.com/company/bizgrants-consulting",
-      "https://www.google.com/maps/place/BizGrants+Consulting+Pte+Ltd/@1.3143378,103.6791001,11z/data=!3m1!4b1!4m6!3m5!1s0xa60a256827d7b39f:0x99ff959a7e8952a2!8m2!3d1.314!4d103.84425!16s%2Fg%2F11yf8b2n4d"
-    ]
-  }
+    {
+      "@type": "Brand",
+      "name": "CalendarSync",
+      "url": "https://www.calendarsync.app",
+      "description": "Booking pages for client meetings"
+    }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/bizgrants-consulting",
+    "https://www.google.com/maps/place/BizGrants+Consulting+Pte+Ltd/@1.3143378,103.6791001,11z/data=!3m1!4b1!4m6!3m5!1s0xa60a256827d7b39f:0x99ff959a7e8952a2!8m2!3d1.314!4d103.84425!16s%2Fg%2F11yf8b2n4d"
+  ]
+}
   </script>
 
   <!-- LocalBusiness Schema (references canonical entity by @id) -->
@@ -209,7 +234,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/style.css?v=b2aeb2d1" />
+  <link rel="stylesheet" href="/style.css?v=89d53d4f" />
   <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/jdreview/*"}}]},"eagerness":"moderate"}]}</script>
 
   <!-- CalendarSync booking widget -->
@@ -370,6 +395,7 @@
             Book a free consultation
           </a>
         </div>
+        <p class="booking-note">Booking runs on <a href="https://www.calendarsync.app/?utm_source=bizgrants&amp;utm_medium=referral&amp;utm_campaign=contact">CalendarSync</a>, a BizGrants product.</p>
       </div>
     </section>
 
@@ -458,7 +484,7 @@
           <div class="footer-heading">BizGrants Consulting</div>
           <p>
             Advisory for Skills and Workforce Development Agency Career Conversion Programmes, job redesign grants and SkillsFuture supported
-            workforce transformation in Singapore.
+            workforce transformation in Singapore. An independent consultancy, not a government agency.
           </p>
         </div>
         <div>
@@ -474,6 +500,14 @@
           </ul>
         </div>
         <div>
+          <div class="footer-heading">Our products</div>
+          <ul class="footer-links">
+            <li><a href="https://huntsales.io/?utm_source=bizgrants&amp;utm_medium=referral&amp;utm_campaign=footer">HuntSales<span class="footer-sub">AI-driven B2B outreach CRM</span></a></li>
+            <li><a href="https://www.calendarsync.app/?utm_source=bizgrants&amp;utm_medium=referral&amp;utm_campaign=footer">CalendarSync<span class="footer-sub">Booking pages for client meetings</span></a></li>
+            <li><a href="/products/">All products</a></li>
+          </ul>
+        </div>
+        <div>
           <div class="footer-heading">Contact</div>
           <ul class="footer-links">
             <li><strong>Telephone:</strong> <a href="tel:+6588875297">+65 8887 5297</a></li>
@@ -483,7 +517,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 BizGrants Consulting Pte. Ltd. HuntSales is a brand of BizGrants Consulting Pte. Ltd. &middot; <a href="https://huntsales.io">HuntSales, our B2B sales platform</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></span>
+        <span>© 2026 BizGrants Consulting Pte. Ltd. HuntSales and CalendarSync are brands of BizGrants Consulting Pte. Ltd. &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></span>
         <span>For Singapore registered employers hiring or reskilling Singapore Citizens and PRs.</span>
       </div>
     </div>
@@ -553,7 +587,7 @@
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBH1DYTQB"></script>
-  <script src="/shared.js?v=1f5babcd" defer></script>
+  <script src="/shared.js?v=5873cc83" defer></script>
 </body>
 </html>
 

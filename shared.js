@@ -86,6 +86,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-CWBH1DYTQB');
+gtag('config', 'AW-17532247075');
 
 /* === Apollo Website Tracker === */
 (function initApollo() {
@@ -140,7 +141,9 @@ document.addEventListener('click', function (e) {
    The CalendarSync booking pop-up posts {source: 'calendarsync-embed',
    type: 'booked'} when a visitor confirms a booking on this site. Bookings
    made directly on the CalendarSync page (for example by our telemarketers
-   on a client's behalf) never reach this page, so they are not counted. */
+   on a client's behalf) never reach this page, so they are not counted.
+   The second event reports the booking to the Google Ads "Book appointment"
+   conversion action, so ad clicks that end in a booking are credited. */
 window.addEventListener('message', function (e) {
   if (e.origin !== 'https://www.calendarsync.app') return;
   var d = e.data;
@@ -149,6 +152,9 @@ window.addEventListener('message', function (e) {
     gtag('event', 'book_appointment', {
       event_category: 'Booking',
       page_location: window.location.href
+    });
+    gtag('event', 'conversion', {
+      send_to: 'AW-17532247075/g54TCOqJ85UbEKO4g6hB'
     });
   }
 });

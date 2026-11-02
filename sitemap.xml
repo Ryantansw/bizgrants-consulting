@@ -5,7 +5,7 @@
   <!-- Main Pages -->
   <url>
     <loc>https://bizgrants.consulting/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
@@ -24,13 +24,13 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/services/career-conversion-programme/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/services/wdg-job-redesign/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -60,7 +60,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -166,7 +166,7 @@
   <!-- Pillar / Guide Pages -->
   <url>
     <loc>https://bizgrants.consulting/wsg-career-conversion-programme/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <video:video>
@@ -210,7 +210,7 @@
 
   <url>
     <loc>https://bizgrants.consulting/regional-hq-workforce-funding/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -334,19 +334,19 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/singapore-government-grants-for-smes/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/wdg-job-redesign-grant/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/business-case-for-job-redesign/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -409,12 +409,6 @@
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bizgrants.consulting/blog/job-redesign-grant-singapore/</loc>
-    <lastmod>2026-10-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/skillsfuture-enterprise-credit-expiry/</loc>
@@ -634,7 +628,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/ctc-grant-vs-wdg-job-redesign/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -670,7 +664,7 @@
   </url>
   <url>
     <loc>https://bizgrants.consulting/blog/edge-grant-singapore/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

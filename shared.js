@@ -121,6 +121,58 @@ window.addEventListener('load', function () {
   }
 });
 
+/* === WhatsApp Button ===
+   A floating "WhatsApp" button that sits above the booking badge. It opens
+   a chat with a pre-filled message naming the topic of the page. The
+   number takes WhatsApp messages and WhatsApp calls only, not phone calls.
+   Skipped on thank-you and 404 pages, like the booking badge. */
+window.BIZGRANTS_WHATSAPP = '6588875297';
+(function initWhatsAppButton() {
+  var path = window.location.pathname;
+  if (/\/(thank-you|404)\/?$/.test(path) || path.endsWith('/404.html')) return;
+  var topic = /ccp|career-conversion|mcpp/.test(path) ? 'the Career Conversion Programme (CCP)'
+    : /job-redesign|wdg/.test(path) ? 'the job redesign grant (WDG)'
+    : /ai-/.test(path) ? 'AI transformation'
+    : 'grants for my company';
+  var message = 'Hi BizGrants, I have a question about ' + topic + '.';
+
+  var style = document.createElement('style');
+  style.textContent =
+    '.bg-wa{position:fixed;right:20px;bottom:70px;z-index:2147483644;display:inline-flex;align-items:center;gap:8px;' +
+    'height:38px;padding:0 16px 0 12px;border-radius:999px;background:#fff;color:#0e1733;border:1px solid oklch(0.82 0.015 260);' +
+    'box-shadow:0 4px 14px oklch(0.18 0.05 258 / 0.14);font-family:inherit;font-size:14px;font-weight:600;line-height:1;text-decoration:none}' +
+    '.bg-wa:hover{border-color:#0e1733}' +
+    '.bg-wa:focus-visible{outline:2px solid #0e1733;outline-offset:2px}' +
+    '.bg-wa svg{width:20px;height:20px;flex:none;fill:#25d366}' +
+    '@media print{.bg-wa{display:none}}';
+  document.head.appendChild(style);
+
+  var link = document.createElement('a');
+  link.className = 'bg-wa';
+  link.href = 'https://wa.me/' + window.BIZGRANTS_WHATSAPP + '?text=' + encodeURIComponent(message);
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.setAttribute('aria-label', 'Message us on WhatsApp');
+  link.setAttribute('data-wa-location', 'floating');
+  link.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>WhatsApp</span>';
+  document.body.appendChild(link);
+})();
+
+/* === WhatsApp Click Tracking (GA4) ===
+   Fires whatsapp_click for any link to wa.me: the floating button, the
+   footer number and the contact page. Not a booking, so it is reported
+   for review only and does not count as a Google Ads conversion. */
+document.addEventListener('click', function (e) {
+  var link = e.target.closest('a');
+  if (!link || !/^https:\/\/wa\.me\//.test(link.href)) return;
+  if (typeof gtag === 'function') {
+    gtag('event', 'whatsapp_click', {
+      link_location: link.getAttribute('data-wa-location') || (link.closest('footer') ? 'footer' : 'page'),
+      page_location: window.location.href
+    });
+  }
+}, { capture: true });
+
 /* === Booking Click Tracking (GA4) ===
    Fires a cta_click event whenever a visitor clicks a link to the booking URL. */
 document.addEventListener('click', function (e) {

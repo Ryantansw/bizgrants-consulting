@@ -367,8 +367,8 @@
       min-height: 1em;
     }
 
-    /* Outcome status tag on each case and featured card */
-    .case-status {
+    /* Type tag (new hire or existing staff) on each case and featured card */
+    .case-type {
       display: block;
       width: fit-content;
       font-family: 'JetBrains Mono', monospace;
@@ -380,11 +380,8 @@
       border-radius: var(--radius-sm);
       background: var(--paper-soft);
       color: var(--ink-muted);
-      margin-bottom: var(--space-3);
+      margin-top: var(--space-3);
     }
-    .case-status[data-status="claimed"] { background: oklch(0.42 0.1 160); border-color: oklch(0.42 0.1 160); color: var(--surface); }
-    .case-status[data-status="approved"] { background: oklch(0.95 0.035 160); border-color: oklch(0.8 0.07 160); color: oklch(0.38 0.09 160); }
-    .case-status[data-status="submitted"] { background: oklch(0.96 0.02 258); border-color: oklch(0.85 0.04 258); color: var(--brand-deep); }
 
     /* Featured cases above the filters */
     .case-featured { margin-top: var(--space-8); }
@@ -409,7 +406,7 @@
       color: var(--ink-muted);
     }
     .case-card h3 { font-size: 1.05rem; line-height: 1.35; letter-spacing: -0.01em; margin: 0; color: var(--ink); }
-    .case-card .case-status { margin: auto 0 0; }
+    .case-card .case-type { margin: auto 0 0; }
     .case-card .case-arrow {
       font-family: 'JetBrains Mono', monospace;
       font-size: var(--fs-tiny);
@@ -477,42 +474,42 @@
 
     <section class="container">
       <div class="case-featured">
-        <p class="case-filter-label" id="case-featured-label">Recent approvals</p>
+        <p class="case-filter-label" id="case-featured-label">Featured case studies</p>
         <div class="case-featured-grid">
           <a href="/case-studies/legal-practice-ai-practitioner-conversion/" class="case-card">
             <span class="case-card-tag">Legal Services</span>
-            <h3>CCP approved for a lawyer building a law firm’s AI practice</h3>
-            <span class="case-status" data-status="approved">Approved</span>
+            <h3>CCP for a lawyer building a law firm’s AI practice</h3>
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </a>
           <a href="/case-studies/fintech-ai-audit-function-conversion/" class="case-card">
             <span class="case-card-tag">Financial Services</span>
-            <h3>CCP approved for a compliance hire moving into AI audit at a payments firm</h3>
-            <span class="case-status" data-status="approved">Approved</span>
+            <h3>CCP for a compliance hire moving into AI audit at a payments firm</h3>
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </a>
           <a href="/case-studies/ai-software-presales-conversion/" class="case-card">
             <span class="case-card-tag">Infocomm Technology</span>
-            <h3>CCP approved and claimed for an engineer moving into pre-sales</h3>
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
+            <h3>CCP for an engineer moving into pre-sales at a software firm</h3>
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </a>
           <a href="/case-studies/oncology-clinic-nurse-to-business-development/" class="case-card">
             <span class="case-card-tag">Healthcare</span>
-            <h3>CCP approved for a clinic nurse moving into business development</h3>
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
+            <h3>CCP for a clinic nurse moving into business development</h3>
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </a>
           <a href="/case-studies/food-distribution-sales-to-ecommerce-redesign/" class="case-card">
             <span class="case-card-tag">Wholesale Trade</span>
-            <h3>Job redesign approved for a sales director moving into e-commerce</h3>
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
+            <h3>Job redesign for a sales director moving into e-commerce</h3>
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </a>
           <a href="/case-studies/insurance-broker-banker-conversion/" class="case-card">
             <span class="case-card-tag">Financial Services</span>
-            <h3>CCP approved for a bank relationship manager hired by an insurance broker</h3>
-            <span class="case-status" data-status="approved">Approved</span>
+            <h3>CCP for a bank relationship manager hired by an insurance broker</h3>
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </a>
         </div>
@@ -525,16 +522,6 @@
           <button type="button" class="case-chip" data-filter="type" data-value="all" aria-pressed="true">All<span>45</span></button>
           <button type="button" class="case-chip" data-filter="type" data-value="new-hire" aria-pressed="false">New hires<span>38</span></button>
           <button type="button" class="case-chip" data-filter="type" data-value="job-redesign" aria-pressed="false">Job redesign (existing staff)<span>11</span></button>
-          </div>
-        </div>
-        <div class="case-filter-group">
-          <p class="case-filter-label" id="case-status-label">Result</p>
-          <div class="case-filter-chips" role="group" aria-labelledby="case-status-label">
-          <button type="button" class="case-chip" data-filter="status" data-value="all" aria-pressed="true">All<span>45</span></button>
-          <button type="button" class="case-chip" data-filter="status" data-value="approved" aria-pressed="false">Approved<span>27</span></button>
-          <button type="button" class="case-chip" data-filter="status" data-value="claimed" aria-pressed="false">Approved and claimed<span>6</span></button>
-          <button type="button" class="case-chip" data-filter="status" data-value="submitted" aria-pressed="false">Submitted<span>14</span></button>
-          <button type="button" class="case-chip" data-filter="status" data-value="scoped" aria-pressed="false">Scoped<span>4</span></button>
           </div>
         </div>
         <div class="case-filter-group">
@@ -566,217 +553,232 @@
       </div>
       <div class="case-grid" id="case-grid-main">
 
-        <a href="/case-studies/ai-software-presales-conversion/" class="case-row" data-sector="infocomm-technology" data-type="new-hire" data-status="claimed">
+        <a href="/case-studies/ai-software-presales-conversion/" class="case-row" data-sector="infocomm-technology" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;34<span class="case-sector">Infocomm Technology</span></div>
           <div>
             <div class="case-meta-tag">Software / AI sales enablement</div>
-            <h2>CCP approved and claimed for an engineer moving into pre-sales</h2>
+            <h2>CCP for an engineer moving into pre-sales at a software firm</h2>
             <p class="case-summary">A small software firm hired an engineer into a customer-facing pre-sales role.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
-            Approved in about two weeks; claim approved by the agency.
+            <strong>The role</strong>
+            Back-end engineer &rarr; Pre-sales solutions engineer
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/oncology-clinic-nurse-to-business-development/" class="case-row" data-sector="healthcare" data-type="new-hire" data-status="claimed">
+        <a href="/case-studies/oncology-clinic-nurse-to-business-development/" class="case-row" data-sector="healthcare" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;41<span class="case-sector">Healthcare</span></div>
           <div>
             <div class="case-meta-tag">Healthcare / specialist clinic</div>
-            <h2>CCP approved for a clinic nurse moving into business development</h2>
+            <h2>CCP for a clinic nurse moving into business development</h2>
             <p class="case-summary">A private oncology clinic group moved a surgical clinic nurse into business development, building referral networks and running campaigns.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
-            Approved and taken through to the claim.
+            <strong>The role</strong>
+            Surgical clinic nurse &rarr; Business development executive
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/energy-efficiency-startup-twin-sales-hires/" class="case-row" data-sector="energy-and-power" data-type="new-hire" data-status="claimed">
+        <a href="/case-studies/energy-efficiency-startup-twin-sales-hires/" class="case-row" data-sector="energy-and-power" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;40<span class="case-sector">Energy and Power</span></div>
           <div>
             <div class="case-meta-tag">Energy efficiency start-up</div>
-            <h2>CCP approved for two sales hires at an energy efficiency start-up</h2>
+            <h2>CCP for two sales hires at an energy efficiency start-up</h2>
             <p class="case-summary">An energy efficiency start-up hired two career switchers into B2B sales after its first funding round.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
-            Both approved and claimed.
+            <strong>The role</strong>
+            Career switchers &rarr; Two B2B sales managers
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/food-distribution-sales-to-ecommerce-redesign/" class="case-row" data-sector="wholesale-trade" data-type="job-redesign" data-status="claimed">
+        <a href="/case-studies/food-distribution-sales-to-ecommerce-redesign/" class="case-row" data-sector="wholesale-trade" data-type="job-redesign">
           <div class="case-num">CASE / 2025&minus;39<span class="case-sector">Wholesale Trade</span></div>
           <div>
             <div class="case-meta-tag">F&amp;B wholesale distribution</div>
-            <h2>Job redesign approved for a sales director moving into e-commerce</h2>
+            <h2>Job redesign for a sales director moving into e-commerce</h2>
             <p class="case-summary">A small food distributor moved its sales director into running its online grocery business, with digital marketing at the core of the new job.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
-            Approved; claim submitted after the three-month programme.
+            <strong>The role</strong>
+            Sales director &rarr; Digital marketing and e-commerce director
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/cybersecurity-presales-conversion-to-claim/" class="case-row" data-sector="infocomm-technology" data-type="new-hire" data-status="claimed">
+        <a href="/case-studies/cybersecurity-presales-conversion-to-claim/" class="case-row" data-sector="infocomm-technology" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;17<span class="case-sector">Infocomm Technology</span></div>
           <div>
             <div class="case-meta-tag">Cybersecurity / ICT infrastructure</div>
-            <h2>CCP approved and claimed for a cybersecurity pre-sales engineer</h2>
+            <h2>CCP for a cybersecurity pre-sales engineer</h2>
             <p class="case-summary">A cybersecurity provider hired an experienced technical professional into a customer-facing pre-sales engineering role, with support from application through to the claim.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
-            Approved and claimed.
+            <strong>The role</strong>
+            Technical specialist &rarr; Cybersecurity pre-sales engineer
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/biotech-commercial-reskilling/" class="case-row" data-sector="biomedical-manufacturing" data-type="new-hire" data-status="claimed">
+        <a href="/case-studies/biotech-commercial-reskilling/" class="case-row" data-sector="biomedical-manufacturing" data-type="new-hire">
           <div class="case-num">CASE / 2024&minus;06<span class="case-sector">Biomedical Manufacturing</span></div>
           <div>
             <div class="case-meta-tag">Biotech / life sciences</div>
-            <h2>CCP approved for two scientists moving into commercial roles at a biotech firm</h2>
+            <h2>CCP for two scientists moving into commercial roles at a biotech firm</h2>
             <p class="case-summary">A single-cell biotech firm moved two newly hired scientists into commercial and applications roles as its Singapore office became a regional sales hub.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="claimed">Approved and claimed</span>
-            Both approved, and the first claim approved by the agency.
+            <strong>The role</strong>
+            Scientific specialists &rarr; Commercial and applications roles
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/deep-tech-scientist-to-venture-development/" class="case-row" data-sector="professional-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/deep-tech-scientist-to-venture-development/" class="case-row" data-sector="professional-services" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;46<span class="case-sector">Professional Services</span></div>
           <div>
             <div class="case-meta-tag">Deep-tech venture building</div>
-            <h2>CCP approved for a research associate moving into venture development</h2>
+            <h2>CCP for a research associate moving into venture development</h2>
             <p class="case-summary">A deep-tech venture builder hired a research associate into a venture development role.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved within the application window.
+            <strong>The role</strong>
+            Research associate &rarr; Associate manager, venture development
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/consultancy-overseas-markets-redeployment/" class="case-row" data-sector="professional-services" data-type="job-redesign" data-status="approved">
+        <a href="/case-studies/consultancy-overseas-markets-redeployment/" class="case-row" data-sector="professional-services" data-type="job-redesign">
           <div class="case-num">CASE / 2026&minus;45<span class="case-sector">Professional Services</span></div>
           <div>
             <div class="case-meta-tag">Marketing and market-entry consultancy</div>
-            <h2>CCP approved for a director posted overseas by a market-entry consultancy</h2>
+            <h2>CCP for a director posted overseas by a market-entry consultancy</h2>
             <p class="case-summary">A market-entry consultancy posted its Asia client services director to Australia for six months to build new business there.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved.
+            <strong>The role</strong>
+            Client services director &rarr; Regional business development director, Australia
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/medical-device-pivot-five-roles/" class="case-row" data-sector="biomedical-manufacturing" data-type="new-hire job-redesign" data-status="approved">
+        <a href="/case-studies/medical-device-pivot-five-roles/" class="case-row" data-sector="biomedical-manufacturing" data-type="new-hire job-redesign">
           <div class="case-num">CASE / 2026&minus;44<span class="case-sector">Biomedical Manufacturing</span></div>
           <div>
             <div class="case-meta-tag">Medical device manufacturing</div>
-            <h2>Roles approved as a medical device firm moved into manufacturing</h2>
+            <h2>Five roles at a medical device firm moving into manufacturing</h2>
             <p class="case-summary">A small medical device company moving from R&amp;D into manufacturing redesigned three existing roles and hired two more.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Four roles approved, including two manufacturing redesigns.
+            <strong>The role</strong>
+            Three redesigned roles and two new hires
+            <span class="case-type">New hires and existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/industrial-cooling-four-hires-three-pathways/" class="case-row" data-sector="built-environment" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/industrial-cooling-four-hires-three-pathways/" class="case-row" data-sector="built-environment" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;43<span class="case-sector">Built Environment</span></div>
           <div>
             <div class="case-meta-tag">Industrial cooling systems</div>
-            <h2>Four hires approved under CCP at an industrial cooling firm</h2>
+            <h2>Four CCP hires at an industrial cooling firm</h2>
             <p class="case-summary">An industrial cooling systems firm made four very different hires in one year, each matched to the CCP route that fitted the role.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            All four approved.
+            <strong>The role</strong>
+            Four hires across operations, project engineering, HR and project delivery
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/it-asset-disposition-operations-conversion/" class="case-row" data-sector="environmental-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/it-asset-disposition-operations-conversion/" class="case-row" data-sector="environmental-services" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;38<span class="case-sector">Environmental Services</span></div>
           <div>
             <div class="case-meta-tag">IT asset disposition / e-waste recovery</div>
-            <h2>CCP approved for an operations lead at an e-waste and IT asset disposal firm</h2>
+            <h2>CCP for an operations lead at an e-waste and IT asset disposal firm</h2>
             <p class="case-summary">An e-waste and IT asset disposal business hired an operations lead into a regulated role covering data destruction, which was new to them.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved, with the role centred on data destruction governance and process design.
+            <strong>The role</strong>
+            Operations and safety lead &rarr; IT asset disposition operations manager
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/legal-practice-ai-practitioner-conversion/" class="case-row" data-sector="legal-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/legal-practice-ai-practitioner-conversion/" class="case-row" data-sector="legal-services" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;36<span class="case-sector">Legal Services</span></div>
           <div>
             <div class="case-meta-tag">Legal services / legal AI</div>
-            <h2>CCP approved for a lawyer building a law firm’s AI practice</h2>
+            <h2>CCP for a lawyer building a law firm’s AI practice</h2>
             <p class="case-summary">A cross-border law practice hired a lawyer to build its generative AI and automation services, work that was entirely new to them.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved eight days after submission.
+            <strong>The role</strong>
+            Legal consultant &rarr; Associate lawyer and legal AI practitioner
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/fintech-ai-audit-function-conversion/" class="case-row" data-sector="financial-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/fintech-ai-audit-function-conversion/" class="case-row" data-sector="financial-services" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;35<span class="case-sector">Financial Services</span></div>
           <div>
             <div class="case-meta-tag">Fintech / payments platform</div>
-            <h2>CCP approved for a compliance hire moving into AI audit at a payments firm</h2>
+            <h2>CCP for a compliance hire moving into AI audit at a payments firm</h2>
             <p class="case-summary">A payments firm hired a compliance professional to set up internal audit for AI, models and technology risk, work that was new to them.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved, with the role centred on AI and technology assurance.
+            <strong>The role</strong>
+            Compliance reviewer &rarr; AI and technology internal audit manager
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/social-service-non-corporate-eligibility/" class="case-row" data-sector="social-service" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/social-service-non-corporate-eligibility/" class="case-row" data-sector="social-service" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;21<span class="case-sector">Social Service</span></div>
           <div>
             <div class="case-meta-tag">Social service / registered charity (IPC)</div>
-            <h2>CCP approved for a senior HR hire at a social service charity</h2>
+            <h2>CCP for a senior HR hire at a social service charity</h2>
             <p class="case-summary">A registered social service charity hired a senior HR professional to set up its HR function.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved and now at the claim stage.
+            <strong>The role</strong>
+            Senior HR lead
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/insurance-broker-banker-conversion/" class="case-row" data-sector="financial-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/insurance-broker-banker-conversion/" class="case-row" data-sector="financial-services" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;42<span class="case-sector">Financial Services</span></div>
           <div>
             <div class="case-meta-tag">Insurance and employee benefits broking</div>
-            <h2>CCP approved for a bank relationship manager hired by an insurance broker</h2>
+            <h2>CCP for a bank relationship manager hired by an insurance broker</h2>
             <p class="case-summary">A small insurance and employee benefits broker hired a bank relationship manager to look after its key corporate accounts.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved before the application window closed.
+            <strong>The role</strong>
+            Bank relationship manager &rarr; Client service manager, key accounts
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/education-group-multi-entity-conversions/" class="case-row" data-sector="training-and-adult-education" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/education-group-multi-entity-conversions/" class="case-row" data-sector="training-and-adult-education" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;22<span class="case-sector">Training and Adult Education</span></div>
           <div>
             <div class="case-meta-tag">Experiential education group</div>
@@ -784,13 +786,14 @@
             <p class="case-summary">An experiential education group made hires across several related companies in the group.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approvals across the group, with one hire completed through to the final review.
+            <strong>The role</strong>
+            Programme, operations and academy roles across related companies
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/design-practice-multi-year-programme/" class="case-row" data-sector="built-environment" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/design-practice-multi-year-programme/" class="case-row" data-sector="built-environment" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;19<span class="case-sector">Built Environment</span></div>
           <div>
             <div class="case-meta-tag">Architecture / interior design practice</div>
@@ -798,13 +801,14 @@
             <p class="case-summary">An architecture and design practice has used CCP for several hires over a number of years as part of its regular workforce planning.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Multiple approvals across the hires.
+            <strong>The role</strong>
+            Sustainability, project delivery and studio leadership roles over several years
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/regulated-exchange-finance-tech-cohort/" class="case-row" data-sector="financial-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/regulated-exchange-finance-tech-cohort/" class="case-row" data-sector="financial-services" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;16<span class="case-sector">Financial Services</span></div>
           <div>
             <div class="case-meta-tag">Financial market infrastructure / digital exchange</div>
@@ -812,41 +816,44 @@
             <p class="case-summary">A regulated digital exchange used CCP for four hires across finance management and platform engineering.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Finance management role approved; engineering applications submitted.
+            <strong>The role</strong>
+            Finance manager, site reliability engineer, full-stack developer and one more technical role
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/built-environment-innovation-lead/" class="case-row" data-sector="built-environment" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/built-environment-innovation-lead/" class="case-row" data-sector="built-environment" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;04<span class="case-sector">Built Environment</span></div>
           <div>
             <div class="case-meta-tag">Built environment / M&amp;E engineering</div>
-            <h2>CCP approved for a facilities engineer moving into an innovation lead role</h2>
+            <h2>CCP for a facilities engineer moving into an innovation lead role</h2>
             <p class="case-summary">An M&amp;E services contractor moved a facilities engineer into an innovation lead role covering smart facilities, energy efficiency and digital records.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved, with six months of salary support.
+            <strong>The role</strong>
+            Facilities engineer &rarr; Innovation lead
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/beauty-aesthetics-reskilling/" class="case-row" data-sector="retail" data-type="job-redesign" data-status="approved">
+        <a href="/case-studies/beauty-aesthetics-reskilling/" class="case-row" data-sector="retail" data-type="job-redesign">
           <div class="case-num">CASE / 2024&minus;14<span class="case-sector">Retail</span></div>
           <div>
             <div class="case-meta-tag">Beauty &amp; aesthetics / specialty retail</div>
-            <h2>Job redesign approved for a marketer moving into digital at a beauty brand</h2>
+            <h2>Job redesign for a marketer moving into digital at a beauty brand</h2>
             <p class="case-summary">A beauty and aesthetics brand reskilled a marketing executive into a digital marketing and analytics specialist as it expanded into new markets.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved, with funded training across the redesign period.
+            <strong>The role</strong>
+            Marketing executive &rarr; Digital marketing and analytics specialist
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/cleantech-water-purification/" class="case-row" data-sector="environmental-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/cleantech-water-purification/" class="case-row" data-sector="environmental-services" data-type="new-hire">
           <div class="case-num">CASE / 2024&minus;11<span class="case-sector">Environmental Services</span></div>
           <div>
             <div class="case-meta-tag">Cleantech / water purification</div>
@@ -854,13 +861,14 @@
             <p class="case-summary">A cleantech water purification firm made its first senior commercial hire outside the founders, with training covering its technology and public-sector buyers.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Reached the funding agreement stage, with funded training for the new commercial lead.
+            <strong>The role</strong>
+            Senior commercial lead
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/saas-mobile-app-cohorts/" class="case-row" data-sector="infocomm-technology" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/saas-mobile-app-cohorts/" class="case-row" data-sector="infocomm-technology" data-type="new-hire">
           <div class="case-num">CASE / 2024&minus;09<span class="case-sector">Infocomm Technology</span></div>
           <div>
             <div class="case-meta-tag">Software / SaaS / mobile app</div>
@@ -868,13 +876,14 @@
             <p class="case-summary">A SaaS and mobile app developer used CCP across four hiring rounds over 18 months, for product, engineering and digital marketing roles.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Multiple applications approved; CCP is now a regular part of how the firm hires.
+            <strong>The role</strong>
+            Product, engineering and digital marketing roles over four hiring rounds
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/fintech-ai-payments-cohort/" class="case-row" data-sector="financial-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/fintech-ai-payments-cohort/" class="case-row" data-sector="financial-services" data-type="new-hire">
           <div class="case-num">CASE / 2024&minus;07<span class="case-sector">Financial Services</span></div>
           <div>
             <div class="case-meta-tag">Fintech / cross-border payments</div>
@@ -882,41 +891,44 @@
             <p class="case-summary">A cross-border payments firm made five hires as it moved into enterprise AI, including a senior manager for enterprise AI, a head of client growth and a senior accountant.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Approved roles included the enterprise AI senior manager.
+            <strong>The role</strong>
+            Five roles, including a senior manager for enterprise AI
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/fnb-people-operations-conversion/" class="case-row" data-sector="food-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/fnb-people-operations-conversion/" class="case-row" data-sector="food-services" data-type="new-hire">
           <div class="case-num">CASE / 2024&minus;03<span class="case-sector">Food Services</span></div>
           <div>
             <div class="case-meta-tag">F&amp;B / specialty retail</div>
-            <h2>CCP approved for a People &amp; Culture lead and an operations lead at an F&amp;B brand</h2>
+            <h2>CCP for a People &amp; Culture lead and an operations lead at an F&amp;B brand</h2>
             <p class="case-summary">A specialty F&amp;B brand hired a People &amp; Culture lead and a senior multi-site operations lead at the same time, each from a different industry.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Both approved.
+            <strong>The role</strong>
+            People &amp; Culture lead and multi-site operations lead
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/medtech-job-redesign-reskilling/" class="case-row" data-sector="biomedical-manufacturing" data-type="new-hire job-redesign" data-status="approved">
+        <a href="/case-studies/medtech-job-redesign-reskilling/" class="case-row" data-sector="biomedical-manufacturing" data-type="new-hire job-redesign">
           <div class="case-num">CASE / 2024&minus;02<span class="case-sector">Biomedical Manufacturing</span></div>
           <div>
             <div class="case-meta-tag">MedTech / biomedical device manufacturing</div>
-            <h2>Job redesign and a new-hire CCP approved at a medical device manufacturer</h2>
+            <h2>Job redesign and a new-hire CCP at a medical device manufacturer</h2>
             <p class="case-summary">A medical device manufacturer expanded two existing research and engineering roles and hired a manufacturing engineer, with training in manufacturing quality standards and AI.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Job redesign approved for both existing roles, plus 12 months of salary support for the new hire.
+            <strong>The role</strong>
+            Two research and engineering roles redesigned, plus a manufacturing engineer hire
+            <span class="case-type">New hires and existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/hospitality-multi-property/" class="case-row" data-sector="hotel-and-accommodation-services" data-type="new-hire" data-status="approved">
+        <a href="/case-studies/hospitality-multi-property/" class="case-row" data-sector="hotel-and-accommodation-services" data-type="new-hire">
           <div class="case-num">CASE / 2023&minus;08<span class="case-sector">Hotel and Accommodation Services</span></div>
           <div>
             <div class="case-meta-tag">Hotels &amp; hospitality</div>
@@ -924,13 +936,14 @@
             <p class="case-summary">A multi-property hotel group hired across finance, real estate investment, F&amp;B, sustainability and a property general manager role.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Several roles approved, each with structured training.
+            <strong>The role</strong>
+            Five head office and property roles
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/travel-media-workforce-buildout/" class="case-row" data-sector="media" data-type="new-hire job-redesign" data-status="approved">
+        <a href="/case-studies/travel-media-workforce-buildout/" class="case-row" data-sector="media" data-type="new-hire job-redesign">
           <div class="case-num">CASE / 2023&minus;01<span class="case-sector">Media</span></div>
           <div>
             <div class="case-meta-tag">Travel &amp; digital media SME</div>
@@ -938,13 +951,14 @@
             <p class="case-summary">A travel media firm moving from content into commerce built out six roles across business development, partnerships and digital marketing.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="approved">Approved</span>
-            Multiple applications approved, with three and six months of salary support.
+            <strong>The role</strong>
+            Six roles across business development, partnerships and digital marketing
+            <span class="case-type">New hires and existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/consultancy-three-channel-comparison/" class="case-row" data-sector="media" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/consultancy-three-channel-comparison/" class="case-row" data-sector="media" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;32<span class="case-sector">Media</span></div>
           <div>
             <div class="case-meta-tag">Business consulting / brand strategy</div>
@@ -952,13 +966,14 @@
             <p class="case-summary">A business consultancy had one digital marketing role to fund and compared three programme options before applying.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Submitted through the best-fitting option.
+            <strong>The role</strong>
+            Digital marketing specialist
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/marine-services-manpower-aligned-conversion/" class="case-row" data-sector="marine-and-offshore" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/marine-services-manpower-aligned-conversion/" class="case-row" data-sector="marine-and-offshore" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;31<span class="case-sector">Marine and Offshore</span></div>
           <div>
             <div class="case-meta-tag">Marine and offshore services</div>
@@ -966,13 +981,14 @@
             <p class="case-summary">A marine and offshore services firm planned its CCP hire as part of a wider decision on its workforce mix.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Application submitted, aligned with the firm’s manpower plan.
+            <strong>The role</strong>
+            One hire, planned around the firm&rsquo;s workforce mix
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/healthcare-vp-operations-conversion/" class="case-row" data-sector="healthcare" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/healthcare-vp-operations-conversion/" class="case-row" data-sector="healthcare" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;29<span class="case-sector">Healthcare</span></div>
           <div>
             <div class="case-meta-tag">Healthcare operations</div>
@@ -980,13 +996,14 @@
             <p class="case-summary">A healthcare operator hired an executive into a VP Operations role, with a training plan tied to the role’s performance goals.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Application submitted, with a development plan linked to KPIs for the first months.
+            <strong>The role</strong>
+            Executive &rarr; VP Operations
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/it-services-technician-to-leadership/" class="case-row" data-sector="infocomm-technology" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/it-services-technician-to-leadership/" class="case-row" data-sector="infocomm-technology" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;28<span class="case-sector">Infocomm Technology</span></div>
           <div>
             <div class="case-meta-tag">IT managed services / technical support</div>
@@ -994,13 +1011,14 @@
             <p class="case-summary">An IT managed services firm moved a technical engineer into a role leading growth and customer operations.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Application submitted for the move into operations leadership.
+            <strong>The role</strong>
+            IT engineer &rarr; Growth and customer operations lead
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/food-services-whitelist-pathway/" class="case-row" data-sector="food-services" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/food-services-whitelist-pathway/" class="case-row" data-sector="food-services" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;27<span class="case-sector">Food Services</span></div>
           <div>
             <div class="case-meta-tag">Food services / restaurant group</div>
@@ -1008,13 +1026,14 @@
             <p class="case-summary">A restaurant group hired under the food services route, which funds a set list of roles, so the hire was matched to a supported role.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Submitted; the agency indicated general support.
+            <strong>The role</strong>
+            Revenue management hire
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/furniture-manufacturer-sales-ops-cohort/" class="case-row" data-sector="retail" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/furniture-manufacturer-sales-ops-cohort/" class="case-row" data-sector="retail" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;25<span class="case-sector">Retail</span></div>
           <div>
             <div class="case-meta-tag">Furniture manufacturing / design retail</div>
@@ -1022,13 +1041,14 @@
             <p class="case-summary">A bespoke furniture maker and retailer converted four roles across sales, business development and operations as it built a proper commercial team.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Applications submitted, with the sales and business development roles formalised and training in place.
+            <strong>The role</strong>
+            Four sales, business development and operations roles
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/education-back-office-cohort/" class="case-row" data-sector="training-and-adult-education" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/education-back-office-cohort/" class="case-row" data-sector="training-and-adult-education" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;23<span class="case-sector">Training and Adult Education</span></div>
           <div>
             <div class="case-meta-tag">Private education / enrichment</div>
@@ -1036,13 +1056,14 @@
             <p class="case-summary">A private education group converted five roles across HR, finance and operations as those teams grew into proper functions.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Applications submitted, each with a role-specific training plan.
+            <strong>The role</strong>
+            Five HR, finance, accounting and admin roles
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/consumer-goods-mnc-conversion/" class="case-row" data-sector="wholesale-trade" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/consumer-goods-mnc-conversion/" class="case-row" data-sector="wholesale-trade" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;30<span class="case-sector">Wholesale Trade</span></div>
           <div>
             <div class="case-meta-tag">Global consumer goods multinational</div>
@@ -1050,13 +1071,14 @@
             <p class="case-summary">A global consumer goods multinational used CCP for commercial field roles, working within a large employer’s own approval processes.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Territory management and business development roles assessed and submitted.
+            <strong>The role</strong>
+            Territory management and business development roles
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/bespoke-tailoring-digital-function/" class="case-row" data-sector="retail" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/bespoke-tailoring-digital-function/" class="case-row" data-sector="retail" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;26<span class="case-sector">Retail</span></div>
           <div>
             <div class="case-meta-tag">Luxury retail / bespoke tailoring</div>
@@ -1064,13 +1086,14 @@
             <p class="case-summary">A bespoke tailoring house with no in-house digital team hired its first digital marketing manager.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Application submitted with a full training plan for the new role.
+            <strong>The role</strong>
+            Digital marketing manager, a first for the business
+            <span class="case-type">New hire</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/electronics-distribution-ai-job-redesign/" class="case-row" data-sector="wholesale-trade" data-type="job-redesign" data-status="submitted">
+        <a href="/case-studies/electronics-distribution-ai-job-redesign/" class="case-row" data-sector="wholesale-trade" data-type="job-redesign">
           <div class="case-num">CASE / 2025&minus;20<span class="case-sector">Wholesale Trade</span></div>
           <div>
             <div class="case-meta-tag">Electronics distribution / wholesale trade</div>
@@ -1078,13 +1101,14 @@
             <p class="case-summary">An electronic components distributor redesigned senior commercial and operations roles around new AI tools that changed the day-to-day work.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Application submitted, with AI skills built into each role.
+            <strong>The role</strong>
+            Senior commercial roles reshaped by AI
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/consultancy-four-roles-four-pathways/" class="case-row" data-sector="training-and-adult-education" data-type="new-hire job-redesign" data-status="submitted">
+        <a href="/case-studies/consultancy-four-roles-four-pathways/" class="case-row" data-sector="training-and-adult-education" data-type="new-hire job-redesign">
           <div class="case-num">CASE / 2025&minus;18<span class="case-sector">Training and Adult Education</span></div>
           <div>
             <div class="case-meta-tag">Corporate training / organisational capability consulting</div>
@@ -1092,13 +1116,14 @@
             <p class="case-summary">A corporate training consultancy had four roles to fund, and each was matched to the CCP route that suited that role.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            All four applications submitted, including a director moving into a digital growth and marketing role.
+            <strong>The role</strong>
+            Business development director &rarr; Digital growth lead, plus three other roles
+            <span class="case-type">New hires and existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/data-ai-consultancy-reskilling/" class="case-row" data-sector="infocomm-technology" data-type="job-redesign" data-status="submitted">
+        <a href="/case-studies/data-ai-consultancy-reskilling/" class="case-row" data-sector="infocomm-technology" data-type="job-redesign">
           <div class="case-num">CASE / 2025&minus;10<span class="case-sector">Infocomm Technology</span></div>
           <div>
             <div class="case-meta-tag">Data analytics &amp; AI consulting</div>
@@ -1106,13 +1131,14 @@
             <p class="case-summary">A data analytics consultancy reskilled a senior consultant to lead AI delivery, with training built around real client projects.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Application submitted; the consultant now leads AI delivery.
+            <strong>The role</strong>
+            Senior consultant &rarr; AI delivery lead
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/fund-management-finance-cohort/" class="case-row" data-sector="financial-services" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/fund-management-finance-cohort/" class="case-row" data-sector="financial-services" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;05<span class="case-sector">Financial Services</span></div>
           <div>
             <div class="case-meta-tag">Asset management / financial services</div>
@@ -1120,13 +1146,14 @@
             <p class="case-summary">A boutique fund manager hired a CFO, a fund accountant and an investment professional, each with a training plan built for a regulated finance role.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Applications submitted, with a structured training path for senior finance hires.
+            <strong>The role</strong>
+            CFO, fund accountant and investment professional
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/industrial-climate-engineers/" class="case-row" data-sector="precision-engineering" data-type="new-hire" data-status="submitted">
+        <a href="/case-studies/industrial-climate-engineers/" class="case-row" data-sector="precision-engineering" data-type="new-hire">
           <div class="case-num">CASE / 2024&minus;12<span class="case-sector">Precision Engineering</span></div>
           <div>
             <div class="case-meta-tag">Industrial manufacturing / climate solutions</div>
@@ -1134,13 +1161,14 @@
             <p class="case-summary">The regional arm of a global climate solutions manufacturer hired two engineers to support customers in semiconductor and pharmaceutical manufacturing.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="submitted">Submitted</span>
-            Both applications passed eligibility checks.
+            <strong>The role</strong>
+            Two engineering hires for semiconductor and pharmaceutical work
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/exchange-job-redesign-org-scan/" class="case-row" data-sector="financial-services" data-type="job-redesign" data-status="scoped">
+        <a href="/case-studies/exchange-job-redesign-org-scan/" class="case-row" data-sector="financial-services" data-type="job-redesign">
           <div class="case-num">CASE / 2026&minus;37<span class="case-sector">Financial Services</span></div>
           <div>
             <div class="case-meta-tag">Regulated exchange / job redesign scoping</div>
@@ -1148,13 +1176,14 @@
             <p class="case-summary">An exchange that had already hired with CCP support asked which of its existing roles were changing because of AI and automation, and where job redesign funding could apply.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="scoped">Scoped</span>
-            Twenty-one priority roles identified across seven role groups.
+            <strong>The role</strong>
+            21 existing roles reviewed for job redesign
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/climate-tech-dual-entity-workforce-plan/" class="case-row" data-sector="environmental-services" data-type="new-hire" data-status="scoped">
+        <a href="/case-studies/climate-tech-dual-entity-workforce-plan/" class="case-row" data-sector="environmental-services" data-type="new-hire">
           <div class="case-num">CASE / 2026&minus;24<span class="case-sector">Environmental Services</span></div>
           <div>
             <div class="case-meta-tag">Climate technology / water and sustainability</div>
@@ -1162,13 +1191,14 @@
             <p class="case-summary">Two related climate and water technology companies reviewed six roles across sustainability, software, modelling and finance to see which could qualify.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="scoped">Scoped</span>
-            Six roles scoped, with sustainability and technical leadership roles the strongest fits.
+            <strong>The role</strong>
+            Six roles across sustainability, software, modelling and finance
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/childrens-fitness-job-redesign-service-length/" class="case-row" data-sector="sports-and-fitness" data-type="job-redesign" data-status="scoped">
+        <a href="/case-studies/childrens-fitness-job-redesign-service-length/" class="case-row" data-sector="sports-and-fitness" data-type="job-redesign">
           <div class="case-num">CASE / 2025&minus;48<span class="case-sector">Sports and Fitness</span></div>
           <div>
             <div class="case-meta-tag">Children’s fitness franchise</div>
@@ -1176,13 +1206,14 @@
             <p class="case-summary">A children’s fitness franchise wanted to move a franchise development role into digital marketing.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="scoped">Scoped</span>
-            Eligibility checked before any paperwork was prepared.
+            <strong>The role</strong>
+            Franchise development lead &rarr; Digital marketing lead
+            <span class="case-type">Existing staff</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
 
-        <a href="/case-studies/environmental-services-workforce-scan/" class="case-row" data-sector="environmental-services" data-type="new-hire" data-status="scoped">
+        <a href="/case-studies/environmental-services-workforce-scan/" class="case-row" data-sector="environmental-services" data-type="new-hire">
           <div class="case-num">CASE / 2025&minus;33<span class="case-sector">Environmental Services</span></div>
           <div>
             <div class="case-meta-tag">Environmental and facilities services</div>
@@ -1190,8 +1221,9 @@
             <p class="case-summary">An environmental and facilities services firm wanted to know which roles across the whole business could qualify, rather than starting with one job.</p>
           </div>
           <div class="case-outcome">
-            <span class="case-status" data-status="scoped">Scoped</span>
-            Qualifying roles found in general management, project delivery, commercial and marketing.
+            <strong>The role</strong>
+            Roles across management, project delivery, commercial and marketing
+            <span class="case-type">New hires</span>
             <span class="case-arrow">Read case &rarr;</span>
           </div>
         </a>
@@ -1220,11 +1252,11 @@
         </div>
         <div class="ccp-card">
           <h3>Documentation &amp; submission</h3>
-          <p>Application forms, eligibility declarations, trainee details, employment contract reviews, and CPF/payroll substantiation, compiled and submitted end to end.</p>
+          <p>Application forms, eligibility declarations, trainee details, employment contract reviews and CPF/payroll records, prepared for your review before you submit.</p>
         </div>
         <div class="ccp-card">
           <h3>End-to-end coordination</h3>
-          <p>Liaising with the relevant programme partners through to funding agreement and disbursement, including any clarifications during the assessor review.</p>
+          <p>Coordinating each application through to funding agreement and disbursement, including any clarifications during review.</p>
         </div>
       </div>
     </section>
@@ -1293,7 +1325,7 @@
 
 
   <script>
-    // Filters (type of support, result, industry) and progressive reveal for
+    // Filters (type of support, industry) and progressive reveal for
     // the case grid. Cards render visible by default, so crawlers and no-JS
     // visitors always see every case. With no filter, the list collapses to
     // the first 12. An industry can be linked directly, e.g.
@@ -1309,7 +1341,7 @@
       var chips = bar ? Array.prototype.slice.call(bar.querySelectorAll('.case-chip')) : [];
       if (!rows.length || !wrap || !btn) return;
       var expanded = false;
-      var state = { type: 'all', status: 'all', sector: 'all' };
+      var state = { type: 'all', sector: 'all' };
       function hasChip(filter, value) {
         return chips.some(function (c) { return c.getAttribute('data-filter') === filter && c.getAttribute('data-value') === value; });
       }
@@ -1317,14 +1349,10 @@
         var h = window.location.hash.replace('#', '');
         return hasChip('sector', h) ? h : 'all';
       }
-      function unfiltered() { return state.type === 'all' && state.status === 'all' && state.sector === 'all'; }
+      function unfiltered() { return state.type === 'all' && state.sector === 'all'; }
       function matches(r) {
         if (state.sector !== 'all' && r.getAttribute('data-sector') !== state.sector) return false;
         if (state.type !== 'all' && (' ' + r.getAttribute('data-type') + ' ').indexOf(' ' + state.type + ' ') === -1) return false;
-        if (state.status !== 'all') {
-          var s = r.getAttribute('data-status');
-          if (state.status === 'approved' ? (s !== 'approved' && s !== 'claimed') : s !== state.status) return false;
-        }
         return true;
       }
       function apply() {

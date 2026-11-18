@@ -1,0 +1,87 @@
+# Tell IndexNow search engines (Bing, Yandex, Seznam, Naver and others)
+# which pages changed, once GitHub Pages has finished deploying them.
+# The key file lives at /f5e5aa7a7ea1b43ae8a8c8fe24f1bdf8.txt.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: Submit every URL in sitemap.xml instead of only changed pages
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  deployments: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    env:
+      HOST: bizgrants.consulting
+      KEY: f5e5aa7a7ea1b43ae8a8c8fe24f1bdf8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: List URLs
+        id: urls
+        env:
+          BEFORE: ${{ github.event.before }}
+          ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.all }}
+        run: |
+          if [ "$ALL" = "true" ]; then
+            grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's#</\?loc>##g' > urls.txt
+          else
+            # Only real pages (folder/index.html); old *.html redirect stubs and the
+            # disallowed /jdreview/ tool are skipped.
+            git diff --name-only "$BEFORE" "$GITHUB_SHA" -- '*index.html' \
+              | grep -v -e '^\.' -e '^jdreview/' \
+              | sed -E 's#(^|/)index\.html$#\1#; s#^#https://'"$HOST"'/#' > urls.txt || true
+          fi
+          sort -u urls.txt -o urls.txt
+          echo "count=$(grep -c . urls.txt || true)" >> "$GITHUB_OUTPUT"
+          cat urls.txt
+
+      - name: Wait for the GitHub Pages deploy of this commit
+        if: steps.urls.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 40); do
+            id=$(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=github-pages&sha=$GITHUB_SHA" --jq '.[0].id // empty')
+            if [ -n "$id" ]; then
+              state=$(gh api "repos/$GITHUB_REPOSITORY/deployments/$id/statuses" --jq '.[0].state // empty')
+              echo "Pages deployment $id: ${state:-pending}"
+              if [ "$state" = "success" ]; then exit 0; fi
+              if [ "$state" = "failure" ] || [ "$state" = "error" ]; then
+                echo "Pages deploy failed; not submitting."
+                exit 1
+              fi
+            fi
+            sleep 15
+          done
+          echo "Timed out after 10 minutes waiting for the Pages deploy; submitting anyway."
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          jq -Rn --arg host "$HOST" --arg key "$KEY" \
+            '{host: $host, key: $key, keyLocation: "https://\($host)/\($key).txt",
+              urlList: [inputs | select(length > 0)]}' < urls.txt > body.json
+          code=$(curl -sS -o resp.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @body.json)
+          echo "IndexNow HTTP $code"
+          cat resp.txt
+          case "$code" in
+            200|202) echo "Submitted ${{ steps.urls.outputs.count }} URL(s)." ;;
+            *) exit 1 ;;
+          esac
